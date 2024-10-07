@@ -1,0 +1,209 @@
+.Full-page {
+    width: 100vw;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    column-gap: 50px;
+}
+
+.Full-page .cv-right-dashboard {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+}
+
+.Full-page .cv-right-dashboard .cv-all-forms {
+    flex: 1;
+    background-color: #F0F2FD;
+    padding: 50px;
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.Full-page .cv-right-dashboard .cv-all-forms .prev-resp-icon {
+    color: #fff;
+    background-color: #5a4abd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+}
+
+/* HIGHLIGHT CSS OPTION */
+.Full-page .cv-right-dashboard .personal-route .personal-edit {
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 3;
+    border: 3px solid #5a4abd;
+}
+
+.Full-page .cv-right-dashboard .resumeCV::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.Full-page .cv-right-dashboard .summary-route .summary-edit {
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 3;
+    border: 3px solid #5a4abd;
+}
+
+.Full-page .cv-right-dashboard .contact-route .contact-edit {
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 3;
+    border: 3px solid #5a4abd;
+}
+
+.Full-page .cv-right-dashboard .skills-route .skill-edit {
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 3;
+    border: 3px solid #5a4abd;
+}
+
+.Full-page .cv-right-dashboard .project-route .project-edit {
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 3;
+    border: 3px solid #5a4abd;
+}
+
+.Full-page .cv-right-dashboard .education-route .education-edit {
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 3;
+    border: 3px solid #5a4abd;
+}
+
+.Full-page .cv-right-dashboard .job-exp-route .job-exp-edit {
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 3;
+    border: 3px solid #5a4abd;
+}
+
+/* RESPONSIVE CSS */
+
+@media screen and (max-width: 1440px){
+    .Full-page {
+        column-gap: 30px;
+    }
+}
+@media screen and (max-width: 1024px) {
+
+    .Full-page {
+
+        column-gap: 25px;
+    }
+
+    .Full-page .cv-right-dashboard {
+        width: auto;
+        flex: 1;
+
+    }
+
+    .Full-page .cv-right-dashboard .cv-all-forms {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .Full-page {
+        column-gap: 0;
+    }
+
+    .Full-page .sidebar {
+        background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(31, 104, 232, 1) 100%);
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        z-index: 100;
+        width: 100%;
+        padding: 0;
+    }
+
+    .Full-page .sidebar .sidebar-icon {
+        padding: 20px;
+        border: none;
+    }
+
+    .Full-page .sidebar .sidebar-icon:hover {
+        background-color: transparent;
+    }
+
+    .Full-page .sidebar .sidebar-icon svg {
+        width: 25px;
+        height: 25px;
+        color: #fff;
+    }
+
+    .Full-page .prev-wrapper {
+        width: 0%;
+    }
+
+    .Full-page .prev-wrapper .resume-prev-section .resumeCV {
+        display: none;
+    }
+
+    .Full-page .prev-wrapper .resumecv-eye {
+        position: fixed;
+        z-index: 1000;
+        right: 20px;
+        bottom: 80px;
+        border-radius: 50%;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Full-page .cv-right-dashboard {
+        width: 100%;
+        flex-wrap: nowrap;
+        column-gap: 0;
+    }
+
+    .Full-page .cv-right-dashboard .cv-all-forms {
+        flex: 1;
+        height: 95vh;
+        padding-bottom: 100px;
+    }
+}

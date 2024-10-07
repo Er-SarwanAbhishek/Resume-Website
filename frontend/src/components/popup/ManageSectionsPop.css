@@ -1,0 +1,38 @@
+.manage-required-details-popup .manage-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgb(221, 215, 215);
+}
+
+.manage-required-details-popup .manage-details span {
+    font-size: 18px;
+    font-family: "Inter";
+}
+
+.manage-required-details-popup .manage-details .switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.manage-required-details-popup .manage-details .slider {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.manage-required-details-popup .manage-details .active {
+    background-color: #5A4ABD;
+    transform: translateX(14px);
+}

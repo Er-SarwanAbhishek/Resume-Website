@@ -1,0 +1,96 @@
+.font-size-slider #font-slider {
+    width: 100%;
+}
+
+.font-size-slider .font-pixel {
+    display: flex;
+    justify-content: first baseline;
+    margin-bottom: 5px;
+}
+
+.font-size-slider .font-pixel h4 {
+    font-family: "inter";
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: rgb(92, 92, 92);
+}
+
+.font-size-slider .slider-icon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.font-size-slider .slider-icon i {
+    cursor: pointer;
+}
+
+.font-size-slider .slider-icon i:hover {
+    cursor: pointer;
+    color: #4956D0;
+}
+
+input[type="range"] {
+    display: block;
+    position: relative;
+    outline: none;
+    appearance: none;
+}
+
+input[type="range"]::before,
+input[type="range"]::after {
+    position: absolute;
+    display: inline-block;
+    top: -5px;
+}
+
+input[type="range"]::before {
+    content: alt(min);
+    left: 0;
+    transform: translateX(calc(100% +5px));
+}
+
+input[type="range"]::after {
+    content: alt(min);
+    left: 0;
+    transform: translateX(calc(100% +5px));
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #222;
+    height: 5px;
+    border-radius: 3px;
+    appearance: none;
+    cursor: grab;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #4956D0;
+    width: 6px;
+    height: 25px;
+    border-radius: 3px;
+    appearance: none;
+    margin-top: -10px;
+    scroll-behavior: smooth;
+}
+
+.font-size-pixel {
+    font-family: "mulish", sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.font-size-slider .font-size-pixel .fixed {
+    font-size: small;
+    color: #afb4b5;
+    ;
+}
+
+.font-size-slider #fontsize {
+    font-size: 15px;
+    font-family: "montserrat";
+}

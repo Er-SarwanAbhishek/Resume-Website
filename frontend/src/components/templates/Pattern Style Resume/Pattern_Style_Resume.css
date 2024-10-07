@@ -1,0 +1,208 @@
+.pattern-style-resume {
+    width: 100%;
+    background-color: #fff;
+    background-size: cover;
+    min-height: 1120px;
+    position: relative;
+    padding: 40px;
+    z-index: 1;
+}
+
+.pattern-style-resume .resume-qr-code{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.pattern-style-resume .header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+/* Global Css  */
+
+.pattern-style-resume .personal-details h1 {
+    font-size: 35px;
+    margin-bottom: 8px;
+    padding-top: 60px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.pattern-style-resume .personal-details h4 {
+    font-size: 15px;
+    position: relative;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.pattern-style-resume h4 .bottom-theme {
+    height: 10px;
+    width: 300px;
+    top: 22px;
+    position: absolute;
+    margin-top: -12px;
+    z-index: -1;
+}
+
+.pattern-style-resume .profile-img {
+    width: 200px;
+    height: 160px;
+    background-position: center;
+    margin-top: 18px;
+    background-size: cover;
+    position: relative;
+}
+
+.pattern-style-resume .profile-img .side-theme{
+    height: 270px;
+    width: 85px;
+    position: absolute;
+    z-index: -1;
+    top: -60px;
+    right: -24px;
+}
+
+.pattern-style-resume h2 {
+    font-size: 22px;
+    border-bottom: 1px solid;
+    display: inline-block;
+    padding: 20px 0px 5px 0px;
+    margin-bottom: 8px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.pattern-style-resume p {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.pattern-style-resume .main {
+    width: 100%;
+    display: flex;
+    gap: 5%;
+    margin-top: 20px;
+}
+
+.pattern-style-resume .left-column {
+    width: 38%;
+}
+
+/* Education information css */
+
+.pattern-style-resume .left-column .education-information .education-details p i {
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.pattern-style-resume .left-column .education-information h2:nth-child(1) {
+    padding-top: 0px;
+}
+
+.pattern-style-resume .left-column .education-details div {
+    margin-bottom: 10px;
+}
+
+.pattern-style-resume .left-column .education-details div:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+/* skills information Css */
+
+.pattern-style-resume .left-column .skills-information ul li {
+    list-style: none;
+    margin-bottom: 18px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.pattern-style-resume .left-column .skills-information ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.pattern-style-resume .left-column .skills-information ul li .skills-side-border {
+    height: 5px;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.pattern-style-resume .right-column {
+    width: 57%;
+}
+
+.pattern-style-resume .main .right-column {
+    border-left: 2px solid;
+    padding-left: 30px;
+}
+
+/* .experience information Css */
+
+
+.pattern-style-resume .right-column .experience-information .experience-details i {
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.pattern-style-resume .right-column .experience-information h2 {
+    padding-top: 0px;
+}
+
+.pattern-style-resume .right-column .experience-details div {
+    margin-bottom: 10px;
+}
+
+.pattern-style-resume .right-column .experience-details div:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+/* project information Css */
+
+.pattern-style-resume .right-column .project-information .project-details i {
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.pattern-style-resume .right-column .project-details div {
+    margin-bottom: 10px;
+}
+
+/* contact information Css */
+
+.pattern-style-resume .contact-Information {
+    border-top: 2px solid;
+    margin: 30px 0px 0px 0px;
+    position: relative;
+}
+.pattern-style-resume .contact-Information .contact-theme-design{
+    width: 60%;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    top: -12px;
+}
+
+.pattern-style-resume .contact-Information ul li {
+    list-style: none;
+    font-size: 12px;
+    padding-top: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.pattern-style-resume .contact-Information ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pattern-style-resume .contact-Information i {
+    margin-right: 10px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

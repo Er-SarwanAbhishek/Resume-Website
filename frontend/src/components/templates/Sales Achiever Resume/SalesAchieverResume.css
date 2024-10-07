@@ -1,0 +1,114 @@
+.SalesAchieverRT {
+    position: relative;
+    width: 100%;
+    min-height: 1120px;
+    background-color: #fff;
+    background-size: cover;
+}
+.SalesAchieverRT .resume-qr-code{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.SalesAchieverRT .parent-sec {
+    display: flex;
+    padding: 2rem 0;
+}
+
+.SalesAchieverRT .left-sec {
+    width: 33%;
+    padding: 2rem;
+}
+
+.SalesAchieverRT .right-sec {
+    padding: 2rem 0 3rem 2rem;
+}
+
+.SalesAchieverRT .for-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 10px solid #fff;
+    margin-bottom: 20px;
+}
+
+.SalesAchieverRT .contact-list:nth-last-child(1) p{
+    padding-bottom: 0px !important;
+}
+
+.SalesAchieverRT .for-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.SalesAchieverRT .left-sec .contact .contact-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.SalesAchieverRT .custom-heading-space {
+    margin-bottom: 20px;
+}
+
+.SalesAchieverRT p {
+    line-height: 1.3rem;
+}
+
+.SalesAchieverRT h2 {
+    margin-bottom: 10px;
+}
+
+.SalesAchieverRT h1 {
+    font-size: 30px;
+}
+
+
+.SalesAchieverRT li {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 1rem;
+}
+
+.SalesAchieverRT li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.SalesAchieverRT li::before {
+    content: "► ";
+}
+
+.SalesAchieverRT .parent-sec .left-sec .contact p {
+    padding-bottom: 5px;
+}
+
+.SalesAchieverRT .parent-sec .right-sec .profile-details {
+    margin-bottom: 10px;
+}
+
+.SalesAchieverRT .right-sec .gradient-section {
+    height: 2rem;
+}
+
+.SalesAchieverRT .parent-sec .right-sec .summary h2 {
+    padding-top: 12px;
+}
+
+.SalesAchieverRT .right-sec .for-spacing {
+    padding-right: 2rem;
+}
+
+/* shapes */
+.SalesAchieverRT .tiangle-shapes {
+    width: 70px;
+    height: 70px;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    background-color: #ffffff;
+    position: absolute;
+    left: 24.5%;
+    top: 1.2%;
+}

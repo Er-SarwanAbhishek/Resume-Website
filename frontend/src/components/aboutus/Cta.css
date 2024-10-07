@@ -1,0 +1,132 @@
+.cv-cta {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+}
+
+.cv-cta .cta-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+    background-color: #ECF2FF;
+    max-width: 1400px;
+}
+
+.cv-cta .cta-box h2 {
+    font-family: "montserrat";
+    line-height: 1.2em;
+    color: #1f1616;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+.cv-cta .cta-box p {
+    font-family: "mulish";
+    font-size: 20px;
+    width: 70%;
+    text-align: center;
+}
+
+.cv-cta .cta-box .image1 {
+    top: 13%;
+    left: 2%;
+    position: absolute;
+    width: 64px;
+    transform: rotate(-16deg)
+}
+
+.cv-cta .cta-box .image2 {
+    bottom: 40%;
+    right: 10%;
+    position: absolute;
+    width: 50px;
+}
+
+.cv-cta .cta-box .image3 {
+    top: 34%;
+    right: 10%;
+    position: absolute;
+    width: 80px;
+}
+
+.cv-cta .cta-box .image4 {
+    bottom: 7%;
+    left: 1%;
+    position: absolute;
+    width: 74px;
+    transform: rotate(-16deg)
+}
+
+.cv-cta .cta-box .image5 {
+    top: 16px;
+    right: 16px;
+    position: absolute;
+}
+
+.cv-cta .cta-box .image6 {
+    left: 8%;
+    top: 44%;
+    position: absolute;
+    width: 68px;
+    transform: rotate(16deg)
+}
+
+.cv-cta .cta-box .image7 {
+    right: 2%;
+    bottom: 10%;
+    position: absolute;
+    width: 80px;
+    transform: rotate(-7deg);
+}
+
+.cv-cta .cta-box .image8 {
+    right: 2%;
+    top: 8%;
+    position: absolute;
+    width: 80px;
+    transform: rotate(7deg);
+}
+
+.cv-cta .cta-box .image9 {
+    position: absolute;
+    width: 34px;
+    transform: rotate(7deg);
+    bottom: 20%;
+    right: 38%;
+    z-index: 11;
+    animation: zoomInOut 4s infinite;
+}
+
+.cv-cta .cta-box button {
+    border: none;
+    padding: 12px 60px;
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+    color: #fff;
+    font-family: "Mulish";
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: rotate(7deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(7deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(7deg) scale(1);
+    }
+}

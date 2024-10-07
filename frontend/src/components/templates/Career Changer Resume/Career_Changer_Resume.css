@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.career-changer-resume {
+    /* border: 2px solid #000000; */
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    /* margin: 20px; */
+    padding: 30px;
+    background-color: white;
+    background-size: cover;
+}
+
+.career-changer-resume h1 {
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+.career-changer-resume h4 {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.career-changer-resume h2 {
+    font-size: 20px;
+    margin: 15px 0px 10px 0px;
+    border-bottom: 2px solid #e5e5e5;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+}
+
+.career-changer-resume p {
+    font-size: 12px;
+    line-height: 22px;
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+}
+
+.career-changer-resume b{
+    font-size: 14px;
+}
+
+.career-changer-resume ul li{
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.career-changer-resume .contact-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.career-changer-resume .contact-information li{
+    list-style: disc;
+}
+
+.career-changer-resume .skills-information ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.career-changer-resume .skills-information li{
+    width: 20%;
+    list-style: inside;
+    text-align: left;
+    /* display: flex; */
+}
+
+.career-changer-resume .experience-information .experience-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.career-changer-resume .experience-information .experience-level{
+    padding-bottom: 10px;
+}
+
+.career-changer-resume .experience-information .experience-level:nth-last-child(1){
+    padding-bottom: 0px;
+}
+
+.career-changer-resume .project-information .project-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.career-changer-resume .project-information .project-level{
+    padding-bottom: 10px;
+}
+
+.career-changer-resume .project-information .project-level:nth-last-child(1){
+    padding-bottom: 0px;
+}
+
+.career-changer-resume .education-information .education-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.career-changer-resume .education-information .education-level{
+    padding-bottom: 10px;
+}
+
+.career-changer-resume .education-information .education-details:nth-last-child(1){
+    padding-bottom: 0px;
+}

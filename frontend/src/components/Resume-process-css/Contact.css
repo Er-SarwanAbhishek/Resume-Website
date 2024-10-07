@@ -1,0 +1,106 @@
+.edit-contact-form{
+    position: relative;
+}
+
+.edit-contact-form h1 {
+    font-family: "Montserrat";
+    margin-bottom: 30px;
+}
+
+.edit-contact-form form input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: "mulish";
+}
+
+
+.edit-contact-form form input:focus {
+    outline: none;
+}
+
+.edit-contact-form form .social-media {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.edit-contact-form form .social-media input {
+    border-radius: 0px;
+    margin: 0px;
+    padding:10px;
+    font-family: "mulish";
+}
+
+.edit-contact-form form .social-media #brandIcon {
+    padding: 10px;
+    background-color: #fff;
+    border-right: 1px solid #e5e5e5;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+}
+
+.edit-contact-form form .social-media .fa-trash {
+    border-radius: 10px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-left: 1px solid #e5e5e5;
+}
+
+.edit-contact-form form .social-section .delete-section {
+    /* background-color: green; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-contact-form form .social-section .delete-section i {
+    padding: 10px;
+    border-radius: px;
+    background-color: #fff;
+}
+
+
+/* **** BUTTON STYLE **** */
+
+.edit-contact-form form .save-section {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit-contact-form form .save-section a {
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    font-family: "montserrat";
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+
+}
+
+.edit-contact-form form .save-section a i {
+    margin-left: 8px;
+}
+
+.edit-contact-form form .save-section button {
+    min-width: calc(50% - 7.5px);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+    font-family: "montserrat";
+    font-size: 15px;
+    font-weight: 500;
+    z-index: 0;
+}

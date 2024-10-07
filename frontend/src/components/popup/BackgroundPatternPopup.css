@@ -1,0 +1,76 @@
+.common-pop-box {
+    width: 300px;
+    /* min-height: 400px; */
+    background-color: #fff;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    left: 20px;
+    animation: LeftSliding 0.3s linear;
+    transition: all 0.3s;
+    z-index: 100;
+}
+
+.common-pop-box .cancel-btn {
+    width: 22px;
+    height: 22px;
+    color: #000;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.common-pop-box .cancel-btn:hover {
+    color: #5a4abd;
+    animation: AnimOnCancelBtn 0.2s linear forwards alternate;
+}
+
+.common-pop-box h2 {
+    font-family: "montserrat";
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.background-pop-body .b-patterns {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    row-gap: 13px;
+}
+
+.background-pop-body .pattern {
+    width: 30%;
+    height: 80px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    cursor: pointer;
+    background-size: 800%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-pop-body .pattern i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.background-pop-body .pattern:nth-child(4) {
+    background-position-x: 60%;
+    background-size: 500%;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 450px) {
+    .common-pop-box {
+        bottom: 20px;
+    }
+}

@@ -1,0 +1,104 @@
+.red-white-resume {
+  width: 100%;
+  min-height: 100%;
+  padding: 40px;
+  position: relative;
+  background-color: #fff;
+}
+
+.red-white-resume *{
+  z-index: 1;
+}
+
+.red-white-resume .img-up {
+  width: 250px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 0;
+}
+
+.red-white-resume .img-bottom {
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  z-index: 0;
+}
+
+.red-white-resume .header {
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.red-white-resume .header .img-module {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  border-radius: 50%;
+  border: 15px #8c3c4b solid;
+}
+
+.red-white-resume .header h1 {
+  font-size: 5rem;
+  color: #8c3c4b;
+}
+
+.red-white-resume h2 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.red-white-resume .contact {
+  display: flex;
+  justify-content: center;
+  border-bottom: 4px solid #8c3c4b;
+  padding-bottom: 20px;
+}
+
+.red-white-resume .contact-imgs {
+  display: flex;
+}
+
+.red-white-resume .contact-imgs p {
+  margin-top: 0px;
+  padding-right: 35px;
+  font-size: 0.9rem;
+}
+
+.red-white-resume .contact-imgs i {
+  padding-right: 5px;
+}
+
+.red-white-resume .bottom-details {
+  display: flex;
+  padding-top: 20px;
+}
+
+.red-white-resume .bottom-details .left-section {
+  width: 65%;
+  border-right: 4px solid #8c3c4b;
+  padding-right: 40px;
+}
+
+.red-white-resume .bottom-details .right-section {
+  width: 35%;
+  margin-left: 30px;
+}
+
+.red-white-resume .bottom-details .left-section .common-sec {
+  margin-bottom: 20px;
+}
+
+.red-white-resume .bottom-details .left-section .common-sec .name-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.red-white-resume .bottom-details .right-section .skills li {
+  margin-bottom: 15px;
+}

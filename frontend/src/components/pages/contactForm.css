@@ -1,0 +1,215 @@
+.contact-form-main-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0px;
+}
+
+.contact-form-main-container .contact-container {
+  display: flex;
+  width: 80%;
+  max-width: 1400px;
+}
+
+.contact-form-main-container .contact-form {
+  flex: 2;
+}
+
+.contact-form-main-container .contact-form h2 {
+  font-size: 40px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-form-main-container .contact-form p {
+  font-size: 16px;
+  font-family: "Mulish";
+  margin-bottom: 20px;
+}
+
+.contact-form-main-container .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form-main-container .form-group label {
+  display: block;
+  font-size: 11px;
+  margin-top: 10px;
+  font-family: "Inter";
+  position: absolute;
+  padding-left: 15px;
+  color: gray;
+}
+
+.contact-form-main-container .form-group input,
+.contact-form-main-container .form-group textarea {
+  width: 90%;
+  padding: 25px 15px 15px 15px;
+  font-size: 14px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  font-family: "Mulish";
+  color: black;
+}
+
+.contact-form-main-container .form-group input:focus,
+.contact-form-main-container .form-group textarea:focus {
+  color: #000;
+  outline: 3px solid rgba(112, 92, 236, 0.1);
+}
+
+.contact-form-main-container .form-group textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form-main-container .submit-btn {
+  background: linear-gradient(90deg,
+      rgba(112, 92, 236, 1) 0%,
+      rgba(42, 81, 186, 1) 100%);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 90%;
+  font-family: "Mulish";
+}
+
+/* Accordion CSS */
+
+.accordian .svg-inline--fa fa-plus {
+  font-weight: 100;
+}
+
+.contact-form-main-container .accordian {
+  flex: 1.5;
+  margin-top: 50px;
+}
+
+.contact-form-main-container .accordion-item {
+  background-color: #f2f2f2;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.contact-form-main-container .accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  position: relative;
+}
+
+.contact-form-main-container .accordian .active {
+  text-decoration: none;
+}
+
+.contact-form-main-container .accordion-title:hover h4 {
+  color: #5a4abd;
+}
+
+.contact-form-main-container .accordion-title .icon {
+  transition: transform 0.3s ease-in-out;
+  /* Smooth rotation transition */
+}
+
+.contact-form-main-container .accordion-title.active .icon {
+  transform: rotate(180deg);
+  /* Rotate the icon 180 degrees when active */
+}
+
+.contact-form-main-container .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #f2f2f2;
+  border-radius: 15px;
+}
+
+.contact-form-main-container .accordian h4 {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5rem;
+}
+
+.contact-form-main-container .accordian p {
+  font-family: "Inter";
+  line-height: 1.5rem;
+}
+
+.contact-form-main-container .accordion-content.open {
+  max-height: 600px;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width:1024px){
+  .contact-form-main-container .contact-container {
+  
+    width: 90%;
+
+  }
+  .contact-form-main-container .contact-form h2 {
+    font-size: 40px;
+
+}
+.contact-form-main-container .accordian {
+  
+  margin-top: 48px;
+}
+.contact-form-main-container .accordion-title {
+  padding: 18px;
+
+}
+.contact-form-main-container .accordian h4 {
+  font-size: 16px;
+
+}
+.contact-form-main-container .accordian p {
+  font-size: 14px;
+}
+}
+@media screen and (max-width: 768px) {
+  .contact-form-main-container {
+   
+    padding: 60px 0px;
+  }
+  .contact-form-main-container .contact-form {
+    padding-bottom: 60px;
+}
+  .contact-form-main-container .contact-form h2 {
+    font-size: 26px;
+  }
+
+  .contact-form-main-container .contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1400px;
+  }
+
+
+  .contact-form-main-container .form-group input,
+  .contact-form-main-container .form-group textarea {
+    width: 100%;
+  }
+
+  .contact-form-main-container .submit-btn {
+    width: 100%;
+  }
+
+  .contact-form-main-container .accordian {
+
+    margin-top: 0px;
+  }
+  .contact-form-main-container .accordion-title {
+    padding: 15px;
+}
+}

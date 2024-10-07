@@ -1,0 +1,116 @@
+.minimalist_professional_resume {
+  width: 100%;
+  min-height: 1122.520px;
+  display: flex;
+  padding: 20px;
+  background-color: antiquewhite;
+  position: relative;
+}
+.minimalist_professional_resume .resume-qr-code{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.minimalist_professional_resume .Left-section {
+  width: 35%;
+  color: white;
+}
+
+.minimalist_professional_resume .Left-section .left-bottom-section {
+  background-color: #232323;
+  padding: 20px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  margin-top: -100px;
+
+}
+
+.minimalist_professional_resume .Right-section {
+  width: 65%;
+  padding: 20px;
+}
+
+.minimalist_professional_resume h1 {
+  font-size: 4rem;
+  margin-bottom: 5px;
+}
+
+.minimalist_professional_resume .about-me {
+  margin-bottom: 20px;
+}
+
+.minimalist_professional_resume h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.minimalist_professional_resume h2 {
+  color: #DD5D5C;
+  border-bottom: 1px solid #DD5D5C;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.minimalist_professional_resume .Right-section h2 {
+  margin-bottom: 10px;
+}
+
+.minimalist_professional_resume .Left-section .img-module img {
+  width: 80%;
+  border-radius: 35%;
+  border: 3px solid #DD5D5C;
+  z-index: -1;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.minimalist_professional_resume .Left-section .skills {
+  margin: 100px 0px 20px;
+
+}
+
+.minimalist_professional_resume .Left-section .skills li {
+  margin-bottom: 10px;
+}
+
+.minimalist_professional_resume .Left-section .left-bottom-section .contact {
+  margin-bottom: 20px;
+}
+
+.minimalist_professional_resume .Left-section .left-bottom-section .contact-imgs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+
+.minimalist_professional_resume .common-sec {
+  margin-bottom: 20px;
+}
+
+.minimalist_professional_resume .Right-section .common-sec .name-date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.minimalist_professional_resume .Right-section .common-sec .name-date .date-section {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.minimalist_professional_resume .course-role-section {
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.minimalist_professional_resume .left-bottom-section .name-date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.minimalist_professional_resume .Left-section .name-date .date-section {
+  font-weight: 500;
+}

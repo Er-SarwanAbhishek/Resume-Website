@@ -1,0 +1,220 @@
+.cv-why-choose {
+    background-color: #fff;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 80px;
+}
+
+.cv-why-choose .wh-row {
+    max-width: 1400px;
+    width: 80%;
+    display: flex;
+}
+
+.cv-why-choose .wh-row .wh-column {
+    width: 47%;
+}
+
+.cv-why-choose #wcu-img {
+    width: 600px;
+}
+
+.cv-why-choose .wh-row .column-b {
+    padding: 40px 0px 80px 80px;
+}
+
+.cv-why-choose .wh-row .column-b h2 {
+    font-family: "montserrat";
+    line-height: 1.2em;
+    color: #1f1616;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.cv-why-choose .wh-row .column-b h2 span {
+    color: #5a4abd;
+}
+
+.cv-why-choose .wh-row .column-b li {
+    font-family: "Inter";
+    display: flex;
+    font-size: 17px;
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: 500;
+    column-gap: 10px;
+}
+
+.cv-why-choose .wh-row .column-b button {
+    border: none;
+    padding: 12px 60px;
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+    color: #fff;
+    font-family: "Mulish";
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+
+
+@media screen and (max-width:1366px) {
+    .cv-why-choose .wh-row {
+        width: 90%;
+    }
+}
+@media screen and (max-width:1024px) {
+    .cv-why-choose {
+        display: flex;
+         padding: 80px 0px;
+    }
+    
+    .cv-why-choose .wh-row {
+        width: 90%;
+        gap: 40px;
+    }
+    
+    .cv-why-choose .wh-row .wh-column {
+        width: 47%;
+    }
+    
+    .cv-why-choose #wcu-img {
+        width: 500px;
+    }
+    .cv-why-choose .wh-row .column-b {
+        padding: 40px 0px 60px 60px;
+    }
+    .cv-why-choose .wh-row .column-b h2 {
+       
+        font-size: 35px;
+        
+    }
+    .cv-why-choose .wh-row .column-b li {
+
+        font-size: 16px;
+     
+      
+    }
+
+}
+@media screen and (max-width: 768px){
+    .cv-why-choose {
+     
+        padding: 60px 0px;
+    }
+    .cv-why-choose .wh-row .wh-column {
+        width: 100%;
+    }
+    .cv-why-choose .wh-row .column-a {
+       
+        text-align: center;
+    }
+    .cv-why-choose #wcu-img {
+        width: 400px;
+    }
+    .cv-why-choose .wh-row {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .cv-why-choose .wh-row .column-b h2 {
+        font-size: 26px;
+    }
+    .cv-why-choose .wh-row .column-b {
+        padding: 0px;
+    }
+    .cv-why-choose .wh-row .column-b li {
+        font-size: 16px;
+    }
+    .cv-why-choose .wh-row .column-b button {
+        padding: 12px 60px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+@media screen and (max-width: 450px) {
+    .cv-about-us-sec .cva-row h2 {
+        font-size: 26px;
+        text-align: start;
+    }
+
+    .cv-about-us-sec .cva-row h2 span {
+        color: #5a4abd !important;
+    }
+
+    .cv-about-us-sec .cva-row .cva-column li {
+        font-size: 12px;
+        margin-bottom: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .cv-about-us-sec .column-a {
+        padding: 0;
+        padding:60px 0px;
+     
+        z-index: 5;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cv-about-us-sec .cva-row .cva-column button {
+        font-size: 15px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    .cv-why-choose .wh-row {
+        width: 90%;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .cv-why-choose {
+        padding: 60px 0;
+    }
+
+    .cv-why-choose .wh-row .column-b {
+        padding: 0;
+        width: 90%;
+    }
+
+    .cv-why-choose .wh-row .column-b h2 {
+        font-size: 26px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .cv-why-choose #wcu-img {
+        width: 100%;
+        zoom: 0.45;
+    }
+
+    .cv-why-choose .wh-row .column-b li {
+        font-size: 12px;
+        margin-bottom: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .cv-why-choose .wh-row .column-b button {
+
+        font-size: 15px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    .cv-why-choose .wh-row .wh-column {
+        width: 100%;
+        text-align: start;
+    }
+}

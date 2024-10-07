@@ -1,0 +1,121 @@
+.resume-process-navbar {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    color: #000;
+    position: sticky;
+    top: 75px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccd2f9;
+    z-index: 50;
+    column-gap: 50px;
+}
+
+.resume-process-navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    font-size: clamp(12px, 1vw, 15px);
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.resume-process-navbar a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.resume-process-navbar .active-page {
+    color: #5A4ABD;
+    position: relative;
+}
+
+.resume-process-navbar .active-page svg {
+    color: #5A4ABD;
+}
+
+.resume-process-navbar .active-page::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    height: 2px;
+    background-color: #5A4ABD;
+    animation: ScaleEffect 0.2s linear;
+}
+
+.leftbar-resumedashboard-flex {
+    display: flex;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1440px){
+    .resume-process-navbar {
+        column-gap: 45px;
+    }
+}
+@media screen and (max-width: 1366px){
+    .resume-process-navbar {
+        column-gap: 38px;
+    }
+}
+@media screen and (max-width: 1280px){
+    .resume-process-navbar {
+        column-gap: 30px;
+    }
+}
+@media screen and (max-width: 1024px){
+
+ 
+    .resume-process-navbar {
+        column-gap: 18px;
+    }
+    .resume-process-navbar a svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .resume-process-navbar {
+        width: auto;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 0;
+        top: 0;
+        justify-content: flex-start;
+        border: none;
+    }
+
+    .resume-process-navbar a{
+        padding: 20px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .resume-process-navbar a span {
+        display: none;
+    }
+
+    .resume-process-navbar .active-page{
+        background-color: #5a4abd;
+    }
+
+    .resume-process-navbar .active-page svg{
+        color: #fff;
+    }
+
+    .resume-process-navbar .active-page::before {
+        display: none;
+    }
+}

@@ -1,0 +1,183 @@
+.Yellow-Theme-Template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    background-size: cover;
+    background-color: #fff;
+    padding-bottom: 40px;
+}
+
+.Yellow-Theme-Template .resume-qr-code {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+}
+
+/* header Css */
+
+.Yellow-Theme-Template .Header {
+    display: flex;
+}
+
+
+.Yellow-Theme-Template .Header .Personal-Details {
+    width: 55%;
+    font-size: 2.6rem;
+    padding: 40px 40px;
+    line-height: 80px;
+}
+
+/* All hedings global Css */
+
+
+.Yellow-Theme-Template h4 {
+    font-size: 1.9rem;
+    padding: 80px 50px 0px 50px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.Yellow-Theme-Template h2 {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin: 20px 0px 15px 0px;
+    column-gap: 10px;
+}
+
+.Yellow-Theme-Template h2 .designing-line {
+    height: 5px;
+    width: 100px;
+}
+
+.Yellow-Theme-Template p {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.Yellow-Theme-Template ul li {
+    list-style: none;
+    font-size: 14px;
+    margin: 0px 15px 15px 0px;
+    font-family: "Inter", sans-serif;
+}
+
+.Yellow-Theme-Template b {
+    text-transform: uppercase;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.Yellow-Theme-Template .Main {
+    width: 100%;
+    display: flex;
+    gap: 5%;
+}
+
+.Yellow-Theme-Template .Left-Column {
+    width: 38%;
+    padding-left: 40px;
+}
+
+/* Skills-Information Css */
+
+
+.Yellow-Theme-Template .Left-Column .Skills-Information ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Yellow-Theme-Template .Left-Column .Skills-Information li {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Project-Information Css */
+
+.Yellow-Theme-Template .Left-Column .Project-Information .Project-Details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Yellow-Theme-Template .Left-Column .Project-Information .Project-Details div {
+    width: 100%;
+}
+
+.Yellow-Theme-Template .Left-Column .Project-Information p {
+    text-align: left;
+}
+
+/* Right-column Css  */
+
+.Yellow-Theme-Template .Right-Column {
+    width: 57%;
+    padding-right: 40px;
+}
+
+/* Contact-Information Css */
+
+.Yellow-Theme-Template .Right-Column .Contact-Information {
+    border: 2px solid #000;
+}
+
+.Yellow-Theme-Template .Right-Column .Contact-Information ul li {
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+}
+
+.Yellow-Theme-Template .Right-Column .Contact-Information ul li:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.Yellow-Theme-Template .Right-Column .Contact-Information {
+    padding: 60px 20px 20px 20px;
+    margin: -40px 0px 15px 0px;
+    width: 98%;
+}
+
+.Yellow-Theme-Template .Right-Column .Contact-Information i {
+    margin-right: 20px;
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Education Information Css */
+
+.Yellow-Theme-Template .Right-Column .Education-Information .Education-Details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Yellow-Theme-Template .Right-Column .Education-Information .Education-Details div {
+    width: 90%;
+}
+
+.Yellow-Theme-Template .Right-Column .Education-Information p {
+    text-align: left;
+}
+
+/* Experience Information css */
+
+.Yellow-Theme-Template .Right-Column .Experience-Information .Experience-Details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Yellow-Theme-Template .Right-Column .Experience-Information .Experience-Details div {
+    width: 90%;
+}
+
+.Yellow-Theme-Template .Right-Column .Experience-Information p {
+    text-align: left;
+}

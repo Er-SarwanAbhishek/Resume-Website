@@ -1,0 +1,308 @@
+.qrcode-content-column {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    width: 100vw;
+}
+
+.qrcode-content-column .gradient-3{
+    position: absolute;
+    top: 450%;
+    right: -100px;
+    opacity: 0.6;
+}
+
+.qrcode-content-column h2 {
+    color: #ffff;
+    font-size: 40px;
+    color: black;
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.qrcode-content-column .step {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.qrcode-content-column .step1,
+.qrcode-content-column .step2,
+.qrcode-content-column .step3 {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.qrcode-content-column .step li {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 500;
+    font-family: "Inter";
+}
+
+.qrcode-content-column .step i {
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5a4abd;
+    border-radius: 50%;
+
+}
+
+.qrcode-content-column .qrcode-row {
+    display: flex;
+    max-width: 1400px;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.qrcode-content-column .image-content {
+    width: 100%;
+    display: flex;
+    gap: 4%;
+}
+
+.qrcode-content-column .video-section {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qrcode-content-column .video-qrcode {
+    position: relative;
+    width: 82%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 85%;
+}
+
+.qrcode-content-column .video-qrcode img {
+    position: relative;
+    z-index: 2;
+}
+
+.qrcode-content-column .video-qrcode .background-gradient {
+    position: absolute;
+    right: -0%;
+    top: -40%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.qrcode-content-column .content {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.qrcode-content-column .content button {
+    padding: 12px 60px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.qrcode-content-column .qrcode-row2 {
+    display: flex;
+    max-width: 1400px;
+    width: 80%;
+    gap: 10%;
+    margin-top: 50px;
+}
+
+.qrcode-content-column .qrcode-row2 i {
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: #5a4abd;
+}
+
+.qrcode-content-column .qrcode-row2 span {
+    color: #000;
+    font-family: "Mulish";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+
+.qrcode-content-column .qrcode-feature1,
+.qrcode-content-column .qrcode-feature2,
+.qrcode-content-column .qrcode-feature3 {
+    width: 33%;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1024px) {
+    .qrcode-content-column .qrcode-row{
+        width: 90%;
+    }
+
+    .qrcode-content-column .qrcode-row2 {
+        width: 90%;
+    }
+    .qrcode-content-column h2{
+        font-size: 35px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .qrcode-content-column {
+
+        padding-top: 60px;
+   
+    }
+    .qrcode-content-column .video-qrcode {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .qrcode-content-column h2 {
+        font-size: 26px;
+        margin-bottom: 20px
+    }
+    .qrcode-content-column .video-section {
+        width: 100%;
+        text-align: center;
+    }
+    .qrcode-content-column .image-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+    .qrcode-content-column .content {
+        width: 100%;
+        align-items: center;
+    }
+    .qrcode-content-column .step li {
+        font-size: 14px;
+    }
+    .qrcode-content-column .step i {
+        
+        min-width: 16px;
+        min-height: 16px;
+        font-size: 12px;
+        
+    }
+    .qrcode-content-column .qrcode-row {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+  
+    .qrcode-content-column .qrcode-row2 {
+        width: 90%;
+        gap: 3%;
+    }
+
+    .qrcode-content-column .qrcode-row2 i {
+        font-size: 30px;
+    }
+
+    .qrcode-content-column .qrcode-row2 span {
+        font-size: 14px;
+    }
+
+    .qrcc-h2 h2 {
+        font-family: "montserrat";
+        font-weight: 400;
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+
+    .qrcode-content-column .content button {
+
+        font-size: 16px;
+    }
+
+    .qrcc-h2 {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:769px) {
+    .qrc-h2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .qrcode-content-column .image-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .qrcode-content-column .video-section {
+        width: 80%;
+    }
+
+    .qrcode-content-column .video-qrcode {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .qrcode-content-column .content {
+        width: 90%;
+    }
+
+    .qrcode-content-column .step li {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .qrcode-content-column .qrcode-row2 i {
+        font-size: 35px;
+        margin-bottom: 5px;
+    }
+
+    .qrcode-content-column .qrcode-row2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .qrcode-content-column .qrcode-row2 span {
+        font-size: 14px;
+    }
+
+    .qrcode-content-column .qrcode-feature1,
+    .qrcode-content-column .qrcode-feature2,
+    .qrcode-content-column .qrcode-feature3 {
+        width: 90%;
+        margin-bottom: 25px;
+    }
+
+    .qrcode-content-column .content a {
+        padding: 6px 30px;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+}

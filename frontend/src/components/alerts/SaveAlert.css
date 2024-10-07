@@ -1,0 +1,55 @@
+.save-alert {
+    background-color: #242046;
+    padding: 15px 50px;
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 200px);
+    border-radius: 5px;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    column-gap: 10px;
+    color: #fff;
+}
+
+.show {
+    display: flex;
+    animation: showAlertAnim 0.25s ease-in;
+}
+
+.hide {
+    animation: hideAlertAnim 0.25s ease-in;
+}
+
+.save-alert p {
+    font-family: "mulish";
+    font-weight: 600;
+}
+
+@keyframes showAlertAnim {
+    from {
+        opacity: 0;
+        top: 20px;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hideAlertAnim {
+    0% {
+        display: flex;
+        opacity: 1;
+    }
+
+    99% {
+        display: flex;
+        opacity: 0;
+        top: 20px;
+    }
+
+    100% {
+        display: none;
+    }
+}

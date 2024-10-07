@@ -1,0 +1,179 @@
+.header-section {
+    width: 100vw;
+    padding: 20px 0px;
+    background: rgb(112, 92, 236);
+    background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(31, 104, 232, 1) 100%);
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-section .header-row {
+    max-width: 1400px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-section .header-row .logo {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: normal;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header-section .header-row .menu {
+    display: flex;
+}
+
+.header-section .header-row .menu li {
+    padding: 1px 15px;
+    border-right: 2px solid #fff;
+}
+
+.header-section .header-row .menu li a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Montserrat';
+}
+
+.header-section .header-row .menu li:nth-last-child(1) {
+    border-right: none;
+}
+
+.header-section .header-row .header-btn {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.header-section .header-row .resp-btns{
+    display: none;
+}
+
+.header-section .header-row .header-btn button {
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter';
+    transition: 0.3s;
+    padding: 8px 20px;
+}
+
+.header-section .header-row .header-btn button a {
+    text-decoration: none;
+}
+
+.header-section .header-row .header-btn .login-btn {
+    background-color: transparent;
+    color: #fff;
+    outline: 1px solid #fff;
+}
+
+.header-section .header-row .header-btn .login-btn a {
+    color: #fff;
+}
+
+.header-section .header-row .header-btn .signup-btn a {
+    color: #3051BB;
+}
+
+.header-section .header-row .header-btn .login-btn:hover {
+    background-color: #fff;
+    outline: none;
+}
+
+.header-section .header-row .header-btn .login-btn:hover a {
+    color: #3051BB;
+}
+
+.header-section .header-row .header-btn .signup-btn:hover {
+    background-color: transparent;
+    outline: 1px solid #fff;
+}
+
+.header-section .header-row .header-btn .signup-btn:hover a {
+    color: #fff;
+}
+
+.main-header .header-row .header-btn .contact-us {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Montserrat";
+    margin-right: 60px;
+}
+
+/* AFTER LOGIN */
+
+.header-section .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+
+}
+
+/* Hamburger Menu hidden on larger screens */
+
+.navbarPop-main-container {
+    color: white;
+    cursor: pointer;
+    margin-left: 18px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.header-section .cv-menu-icon {
+    font-size: 20px;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1024px){
+    .header-section .header-row {
+        width: 90%; 
+    }
+    .header-section .header-row .menu li a {
+        font-size: 16px;
+    }
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .header-section .header-row .menu {
+        display: none;
+    }
+
+    .header-section .header-row .header-btn .login-btn{
+        padding: 0px;
+        padding-right: 2px;
+        outline: none;
+    }
+
+    .header-section .header-row .header-btn .login-btn:hover{
+        background: none;
+    }
+
+    .header-section .profile{
+        display: none;
+    }
+
+    .header-section .header-row .resp-btns{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header-section .header-row .header-btn button{
+        display: none;
+    }
+}

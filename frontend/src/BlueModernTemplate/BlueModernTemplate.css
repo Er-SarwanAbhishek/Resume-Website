@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(../assets/fonts/HelveticaNeueBold.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    src: url(../assets/fonts/HelveticaNeueLight.otf);
+}
+
+.MRT-Template {
+    width: 793px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.MRT-Upper-section-content {
+    padding: 2rem 3rem;
+    display: flex;
+    position: relative;
+}
+
+.MRT-Sec-img {
+    width: 220px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    border: 2px solid rgb(75, 32, 3);
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    left: 1%;
+}
+
+.MRT-sec-upper {
+    background-color: #fff;
+    border: 5px solid #fff;
+    width: 80%;
+    display: flex;
+    z-index: 10;
+    justify-content: start;
+    height: 6rem;
+    margin-top: 15px;
+    margin-left: .65%;
+}
+
+
+.MRT-Heading-Style .hhh {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: 'Helvetica Neue';
+    margin: 10px 0;
+}
+
+.MRT-Heading-Style .ppp {
+    border-left: 3px solid rgb(75, 32, 3);
+    padding: 0 2rem 0.2rem 0.8rem;
+}
+
+.MRT-sec-details i,
+.MRT-sec-details p {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.MRT-ul-details-sec{
+    display: flex;
+    width: 64%;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    padding-right: 2rem;
+    bottom: 5%;
+}
+.MRT-contact-details {
+    width: 100%;
+    border-left: 3px solid rgb(75, 32, 3);
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    margin-bottom: 1rem;
+}
+
+.MRT-Para-Size-Option .para-font-size {
+    margin: 0;
+    line-height: 1.2em;
+    font-size: 15px;
+    font-family: 'Helvetica Neue Light';
+}
+
+.MRT-contact-details i {
+    padding: 0 10px;
+    color: rgb(75, 32, 3);
+}
+
+.MRT-contact-details p {
+    font-size: 1rem;
+    padding: 0;
+}
+
+.MRT-sec-details {
+    display: flex;
+    padding: 0.2rem 0 0.2rem 0;
+}
+
+.MRT-sec-heading h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.MRT-Lower-section {
+    background-color: #fff;
+    padding: 0 3rem 3rem 3rem;
+    display: flex;
+    column-gap: 4%;
+}
+
+.MRT-Left {
+    width: 30%;
+}
+
+.MRT-Right {
+    width: 66%;
+}
+
+.MRT-skills-list li {
+    /* list-style-type: disc; */
+    font-weight: 600;
+    font-family: 'Helvetica Neue Light';
+    padding-top: 0.5rem;
+    font-size:1rem;
+    display: flex;
+    align-items: start;
+    line-height: 1.2rem;
+}
+.MRT-skills-list li::before{
+    content: '•';
+    padding-right: 0.5rem;
+}
+.MRT-Heading-Style h4 {
+    line-height: 1.2em;
+    margin: 0.5rem 0;
+}
+
+.MRT-mydiv{
+    padding-left: 1rem;
+    border-left: 3px solid rgb(75, 32, 3);
+    padding-bottom: 0.2rem;
+}

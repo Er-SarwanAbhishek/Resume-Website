@@ -1,0 +1,395 @@
+.cvnest-social-media-icon {
+    padding: 50px 0px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cvnest-footer-section {
+    width: 80%;
+    max-width: 1400px;
+    display: flex;
+    gap: 5%;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 40px;
+    margin-bottom: 15px;
+}
+
+.cvnest-footer-section h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.cvnest-footer-section h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+
+.cvnest-footer-section .logo-cvnest{
+    width: 40%;
+}
+    
+
+.cvnest-footer-section .contact-section {
+    width: 30%;
+}
+.cvnest-footer-section .quick-links{
+    width: 20%;
+}
+
+.cvnest-footer-section .quick-links li {
+    list-style-type: none;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cvnest-footer-section .quick-links li a{
+    color: #000;
+}
+
+.cvnest-footer-section .quick-links li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.cvnest-footer-section .logo-cvnest p {
+    line-height: 1.4rem;
+    font-size: 14px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+}
+
+.contact-icon-text-section {
+    display: flex;
+}
+
+.cvnest-social-media-icon .email-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-text-email-section .email-text p {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Mulish", sans-serif;
+}
+
+.contact-text-email-section {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.contact-text-email-section svg {
+    color: #5A4ABD;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+.contact-text-email-section span {
+    font-size: 15px;
+}
+
+.cvnest-social-media-icon .fb-insta-tele-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cvnest-social-media-icon .bottom-row {
+    width: 80%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Mulish";
+    font-weight: 600;
+}
+
+.cvnest-social-media-icon .bottom-row p {
+    font-size: 16px;
+}
+
+.cvnest-social-media-icon .bottom-row .copyright-section {
+    display: flex;
+    column-gap: 25px;
+}
+
+.cvnest-social-media-icon .bottom-row .copyright-section .policy {
+    display: flex;
+    column-gap: 20px;
+}
+
+/* Search bar Css */
+
+.cvnest-social-media-icon .Subscribe_Bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cvnest-social-media-icon input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.cvnest-social-media-icon input[type="text"]:focus {
+    outline: 3px solid rgba(112, 92, 236, 0.1);
+}
+
+.cvnest-social-media-icon button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #5a4abd;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Social media icon Css */
+
+.fb-insta-tele-section i {
+    font-size: 15px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+    color: #5A4ABD;
+}
+.cvnest-social-media-icon .fb-insta-tele-section .social-media-connection{
+    display: flex;
+    gap: 10px;
+}
+@media screen and (max-width: 1440px) {
+    .cvnest-social-media-icon .Subscribe_Bar {
+
+        gap: 8px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .cvnest-footer-section {
+        width: 90%;
+    }
+    .cvnest-footer-section h3 {
+        font-size: 20px;
+    }
+    .cvnest-social-media-icon .bottom-row {
+        width: 90%;
+        align-items: center;
+    }
+    .cvnest-social-media-icon .bottom-row p {
+        font-size: 14px;
+    }
+    .cvnest-social-media-icon input[type="text"] {
+        padding: 10px 10px;
+        width: 180px;
+    }
+
+}
+
+@media screen and (max-width: 1023px) {
+    .cvnest-footer-section {
+        width: 90%;
+        max-width: 1400px;
+        padding-bottom: 30px;
+    }
+
+    .cvnest-footer-section h2 {
+        margin-bottom: 15px;
+        font-size: 25px;
+    }
+
+    .cvnest-footer-section .logo-cvnest p {
+        line-height: 1.3em;
+        font-size: 14px;
+    }
+
+    .cvnest-footer-section h3 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .cvnest-footer-section .quick-links li {
+        font-size: 14px;
+        margin-bottom: 8px;
+
+    }
+
+    .contact-text-email-section .email-text p {
+        font-size: 14px;
+    }
+
+    .contact-text-email-section span {
+        font-size: 14px;
+    }
+    .cvnest-social-media-icon .Subscribe_Bar {
+        column-gap: 10px; 
+        display: flex;
+        flex-direction: column;
+    }
+    .cvnest-social-media-icon input[type="text"] {
+        padding: 8px 12px;
+        width: 100%;
+    }
+
+    .cvnest-social-media-icon button {
+        padding: 8px 12px;
+        font-size: 12px;
+
+    }
+
+    .cvnest-social-media-icon .bottom-row .copyright-section {
+        column-gap: 12px;
+    }
+
+    .cvnest-social-media-icon .bottom-row .copyright-section .policy {
+        width: 70%;
+        display: flex;
+       
+        justify-content: space-between;
+    }
+
+    .cvnest-social-media-icon .bottom-row p {
+        font-size: 14px;
+    }
+
+
+    .cvnest-social-media-icon .bottom-row {
+        width: 90%;
+        flex-direction: column;
+ 
+    }
+    .cvnest-social-media-icon .bottom-row .copyright-section p{
+        width: 54%;
+    }
+    .cvnest-social-media-icon .bottom-row .copyright-section {
+        column-gap: 8px;
+        width: 100%;
+    }
+    .cvnest-social-media-icon .fb-insta-tele-section {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .cvnest-social-media-icon .fb-insta-tele-section .developed-by{
+        width: 100%;
+        text-align: center;
+    }
+    .cvnest-social-media-icon .fb-insta-tele-section .social-media-connection{
+        display: flex;
+        gap: 20px;
+    }
+    .cvnest-social-media-icon .fb-insta-tele-section p:nth-child(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cvnest-social-media-icon {
+        padding: 60px 0;
+    }
+
+    .cvnest-footer-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        row-gap: 20px;
+    }
+
+    .cvnest-social-media-icon .cvnest-footer-section {
+        width: 90%;
+    }
+
+    /* .cvnest-social-media-icon .cvnest-footer-section .Subscribe_Bar {
+        display: none;
+    } */
+
+    .cvnest-footer-section .quick-links,
+    .cvnest-footer-section .contact-section {
+        width: 45%;
+       
+    }
+    .cvnest-social-media-icon .bottom-row .copyright-section .policy {
+        display: flex;
+        column-gap: 10px;
+    }
+    .cvnest-social-media-icon .bottom-row .copyright-section p {
+        width: 100%;
+        text-align: center;
+    } 
+    .cvnest-footer-section .logo-cvnest {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .cvnest-footer-section h3 {
+        text-align: left;
+        margin-bottom: 12px;
+    }
+    .contact-text-email-section {
+        margin-bottom: 12px;
+    }
+
+    .contact-text-email-section svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .cvnest-social-media-icon .Subscribe_Bar {
+        gap: 8px;
+    }
+ 
+    .cvnest-social-media-icon .bottom-row {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        row-gap: 8px;
+    }
+
+
+    .cvnest-social-media-icon .bottom-row .copyright-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 8px;
+        width: 100%;
+    }
+    .cvnest-social-media-icon .fb-insta-tele-section {
+     
+        margin-top: 0px;
+        
+    }
+
+
+    .cvnest-social-media-icon .fb-insta-tele-section {
+        display: flex;
+    }
+
+    .cvnest-social-media-icon .fb-insta-tele-section i{
+        display: none;
+    }
+
+    .cvnest-social-media-icon .fb-insta-tele-section p:nth-child(1) {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cvnest-social-media-icon .fb-insta-tele-section p:nth-child(2){
+        display: none;
+    }
+
+}

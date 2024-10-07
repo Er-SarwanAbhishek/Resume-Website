@@ -1,0 +1,11 @@
+.resume-wrapper{
+    width: 793.001px;
+    border: 1px solid #e5e5e5;
+    margin: 50px;
+}
+
+@media screen and (max-width: 450px) {
+    .resume-wrapper{
+        zoom: 0.48;
+    }
+}

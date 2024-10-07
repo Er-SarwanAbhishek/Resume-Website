@@ -1,0 +1,211 @@
+
+.creative-image-template {
+    /* border: 2px solid #000000; */
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    /* margin: 20px; */
+    display: flex;
+    background-color: white;
+    background-size: cover;
+}
+
+.creative-image-template .left-column{
+    width: 45%;
+}
+
+.creative-image-template .resume-qr-code {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* image css  */
+
+.creative-image-template .left-column .profile-img{
+    width: 100%;
+    height: 30%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* right column global Css */
+
+.creative-image-template .left-column .sub-left{
+    width: 100%;
+    height: calc(70% + 70px);
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+    background-color: #28555E;
+    margin-top: -70px;
+    /* padding-right: 20px;
+    padding-top: 50px; */
+    padding: 30px;
+}
+
+.creative-image-template .left-column h2{
+    font-size: 22px;
+    color: white;
+    margin: 30px 30px 15px 0px;
+    text-align: left;
+}
+
+.creative-image-template h2 i{
+    margin-right: 10px;
+    color: #d18c5c;
+}
+
+.creative-image-template ul li{
+    font-size: 12px;
+    list-style: none;
+    margin-bottom: 20px;
+    color: white;
+    text-align: left;
+    /* margin-left: 30px; */
+    font-family: "Playpen Sans", cursive;
+}
+
+.creative-image-template ul li:nth-last-child(1){
+    margin-bottom: 0px;
+}
+
+.creative-image-template .left-column p{
+    font-size: 12px;
+    color: white;
+    line-height: 22px;
+    text-align: left;
+    /* margin-left: 30px; */
+    font-family: "Playpen Sans", cursive;
+}
+
+/* contact details Css */
+.creative-image-template .left-column .sub-left .contact-details li{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.creative-image-template .left-column .sub-left .contact-details ul i{
+    /* margin-right: 15px; */
+    font-size: 10px;
+    background-color: white;
+    border-radius: 50%;
+    color: #000000;
+    /* padding: 13px; */
+    min-width: 16px;
+    min-height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* education information CSS */
+
+.creative-image-template .left-column .sub-left .education-information .education-details b{
+    font-size: 13px;
+}
+
+.creative-image-template .left-column .sub-left .education-information .education-details i{
+    color: #d18c5c;
+}
+
+.creative-image-template .left-column .sub-left .education-information .education-details{
+    padding-bottom: 15px;
+}
+
+.creative-image-template .left-column .sub-left .education-information .education-details:nth-last-child(1){
+    padding-bottom: 0px;
+}
+
+/* Skills Information CSS */
+
+
+.creative-image-template .left-column .sub-left .skills-information ul li{
+    position: relative;
+}
+
+.creative-image-template .left-column .sub-left .skills-information .list-dots{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    /* background-color: #d18c5c; */
+    bottom: 10px;
+    top: 5px; 
+    left: 0px;
+}
+
+.creative-image-template .left-column .sub-left .skills-information li{
+    padding-left: 25px;
+}
+
+/* Right column global css */
+
+.creative-image-template h1{
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.creative-image-template h4{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.creative-image-template .right-column{
+    width: 55%;
+    margin: 30px;
+    text-align: left;
+}
+
+.creative-image-template .right-column h2{
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    margin: 30px 0px 15px 0px;
+    text-align: left;
+}
+
+.creative-image-template .right-column p{
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    line-height: 27px;
+    text-align: left;
+    font-family: "Playpen Sans", cursive;
+}
+
+/* Experience information css */
+
+.creative-image-template .right-column .experience-information .experience-details b{
+    font-size: 13px;
+}
+
+.creative-image-template .right-column .experience-information .experience-details i{
+    color: #d18c5c;
+}
+
+.creative-image-template .right-column .experience-information .experience-details{
+    padding-bottom: 15px;
+}
+
+.creative-image-template .right-column .experience-information .experience-details:nth-last-child(1){
+    padding-bottom: 0px;
+}
+
+/* project information css */
+
+.creative-image-template .right-column .project-information .project-details b{
+    font-size: 13px;
+}
+
+.creative-image-template .right-column .project-information .project-details i{
+    color: #d18c5c;
+}
+
+.creative-image-template .right-column .project-information .project-details{
+    padding-bottom: 15px;
+}
+
+.creative-image-template .right-column .project-information .project-details:nth-last-child(1){
+    padding-bottom: 0px;
+}

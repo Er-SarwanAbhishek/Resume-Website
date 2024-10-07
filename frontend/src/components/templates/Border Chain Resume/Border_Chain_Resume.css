@@ -1,0 +1,181 @@
+.Border-Style-Resume-Template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    padding: 30px;
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+    border: 8px solid;
+    background-size: cover;
+}
+.Border-Style-Resume-Template .resume-qr-code{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.Border-Style-Resume-Template p {
+    line-height: 1.4em;
+}
+.Border-Style-Resume-Template h4{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* HEADER CSS */
+
+.Border-Style-Resume-Template .Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.Border-Style-Resume-Template .Header .P-details {
+    width: 70%;
+    padding-bottom: 20px;
+    border-bottom: 3px solid;
+}
+
+.Border-Style-Resume-Template .Header h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 1.1em;
+}
+
+/* IMAGE CSS */
+
+.Border-Style-Resume-Template .Header .Profile_Image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid;
+    background-size: cover;
+    background-position: center;
+}
+
+.Border-Style-Resume-Template .Container {
+    width: 100%;
+    display: flex;
+}
+
+/* .Left-Column */
+
+.Border-Style-Resume-Template .Container .Left-Column {
+    width: 40%;
+    padding-right: 30px;
+}
+
+.Border-Style-Resume-Template h2 {
+    margin-bottom: 10px;
+    font-family: "poppins";
+    font-weight: 600;
+}
+
+/* .Left-Column .Contact-info */
+
+.Border-Style-Resume-Template .Container .Left-Column .Contact-info ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.Border-Style-Resume-Template .Container .Left-Column .Contact-info ul li:nth-last-child(1){
+    margin-bottom: 0px;
+}
+
+.Border-Style-Resume-Template .Contact-info {
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+}
+
+.Border-Style-Resume-Template .Container .Left-Column .Contact-info ul li i {
+    width: 8px;
+    height: 8px;
+}
+
+/* .Left-Column .Skills-info */
+
+.Border-Style-Resume-Template .Container .Left-Column .Skills-info ul {
+    border-left: 3px solid;
+    padding: 10px 0 10px 20px;
+    position: relative;
+}
+
+.Border-Style-Resume-Template .Container .Left-Column .Skills-info ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.Border-Style-Resume-Template .Container .Left-Column .Skills-info ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.Border-Style-Resume-Template .Container .Left-Column .Skills-info ul li span {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    margin-top: 5px;
+    left: -2.62%;
+    border-radius: 10px;
+}
+
+.Border-Style-Resume-Template .Container .Left-Column .Skills-info {
+    margin-top: 20px;
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* .Left-Column .Project-info */
+
+.Border-Style-Resume-Template .Container .Left-Column .Project-info .Project-details p {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+
+/* .Right-Column */
+
+.Border-Style-Resume-Template .Container .Right-Column {
+    width: 60%;
+    border-left: 3px solid;
+    padding-left: 30px;
+    padding-bottom: 30px; 
+}
+
+/* .Right-Column .Summary-info */
+
+.Border-Style-Resume-Template .Container .Right-Column .Summary-info p {
+    font-size: 18px;
+}
+
+.Border-Style-Resume-Template .Container .Right-Column .Summary-info {
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* .Right-Column .Education-Field info */
+
+.Border-Style-Resume-Template .Container .Right-Column .Education-Field .Each-Edu p {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.Border-Style-Resume-Template .Container .Right-Column .Education-Field {
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* Right-Column Experience-info */
+
+.Border-Style-Resume-Template .Container .Right-Column .Experience-info .Exp-details p {
+    font-size: 12px;
+    margin-bottom: 3px;
+}

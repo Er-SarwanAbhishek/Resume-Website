@@ -1,0 +1,62 @@
+.prev-wrapper {
+    width: 40%;
+    padding: 50px 0;
+}
+
+.prev-wrapper h4 {
+    font-family: "montserrat";
+    line-height: 1.3em;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.resume-prev-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.prev-wrapper .resumeCV {
+    display: inline-block;
+    width: 793.7008px;
+    border: 1px solid #e5e5e5;
+    zoom: 0.55;
+}
+
+.resumecv-eye {
+    margin-left: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #635AE2;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.resumecv-eye:hover {
+    background-color: #4956D0;
+}
+
+
+
+@media screen and (max-width: 1366px) {
+    .prev-wrapper .resumeCV {
+        width: auto;
+        zoom: 0.45;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .prev-wrapper .resumeCV {
+        width: auto;
+        zoom: 0.45;
+    }
+}
+

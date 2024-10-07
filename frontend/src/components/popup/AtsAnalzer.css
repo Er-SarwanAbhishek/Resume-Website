@@ -1,0 +1,70 @@
+.ats-analyzer-parent .circular-slider {
+    width: 120px;
+    height: 120px;
+    margin-right: 35px;
+}
+
+.ats-analyzer-parent .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#5a4abd 0%, #5a4abd var(--percentage), #beb7ec var(--percentage));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ats-analyzer-parent .output {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.ats-analyzer-parent .range {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.ats-analyzer-parent input[type="range"] {
+    display: none;
+    position: relative;
+    outline: none;
+    appearance: none;
+}
+
+.ats-analyzer-parent .circular-slider h3 {
+    font-size: 22px; 
+    font-family: "montserrat";
+    color: #333; 
+}
+ .ats-analyzer-parent{
+    display: flex;
+    margin-bottom: 20px;
+}
+.ats-analyzer-parent .data-about-ats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ats-analyzer-parent .data-about-ats h4{
+    font-weight: 500;
+}
+.ats-analyzer-parent .data-about-ats h4:first-child{
+    color: #2dc08d;
+}
+.ats-analyzer-parent .data-about-ats h4:nth-child(2) {
+    color: #ff9c07;
+}
+.ats-analyzer-parent .data-about-ats h4:last-child{
+    color: #E33B43;
+}

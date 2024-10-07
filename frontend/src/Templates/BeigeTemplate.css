@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'poppins';
+}
+ .Beige-resume-template{
+width: 50vw;
+    background-color: #434343;
+    border: 1px solid #e9e6e6;
+ }
+/* Section 1st */
+.Beige-a-Template,.Beige-b-Template{
+    display: flex;
+    justify-content: space-around;
+}
+.Beige-name{
+background-color: #fff;
+border-top-right-radius: 60px;
+    width: 50%;
+}
+.Beige-name-data{
+    padding-top: 2.5rem;
+   text-align: center;
+}
+.Beige-name-data h1{
+font-weight: 700;
+font-size: 3.5em;
+color: #f36e45;
+line-height: 1.2em;
+}
+.Beige-name-data p{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 1.2em
+}
+.Beige-contact-me{
+    width: 50%;
+    background-color: #434343;
+}
+.Beige-contact-sec{
+    padding: 3.5rem 0 2rem 2rem;
+}
+.Beige-contact-sec h2{
+    margin-bottom: 10px;
+}
+.Beige-contact {
+    display: flex;
+    align-items: center; 
+    padding: 0.3rem 0;
+}
+
+.Beige-contact i {
+    color: #f36e45;
+    padding-right: 2%;
+}
+
+.Beige-contact p {
+    color: #fff;
+    margin: 0 0 0 5px;
+}
+
+/* Section  2nd */
+.Beige-about-me{
+    border-top-right-radius: 160px;
+    border-bottom-right-radius: 160px;
+    background-color: #f36e45;
+    display: flex;
+    padding: 1rem;
+    height: 100%;
+}
+.Beige-about-me h2{
+    color:#fff;
+    margin-bottom: 0px;
+}
+.Beige-about-me p{
+    color:#fff;
+    padding-right: 0.6rem;
+    
+    line-height: 1.3em;
+    width: 85%;
+}
+.Beige-about-blank-div{
+    width: 80%;
+    height: auto;
+    border-top: 30px solid #fff;
+    border-bottom: 30px solid #fff;
+    border-right: 30px solid #fff;
+    border-top-right-radius: 160px;
+    border-bottom-right-radius: 160px;
+    background-color: #fff;
+}.new-image{
+    position: absolute;
+}
+.Beige-profile-image{
+    padding: 1rem;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    border-radius: 50%;
+    width: 55%; 
+    max-width: 250px;
+     margin-right: 0.5rem;
+}
+
+.Beige-profile-image img{
+    width: 120px;
+    height: auto; 
+    border-radius: 50%;
+}
+
+.Beige-section-education{
+ padding: 2rem;
+    margin-bottom: 0px;
+}
+.Beige-section-edu-heading h2{
+    color: #f36e45;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.Beige-edu-grp{
+    display: flex;
+    color: #f36e45;
+    align-items: center;
+   gap: 2rem;
+    font-weight: 600;
+}
+.Beige-edu-grp h3,.Beige-edu-grp p{
+    margin:  5px 0 0 0;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+.beige-course-name,.beige-role-name{
+    margin: 5px 0 0 0;
+    font-weight: 600;
+}
+.beige-course-name{
+    color: #fff;
+}
+.beige-about-job{
+    line-height: 1.3em;
+    margin: 10px 0 30px 0;
+    font-weight: 500;
+}
+/* .design2{
+    position: absolute;
+   right: 28rem;
+   top: 18rem;
+} */
+.beige-about-edu{
+    line-height: 1.3em;
+    margin: 10px 0 30px 0;
+    color: #fff;
+    font-weight: 500;
+}
+.Beige-section-job{
+width: 50%;
+padding: 2rem; 
+    background-color: #F4F4F4;
+    font-weight: 600;
+    border-top-right-radius: 80px;
+
+}
+ .new-section-edu{
+    width: 50%;
+    background-color: #434343;
+    display: flex;
+    flex-direction: column;
+ }
+ .Beige-skill-sec{
+    padding: 0 0 0 1rem;
+    margin-bottom: 10px;
+ }
+ .Beige-skills-sec {
+    padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 10px;
+}
+.Beige-skills-sec li {
+    padding: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    list-style-type: none;
+    color: #fff;
+}
+.Beige-skills-sec li::before {
+    content: "•"; 
+    font-size: 20px;
+    padding-right: 8px;
+    color: #f36e45; 
+  }
+ .forHeading-beige h2{
+    margin-top:0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #f36e45;
+ }
+ .Beige-skill-sec h2{
+    color: #f36e45;
+    margin-bottom: 10px;
+ }

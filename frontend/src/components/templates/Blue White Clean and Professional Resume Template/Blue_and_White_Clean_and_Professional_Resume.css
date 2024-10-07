@@ -1,0 +1,105 @@
+.blue-and-white-clean-resume {
+    width: 100%;
+    min-height: 1120px;
+    padding: 40px;
+    background-color: #fff;
+    overflow-anchor: none;
+    border: 1px solid #e5e5e5;
+    background-size: cover;
+    position: relative;
+}
+.blue-and-white-clean-resume .resume-qr-code{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.blue-and-white-clean-resume h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.blue-and-white-clean-resume h2 {
+    text-transform: uppercase;
+    font-weight: 20%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #00366d1e;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.blue-and-white-clean-resume h4 {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.blue-and-white-clean-resume p {
+    line-height: 1.2rem;
+}
+
+
+/* HEADER AND CONTACT SECTION CSS */
+
+.blue-and-white-clean-resume .header {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.blue-and-white-clean-resume .header .img-module {
+    width: 20%;
+}
+
+.blue-and-white-clean-resume .header .img-module img {
+    width: 100%;
+}
+
+.blue-and-white-clean-resume .header .personal-details-module {
+    width: 80%;
+    padding-left: 30px;
+}
+
+.blue-and-white-clean-resume .header .personal-details-module ul li {
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.blue-and-white-clean-resume .header .personal-details-module ul li i {
+    font-size: 0.9rem;
+}
+
+.blue-and-white-clean-resume .summary-para {
+    margin-bottom: 20px;
+}
+
+/* PROJECT AND JOB SECTION CSS */
+
+.blue-and-white-clean-resume .common-sec {
+    margin-bottom: 5px;
+}
+
+.blue-and-white-clean-resume .common-sec .name-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* SKILL SECTION CSS */
+
+.blue-and-white-clean-resume .skill-sec {
+    margin-bottom: 20px;
+}
+
+.blue-and-white-clean-resume .skill-sec li {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-bottom: 8px;
+}
+
+.blue-and-white-clean-resume .skill-sec li:nth-last-child(1) {
+    margin-bottom: 0px;
+}

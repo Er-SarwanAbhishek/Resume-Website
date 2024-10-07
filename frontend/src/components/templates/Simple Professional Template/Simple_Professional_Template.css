@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.simple-professional-template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    display: flex;
+    padding: 30px;
+    text-align: left;
+    gap: 5%;
+    background-color: WHITE;
+    background-size: cover;
+}
+
+.simple-professional-template .resume-qr-code {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.simple-professional-template .left-column{
+    width: 38%;
+}
+
+.simple-professional-template h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.simple-professional-template h4{
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.simple-professional-template h2{
+    font-size: 22px;
+    margin: 20px 0px 20px 0px;
+    border-bottom: 3px solid #608ABF;
+    padding: 5px 0px;
+    color: black;
+    width: 70%;
+}
+
+.simple-professional-template .left-column .personal-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.simple-professional-template .left-column .personal-details .profile-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.simple-professional-template ul li{
+    list-style: none;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #000000;
+    display: flex;
+}
+
+.simple-professional-template ul li:nth-last-child(1){
+    margin-bottom: 0px;
+}
+
+.simple-professional-template .left-column .contact-details i{
+    margin-right: 15px;
+    font-size: 20px;
+    color: #608ABF;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.simple-professional-template .left-column .contact-details li{
+    display: flex;
+    align-items: center;
+}
+
+.simple-professional-template p{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.simple-professional-template .left-column .skills-information ul li{
+   position: relative; 
+}
+
+.simple-professional-template .left-column .skills-information  li .list-dots{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #608ABF;
+    bottom: 10px;
+    top: 5px; 
+    left: 0px;
+}
+
+.simple-professional-template .left-column .skills-information li{
+    padding-left: 25px;
+}
+
+.simple-professional-template .right-column{
+    width: 57%;
+}
+
+.simple-professional-template .right-column .education-information .education-details .education-level{
+    display: flex;
+    justify-content: space-between;
+}
+
+.simple-professional-template .right-column .education-information .education-details b{
+    font-size: 14px;
+}
+
+.simple-professional-template .right-column .education-information .education-details{
+    padding-bottom: 10px;
+    position: relative;
+    border-left: 2px solid #608ABF;
+    padding-left: 20px;
+}
+
+.simple-professional-template .right-column .education-information .education-details .chain-type-dots{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: -6px;
+}
+
+.simple-professional-template .right-column .education-information .education-details:nth-last-child(1){
+    padding-bottom: 0px;
+}
+
+.simple-professional-template .right-column .experience-information .experience-details .experience-level{
+    display: flex;
+    justify-content: space-between;
+}
+
+.simple-professional-template .right-column .experience-information .experience-details b{
+    font-size: 14px;
+}
+
+.simple-professional-template .right-column .experience-information .experience-details{
+    padding-bottom: 10px;
+    position: relative;
+    border-left: 2px solid #608ABF;
+    padding-left: 20px;
+}
+
+.simple-professional-template .right-column .experience-information .experience-details .chain-type-dots{
+    content: "";
+    position: absolute;
+    background-color: #608ABF;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: -6px;
+}
+
+.simple-professional-template .right-column .experience-information .experience-details:nth-last-child(1){
+    padding-bottom: 0px;
+}
+
+.simple-professional-template .right-column .project-information .project-details .project-level{
+    display: flex;
+    justify-content: space-between;
+}
+
+.simple-professional-template .right-column .project-information .project-details b{
+    font-size: 14px;
+}
+
+.simple-professional-template .right-column .project-information .project-details{
+    padding-bottom: 10px;
+    position: relative;
+    border-left: 2px solid #608ABF;
+    padding-left: 20px;
+}
+
+.simple-professional-template .right-column .project-information .project-details .chain-type-dots{
+    content: "";
+    position: absolute;
+    background-color: #608ABF;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: -6px;
+}
+
+.simple-professional-template .right-column .project-information .project-details:nth-last-child(1){
+    padding-bottom: 0px;
+}

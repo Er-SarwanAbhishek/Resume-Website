@@ -1,0 +1,128 @@
+.signup-main-container {
+    width: 100vw;
+    height: 100vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.signup-main-container .signup-container {
+    width: 50%;
+    display: flex;
+    border-radius: 20px;
+    background-color: #fff;
+    position: relative;
+    animation: TopSliding 0.3s ease-in-out;
+}
+
+.signup-main-container .signup-container .cancel-btn {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.signup-main-container .signup-container .cancel-btn:hover {
+    color: #5a4abd;
+    animation: AnimOnCancelBtn 0.2s linear forwards alternate;
+}
+
+.signup-main-container .signup-container .signup-plans {
+    width: 40%;
+    background: #5a4abd;
+    padding: 50px 10px 50px 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.signup-main-container .signup-container .signup-plans h2 {
+    font-size: 35px;
+    color: #fff;
+    font-family: "Montserrat";
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.signup-main-container .signup-container .signup-steps {
+    width: 60%;
+    padding: 50px;
+}
+
+.signup-main-container .signup-container .signup-steps h2 {
+    margin-bottom: 20px !important;
+}
+
+.signup-main-container .signup-container .signup-steps .pop-signup-box {
+    width: 80%;
+}
+
+.signup-main-container .signup-container .signup-plans ul {
+    padding: 10px;
+}
+
+.signup-main-container .signup-container .signup-plans ul li {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: "Mulish";
+    font-size: 16px;
+}
+
+.signup-main-container .signup-container .signup-plans ul li i {
+    min-width: 18px;
+    min-height: 18px;
+    color: #5a4abd;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+    .signup-main-container .signup-container{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .signup-main-container .signup-container .signup-plans {
+        display: none;
+    }
+
+    .signup-main-container .signup-container .signup-steps {
+        width: 100%;
+    }
+
+    .signup-main-container .signup-container .signup-steps .pop-signup-box {
+        width: 100%;
+    }
+
+    .signup-main-container .signup-container .signup-steps h2 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .signup-main-container .signup-container {
+        width: 80%;
+    }
+
+    .signup-main-container .signup-container .signup-steps {
+        padding: 30px;
+    }
+
+    .signup-main-container .signup-container .signup-steps h2 {
+        margin-top: 0px !important;
+    }
+}

@@ -1,0 +1,193 @@
+.my-template {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.my-template .my-template-row {
+    max-width: 1400px;
+    width: 80%;
+}
+
+.my-template .my-template-row .heading {
+    font-family: "montserrat";
+    font-size: 1.8rem;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.my-template .my-template-row .all-templates {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    row-gap: 30px;
+}
+
+.my-template .my-template-row .all-templates .temp-box {
+    width: 32%;
+    background-color: #f0f2fd;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.my-template .my-template-row .all-templates .temp-box:hover {
+    background-color: #e3e7fc;
+}
+
+.my-template .my-template-row .all-templates .temp-box .resume-prev {
+    /* width: 793.7008px; */
+    zoom: 0.511;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+/* BUTTONS */
+
+.my-template .my-template-row .all-templates .temp-box .delete-temp {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #fe2e2e;
+    padding: 10px;
+    border-radius: 50%;
+    border-top-right-radius: 8px;
+    background-color: #ffc5c5;
+    animation: Fade 0.3s linear;
+    display: none;
+    z-index: 2;
+}
+
+.my-template .my-template-row .all-templates .temp-box:hover .delete-temp {
+    display: block;
+}
+
+.my-template .my-template-row .all-templates .temp-box button {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-family: "mulish";
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.my-template .my-template-row .all-templates .temp-box .prev-btn {
+    border: 1px solid #5a4abd;
+    color: #5a4abd;
+    background: transparent;
+}
+
+.my-template .my-template-row .all-templates .temp-box .use-btn {
+    background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+    color: #fff;
+}
+
+/* DEFAULT MESSAGE */
+.my-template .my-template-row .all-templates .default-msg h4 {
+    font-family: "mulish";
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.my-template .my-template-row .all-templates .default-msg a {
+    border-radius: 10px;
+    border: none;
+    padding: 10px 50px;
+    font-family: "mulish";
+    font-size: 1.1rem;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+    text-decoration: none;
+}
+@media screen and (max-width:1440px) {
+    .my-template .my-template-row .all-templates .temp-box .resume-prev {
+      
+        zoom: 0.45;
+    }
+}
+@media screen and (max-width:1280px) {
+    .my-template .my-template-row .all-templates .temp-box .resume-prev {
+      
+        zoom: 0.38;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .my-template .my-template-row {
+        width: 90%;
+    }
+
+    .my-template .my-template-row .all-templates {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .my-template .my-template-row .all-templates .temp-box {
+        width: 48%;
+    }
+
+    .my-template .my-template-row .all-templates .temp-box .resume-prev {
+        zoom: 0.52;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .my-template {
+        padding: 60px 0px;
+    }
+
+    .my-template .my-template-row {
+        width: 90%;
+    }
+    .my-template .my-template-row .all-templates .temp-box .resume-prev {
+      
+        zoom: 0.45;
+    }
+
+
+    .my-template .my-template-row .all-templates {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        column-gap: 4%;
+    }
+
+    .my-template .my-template-row .all-templates .temp-box {
+        width: 48%;
+        zoom: 0.78;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .my-template {
+        padding: 30px 0px;
+    }
+
+    .my-template .my-template-row {
+        width: 90%;
+    }
+
+    .my-template .my-template-row .all-templates {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        column-gap: 4%;
+    }
+
+    .my-template .my-template-row .all-templates .temp-box {
+        width: 48%;
+        zoom: 0.54;
+    }
+
+    .my-template .my-template-row .all-templates .temp-box .resume-prev {
+        zoom: 0.35;
+    }
+}

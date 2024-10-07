@@ -1,0 +1,269 @@
+.home-resume-picker {
+    padding: 80px 0;
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.home-resume-picker .hsp-row1 {
+    max-width: 1400px;
+    width: 40%;
+    margin-bottom: 50px;
+}
+
+.home-resume-picker .hsp-row1 h2 {
+    color: #000;
+    text-align: center;
+    font-family: "montserrat";
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.home-resume-picker .hsp-row1 span {
+    font-weight: 600;
+    color: #5A4ABD;
+}
+
+.home-resume-picker .list-side i {
+    padding-right: 10px;
+    font-size: 1.4rem;
+}
+
+.home-resume-picker .rp-container {
+    max-width: 1400px;
+    width: 60%;
+    display: flex;
+    column-gap: 6%;
+}
+
+.home-resume-picker .rp-container .list-side,
+.home-resume-picker .rp-container .view-side {
+    width: 47%;
+}
+
+.home-resume-picker .rp-container .list-side .designation-active-tab {
+    background-color: #5a4abd;
+    color: #fff;
+}
+
+.home-resume-picker .rp-container .list-side .designation-active-tab:hover {
+    color: #fff !important;
+}
+
+.home-resume-picker .rp-container .list-side .designation-active-tab .designation-list h3 {
+    color: white;
+}
+
+.home-resume-picker .rp-container .view-side .vs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+
+}
+
+.home-resume-picker .rp-container .view-side .vs:hover .template-btn {
+    display: block;
+}
+
+.home-resume-picker .rp-container .view-side .vs .template-btn {
+    padding: 8px 25px;
+    border: none;
+    background-color: #5A4ABD;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "montserrat";
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    bottom: 50px;
+    display: none;
+    right: 35%;
+    animation: templateButton 0.3s ease-in alternate;
+}
+
+.home-resume-picker .rp-container .list-side .designation-list {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.home-resume-picker .rp-container .list-side .designation-list:hover {
+    color: #5A4ABD;
+}
+
+.home-resume-picker .rp-container .list-side .designation-list i {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5A4ABD;
+    color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding-right: 0px;
+}
+
+.home-resume-picker .rp-container .list-side .designation-list h3 {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.home-resume-picker .rp-container .list-side .designation-list h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #5A4ABD;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.home-resume-picker .rp-container .list-side .designation-list:hover h3::after {
+    transform: scaleX(1);
+}
+
+.view-side .view-side-dimenssions {
+    width: 793px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    zoom: 0.62;
+    overflow: hidden;
+}
+
+.home-resume-picker .view-side {
+    width: 45%;
+}
+.home-resume-picker .hsp-row1 .dropdown-side{
+    display: none;
+}
+
+
+@media screen and (max-width:1440px){
+    .home-resume-picker .rp-container {
+        width: 80%;
+        
+    }
+    .home-resume-picker .hsp-row1 {
+        width: 50%;
+     
+    }
+    .home-resume-picker .rp-container .list-side,
+.home-resume-picker .rp-container .view-side {
+    width: 55%;
+}
+ 
+}
+@media screen and (max-width:1024px){
+    .home-resume-picker {
+        padding: 60px 0;
+    }
+    .home-resume-picker .rp-container {
+        width: 90%;
+        column-gap: 0%;
+    }
+    .home-resume-picker .hsp-row1 {
+
+        width: 60%;
+        margin-bottom: 40px;
+    }
+    .home-resume-picker .hsp-row1 h2 {
+        
+
+        font-size: 35px;
+
+    }
+    .home-resume-picker .rp-container .list-side .designation-list {
+        width: 62%;
+    }
+    .home-resume-picker .rp-container .list-side .designation-list h3 {
+        font-size: 18px;
+    }
+   
+    .view-side .view-side-dimenssions {
+        zoom: 0.56;
+    }
+  
+}
+@media screen and  (max-width:768px){
+    .home-resume-picker{
+        zoom: 1;
+        padding: 60px 0;
+    }
+    .home-resume-picker .hsp-row1 h2{
+        font-size: 26px;
+    }
+    .home-resume-picker .hsp-row1 {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .home-resume-picker .rp-container {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        zoom: 0.73;
+    }
+    .home-resume-picker  .rp-container .view-side{
+        width: 38%;
+        margin-top:0;
+    }
+    .home-resume-picker .rp-container .list-side{
+        display: none;
+    }
+    .home-resume-picker .rp-container .view-side .vs .template-btn {
+        right: 5%;
+        font-size: 15px;
+        padding:  8px 24px;
+    }
+    .home-resume-picker .rp-container .view-side .vs .vs-div{
+        border: 20px solid #f0f2fd !important;
+    }
+    .home-resume-picker .hsp-row1 .dropdown-side{
+        display: flex;
+     margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+
+    }
+    .home-resume-picker .hsp-row1 .dropdown-side .profession-dropdown{
+        border: none;
+        padding: 8px;
+        border-radius: 10px;
+        outline: none;
+        text-align: center;
+       color: #fff;
+        font-size: 15px;
+        font-family: 'montserrat';
+        font-weight: 500;
+        cursor: pointer;
+        padding: 8px 25px;
+        border: none;
+        border-radius: 5px;
+        font-family: "montserrat";
+        background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+        position: relative;
+    }
+    .home-resume-picker  .profession-dropdown option {
+        color: #000;
+        border-radius: 5px;
+        font-weight: 500;
+    }
+    .home-resume-picker .rp-container .view-side .vs .template-btn {
+        width: 100%;
+    }
+
+  
+}

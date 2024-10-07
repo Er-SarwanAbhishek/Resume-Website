@@ -1,0 +1,219 @@
+.instruction-popup {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+
+.instruction-popup .for-custom-padding {
+  width: 80%;
+  max-width: 1400px;
+  background-color: #F6F5F3;
+  padding: 50px 0px 70px;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  animation: TopSliding 0.3s linear;
+}
+
+.instruction-popup .cancel-btn {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  background-color: #635AE2;
+  color: #fff;
+  padding: 11px 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: TopSliding 0.3s linear;
+}
+
+.instruction-popup .cancel-btn:hover {
+  background-color: #ad0404;
+}
+
+.instruction-popup h1 {
+  font-family: "montserrat";
+  font-weight: normal;
+  color: #000000;
+  font-size: 3rem;
+  animation: TopSliding 0.3s linear;
+  text-align: center;
+}
+
+.instruction-popup .row {
+  width: 90%;
+  display: flex;
+  column-gap: 5%;
+  animation: TopSliding 0.3s linear;
+  margin: 2.5rem 0rem;
+}
+
+.instruction-popup .row .column {
+  width: 30%;
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.instruction-popup .row .column h3 {
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #5A4ABD;
+  margin-bottom: 10px;
+}
+
+.instruction-popup .row .column p {
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+.instruction-popup button {
+  padding: 12px 60px;
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Mulish";
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+  color: #fff;
+}
+
+.instruction-popup button:hover {
+  background: linear-gradient(90deg, rgba(42, 81, 186, 1) 0%, rgba(112, 92, 236, 1) 100%);
+}
+
+.instruction-popup .popup-lord-icon {
+  margin-bottom: 20px;
+}
+
+.instruction-popup .for-custom-padding .slider-mobile {
+  display: none;
+}
+
+@media screen and (max-width:1024px){
+  .instruction-popup .for-custom-padding{
+  zoom: 0.7;
+  }
+  .instruction-popup h1 {
+    font-size: 2.4rem;
+        text-align: center;
+        padding: 0 10px;
+  }
+  .instruction-popup h1{
+    text-align: center;
+  }
+  .instruction-popup .for-custom-padding{
+    padding: 50px 0 50px;
+  }
+}
+@media  screen and (max-width:768px) {
+  .instruction-popup .for-custom-padding{
+    padding: 50px 0 50px;
+    width: 90%;
+  }
+  .instruction-popup .row .column p {
+    display: none;
+  }
+  .instruction-popup button{
+    margin-right: 0;
+  }
+  .instruction-popup .row .column h3{
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width:450px){
+  .instruction-popup h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    
+}
+
+.instruction-popup .row{
+  display: none;
+}
+.instruction-popup .for-custom-padding .slider-mobile {
+  display: block;
+}
+.slider-mobile {
+  width: 100%;
+  overflow: hidden; 
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+.popup-lord-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; 
+}
+
+h3 {
+  font-size: 16px;
+  text-align: center;
+}
+.slider-mobile {
+  width: 100%;
+  overflow: hidden; 
+  display: flex;  
+}
+
+.slider-mobile .slick-list {
+  display: flex;   
+}
+
+.slider-mobile .slick-track {
+  display: flex;    
+}
+
+.column {
+  flex: 0 0 auto;  
+  width: 100%;    
+     
+  display: flex;    
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.popup-lord-icon {
+  margin-bottom: 10px; 
+}
+
+h3 {
+  font-size: 20px; 
+  text-align: center; 
+}
+.slider-mobile li,.slick-next{
+  display: none;
+}
+.instruction-popup .for-custom-padding{
+  zoom: 0;
+}
+}

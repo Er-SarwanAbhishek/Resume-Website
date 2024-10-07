@@ -1,0 +1,138 @@
+.GTT-resume-template {
+  width: 100%;
+  min-height: 1122.520px;
+  background-color: #fff;
+  padding: 2rem;
+  position: relative;
+}
+.GTT-resume-template .resume-qr-code{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+.GTT-resume-template .name-sec-so-1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.GTT-resume-template .name-sec-so-1-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  text-align: right;
+  border-bottom: 2px solid #A6A6A6;
+}
+
+.GTT-resume-template .name-sec-so-1-details h4 {
+  margin-top: 0;
+  line-height: 1.2em;
+  color: #545454;
+  font-size: 15px;
+}
+
+.GTT-resume-template .name-sec-so-1-details h1 {
+  line-height: 1.2em;
+  margin-top: 0;
+  color: #545454;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.GTT-resume-template .name-sec-so-1 img {
+  padding: 0.5rem 0 0 0.5rem;
+  border-left: 2px solid #A6A6A6;
+  border-top: 2px solid #A6A6A6;
+}
+
+.GTT-resume-template .contact-sec-so2 {
+  display: flex;
+  background-color: #737373;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  padding-left: 18px;
+}
+
+.GTT-resume-template .account-so-2-details {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 8px 0px 8px;
+  column-gap: 10px;
+}
+
+
+.GTT-resume-template .gtt-for-heading h2 {
+  color: #343434;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.5rem 0 0.2rem 0;
+  font-size: 1.5rem;
+}
+
+.GTT-resume-template .gtt-for-heading h2::before {
+  content: '# ';
+}
+
+.GTT-resume-template .profile-so-3 p{
+  margin-bottom: 10px;
+}
+
+
+.GTT-resume-template .grp-so-4 {
+  display: flex;
+  column-gap: 2%;
+  border-top: 1px solid #A6A6A6;
+  border-bottom: 1px solid #A6A6A6;
+}
+
+.GTT-resume-template .so-4-right {
+  width: 41%;
+}
+
+.GTT-resume-template .so-4-left {
+  border-right: 2px solid #A6A6A6;
+  width: 58%;
+  padding: 0 0.5rem 0 0;
+
+}
+.GTT-resume-template .gtt-for-heading h3 {
+  line-height: 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #545454;
+}
+
+.GTT-resume-template .gtt-skills-list {
+  padding: 0.2rem 0 1rem 0.2rem;
+}
+
+.GTT-resume-template .gtt-skills-list li {
+  list-style-type: none;
+  padding-right: 10px;
+  font-weight: 600;
+  color: #545454;
+}
+.GTT-resume-template .gtt-skills-list li::before {
+  content: '>';
+  padding-right: 5px;
+}
+
+
+.GTT-resume-template .gtt-job-secction-details .fa-description {
+  margin-bottom: 8px; 
+
+}
+.GTT-resume-template .gtt-projects .fa-description{
+  margin-bottom: 8px;
+}
+
+.GTT-resume-template .gtt-education .fa-description{
+  margin-bottom: 8px;
+}
+.GTT-resume-template #for-bottom-spacing{
+  line-height: 1.2rem;
+}

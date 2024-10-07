@@ -1,0 +1,213 @@
+.unique-style-resume {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    padding: 40px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(182, 159, 223, 1) 50%);
+    background-size: cover;
+}
+
+.unique-style-resume .resume-qr-code {
+    position: absolute;
+    left: 60px;
+    bottom: 60px;
+}
+
+.unique-style-resume .resume-header-section {
+    display: flex;
+    padding: 30px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 30px;
+}
+
+.unique-style-resume .resume-header-section .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.unique-style-resume h1 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.unique-style-resume .personal-details {
+    flex: 1;
+    position: relative;
+    padding-left: 20px;
+}
+
+.unique-style-resume h4 {
+    font-size: 14px;
+    background-color: #DF61A6;
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 30px;
+    font-family: "Space Grotesk", sans-serif;
+    color: white;
+}
+
+.unique-style-resume p {
+    text-align: left;
+    line-height: 20px;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+}
+
+.unique-style-resume h2 {
+    margin: 20px 0px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+    font-family: "Space Grotesk", sans-serif;
+
+}
+
+.unique-style-resume .final-section {
+    display: flex;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 0 30px;
+    margin-top: 40px;
+}
+
+.unique-style-resume .final-section .left-column {
+    width: 57%;
+    text-align: left;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.unique-style-resume .final-section .experience-information .experience-details {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.unique-style-resume .final-section .experience-information .experience-details div {
+    width: 80%;
+    padding-left: 20px;
+}
+
+.unique-style-resume .final-section .experience-information .experience-details .date-line::before,
+.unique-style-resume .final-section .experience-information .experience-details .date-line::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 1px solid #DF61A6;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+}
+
+.unique-style-resume .final-section .experience-information .experience-details .date-line::after {
+    top: 93.5%;
+}
+
+.unique-style-resume .final-section .experience-information .experience-details .date-line {
+    width: 30%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.unique-style-resume .final-section .experience-information .experience-details .date-line hr {
+    margin-top: 15px;
+    border: none;
+    flex: 1;
+    width: 2px;
+    background-color: #DF61A6;
+}
+
+.unique-style-resume .final-section .experience-information .experience-details .date-line .duration {
+    background-color: #DF61A6;
+    border-radius: 30px;
+    padding: 5px 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.unique-style-resume .final-section ul li {
+    font-size: 12px;
+    list-style: none;
+    font-family: "Inter", sans-serif;
+}
+
+.unique-style-resume .final-section .contact-details {
+    background-color: #FFD6F3;
+    padding: 20px 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.unique-style-resume .final-section .contact-details ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.unique-style-resume .final-section .contact-details i {
+    margin-right: 10px;
+    font-size: 10px;
+    background-color: #DF61A6;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unique-style-resume .final-section .right-column {
+    width: 38%;
+    padding-bottom: 20px;
+}
+
+.unique-style-resume .final-section .right-column .skills-information ul {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.unique-style-resume .final-section .right-column .skills-information li {
+    background-color: #DF61A6;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+}
+
+.unique-style-resume .final-section .education-details {
+    padding-bottom: 10px;
+}
+
+.unique-style-resume .final-section .education-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.unique-style-resume .final-section .project-details {
+    padding-bottom: 10px;
+}
+
+.unique-style-resume .final-section .project-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}

@@ -1,0 +1,256 @@
+.template-section {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.template-section .ts-row {
+    max-width: 1400px;
+    width: 40%;
+}
+
+.template-section .ts-row h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: normal;
+}
+
+
+.template-section .homemenu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.template-section .homemenu .active-tab {
+    color: #5A4ABD;
+    border-bottom: 2px solid #5A4ABD;
+}
+
+.template-section .homemenu li {
+    margin: 0 10px;
+    z-index: 10;
+    padding-bottom: 10px;
+    font-family: 'Montserrat';
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.template-section .view-all-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 5px;
+    font-family: "Mulish";
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #5A4ABD;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f2fd;
+}
+
+.template-section .view-all-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.template-section .resume-templates {
+    max-width: 1400px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    row-gap: 30px;
+}
+
+.template-section .resume-templates .template-box {
+    background-color: #f0f2fd;
+    width: 32%;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.template-section .resume-templates .template-box:hover {
+    background-color: #e3e7fc;
+}
+
+.template-section .resume-templates .template-box .resume-preve {
+    zoom: 0.511;
+    margin-bottom: 40px;
+}
+
+.template-section .resume-templates .template-box button {
+    width: 48%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-family: "mulish";
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.template-section .resume-templates .template-box .prev-temp {
+    margin-right: 4%;
+    border: 1px solid #5a4abd;
+    color: #5a4abd;
+    background: transparent;
+}
+
+.template-section .resume-templates .template-box .use-temp {
+    background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+    color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1440px){
+    .template-section .resume-templates .template-box .resume-preve {
+        zoom: 0.44;
+    }
+    .template-section .ts-row {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 1280px){
+    .template-section .resume-templates .template-box .resume-preve {
+        zoom: 0.39;
+       
+    }
+    .template-section .ts-row h2 {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .template-section .resume-templates {
+        column-gap: 4%;
+        width: 90%;
+    }
+    .template-section .resume-templates .template-box .resume-preve {
+        zoom: 0.47;
+    }
+    .template-section .ts-row {
+        width: 52%;
+    }
+    .template-section .resume-templates .template-box {
+        width: 48%;
+    }
+    .template-section .ts-row h2 {
+        font-size: 35px;
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .template-section .resume-templates {
+        column-gap: 4%;
+        zoom: 0.78;
+    }
+
+    .template-section .resume-templates .template-box {
+        width: 48%;
+    }
+
+    .template-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .template-section .ts-row {
+        width: 80%;
+    }
+
+    .template-section .ts-row h2 {
+        font-size: 26px;
+    }
+
+    .template-section .homemenu li {
+        font-size: 16px;
+    }
+
+    .template-section .view-all-btn {
+        font-size: 22px;
+        font-family: "montserrat";
+    }
+
+    .template-section .resume-templates .template-box .prev-temp {
+        font-size: 22px;
+    }
+
+    .template-section .resume-templates .template-box .use-temp {
+        font-size: 22px;
+    }
+}
+
+/* for mobile view */
+
+@media screen and (max-width: 450px) {
+    .template-section {
+        padding: 60px 0;
+    }
+
+    .template-section .resume-templates {
+        column-gap: 4%;
+        width: 90%;
+    }
+
+    .template-section .ts-row {
+        width: 80%;
+    }
+
+    .template-section .homemenu {
+        width: 80%;
+    }
+
+    .template-section .resume-templates .template-box {
+        zoom: 0.68;
+    }
+    .template-section .resume-templates .template-box .resume-preve {
+        zoom: 0.37;
+    }
+
+    .template-section .homemenu li {
+        font-size: 15px;
+    }
+
+    .template-section .homemenu li:first-child {
+        display: none;
+    }
+
+    .template-section .resume-templates .template-box .prev-temp{
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .template-section .resume-templates .template-box .use-temp {
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .template-section .view-all-btn {
+        font-size: 22px;
+    }
+
+    .template-section .view-all-btn svg{
+        width: 25px;
+        height: 25px;
+    }
+}

@@ -1,0 +1,81 @@
+.user-sidebar-body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+}
+
+.user-sidebar-body .sidebar-box {
+    width: 25%;
+    height: 100%;
+    background-color: #fff;
+    border-top: 150px solid #5a4abd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: RightSliding 0.3s linear;
+}
+
+.user-sidebar-body .sidebar-box img {
+    margin-top: -50px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.user-sidebar-body .sidebar-box h2 {
+    font-family: "montserrat";
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.user-sidebar-body .sidebar-box ul {
+    width: 100%;
+}
+
+.user-sidebar-body .sidebar-box ul li {
+    font-family: "Mulish";
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 20px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+
+.user-sidebar-body .sidebar-box ul li svg {
+    width: 20px;
+    height: 20px;
+}
+
+.user-sidebar-body .sidebar-box ul li:hover {
+    background-color: #f2f2f2;
+    color: #5a4abd;
+}
+
+.user-sidebar-body .sidebar-box .cancel-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .user-sidebar-body .sidebar-box h2 {
+        margin-bottom: 20px;
+    }
+
+    .user-sidebar-body .sidebar-box {
+        border-width: 100px;
+        width: 60%;
+    }
+}

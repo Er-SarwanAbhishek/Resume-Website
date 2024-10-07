@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.professional-ats-resume {
+    /* border: 2px solid #000000; */
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    /* margin: 20px; */
+    padding: 20px 30px;
+    text-align: left;
+    display: flex;
+    gap: 5%;
+    background-color: white;
+    background-size: cover;
+}
+
+.professional-ats-resume .resume-qr-code {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.professional-ats-resume .left-column {
+    width: 40%;
+}
+
+.professional-ats-resume .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+.professional-ats-resume h2 {
+    font-size: 20px;
+    margin: 20px 0px 10px 0px;
+    color: #757500;
+}
+
+.professional-ats-resume b {
+    font-size: 14px;
+}
+
+.professional-ats-resume p {
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.professional-ats-resume .left-column .contact-information ul li {
+    font-size: 12px;
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.professional-ats-resume .left-column .contact-information ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.professional-ats-resume .left-column .contact-information li {
+    display: flex;
+    font-weight: 600;
+}
+
+.professional-ats-resume .left-column .contact-information i {
+    margin-right: 15px;
+    font-size: 12px;
+    background-color: #F6FF68;
+    color: black;
+    padding: 12px;
+    border-radius: 5px;
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.professional-ats-resume .left-column .skills-information ul li {
+    list-style: none;
+    font-size: 12px;
+}
+
+.professional-ats-resume .left-column .skills-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.professional-ats-resume .left-column .skills-information li {
+    background-color: #F6FF68;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 600;
+
+}
+
+.professional-ats-resume .left-column .project-information .project-details {
+    padding-bottom: 10px;
+}
+
+.professional-ats-resume .left-column .project-information .project-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.professional-ats-resume .left-column .project-information .project-details i {
+    font-weight: 500;
+    color: #757500;
+}
+
+.professional-ats-resume h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.professional-ats-resume h4 {
+    font-size: 15px;
+    width: 80%;
+    position: relative;
+    top: 10px;
+    background-color: #fff;
+}
+
+.professional-ats-resume .right-column {
+    width: 57%;
+}
+
+.professional-ats-resume .right-column .personal-details {
+    border: 2px solid black;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.professional-ats-resume .right-column .experience-information .experience-details {
+    padding-bottom: 10px;
+}
+
+.professional-ats-resume .right-column .experience-information .experience-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.professional-ats-resume .right-column .experience-information .experience-level i {
+    font-weight: 500;
+    color: #757500;
+}
+
+.professional-ats-resume .right-column .experience-information .experience-details .experience-level {
+    display: flex;
+    justify-content: space-between;
+}
+
+.professional-ats-resume .right-column .education-information .education-details {
+    padding-bottom: 10px;
+}
+
+.professional-ats-resume .right-column .education-information .education-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.professional-ats-resume .right-column .education-information .education-level i {
+    font-weight: 500;
+    color: #757500;
+}
+
+.professional-ats-resume .right-column .education-information .education-details .education-level {
+    display: flex;
+    justify-content: space-between;
+}
