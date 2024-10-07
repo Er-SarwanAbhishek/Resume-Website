@@ -68,8 +68,9 @@
 .Three_Side_Border_Resume .Left_Column .Contact_info i {
     width: 15px;
     height: 15px;
+    padding: 10px;
     color: #fff;
-    font-size: 8px;
+    font-size: 10px;
     display: inline-flex;
     justify-content: center;
     align-items: center;

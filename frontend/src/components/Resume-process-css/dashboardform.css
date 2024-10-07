@@ -40,11 +40,10 @@
 .Full-page .cv-right-dashboard .personal-route .personal-edit {
     position: relative;
     padding: 10px;
-    background-color: #fff;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     z-index: 3;
-    border: 3px solid #5a4abd;
+    border: 3px solid #5a4abd !important;
 }
 
 .Full-page .cv-right-dashboard .resumeCV::before {
@@ -60,70 +59,74 @@
 .Full-page .cv-right-dashboard .summary-route .summary-edit {
     position: relative;
     padding: 10px;
-    background-color: #fff;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     z-index: 3;
-    border: 3px solid #5a4abd;
+    border: 3px solid #5a4abd !important;
 }
 
 .Full-page .cv-right-dashboard .contact-route .contact-edit {
     position: relative;
     padding: 10px;
-    background-color: #fff;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     z-index: 3;
-    border: 3px solid #5a4abd;
+    border: 3px solid #5a4abd !important;
 }
 
 .Full-page .cv-right-dashboard .skills-route .skill-edit {
     position: relative;
     padding: 10px;
-    background-color: #fff;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     z-index: 3;
-    border: 3px solid #5a4abd;
+    border: 3px solid #5a4abd !important;
 }
 
 .Full-page .cv-right-dashboard .project-route .project-edit {
     position: relative;
     padding: 10px;
-    background-color: #fff;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     z-index: 3;
-    border: 3px solid #5a4abd;
+    border: 3px solid #5a4abd !important;
 }
 
 .Full-page .cv-right-dashboard .education-route .education-edit {
     position: relative;
     padding: 10px;
-    background-color: #fff;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     z-index: 3;
-    border: 3px solid #5a4abd;
+    border: 3px solid #5a4abd !important;
 }
 
 .Full-page .cv-right-dashboard .job-exp-route .job-exp-edit {
     position: relative;
     padding: 10px;
-    background-color: #fff;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     z-index: 3;
-    border: 3px solid #5a4abd;
+    border: 3px solid #5a4abd !important;
+}
+
+/* MOBILE RESUME PREVIEW */
+.Full-page .cv-right-dashboard .mobile-resume-prev{
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: #f2f2f2;
+    display: none;
+}
+
+.Full-page .cv-right-dashboard .cv-prev{
+    width: 793.0078px;
+    zoom: 0.35;
 }
 
 /* RESPONSIVE CSS */
-
-@media screen and (max-width: 1440px){
-    .Full-page {
-        column-gap: 30px;
-    }
-}
 @media screen and (max-width: 1024px) {
 
     .Full-page {
@@ -152,14 +155,14 @@
         position: fixed;
         bottom: 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         z-index: 100;
         width: 100%;
         padding: 0;
     }
 
     .Full-page .sidebar .sidebar-icon {
-        padding: 20px;
+        padding: 20px 0;
         border: none;
     }
 
@@ -168,8 +171,8 @@
     }
 
     .Full-page .sidebar .sidebar-icon svg {
-        width: 25px;
-        height: 25px;
+        width: 22px;
+        height: 22px;
         color: #fff;
     }
 
@@ -205,5 +208,14 @@
         flex: 1;
         height: 95vh;
         padding-bottom: 100px;
+    }
+
+    /* SHOW RESUME PREV ON POP */
+    .Full-page .cv-right-dashboard .hide-form{
+        display: none;
+    }
+
+    .Full-page .cv-right-dashboard .show-cv-prev{
+        display: flex;
     }
 }

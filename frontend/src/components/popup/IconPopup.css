@@ -53,3 +53,10 @@
     text-align: center;
     color: #333;
 }
+
+@media screen and (max-width: 450px) {
+    .icon-popup{
+        width: 280px !important;
+        left: 0 !important;
+    }    
+}

@@ -9,8 +9,10 @@ export default function Professional_Resume_Presentation_Template({ resumeData }
     const { AllSections, isQRCode } = resumeData;
     const { liveTemplateURL } = useContext(GlobalContext);
 
+    const { backgroundPattern } = resumeStyle;
+
     return (
-        <div className="Professional_Resume_Presentation_Template">
+        <div className="Professional_Resume_Presentation_Template" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode ? <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />

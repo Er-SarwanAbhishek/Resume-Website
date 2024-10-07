@@ -33,7 +33,7 @@ export default function Three_Side_Border_Resume({ resumeData }) {
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
     return (
-        <div className="Three_Side_Border_Resume" style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+        <div className="Three_Side_Border_Resume" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
 
             {
                 isQRCode ? <div className="resume-qr-code">
@@ -106,7 +106,7 @@ export default function Three_Side_Border_Resume({ resumeData }) {
                     </div>}
             </div>
             <div className="Right_Column ">
-                <div className="Personal_Information personal-edit personal-edit" style={{ backgroundColor:  "" }}>
+                <div className="Personal_Information personal-edit personal-edit" style={{ backgroundColor: "" }}>
                     <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
                     <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
                 </div>

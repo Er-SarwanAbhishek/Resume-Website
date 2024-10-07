@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Simple_Professional_Template.css'
 import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function Simple_Professional_Template({ resumeData }) {
-    const { AllSections, themeColor, isQRCode, liveTempId, resumeStyle } = resumeData;
-    const liveTemplateURL = `http://localhost:3000/${liveTempId}`;
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
+    const { liveTemplateURL } = useContext(GlobalContext);
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
@@ -24,7 +25,7 @@ export default function Simple_Professional_Template({ resumeData }) {
 
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
     return (
-        <div className='simple-professional-template' style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+        <div className='simple-professional-template' style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode && <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />
@@ -42,7 +43,7 @@ export default function Simple_Professional_Template({ resumeData }) {
                         }}>
                     </div>
                 </div>
-                {AllSections[1].isSection &&  <div className='contact-details contact-edit'>
+                {AllSections[1].isSection && <div className='contact-details contact-edit'>
                     <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[1].sectionName}</h2>
                     <ul>
                         {AllSections[1].list.map(element => {
@@ -57,12 +58,12 @@ export default function Simple_Professional_Template({ resumeData }) {
                     </ul>
                 </div>}
 
-               {AllSections[0].isSection &&    <div className='summary-information summary-edit'>
+                {AllSections[0].isSection && <div className='summary-information summary-edit'>
                     <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[0].sectionName}</h2>
                     <p style={paraStyleCSS}>{AllSections[0].summary}</p>
                 </div>}
 
-                {AllSections[3].isSection &&   <div className='skills-information skill-edit'>
+                {AllSections[3].isSection && <div className='skills-information skill-edit'>
                     <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[3].sectionName}</h2>
                     <ul>
                         {AllSections[3].list.map(skill => {
@@ -78,7 +79,7 @@ export default function Simple_Professional_Template({ resumeData }) {
                 </div>}
             </div>
             <div className='right-column'>
-            {AllSections[5].isSection &&   <div className='education-information education-edit'>
+                {AllSections[5].isSection && <div className='education-information education-edit'>
                     <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[5].sectionName}</h2>
                     {AllSections[5].list.map(Education => {
                         const { listId, collegeName, course, startDate, endDate, aboutEducation } = Education;
@@ -93,7 +94,7 @@ export default function Simple_Professional_Template({ resumeData }) {
                     })}
                 </div>}
 
-                {AllSections[4].isSection &&   <div className='experience-information job-exp-edit'>
+                {AllSections[4].isSection && <div className='experience-information job-exp-edit'>
                     <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[4].sectionName}</h2>
                     {AllSections[4].list.map(Experience => {
                         const { listId, companyName, jobRole, startDate, endDate, aboutJob } = Experience;
@@ -108,7 +109,7 @@ export default function Simple_Professional_Template({ resumeData }) {
                     })}
                 </div>}
 
-                {AllSections[2].isSection &&   <div className='project-information project-edit'>
+                {AllSections[2].isSection && <div className='project-information project-edit'>
                     <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[2].sectionName}</h2>
                     {AllSections[2].list.map(Project => {
                         const { listId, projectName, startDate, endDate, aboutProject } = Project;

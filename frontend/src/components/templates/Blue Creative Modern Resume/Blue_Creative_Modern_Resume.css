@@ -8,11 +8,9 @@
 }
 
 .blue-creative-modern-resume {
-    /* border: 2px solid #000000; */
     width: 100%;
     min-height: 1120px;
     position: relative;
-    /* margin: 20px; */
     gap: 5%;
     background-size: cover;
     background-color: #ffffff;
@@ -47,6 +45,10 @@
     font-size: 50px;
     margin-bottom: 15px;
     font-family: "Outfit", sans-serif;
+}
+
+.blue-creative-modern-resume .personal-details {
+    width: 60%;
 }
 
 .blue-creative-modern-resume .header .personal-details h4 {
@@ -89,7 +91,7 @@
     display: flex;
 }
 
-.blue-creative-modern-resume .main-div ul li:nth-last-child(1){
+.blue-creative-modern-resume .main-div ul li:nth-last-child(1) {
     margin-bottom: 0px;
 }
 
@@ -126,16 +128,16 @@
     font-size: 18px;
 }
 
-.blue-creative-modern-resume .main-div .left-column .project-information .project-details i{
-   color: #03989f;
-   font-weight: 600;
+.blue-creative-modern-resume .main-div .left-column .project-information .project-details i {
+    color: #03989f;
+    font-weight: 600;
 }
 
-.blue-creative-modern-resume .main-div .left-column .project-information .project-details{
+.blue-creative-modern-resume .main-div .left-column .project-information .project-details {
     padding-bottom: 15px;
 }
 
-.blue-creative-modern-resume .main-div .left-column .project-information .project-details:nth-last-child(1){
+.blue-creative-modern-resume .main-div .left-column .project-information .project-details:nth-last-child(1) {
     padding-bottom: 0px;
 }
 
@@ -148,16 +150,16 @@
     font-size: 18px;
 }
 
-.blue-creative-modern-resume .main-div .right-column .education-information .education-details i{
-   color: #03989f;
-   font-weight: 600;
+.blue-creative-modern-resume .main-div .right-column .education-information .education-details i {
+    color: #03989f;
+    font-weight: 600;
 }
 
-.blue-creative-modern-resume .main-div .right-column .education-information .education-details{
+.blue-creative-modern-resume .main-div .right-column .education-information .education-details {
     padding-bottom: 15px;
 }
 
-.blue-creative-modern-resume .main-div .right-column .education-information .education-details:nth-last-child(1){
+.blue-creative-modern-resume .main-div .right-column .education-information .education-details:nth-last-child(1) {
     padding-bottom: 0px;
 }
 
@@ -165,20 +167,20 @@
     font-size: 18px;
 }
 
-.blue-creative-modern-resume .main-div .right-column .experience-information .experience-details i{
-   color: #03989f;
-   font-weight: 600;
+.blue-creative-modern-resume .main-div .right-column .experience-information .experience-details i {
+    color: #03989f;
+    font-weight: 600;
 }
 
-.blue-creative-modern-resume .main-div .right-column .experience-information .experience-details{
+.blue-creative-modern-resume .main-div .right-column .experience-information .experience-details {
     padding-bottom: 15px;
 }
 
-.blue-creative-modern-resume .main-div .right-column .experience-information .experience-details:nth-last-child(1){
+.blue-creative-modern-resume .main-div .right-column .experience-information .experience-details:nth-last-child(1) {
     padding-bottom: 0px;
 }
 
-.blue-creative-modern-resume .bottom-color-1{
+.blue-creative-modern-resume .bottom-color-1 {
     width: 60%;
     height: 40px;
     background-color: #90b9ab;
@@ -188,7 +190,7 @@
     bottom: 0;
 }
 
-.blue-creative-modern-resume .bottom-color-2{
+.blue-creative-modern-resume .bottom-color-2 {
     width: 50%;
     height: 40px;
     background-color: #03989f;

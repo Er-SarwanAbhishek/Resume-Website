@@ -9,6 +9,11 @@
     margin-top: 10px;
 }
 
+.ai-generated-text-popup .result-list {
+    height: 200px;
+    overflow-y: auto;
+}
+
 .result-list li {
     font-size: 14px;
     padding: 20px;

@@ -24,7 +24,7 @@ export default function ATS_Friendly_Resume({ resumeData }) {
 
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
     return (
-        <div className='ats-friendly-resume' style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}")` }}>
+        <div className='ats-friendly-resume' style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode && <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading-border-resume-template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    padding: 30px;
+    background-color: white;
+    background-size: cover;
+}
+
+.heading-border-resume-template .main-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading-border-resume-template h1 {
+    font-size: 35px;
+    margin-bottom: 5px;
+    font-family: "Roboto Slab", serif;
+}
+
+.heading-border-resume-template h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: "Roboto Slab", serif;
+}
+
+.heading-border-resume-template p {
+    font-size: 12px;
+    line-height: 22px;
+    text-align: left;
+    font-family: "PT Sans", sans-serif;
+}
+
+.heading-border-resume-template b {
+    font-size: 14px;
+}
+
+.heading-border-resume-template .summary-information {
+    margin-bottom: 10px;
+}
+
+.heading-border-resume-template h2 {
+    font-size: 20px;
+    border-top: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+    margin: 20px 0px 10px 0px;
+    padding: 5px 0px;
+    font-family: "Roboto Slab", serif;
+    /* background-color: #b8e6ff; */
+    /* text-align: center; */
+}
+
+.heading-border-resume-template .personal-details {
+    text-align: left;
+    width: 60%;
+}
+
+.heading-border-resume-template .contact-details ul li {
+    list-style: none;
+    font-size: 12px;
+    margin-bottom: 15px;
+    font-family: "PT Sans", sans-serif;
+}
+
+.heading-border-resume-template .contact-details {
+    width: 40%;
+}
+
+.heading-border-resume-template .contact-details li {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.heading-border-resume-template .contact-details li p{
+    text-align: right;
+}
+
+.heading-border-resume-template .contact-details i {
+    margin-left: 10px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-border-resume-template .skills-information ul li {
+    list-style: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.heading-border-resume-template .skills-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+}
+
+.heading-border-resume-template .skills-information li {
+    background-color: #e5e5e5;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.heading-border-resume-template .common-sec .common-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading-border-resume-template .common-sec .common-level {
+    padding-bottom: 10px;
+}
+
+.heading-border-resume-template .common-sec .common-level:nth-last-child(1) {
+    padding-bottom: 0px;
+}

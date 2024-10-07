@@ -2,8 +2,9 @@
   width: 100%;
   min-height: 1122.520px;
   padding: 30px;
-  background-color: #fafafa;
+  background-color: white;
   position: relative;
+  background-size: cover;
 }
 .header-modern-template-format-resume-template .resume-qr-code{
   position: absolute;
@@ -12,6 +13,11 @@
 }
 .header-modern-template-format-resume-template h3 {
   font-size: 16px;
+}
+
+.header-modern-template-format-resume-template h4{
+  font-size: 16px;
+  text-align: right;
 }
 
 .header-modern-template-format-multiple-group-section {

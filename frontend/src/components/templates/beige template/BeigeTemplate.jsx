@@ -24,7 +24,7 @@ const BeigeTemplate = ({ resumeData }) => {
   const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
   return (
-    <div className="Beige-resume-template" style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+    <div className="Beige-resume-template" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}.png")` }}>
       {
         isQRCode ? <div className="resume-qr-code">
           <QRCodeCanvas value={liveTemplateURL} size={"50"} />
@@ -67,8 +67,8 @@ const BeigeTemplate = ({ resumeData }) => {
       {
         resumeData.AllSections[0].isSection &&
         <div className="Beige-about-blank-div">
-          <div className="Beige-section Beige-about-me summary-edit" style={themeStyle}>
-            <div style={{ paddingLeft: '1rem' }}>
+          <div className="Beige-section Beige-about-me" style={themeStyle}>
+            <div className=" summary-edit"style={{ paddingLeft: '1rem' }}>
               <h2 style={combineHeadingStyle}>{resumeData.AllSections[0].sectionName}</h2>
               <p style={paraStyleCSS}>{resumeData.AllSections[0].summary}</p>
             </div>
@@ -119,7 +119,7 @@ const BeigeTemplate = ({ resumeData }) => {
                 <div className="Beige-sec-job-heading forHeading-beige">
                   <h2 style={combineHeadingStyle}>{resumeData.AllSections[4].sectionName}</h2>
                 </div>
-                <div className="Beige-sec-job-detail job-exp-edit">
+                <div className="Beige-sec-job-detail">
                   {resumeData.AllSections[4].list.map((element, index) => {
                     const { companyName, jobRole, startDate, endDate, aboutJob } =
                       element;

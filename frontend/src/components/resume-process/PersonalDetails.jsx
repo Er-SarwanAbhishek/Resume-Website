@@ -77,7 +77,7 @@ export default function PersonalDetails() {
                             value={currentTemplateData.userName}
                             onChange={handleChange}
                             required
-                            placeholder='Name'
+                            placeholder='Your name'
                         />
                     </div>
                     <div className='personal-details-name'>
@@ -86,7 +86,6 @@ export default function PersonalDetails() {
                             name='userJobRole'
                             value={currentTemplateData.userJobRole}
                             onChange={handleChange}
-                            required
                             placeholder='Job Role'
                         />
                     </div>

@@ -25,7 +25,7 @@ export default function Colorfull_Resume_Template({ resumeData }) {
     }
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
     return (
-        <div className='colorfull-resume-template' style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+        <div className='colorfull-resume-template' style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode && <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />
@@ -82,7 +82,7 @@ export default function Colorfull_Resume_Template({ resumeData }) {
                 </div>}
             </div>
             <div className='right-column'>
-                <div className='personal-details'>
+                <div className='personal-edit '>
                     <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
                     <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
                 </div>

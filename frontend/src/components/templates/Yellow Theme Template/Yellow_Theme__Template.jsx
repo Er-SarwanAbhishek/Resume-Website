@@ -23,7 +23,7 @@ export default function Yellow_Theme__Template({ resumeData }) {
 
   const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
   return (
-    <div className="Yellow-Theme-Template" style={{ backgroundImage: `url(${backgroundPattern})` }}>
+    <div className="Yellow-Theme-Template"  style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
       {
         isQRCode ? <div className="resume-qr-code">
           <QRCodeCanvas value={liveTemplateURL} size={"50"} />

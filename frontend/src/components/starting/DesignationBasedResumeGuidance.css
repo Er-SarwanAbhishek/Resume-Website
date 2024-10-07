@@ -151,7 +151,6 @@
     display: none;
 }
 
-
 @media screen and (max-width:1440px){
     .home-resume-picker .rp-container {
         width: 80%;
@@ -261,9 +260,6 @@
         border-radius: 5px;
         font-weight: 500;
     }
-    .home-resume-picker .rp-container .view-side .vs .template-btn {
-        width: 100%;
-    }
-
+   
   
 }

@@ -1,4 +1,4 @@
-import React, { useContext , useState } from 'react';
+import React, { useContext, useState } from 'react';
 import GlobalContext from '../context/GlobalContext';
 import { useNavigate } from 'react-router-dom';
 import '../Resume-process-css/education.css'
@@ -6,7 +6,7 @@ import SaveAlert from '../alerts/SaveAlert';
 import { AiTextPopup } from '../popup/AiTextPopup';
 
 export default function JobExp() {
-  const [aiTextSuggestion , setAiTextSuggestion] = useState(false);
+  const [aiTextSuggestion, setAiTextSuggestion] = useState(false);
   const { currentTemplateData, DeleteItem, AddItem, ChangeListValue, ChangeSectionValue, authtoken, setIsSaveData, backServer } = useContext(GlobalContext);
   const index = 5;
   const { sectionName, list } = currentTemplateData.AllSections[index];
@@ -37,9 +37,9 @@ export default function JobExp() {
           'auth-token': authtoken
         }
       })
-      setIsSaveData(<SaveAlert status={"show"} alertMsg={"All changes saved"}/>);
+      setIsSaveData(<SaveAlert status={"show"} alertMsg={"All changes saved"} />);
       setTimeout(() => {
-        setIsSaveData(<SaveAlert status={"hide"} alertMsg={"All changes saved"}/>);
+        setIsSaveData(<SaveAlert status={"hide"} alertMsg={"All changes saved"} />);
       }, 800);
       //ALSO SAVE IN LOCAL STORAGE
       localStorage.setItem('currentTemplate', JSON.stringify(currentTemplateData));
@@ -48,16 +48,16 @@ export default function JobExp() {
       console.log("Server error.", error);
     }
   };
-const handleTextChange = (newText,listId)=>{
-  ChangeListValue({target:{name:'aboutEducation',value:newText}},index,listId)
-  setAiTextSuggestion(false);
-}
+  const handleTextChange = (newText, listId) => {
+    ChangeListValue({ target: { name: 'aboutEducation', value: newText } }, index, listId)
+    setAiTextSuggestion(false);
+  }
   return (
     <div className="education-form">
       <h1>Education</h1>
       <form action="" onSubmit={handleSubmit}>
         <div className='education-form-edit-section'>
-          <input id="education-section-name" type="text" name="sectionName" value={sectionName} placeholder='Section Name' onChange={(e) => ChangeSectionValue(e, index)} required />
+          <input id="education-section-name" type="text" name="sectionName" value={sectionName} placeholder='Section name' onChange={(e) => ChangeSectionValue(e, index)} required />
         </div>
         {list.map((element) => {
           const { listId, collegeName, course, startDate, endDate, aboutEducation } = element;
@@ -67,39 +67,39 @@ const handleTextChange = (newText,listId)=>{
               <div className="education-form-datepic-monthdate-input">
 
                 <div className='education-form-label-section'>
-                  <input class='education-section' type="text" name="collegeName" value={collegeName} onChange={(e) => ChangeListValue(e, index, listId)} placeholder='College Name' required />
+                  <input class='education-section' type="text" name="collegeName" value={collegeName} onChange={(e) => ChangeListValue(e, index, listId)} placeholder='College name' required />
                 </div>
                 <div className='education-form-label-section'>
 
-                  <input class='education-section' type="text" name="course" value={course} onChange={(e) => ChangeListValue(e, index, listId)} placeholder='Education Role' required />
+                  <input class='education-section' type="text" name="course" value={course} onChange={(e) => ChangeListValue(e, index, listId)} placeholder='Degree' required />
                 </div>
               </div>
               <div className='education-form-section-pic-date'>
-                <div className="education-form-datepic-monthdate">  
+                <div className="education-form-datepic-monthdate">
                   <input className="education-select-option" type="date" value={startDate} onChange={(e) => ChangeListValue(e, index, listId)} name='startDate' />
                 </div>
-                <div className="education-form-datepic">    
+                <div className="education-form-datepic">
                   <input className="education-select-option" type="date" value={endDate} onChange={(e) => ChangeListValue(e, index, listId)} name='endDate' />
                 </div>
               </div>
               <div className="education-textarea-delete-section">
-        
-                <textarea type="text" name="aboutEducation" 
-                value={aboutEducation}
-                 onChange={(e) => ChangeListValue(e, index, listId)}
-                  placeholder='Education Details' required />
-                   <img  className='ai-text-suggestion-img'
-                  src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png"  
-                  alt="AI Suggestion" 
+
+                <textarea type="text" name="aboutEducation"
+                  value={aboutEducation}
+                  onChange={(e) => ChangeListValue(e, index, listId)}
+                  placeholder='Description' required />
+                <img className='ai-text-suggestion-img'
+                  src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png"
+                  alt="AI Suggestion"
                   title='Generate text'
                   draggable="false"
-                  onClick={() => setAiTextSuggestion(listId)} 
+                  onClick={() => setAiTextSuggestion(listId)}
                 />
-                 {aiTextSuggestion === listId && (
+                {aiTextSuggestion === listId && (
                   <AiTextPopup
-                    prompt={aboutEducation} 
-                    cancel={() => setAiTextSuggestion(false)} 
-                    onTextChange={(newText) => handleTextChange(newText, listId)} 
+                    prompt={aboutEducation}
+                    cancel={() => setAiTextSuggestion(false)}
+                    onTextChange={(newText) => handleTextChange(newText, listId)}
                   />
                 )}
               </div>

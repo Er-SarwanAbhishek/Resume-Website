@@ -13,7 +13,6 @@ export default function SignUp() {
     const { GoogleLogin, errorDetails, SaveUserDetails } = useContext(GlobalContext);
 
     // USER CREDENTIAL
-
     useEffect(() => {
         if (userCredential.confirmPassword)
             setIconDisplay("")

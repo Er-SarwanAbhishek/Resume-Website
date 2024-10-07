@@ -24,7 +24,7 @@ export default function Border_Chain_Resume({ resumeData }) {
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
     return (
-        <div className="Border-Style-Resume-Template" style={{ ...themeColor, backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+        <div className="Border-Style-Resume-Template" style={{ ...themeColor, backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode ? <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />

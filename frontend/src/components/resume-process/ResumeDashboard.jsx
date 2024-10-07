@@ -6,12 +6,9 @@ import { AtsScorePopup } from "../popup/AtsScorePopup";
 import ResumePreviewpopup from "../popup/ResumePreviewpopup"; 
 import { AtsSkeletonLoader } from "../popup/AtsSkeletonLoader";
 
-export default function ResumeDashboard() {
+export default function ResumeDashboard({highlightSectionClass}) {
   const { currentTemplateData, setAtsScoreGemini } = useContext(GlobalContext);
-  const [isAtsPreview, setIsAtsPreview] = useState(false);
   const [isResumePreview, setIsResumePreview] = useState(false);
-  const [innerHTML, setInnerHTML] = useState("");
-  const [innerText, setInnerText] = useState("");
   const templateRef = useRef();
 
   const getInnerContent = () => {
@@ -19,17 +16,14 @@ export default function ResumeDashboard() {
       const html = templateRef.current.innerHTML;
       const text = templateRef.current.innerText;
 
-      setInnerHTML(html);
-      setInnerText(text);
       setAtsScoreGemini([html, text]);
 
-      setIsAtsPreview(true);
     }
   };
 
   useEffect(() => {
     getInnerContent();
-  }, []); 
+  }, [currentTemplateData]); 
 
 
   const handleResumePreview = () => {
@@ -38,7 +32,7 @@ export default function ResumeDashboard() {
 
   return (
     <>
-      <div className="prev-wrapper">
+      <div className={`prev-wrapper ${highlightSectionClass}`}>
         <div className="resume-prev-section">
           <div className="resumeCV" ref={templateRef}>
             {TemplateData.map((element) => {

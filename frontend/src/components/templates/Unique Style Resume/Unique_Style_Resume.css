@@ -183,13 +183,13 @@
     padding-bottom: 20px;
 }
 
-.unique-style-resume .final-section .right-column .skills-information ul {
+.unique-style-resume .final-section .left-column .skills-information ul {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
 }
 
-.unique-style-resume .final-section .right-column .skills-information li {
+.unique-style-resume .final-section .left-column .skills-information li {
     background-color: #DF61A6;
     padding: 10px 20px;
     border-radius: 20px;

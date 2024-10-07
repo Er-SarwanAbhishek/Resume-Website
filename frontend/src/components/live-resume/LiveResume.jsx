@@ -39,6 +39,7 @@ export default function LiveResume() {
         <>
             {
                 !templateData ? <Error /> :
+                <div className="live-resume-preview-wrapper">
                     <div className="resume-wrapper">
                         {TemplateData.map((element) => {
                             if (element.id === templateData.id) {
@@ -46,6 +47,7 @@ export default function LiveResume() {
                             }
                             return <></>
                         })}
+                    </div>
                     </div>
             }
         </>

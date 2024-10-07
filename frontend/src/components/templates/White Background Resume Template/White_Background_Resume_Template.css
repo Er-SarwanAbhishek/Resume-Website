@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.white-background-resume-template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    padding: 20px 30px;
+    background-color: white;
+    background-size: cover;
+}
+
+.white-background-resume-template .resume-qr-code {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.white-background-resume-template .header {
+    display: flex;
+    gap: 10%;
+    width: 100%
+}
+
+.white-background-resume-template .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 15px;
+}
+
+.white-background-resume-template p {
+    font-size: 12px;
+    line-height: 22px;
+    text-align: left;
+}
+
+.white-background-resume-template h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.white-background-resume-template h2 {
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 3px;
+    margin: 20px 0px 10px 0px;
+    border-bottom: 2px solid #b0b0b0;
+}
+
+.white-background-resume-template h4 {
+    text-align: left;
+    font: 16px;
+    text-transform: uppercase;
+    border-top: 2px solid #b0b0b0;
+    padding-top: 10px;
+}
+
+.white-background-resume-template .summary-information p {
+    margin-bottom: 15px;
+}
+
+.white-background-resume-template .header {
+    border-bottom: 2px solid #b0b0b0;
+    padding-bottom: 10px;
+}
+
+.white-background-resume-template .main-section {
+    display: flex;
+    padding-top: 10px;
+    gap: 5%;
+}
+
+.white-background-resume-template .left-column {
+    width: 40%;
+}
+
+.white-background-resume-template ul li {
+    font-size: 12px;
+    /* margin-bottom: 15px; */
+    list-style: none;
+    text-align: left;
+}
+
+.white-background-resume-template ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.white-background-resume-template .contact-details ul li {
+    margin-bottom: 15px;
+}
+
+.white-background-resume-template .contact-details i {
+    margin-right: 10px;
+    font-size: 12px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-background-resume-template .contact-details li {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.white-background-resume-template .skills-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.white-background-resume-template .skills-information li {
+    background-color: #b0b0b0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.white-background-resume-template .project-information .project-details {
+    display: flex;
+    gap: 10%;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.white-background-resume-template b {
+    font-size: 14px
+}
+
+.white-background-resume-template .right-column {
+    width: 55%;
+    border-left: 2px solid #b0b0b0;
+    padding-left: 30px;
+}
+
+.white-background-resume-template .common-sec .common-details {
+    padding-bottom: 10px;
+}
+
+.white-background-resume-template .common-sec .common-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}

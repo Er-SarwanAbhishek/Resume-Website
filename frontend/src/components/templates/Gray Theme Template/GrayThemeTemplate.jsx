@@ -5,17 +5,18 @@ import GlobalContext from '../../context/GlobalContext';
 
 
 export const GrayThemeTemplate = ({ resumeData }) => {
-  const { isQRCode } = resumeData;
+  const { isQRCode, themeColor } = resumeData;
   const { liveTemplateURL } = useContext(GlobalContext);
   const headingStyleCSS = {
     fontFamily: resumeData.headingTextFont,
-    // color: resumeData.headingTextColor
+    color: resumeData.headingTextColor,
   }
+
   const { backgroundPattern } = resumeData.resumeStyle;
 
   const paraStyleCSS = {
     fontFamily: resumeData.bodyTextFont,
-    // color: resumeData.bodyTextColor,
+    color: resumeData.bodyTextColor,
     fontSize: `${resumeData.bodyTextSize}px`
   }
 
@@ -23,7 +24,7 @@ export const GrayThemeTemplate = ({ resumeData }) => {
 
   return (
 
-    <div className="GTT-resume-template" style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+    <div className="GTT-resume-template" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
       {
         isQRCode ? <div className="resume-qr-code">
           <QRCodeCanvas value={liveTemplateURL} size={"50"} />
@@ -31,9 +32,9 @@ export const GrayThemeTemplate = ({ resumeData }) => {
       }
 
       {/*Name SO-1 */}
-      <div className="GTT-template  name-sec-so-1">
-        <img src={resumeData.profileImage} alt="" style={{ width: '120px', height: '120px' }} />
-        <div className='name-sec-so-1-details personal-edit'>
+      <div className="GTT-template  name-sec-so-1 personal-edit">
+        <img style={{ borderColor: themeColor, width: '120px', height: '120px' }} src={resumeData.profileImage} alt="" />
+        <div className='name-sec-so-1-details' style={{ borderColor: themeColor }}>
           <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
           <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
         </div>
@@ -42,10 +43,10 @@ export const GrayThemeTemplate = ({ resumeData }) => {
       {/*Contact SO-2 */}
       {
         resumeData.AllSections[1].isSection &&
-        <div className='contact-sec-so2 contact-edit'>
+        <div className='contact-sec-so2 contact-edit' style={{ background: themeColor }}>
           {resumeData.AllSections[1].list.map((element) => {
             return (
-              <div key={element.listId} style={paraStyleCSS} className="account-so-2-details">
+              <div key={element.listId} style={paraStyleCSS} className="account-so-2-details"  >
                 <i className={element.iconName}></i>
                 <p>{element.contactName}</p>
               </div>
@@ -57,7 +58,7 @@ export const GrayThemeTemplate = ({ resumeData }) => {
       {
         resumeData.AllSections[0].isSection &&
         <div className="gtt-for-heading profile-so-3 summary-edit">
-          <div className='gtt-for-heading profile-so-3-a '>
+          <div className='gtt-for-heading profile-so-3-a'>
             <h2 style={combineHeadingStyle}>{resumeData.AllSections[0].sectionName}</h2>
           </div>
           <p style={paraStyleCSS}>{resumeData.AllSections[0].summary}</p>
@@ -65,8 +66,8 @@ export const GrayThemeTemplate = ({ resumeData }) => {
 
 
       {/* GROUP SO-4 */}
-      <div className="grp-so-4">
-        <div className="so-4-left">
+      <div className="grp-so-4" style={{ borderColor: themeColor }}>
+        <div className="so-4-left" style={{ borderColor: themeColor }}>
 
           {/* experience | Job */}
           {

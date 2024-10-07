@@ -34,10 +34,405 @@ import ATS_Friendly_Resume from "./ATS Friendly Resume/ATS_Friendly_Resume";
 import Applicant_Tracking_Resume_Template from "./Applicant Tracking Resume Template/Applicant_Tracking_Resume_Template";
 import Professional_ATS_Resume from "./Professional ATS Resume/Professional_ATS_Resume";
 import Career_Changer_Resume from "./Career Changer Resume/Career_Changer_Resume";
-
+import After_Border_Resume_Template from "./After_Border_Resume_Template/After_Border_Resume_Template";
+// import Big_image_Typography_Template from "./Big Image Typography Template/Big_image_Typography_Template";
+import White_Background_Resume_Template from "./White Background Resume Template/White_Background_Resume_Template";
 
 
 export const TemplateData = [
+
+    //WHITE BACKGRAUND RESUME TEMPLATE
+    {
+        id: "WHBARETE",
+        templateName: "White Background Resume Template",
+        element: White_Background_Resume_Template,
+        headingTextFont: "Space Grotesk",
+        bodyTextFont: "Inter",
+        headingTextColor: "#000",
+        themeColor: "#B0B0B0",
+        bodyTextColor: "#000",
+        headingTextSize: 22,
+        bodyTextSize: 13,
+        category: "modern",
+        userName: "Sneha Sharma",
+        profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
+        userJobRole: "Data Analyst",
+        isQRCode: false,
+        resumeStyle: {
+            backgroundPattern: false
+        },
+        resumeDetails: {
+            ATS_Score: 90
+        },
+        AllSections: [
+            {
+                sectionId: "WHBARETE:SUMMARY",
+                isSection: true,
+                sectionName: "Summary",
+                summary: "Detail-oriented Data Analyst with [X] years of experience in interpreting complex data and providing actionable insights.Detail-oriented Data Analyst with [X] years of experience in interpreting complex data and providing actionable insights"
+            },
+            {
+                sectionId: "WHBARETE:CONTACT",
+                isSection: true,
+                sectionVisible: true,
+                sectionName: "Contact",
+                list: [
+                    {
+                        listId: "WHBARETE:CONTACT:1",
+                        iconName: "fa-regular fa-at",
+                        contactName: "sneha.sharma@email.com"
+                    },
+                    {
+                        listId: "WHBARETE:CONTACT:2",
+                        iconName: "fa-regular fa-phone-flip",
+                        contactName: "+91-XXXXXXXXXX"
+                    },
+                    {
+                        listId: "WHBARETE:CONTACT:3",
+                        iconName: "fa-regular fa-location-dot",
+                        contactName: "123 Main Street, Maharashtra, India"
+                    },
+                ]
+            },
+            {
+                sectionId: "WHBARETE:PROJECTS",
+                isSection: true,
+                sectionName: "Projects",
+                list: [
+                    {
+                        listId: "WHBARETE:PROJECTS:1",
+                        projectName: "Customer Segmentation Analysis",
+                        startDate: "2020",
+                        endDate: "2021",
+                        aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly.Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly"
+                    }
+                ]
+            },
+            {
+                sectionId: "WHBARETE:SKILLS",
+                isSection: true,
+                sectionName: "Skills",
+                list: [
+                    {
+                        listId: "WHBARETE:SKILLS:1",
+                        skillName: "Java"
+                    },
+                    {
+                        listId: "WHBARETE:SKILLS:2",
+                        skillName: "Python"
+                    },
+                    {
+                        listId: "WHBARETE:SKILLS:3",
+                        skillName: "JavaScript"
+                    },
+                    {
+                        listId: "WHBARETE:SKILLS:4",
+                        skillName: "Spring Boot"
+                    }
+                ]
+            },
+            {
+                sectionId: "WHBARETE:JOB-EXP",
+                isSection: true,
+                sectionName: "Job Experience",
+                list: [
+                    {
+                        listId: "WHBARETE:JOB-EXP:1",
+                        companyName: "Tech Solutions Pvt. Ltd.",
+                        jobRole: "Data Analyst",
+                        startDate: "2019",
+                        endDate: "2021",
+                        aboutJob: "Analyzed large datasets to uncover trends and patterns, leading to actionable recommendations that improved operational efficiency by [X]%."
+                    },
+                    {
+                        listId: "WHBARETE:JOB-EXP:2",
+                        companyName: "Tech Solutions Pvt. Ltd.",
+                        jobRole: "Data Analyst",
+                        startDate: "2019",
+                        endDate: "2021",
+                        aboutJob: "Analyzed large datasets to uncover trends and patterns, leading to actionable recommendations that improved operational efficiency by [X]%."
+                    }
+                ]
+            },
+            {
+                sectionId: "WHBARETE:EDUCATION",
+                isSection: true,
+                sectionName: "Education",
+                list: [
+                    {
+                        listId: "WHBARETE:EDUCATION:1",
+                        collegeName: "Mumbai University",
+                        course: "Bachelor of Technology in Computer Science",
+                        startDate: "2017",
+                        endDate: "2020",
+                        aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
+                    },
+                    {
+                        listId: "WHBARETE:EDUCATION:2",
+                        collegeName: "Mumbai University",
+                        course: "Bachelor of Technology in Computer Science",
+                        startDate: "2017",
+                        endDate: "2020",
+                        aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
+                    }
+                ]
+            }
+        ]
+    },
+
+    //BIG IMAGE TYPOGRAPHY TEMPLATE
+    // {
+    //     id: "BIIMTYTE",
+    //     templateName: "Big Image Typography Template",
+    //     element: Big_image_Typography_Template,
+    //     headingTextFont: "Space Grotesk",
+    //     bodyTextFont: "Inter",
+    //     headingTextColor: "#000",
+    //     themeColor: "#404040",
+    //     bodyTextColor: "#000",
+    //     headingTextSize: 22,
+    //     bodyTextSize: 13,
+    //     category: "modern",
+    //     userName: "Sneha Sharma",
+    //     profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
+    //     userJobRole: "Data Analyst",
+    //     isQRCode: false,
+    //     resumeStyle: {
+    //         backgroundPattern: false
+    //     },
+    //     resumeDetails: {
+    //         ATS_Score: 90
+    //     },
+    //     AllSections: [
+    //         {
+    //             sectionId: "BIIMTYTE:SUMMARY",
+    //             isSection: true,
+    //             sectionName: "Summary",
+    //             summary: "Detail-oriented Data Analyst with [X] years of experience in interpreting complex data and providing actionable insights."
+    //         },
+    //         {
+    //             sectionId: "BIIMTYTE:CONTACT",
+    //             isSection: true,
+    //             sectionVisible: true,
+    //             sectionName: "Contact",
+    //             list: [
+    //                 {
+    //                     listId: "BIIMTYTE:CONTACT:1",
+    //                     iconName: "fa-regular fa-at",
+    //                     contactName: "sneha.sharma@email.com"
+    //                 },
+    //                 {
+    //                     listId: "BIIMTYTE:CONTACT:2",
+    //                     iconName: "fa-regular fa-phone-flip",
+    //                     contactName: "+91-XXXXXXXXXX"
+    //                 },
+    //                 {
+    //                     listId: "BIIMTYTE:CONTACT:3",
+    //                     iconName: "fa-regular fa-location-dot",
+    //                     contactName: "123 Main Street, Maharashtra, India"
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             sectionId: "BIIMTYTE:PROJECTS",
+    //             isSection: true,
+    //             sectionName: "Projects",
+    //             list: [
+    //                 {
+    //                     listId: "BIIMTYTE:PROJECTS:1",
+    //                     projectName: "Customer Segmentation Analysis",
+    //                     startDate: "2020",
+    //                     endDate: "2021",
+    //                     aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly.Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             sectionId: "BIIMTYTE:SKILLS",
+    //             isSection: true,
+    //             sectionName: "Skills",
+    //             list: [
+    //                 {
+    //                     listId: "BIIMTYTE:SKILLS:1",
+    //                     skillName: "Java"
+    //                 },
+    //                 {
+    //                     listId: "BIIMTYTE:SKILLS:2",
+    //                     skillName: "Python"
+    //                 },
+    //                 {
+    //                     listId: "BIIMTYTE:SKILLS:3",
+    //                     skillName: "JavaScript"
+    //                 },
+    //                 {
+    //                     listId: "BIIMTYTE:SKILLS:4",
+    //                     skillName: "Spring Boot"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             sectionId: "BIIMTYTE:JOB-EXP",
+    //             isSection: true,
+    //             sectionName: "Job Experience",
+    //             list: [
+    //                 {
+    //                     listId: "BIIMTYTE:JOB-EXP:1",
+    //                     companyName: "Tech Solutions Pvt. Ltd.",
+    //                     jobRole: "Data Analyst",
+    //                     startDate: "2019",
+    //                     endDate: "2021",
+    //                     aboutJob: "Analyzed large datasets to uncover trends and patterns, leading to actionable recommendations that improved operational efficiency by [X]%."
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             sectionId: "BIIMTYTE:EDUCATION",
+    //             isSection: true,
+    //             sectionName: "Education",
+    //             list: [
+    //                 {
+    //                     listId: "BIIMTYTE:EDUCATION:2",
+    //                     collegeName: "Mumbai University",
+    //                     course: "Bachelor of Technology in Computer Science",
+    //                     startDate: "2017",
+    //                     endDate: "2020",
+    //                     aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // },
+
+    //AFTER BORDER RESUME TEMPLATE
+    {
+        id: "AFBORETE",
+        templateName: "After Border Resume Template",
+        element: After_Border_Resume_Template,
+        headingTextFont: "Space Grotesk",
+        bodyTextFont: "Inter",
+        headingTextColor: "#2D5B7A",
+        themeColor: "#E5E5E5",
+        bodyTextColor: "#000",
+        headingTextSize: 22,
+        bodyTextSize: 13,
+        category: "minimal",
+        userName: "Sneha Sharma",
+        profileImage: "",
+        userJobRole: "Data Analyst",
+        isQRCode: false,
+        resumeStyle: {
+            backgroundPattern: false
+        },
+        resumeDetails: {
+            ATS_Score: 90
+        },
+        AllSections: [
+            {
+                sectionId: "AFBORETE:SUMMARY",
+                isSection: true,
+                sectionName: "Summary",
+                summary: "Detail-oriented Data Analyst with [X] years of experience in interpreting complex data and providing actionable insights."
+            },
+            {
+                sectionId: "AFBORETE:CONTACT",
+                isSection: true,
+                sectionVisible: true,
+                sectionName: "Contact",
+                list: [
+                    {
+                        listId: "AFBORETE:CONTACT:1",
+                        iconName: "fa-regular fa-at",
+                        contactName: "sneha.sharma@email.com"
+                    },
+                    {
+                        listId: "AFBORETE:CONTACT:2",
+                        iconName: "fa-regular fa-phone-flip",
+                        contactName: "+91-XXXXXXXXXX"
+                    },
+                    {
+                        listId: "AFBORETE:CONTACT:3",
+                        iconName: "fa-regular fa-location-dot",
+                        contactName: "123 Main Street, Maharashtra, India"
+                    },
+                ]
+            },
+            {
+                sectionId: "AFBORETE:PROJECTS",
+                isSection: true,
+                sectionName: "Projects",
+                list: [
+                    {
+                        listId: "AFBORETE:PROJECTS:1",
+                        projectName: "Customer Segmentation Analysis",
+                        startDate: "2020",
+                        endDate: "2021",
+                        aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly.Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly"
+                    }
+                ]
+            },
+            {
+                sectionId: "AFBORETE:SKILLS",
+                isSection: true,
+                sectionName: "Skills",
+                list: [
+                    {
+                        listId: "AFBORETE:SKILLS:1",
+                        skillName: "Java"
+                    },
+                    {
+                        listId: "AFBORETE:SKILLS:2",
+                        skillName: "Python"
+                    },
+                    {
+                        listId: "AFBORETE:SKILLS:3",
+                        skillName: "JavaScript"
+                    },
+                    {
+                        listId: "AFBORETE:SKILLS:4",
+                        skillName: "Spring Boot"
+                    }
+                ]
+            },
+            {
+                sectionId: "AFBORETE:JOB-EXP",
+                isSection: true,
+                sectionName: "Job Experience",
+                list: [
+                    {
+                        listId: "AFBORETE:JOB-EXP:1",
+                        companyName: "Tech Solutions Pvt. Ltd.",
+                        jobRole: "Data Analyst",
+                        startDate: "2019",
+                        endDate: "2021",
+                        aboutJob: "Analyzed large datasets to uncover trends and patterns, leading to actionable recommendations that improved operational efficiency by [X]%."
+                    }
+                ]
+            },
+            {
+                sectionId: "AFBORETE:EDUCATION",
+                isSection: true,
+                sectionName: "Education",
+                list: [
+                    {
+                        listId: "AFBORETE:EDUCATION:1",
+                        collegeName: "Mumbai University",
+                        course: "Bachelor of Technology in Computer Science",
+                        startDate: "2017",
+                        endDate: "2020",
+                        aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
+                    },
+                    {
+                        listId: "AFBORETE:EDUCATION:2",
+                        collegeName: "Mumbai University",
+                        course: "Bachelor of Technology in Computer Science",
+                        startDate: "2017",
+                        endDate: "2020",
+                        aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
+                    }
+                ]
+            }
+        ]
+    },
 
     //CAREER CHANGER RESUME
     {
@@ -51,9 +446,9 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 22,
         bodyTextSize: 13,
-        category: "modern",
+        category: "ats-friendly",
         userName: "Sneha Sharma",
-        profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
+        profileImage: "",
         userJobRole: "Data Analyst",
         isQRCode: false,
         resumeStyle: {
@@ -105,7 +500,7 @@ export const TemplateData = [
                         aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly.Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly"
                     },
                     {
-                        listId: "CARCHARES:PROJECTS:1",
+                        listId: "CARCHARES:PROJECTS:2",
                         projectName: "Customer Segmentation Analysis",
                         startDate: "2020",
                         endDate: "2021",
@@ -251,7 +646,7 @@ export const TemplateData = [
                         aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly.Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly"
                     },
                     {
-                        listId: "PROATRE:PROJECTS:1",
+                        listId: "PROATRE:PROJECTS:2",
                         projectName: "Customer Segmentation Analysis",
                         startDate: "2020",
                         endDate: "2021",
@@ -344,9 +739,9 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 22,
         bodyTextSize: 13,
-        category: "modern",
+        category: "ats-friendly",
         userName: "Sneha Sharma",
-        profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
+        profileImage: "",
         userJobRole: "Data Analyst",
         isQRCode: false,
         resumeStyle: {
@@ -484,9 +879,9 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 22,
         bodyTextSize: 13,
-        category: "modern",
+        category: "ats-friendly",
         userName: "Sneha Sharma",
-        profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
+        profileImage: "",
         userJobRole: "Data Analyst",
         isQRCode: false,
         resumeStyle: {
@@ -764,7 +1159,7 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 20,
         bodyTextSize: 12,
-        category: "modern",
+        category: "creative",
         userName: "Sneha Sharma",
         profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
         userJobRole: "Data Analyst",
@@ -1044,7 +1439,7 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 18,
         bodyTextSize: 12,
-        category: "modern",
+        category: "creative",
         userName: "Sneha Sharma",
         profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
         userJobRole: "Data Analyst",
@@ -1185,7 +1580,7 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 16,
         bodyTextSize: 12,
-        category: "simple",
+        category: "creative",
         userName: "Yogesh Kumar",
         userJobRole: "Front End Developer",
         profileImage: "https://wallpapercave.com/wp/wp13386395.jpg",
@@ -1517,7 +1912,7 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 18,
         bodyTextSize: 12,
-        category: "modern",
+        category: "creative",
         userName: "Sneha Sharma",
         profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
         userJobRole: "Data Analyst",
@@ -1822,7 +2217,7 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 18,
         bodyTextSize: 12,
-        category: "modern",
+        category: "creative",
         userName: "Sneha Sharma",
         profileImage: "",
         userJobRole: "Data Analyst",
@@ -2327,7 +2722,7 @@ export const TemplateData = [
         bodyTextColor: "rgba(0,0,0,0.9)",
         headingTextSize: 18,
         bodyTextSize: 12,
-        category: "simple",
+        category: "minimal",
         userName: "Sneha Sharma",
         profileImage: "",
         userJobRole: "Data Analyst",
@@ -2625,9 +3020,9 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 18,
         bodyTextSize: 12,
-        category: "simple",
+        category: "minimal",
         userName: "Sneha Sharma",
-        profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
+        profileImage: "",
         userJobRole: "Data Analyst",
         subCategory: "dataScientist",
         isQRCode: false,
@@ -2947,7 +3342,7 @@ export const TemplateData = [
         bodyTextColor: "#333",
         headingTextSize: 18,
         bodyTextSize: 12,
-        category: "simple",
+        category: "minimal",
         userName: "Sneha Sharma",
         profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
         userJobRole: "Product Manager",
@@ -3093,7 +3488,6 @@ export const TemplateData = [
         id: "BAWCAPR",
         templateName: "ATS Friendly",
         element: Blue_and_White_Clean_and_Professional_Resume,
-        category: "simple",
         userName: "Aria Sterling",
         headingTextFont: "Oswald",
         bodyTextFont: "Inter",
@@ -3101,6 +3495,7 @@ export const TemplateData = [
         bodyTextColor: "#333",
         headingTextSize: 18,
         bodyTextSize: 12,
+        category: "minimal",
         profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
         userJobRole: "UI/UX Designer",
         isQRCode: false,
@@ -3225,7 +3620,7 @@ export const TemplateData = [
         bodyTextColor: "#333",
         headingTextSize: 18,
         bodyTextSize: 12,
-        category: "professional",
+        category: "modern",
         userName: "Oliver Greene",
         profileImage: "",
         userJobRole: "Graphic Designer",
@@ -3378,7 +3773,7 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 18,
         bodyTextSize: 12,
-        category: "professional",
+        category: "modern",
         userName: "Ravi Patel",
         profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
         userJobRole: "Accountant",
@@ -3528,14 +3923,15 @@ export const TemplateData = [
         id: "templateid1234",
         templateName: "Gray Theme Template",
         element: GrayThemeTemplate,
-        category: "professional",
         userName: "Priya Sharma",
         headingTextFont: "Poppins",
         bodyTextFont: "Mulish",
         headingTextColor: "#333",
+        themeColor: "#737373",
         bodyTextColor: "#000",
         headingTextSize: 18,
         bodyTextSize: 12,
+        category: "modern",
         profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
         userJobRole: "Business Analytics",
         subCategory: "businessAnalytics",
@@ -3707,7 +4103,6 @@ export const TemplateData = [
         id: "templateid12342",
         templateName: "F Theme Template",
         element: FThemeTemplate,
-        category: "professional",
         userName: "Emily Smith",
         headingTextFont: "Poppins",
         bodyTextFont: "Mulish",
@@ -3715,6 +4110,7 @@ export const TemplateData = [
         bodyTextColor: "#000",
         headingTextSize: 18,
         bodyTextSize: 12,
+        category: "ats-friendly",
         profileImage: "",
         userJobRole: "Web Developer",
         subCategory: "softwareEngineer",

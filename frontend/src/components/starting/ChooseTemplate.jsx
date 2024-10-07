@@ -88,9 +88,9 @@ export default function ChooseTemplate({ home }) {
         <ul className="homemenu">
           <li onClick={() => setTemplateMenu("all")} className={templateMenu === "all" ? "active-tab" : ""}>All Templates</li>
           <li onClick={() => setTemplateMenu("modern")} className={templateMenu === "modern" ? "active-tab" : ""}>Modern</li>
-          <li onClick={() => setTemplateMenu("simple")} className={templateMenu === "simple" ? "active-tab" : ""}>Simple</li>
+          <li onClick={() => setTemplateMenu("minimal")} className={templateMenu === "minimal" ? "active-tab" : ""}>Minimal</li>
           <li onClick={() => setTemplateMenu("creative")} className={templateMenu === "creative" ? "active-tab" : ""}>Creative</li>
-          <li onClick={() => setTemplateMenu("professional")} className={templateMenu === "professional" ? "active-tab" : ""}>Professional</li>
+          <li onClick={() => setTemplateMenu("ats-friendly")} className={templateMenu === "ats-friendly" ? "active-tab" : ""}>ATS Friendly</li>
         </ul>
         <div className="resume-templates">
           {TemplateData.slice(0, home && templateMenu === "all" ? tempArrSize : 1000).map((element) => {

@@ -21,7 +21,7 @@ export default function Creative_Image_Resume_Template({ resumeData }) {
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
     return (
-        <div className='creative-image-template' style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+        <div className='creative-image-template' style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode && <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />

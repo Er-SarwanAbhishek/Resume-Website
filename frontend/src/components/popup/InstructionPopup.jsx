@@ -55,8 +55,8 @@ export default function InstructionPopup({ cancel }) {
           <div className="row" ref={instructionPopupRef}>
             <div className="column">
               <span className="popup-lord-icon">
-                <lord-icon
-                  src="https://media.lordicon.com/icons/wired/flat/56-document.json"
+              <lord-icon
+                  src="https://cdn.lordicon.com/yqiuuheo.json"
                   trigger="loop"
                   delay="800"
                   stroke="light"
@@ -72,8 +72,8 @@ export default function InstructionPopup({ cancel }) {
             </div>
             <div className="column">
               <span className="popup-lord-icon">
-                <lord-icon
-                  src="https://media.lordicon.com/icons/wired/flat/245-edit-document.json"
+              <lord-icon
+                    src="https://cdn.lordicon.com/vhyuhmbl.json"
                   trigger="loop"
                   delay="800"
                   speed="8000"
@@ -87,14 +87,17 @@ export default function InstructionPopup({ cancel }) {
             </div>
             <div className="column end-img">
               <span className="popup-lord-icon">
-                <lord-icon
+              {/* <lord-icon
                   src="https://media.lordicon.com/icons/wired/flat/93-document-download.json"
                   trigger="loop"
                   delay="800"
                   stroke="light"
                   colors="primary:#5A4ABD"
                   style={{ width: 150, height: 150 }}
-                ></lord-icon>
+                ></lord-icon> */}
+                 <video className='' autoPlay muted loop>
+                            <source src="./videos/download-icon-vd.mp4" type='video/mp4' />
+                        </video>
               </span>
               <h3>Download Resume</h3>
               <p>Download your custom-designed resume with just one click.</p>
@@ -106,42 +109,45 @@ export default function InstructionPopup({ cancel }) {
             <Slider{...settings}>
               <div className='column'>
                 <span className='popup-lord-icon'>
-                  <lord-icon
-                    src="https://media.lordicon.com/icons/wired/flat/56-document.json"
-                    trigger="loop"
-                    delay="800"
-                    speed="8000"
-                    stroke="light"
-                    colors="primary:#5A4ABD"
-                    style={{ width: 150, height: 150 }}
-                  ></lord-icon>
+                <lord-icon
+                  src="https://cdn.lordicon.com/yqiuuheo.json"
+                  trigger="loop"
+                  delay="800"
+                  stroke="light"
+                  colors="primary:#5A4ABD"
+                  style={{ width: 150, height: 150 }}
+                ></lord-icon>
                 </span>
                 <h3>Choose Template</h3>
               </div>
               <div className='column'>
                 <span className='popup-lord-icon'>
-                  <lord-icon
-                    src="https://media.lordicon.com/icons/wired/flat/245-edit-document.json"
-                    trigger="loop"
-                    delay="800"
-                    speed="8000"
-                    stroke="light"
-                    colors="primary:#EBE6EF,secondary:#8d90ec,tertiary:#5A4ABD"
-                    style={{ width: 150, height: 150 }}
-                  ></lord-icon>
+                <lord-icon
+                    src="https://cdn.lordicon.com/vhyuhmbl.json"
+                  trigger="loop"
+                  delay="800"
+                  speed="8000"
+                  stroke="light"
+                  colors="primary:#EBE6EF,secondary:#8d90ec,tertiary:#5A4ABD"
+                  style={{ width: 150, height: 150 }}
+                ></lord-icon>
                 </span>
                 <h3>Update Details</h3>
               </div>
               <div className='column'>
                 <span className='popup-lord-icon'>
-                  <lord-icon
-                    src="https://media.lordicon.com/icons/wired/flat/93-document-download.json"
-                    trigger="loop"
-                    delay="800"
-                    stroke="light"
-                    colors="primary:#5A4ABD"
-                    style={{ width: 150, height: 150 }}
-                  ></lord-icon>
+                {/* <lord-icon
+                    src="https://cdn.lordicon.com/vhyuhmbl.json"
+                  trigger="loop"
+                  delay="800"
+                  speed="8000"
+                  stroke="light"
+                  colors="primary:#EBE6EF,secondary:#8d90ec,tertiary:#5A4ABD"
+                  style={{ width: 150, height: 150 }}
+                ></lord-icon> */}
+                <video className='download-icon-vd' autoPlay muted loop>
+                            <source src="./videos/download-icon-vd-mobile.mp4" type='video/mp4' />
+                        </video>
                 </span>
                 <h3>Download Resume</h3>
               </div>

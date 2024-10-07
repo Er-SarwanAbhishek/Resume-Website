@@ -4,7 +4,7 @@ import { QRCodeCanvas } from 'qrcode.react';
 import GlobalContext from '../../context/GlobalContext';
 
 export default function Pattern_Style_Resume({ resumeData }) {
-    const { AllSections, isQRCode } = resumeData;
+    const { AllSections, isQRCode, resumeStyle } = resumeData;
     const { liveTemplateURL } = useContext(GlobalContext);
     const { themeColor } = resumeData;
     const { backgroundPattern } = resumeData.resumeStyle;
@@ -22,7 +22,7 @@ export default function Pattern_Style_Resume({ resumeData }) {
 
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
     return (
-        <div className="pattern-style-resume" style={{ backgroundImage: `url(${backgroundPattern})` }}>
+        <div className="pattern-style-resume"  style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode ?
                     <div className="resume-qr-code">
@@ -31,8 +31,8 @@ export default function Pattern_Style_Resume({ resumeData }) {
                     <></>
             }
 
-            <div className="header">
-                <div className="personal-details personal-edit">
+            <div className="header personal-edit">
+                <div className="personal-details">
                     <h1 style={headingStyleCSS}> {resumeData.userName} </h1>
                     <h4 style={headingStyleCSS}> <span className='bottom-theme' style={{ backgroundColor: themeColor }}></span>{resumeData.userJobRole}</h4>
                 </div>

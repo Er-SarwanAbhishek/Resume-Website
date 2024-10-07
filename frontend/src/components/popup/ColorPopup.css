@@ -28,6 +28,7 @@
 .text-color-popup .color-input label{
     width: 40px;
     height: 35px;
+    border: 1px solid #000;
     border-radius: 5px;
     cursor: pointer;
 }

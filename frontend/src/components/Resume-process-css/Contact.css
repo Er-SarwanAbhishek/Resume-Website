@@ -1,4 +1,4 @@
-.edit-contact-form{
+.edit-contact-form {
     position: relative;
 }
 
@@ -31,7 +31,7 @@
 .edit-contact-form form .social-media input {
     border-radius: 0px;
     margin: 0px;
-    padding:10px;
+    padding: 10px;
     font-family: "mulish";
 }
 
@@ -82,10 +82,10 @@
     border-radius: 10px;
     font-family: "montserrat";
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     border: none;
-
+    cursor: pointer;
 }
 
 .edit-contact-form form .save-section a i {

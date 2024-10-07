@@ -19,7 +19,12 @@ export default function Box_Style_Resume({ resumeData }) {
 
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
     return (
-        <div className="box-style-resume">
+        <div className="box-style-resume" style={{ ...themeColor, backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
+              {
+                isQRCode ? <div className="resume-qr-code">
+                    <QRCodeCanvas value={liveTemplateURL} size={"50"} />
+                </div> : <></>
+            }
             <div className="left-column">
                 <div
                     className="profile-img"
@@ -69,7 +74,7 @@ export default function Box_Style_Resume({ resumeData }) {
                 </div>}
             </div>
             <div className="right-column">
-                <div className="personal-details">
+                <div className="personal-details" style={{backgroundColor: themeColor}}>
                     <h1 style={headingStyleCSS}> {resumeData.userName} </h1>
                     <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
                 </div>

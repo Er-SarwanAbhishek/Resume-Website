@@ -23,7 +23,7 @@ export default function Entry_Level_Tech_Professional_Resume({ resumeData }) {
   const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
   return (
-    <div className="Entry_Level_Tech_Professional_Resume" style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+    <div className="Entry_Level_Tech_Professional_Resume" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
       {
         isQRCode ? <div className="resume-qr-code">
           <QRCodeCanvas value={liveTemplateURL} size={"50"} />

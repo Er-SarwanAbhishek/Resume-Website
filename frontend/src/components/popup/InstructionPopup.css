@@ -10,7 +10,9 @@
   top: 0px;
   z-index: 100;
 }
-
+.instruction-popup .popup-lord-icon video{
+  zoom: 0.11;
+}
 .instruction-popup .for-custom-padding {
   width: 80%;
   max-width: 1400px;
@@ -165,7 +167,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-   
+  padding: 10px; 
 }
 
 .popup-lord-icon {
@@ -195,7 +197,7 @@ h3 {
 .column {
   flex: 0 0 auto;  
   width: 100%;    
-     
+  padding: 20px;   
   display: flex;    
   flex-direction: column;
   align-items: center; 
@@ -217,3 +219,4 @@ h3 {
   zoom: 0;
 }
 }
+

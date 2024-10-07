@@ -54,18 +54,16 @@ export default function Summary() {
                         type="text" 
                         name="sectionName" 
                         value={currentTemplateData.AllSections[0].sectionName} 
-                        onChange={(e) => ChangeSectionValue(e, 0)} 
-                        required 
-                        placeholder='About me' 
+                        onChange={(e) => ChangeSectionValue(e, 0)}  
+                        placeholder='Section name' 
                     />
                 </div>
                 <div className="summary-form-textarea">
                     <textarea 
                         name="summary" 
                         value={currentTemplateData.AllSections[0].summary} 
-                        onChange={(e) => ChangeSectionValue(e, 0)} 
-                        required 
-                        placeholder='summary' 
+                        onChange={(e) => ChangeSectionValue(e, 0)}  
+                        placeholder='Description' 
                     />
                     <img 
                         src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png"  

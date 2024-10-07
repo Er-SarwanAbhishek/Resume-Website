@@ -4,9 +4,11 @@
   padding: 40px;
   position: relative;
   background-color: #fff;
+  background-size: cover;
+
 }
 
-.red-white-resume *{
+.red-white-resume * {
   z-index: 1;
 }
 

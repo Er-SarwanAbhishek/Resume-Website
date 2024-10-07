@@ -1,0 +1,27 @@
+.skill-suggest-pop{
+    width: 100% !important;
+    max-height: 350px;
+    overflow-y: auto;
+    left: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-suggest-pop h2{
+    margin-bottom: 0;
+}
+
+.skill-suggest-pop li{
+    padding: 10px;
+    border-radius: 20px;
+    outline: 1px solid #e5e5e5;
+    font-family: "Inter";
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.skill-suggest-pop li:hover{
+    outline: 1px solid #5a4abd;
+    background-color: #fafafa;
+}

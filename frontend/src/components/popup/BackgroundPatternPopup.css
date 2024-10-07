@@ -1,6 +1,5 @@
 .common-pop-box {
     width: 300px;
-    /* min-height: 400px; */
     background-color: #fff;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -72,5 +71,11 @@
 @media screen and (max-width: 450px) {
     .common-pop-box {
         bottom: 20px;
+    }
+
+    .background-pop-body .b-patterns {
+        gap: 3%;
+        height: 250px;
+        overflow-y: auto;
     }
 }

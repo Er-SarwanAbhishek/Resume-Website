@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./SignupFormPopup.css";
 import "../login-process/Signup.css";
 import { Link } from "react-router-dom";
@@ -8,10 +8,39 @@ import GlobalContext from "../context/GlobalContext";
 const SignupFormPopup = ({ cancel }) => {
 
   const { GoogleLogin, errorDetails, SaveUserDetails } = useContext(GlobalContext);
+  const [userCredential, setUserCredential] = useState({ fullName: "", email: "", createPassword: "", confirmPassword: "" });
+  const [iconDisplay, setIconDisplay] = useState("none");
+  const [passType, setPassType] = useState("password");
+  const [eyeClass, setEyeClass] = useState("fa-solid fa-eye");
   const signupFormPopRef = useRef();
 
-  // CLOSE FONT POPUP BY USEREF
+  // USER CREDENTIAL
+  useEffect(() => {
+    if (userCredential.confirmPassword)
+      setIconDisplay("")
 
+    else
+      setIconDisplay("none")
+
+  }, [userCredential])
+
+  const ShowPassword = () => {
+    if (passType === "password") {
+      setPassType("text");
+      setEyeClass("fa-solid fa-eye-slash");
+    }
+    else {
+      setPassType("password");
+      setEyeClass("fa-solid fa-eye");
+    }
+  }
+
+  const GetUserValue = (e) => {
+    const { name, value } = e.target;
+    setUserCredential({ ...userCredential, [name]: value });
+  }
+
+  // CLOSE FONT POPUP BY USEREF\
   const ClosePopup = (e) => {
     if (signupFormPopRef.current.contains(e.target)) {
       return;
@@ -45,10 +74,15 @@ const SignupFormPopup = ({ cancel }) => {
         <div className="signup-steps signup-column">
           <div className="pop-signup-box signup-box">
             <h2>SignUp</h2>
-            <form>
-              <input type="text" placeholder="Enter your name" required />
-              <input type="email" placeholder="Enter your email" required />
-              <input type="password" placeholder="Enter your password" required />
+            <form onSubmit={(e) => SaveUserDetails(e, userCredential)}>
+              <input type="text" name="fullName" value={userCredential.fullName} placeholder="Enter your name" onChange={GetUserValue} required />
+              <input type="email" name="email" value={userCredential.email} placeholder="Enter your email" onChange={GetUserValue} required />
+              <input type="password" name="createPassword" value={userCredential.createPassword} placeholder="Enter your password" onChange={GetUserValue} required />
+              <div className="pass-eye">
+                <input type={passType} name="confirmPassword" value={userCredential.confirmPassword} onChange={GetUserValue} placeholder="- Confirm password" required />
+                <i style={{ display: iconDisplay }} onClick={ShowPassword} className={eyeClass}></i>
+              </div>
+              <p className="error-msg" style={{ display: errorDetails.display }}><i class="fa-solid fa-circle-exclamation"></i> {errorDetails.message}</p>
               <button type="submit">Sign Up</button>
             </form>
 

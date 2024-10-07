@@ -24,7 +24,7 @@ export const SalesAchieverResume = ({ resumeData }) => {
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
     return (
-        <div className="SalesAchieverRT" style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+        <div className="SalesAchieverRT" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
 
             {
                 isQRCode ? <div className="resume-qr-code">

@@ -13,7 +13,7 @@ export default function Unique_Style_Resume({ resumeData }) {
         let b = parseInt(hex.substring(4, 6), 16);
         return `rgba(${r}, ${g}, ${b}, ${opacity})`;
     }
-    const { AllSections, themeColor, isQRCode } = resumeData;
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
     const { liveTemplateURL } = useContext(GlobalContext);
     const downColor = hexToRgba(themeColor, 0.2);
 
@@ -21,6 +21,7 @@ export default function Unique_Style_Resume({ resumeData }) {
         fontFamily: resumeData.headingTextFont,
         color: resumeData.headingTextColor,
     }
+
 
     const paraStyleCSS = {
         fontFamily: resumeData.bodyTextFont,
@@ -30,10 +31,10 @@ export default function Unique_Style_Resume({ resumeData }) {
 
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
     return (
-        <div className='unique-style-resume'>
+        <div className='unique-style-resume' >
 
             {
-                isQRCode ? <div className="resume-qr-code">
+                isQRCode ? <div className="resume-qr-code" >
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />
                 </div> : <></>
             }
@@ -45,7 +46,7 @@ export default function Unique_Style_Resume({ resumeData }) {
                         backgroundImage: `url(${resumeData.profileImage})`,
                     }}
                 ></div>
-                <div className='personal-detail'>
+                <div className='personal-details'>
                     <div className='personal-edit'>
                         <h1 style={headingStyleCSS}>
                             Hi! I'm<br />
@@ -65,6 +66,23 @@ export default function Unique_Style_Resume({ resumeData }) {
             </div>
             <div className='final-section'>
                 <div className='left-column' style={isQRCode ? { paddingBottom: '100px' } : { paddingBottom: '30px' }}>
+
+                    {/* SKILLS */}
+                    {
+                        resumeData.AllSections[3].isSection &&
+                        <div className='skills-information skill-edit'>
+                            <h2 style={combineHeadingStyle}>{AllSections[3].sectionName}</h2>
+                            <ul style={{ borderColor: themeColor }}>
+                                {AllSections[3].list.map(skill => {
+                                    const { listId, skillName } = skill;
+                                    return (
+                                        <li style={{ backgroundColor: themeColor }} key={listId}>
+                                            <p style={{ ...paraStyleCSS, color: '#fff' }}>{skillName}</p>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </div>}
 
                     {/* JOB EXP */}
                     {
@@ -110,23 +128,7 @@ export default function Unique_Style_Resume({ resumeData }) {
                 </div>
                 <div className='right-column'>
 
-                    {/* SKILLS */}
-                    {
 
-                        resumeData.AllSections[3].isSection &&
-                        <div className='skills-information skill-edit'>
-                            <h2 style={combineHeadingStyle}>{AllSections[3].sectionName}</h2>
-                            <ul style={{ borderColor: themeColor }}>
-                                {AllSections[3].list.map(skill => {
-                                    const { listId, skillName } = skill;
-                                    return (
-                                        <li style={{ backgroundColor: themeColor }} key={listId}>
-                                            <p style={{ ...paraStyleCSS, color: '#fff' }}>{skillName}</p>
-                                        </li>
-                                    )
-                                })}
-                            </ul>
-                        </div>}
 
                     {/* EDUCATION */}
                     {

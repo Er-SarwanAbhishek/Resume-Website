@@ -22,7 +22,7 @@ export const FThemeTemplate = ({ resumeData }) => {
   const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
   return (
-    <div className="FThemeTemplate-Template" style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+    <div className="FThemeTemplate-Template" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
       {
         isQRCode ? <div className="resume-qr-code">
           <QRCodeCanvas value={liveTemplateURL} size={"50"} />
@@ -76,7 +76,7 @@ export const FThemeTemplate = ({ resumeData }) => {
                     const { companyName, jobRole, startDate, endDate, aboutJob } = element;
                     return (
                       <div key={index}>
-                        <p style={{ ...headingStyleCSS, fontWeight: 600 }}>{companyName} | {startDate} - {endDate} </p>
+                        <p style={{ ...paraStyleCSS, fontWeight: 600 }}>{companyName} | {startDate} - {endDate} </p>
                         <p style={paraStyleCSS} className='FThemeTemplate-sub-heading'>{jobRole}</p>
                         <p style={paraStyleCSS}>{aboutJob}</p>
                       </div>
@@ -95,7 +95,7 @@ export const FThemeTemplate = ({ resumeData }) => {
                     const { projectName, startDate, endDate, aboutProject } = element;
                     return (
                       <div key={index}>
-                        <p style={{ ...headingStyleCSS, fontWeight: 600 }}>{projectName} | {startDate} - {endDate} </p>
+                        <p style={{ ...paraStyleCSS, fontWeight: 600 }}>{projectName} | {startDate} - {endDate} </p>
                         <p style={paraStyleCSS}>{aboutProject}</p>
                       </div>
                     );
@@ -127,7 +127,7 @@ export const FThemeTemplate = ({ resumeData }) => {
                     const { collegeName, course, startDate, endDate, aboutEducation } = element;
                     return (
                       <React.Fragment key={index}>
-                        <p style={{ ...headingStyleCSS, fontWeight: 600 }}>{collegeName} | {startDate} - {endDate} </p>
+                        <p style={{ ...paraStyleCSS, fontWeight: 600 }}>{collegeName} | {startDate} - {endDate} </p>
                         <p style={paraStyleCSS} className='FThemeTemplate-sub-heading'>{course}</p>
                         <p style={paraStyleCSS}>{aboutEducation}</p>
                       </React.Fragment>

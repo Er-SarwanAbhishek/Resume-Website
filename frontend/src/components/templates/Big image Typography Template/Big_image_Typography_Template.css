@@ -1,0 +1,208 @@
+.big-image-typography-template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    display: flex;
+    gap: 10%;
+    background-color: white;
+    background-size: cover;
+}
+
+/* globel Css */
+
+.big-image-typography-template .left-column {
+    width: 40%;
+    padding: 80px 20px 30px 30px;
+}
+
+.big-image-typography-template .resume-qr-code {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.big-image-typography-template h1 {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.big-image-typography-template h4 {
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.big-image-typography-template h2 {
+    font-size: 20px;
+    text-align: left;
+    margin: 20px 0px 10px 0px;
+    background-color: #000000;
+    color: white;
+    padding: 3px 20px;
+    border-radius: 10px;
+}
+
+.big-image-typography-template p {
+    font-size: 12px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.big-image-typography-template b {
+    font-size: 14px;
+}
+
+/* Contact Details  */
+
+
+.big-image-typography-template .left-column .contact-details ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+    color: black;
+    font-size: 16px;
+}
+
+.big-image-typography-template .left-column .contact-details li {
+    display: flex;
+    align-items: center;
+}
+
+.big-image-typography-template .left-column .contact-details ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.big-image-typography-template .left-column .contact-details i {
+    margin-right: 15px;
+    font-size: 12px;
+    background-color: #000000;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Skills Information css */
+
+.big-image-typography-template .left-column .skills-information ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+    padding-left: 30px;
+}
+
+.big-image-typography-template .left-column .skills-information ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.big-image-typography-template .left-column .skills-information li .list-dots-boxes {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    /* background-color: #000000; */
+    top: 8px;
+    left: 0px;
+}
+
+/* Education Section Css */
+
+
+.big-image-typography-template .left-column .education-information {
+    text-align: left;
+}
+
+.big-image-typography-template .left-column .education-details {
+    padding-bottom: 15px;
+}
+
+/* .big-image-typography-template .left-column .education-details b {
+    font-size: 18px;
+} */
+
+.big-image-typography-template .left-column .education-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+/* Right Column And Image Css */
+
+
+.big-image-typography-template .right-column {
+    width: 50%;
+}
+
+.big-image-typography-template .right-column .profile-img {
+    width: 100%;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Summary section Css */
+
+.big-image-typography-template .right-column .summary-information {
+    text-align: left;
+    background-color: #000000;
+    padding: 20px 30px 20px 30px;
+}
+
+.big-image-typography-template .right-column .summary-information h2 {
+    background-color: white;
+    color: black;
+    width: 70%;
+    margin-top: 0px;
+}
+
+.big-image-typography-template .right-column .summary-information p {
+    color: white;
+}
+
+/* Project Details Css */
+
+.big-image-typography-template .right-column .project_information h2 {
+    width: 70%;
+}
+
+.big-image-typography-template .right-column .project_information .project_details {
+    text-align: left;
+    padding-right: 30px;
+    padding-bottom: 15px;
+}
+
+.big-image-typography-template .right-column .project_information .project_details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.big-image-typography-template .right-column .project_information .project_details b {
+    font-size: 19px;
+}
+
+/* Experience Details Css */
+
+.big-image-typography-template .right-column .experience-information {
+    text-align: left;
+}
+
+.big-image-typography-template .right-column .experience-information h2 {
+    width: 70%;
+}
+
+.big-image-typography-template .right-column .experience-details {
+    padding-bottom: 15px;
+    padding-right: 30px;
+}
+
+/* .big-image-typography-template .right-column .experience-details b {
+    font-size: 18px;
+} */
+
+.big-image-typography-template .right-column .experience-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}

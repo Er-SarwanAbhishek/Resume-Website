@@ -1,7 +1,16 @@
-.resume-wrapper{
-    width: 793.001px;
+.resume-wrapper {
+    width: 793px; 
     border: 1px solid #e5e5e5;
-    margin: 50px;
+  
+}
+
+.live-resume-preview-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 60px 0;
 }
 
 @media screen and (max-width: 450px) {

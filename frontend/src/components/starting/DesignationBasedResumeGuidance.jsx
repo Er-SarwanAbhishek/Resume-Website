@@ -104,7 +104,7 @@ export const DesignationBasedResumeGuidance = ({ editTemplate, setIsPrevTemplate
                     The Right Resume Builder for Your <span>Job and Experience</span>
                 </h2>
                 <div className="dropdown-side">
-                    <img src="" alt="" draggable="false" />
+                    {/* <img src="" alt="" draggable="false" /> */}
                     <select
                         value={subSelectedTem}
                         onChange={handleDropdownChange}

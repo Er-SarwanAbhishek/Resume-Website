@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.after-border-resume-template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    padding: 0px 30px 30px 30px;
+    text-align: left;
+    background-color: white;
+    background-size: cover;
+}
+
+.after-border-resume-template .resume-qr-code {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.after-border-resume-template .personal-details {
+    border-top: 40px solid #e5e5e5;
+    padding: 15px 0px 8px 0px;
+    border-bottom: 2px solid #b0b0b0;
+}
+
+.after-border-resume-template h1 {
+    font-size: 35px;
+}
+
+.after-border-resume-template h4 {
+    font-size: 18px;
+}
+
+.after-border-resume-template p{
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.after-border-resume-template h2 {
+    font-size: 20px;
+    margin: 20px 0px 10px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: #2D5B7A;
+}
+
+.after-border-resume-template h2 .theme-design {
+    width: 100%;
+    height: 20px;
+    background-color: #e5e5e5;
+}
+
+.after-border-resume-template b{
+    font-size: 14px;
+}
+
+.after-border-resume-template .summary-information{
+    border-bottom: 2px solid #b0b0b0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.after-border-resume-template .main {
+    display: flex;
+    gap: 5%;
+}
+
+.after-border-resume-template .left-column {
+    width: 57%;
+}
+
+.after-border-resume-template .common-sec{
+    border-bottom: 2px solid #b0b0b0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.after-border-resume-template .common-details{
+    padding-bottom: 10px;
+}
+
+.after-border-resume-template .common-details:nth-last-child(1){
+    padding-bottom: 0px;
+}
+
+.after-border-resume-template .right-column{
+    width: 37%;
+}
+
+.after-border-resume-template .right-column  ul li{
+    list-style: none;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.after-border-resume-template .right-column ul li:nth-last-child(1){
+    margin-bottom: 0px;
+}
+
+.after-border-resume-template .right-column .contact-details i{
+    margin-right: 10px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.after-border-resume-template .contact-details li{
+    display: flex;
+    align-items: center;
+}
+
+.after-border-resume-template .contact-details{
+    border-bottom: 2px solid #b0b0b0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.after-border-resume-template .skills-information ul li{
+    list-style: square;
+    list-style: inside;
+}
+
+.after-border-resume-template .skills-information{
+    border-bottom: 2px solid #b0b0b0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}

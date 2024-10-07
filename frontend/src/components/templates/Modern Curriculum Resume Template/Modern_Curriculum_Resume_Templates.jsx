@@ -25,7 +25,7 @@ export default function Moder_Curriculum_Resume_Templates({ resumeData }) {
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px`, borderColor: themeColor }
 
     return (
-        <div className="modern-curriculum-resume-templates" style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+        <div className="modern-curriculum-resume-templates" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode ? <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />

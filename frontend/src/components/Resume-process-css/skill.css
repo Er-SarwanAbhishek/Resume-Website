@@ -1,3 +1,7 @@
+.edit-skills-form {
+   position: relative;
+}
+
 .edit-skills-form h1 {
    margin-bottom: 30px;
    font-family: "Montserrat", sans-serif;
@@ -6,7 +10,6 @@
 .skill-form-section {
    display: flex;
    flex-wrap: wrap;
-
 }
 
 .skills-section input {
@@ -80,7 +83,6 @@
    margin-bottom: 20px;
    background-color: #fff;
    border: 1px solid #e5e5e5;
-   border: none;
    outline: none;
 }
 
@@ -101,6 +103,7 @@
    border-bottom-left-radius: 0px !important;
    border-left: 1px solid #e5e5e5;
    padding: 10px;
+   cursor: pointer;
 }
 
 .edit-contact-form form .save-section button {

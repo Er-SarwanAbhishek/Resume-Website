@@ -3,21 +3,27 @@ import "./BlueModernTemplate.css";
 import { QRCodeCanvas } from "qrcode.react";
 import GlobalContext from "../../context/GlobalContext";
 
+
 const BlueModernTemplate = ({ resumeData }) => {
-  const { isQRCode } = resumeData;
+  const { isQRCode, resumeStyle } = resumeData;
   const { liveTemplateURL } = useContext(GlobalContext);
+
+
   const headingStyleCSS = {
     fontFamily: resumeData.headingTextFont,
     color: resumeData.headingTextColor
   }
 
+  const { backgroundPattern } = resumeStyle;
+
   const paraStyleCSS = {
     fontFamily: resumeData.bodyTextFont,
-    color: resumeData.bodyTextColor
+    color: resumeData.bodyTextColor,
+    fontSize: `${resumeData.bodyTextSize}px`
   }
-
+  const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
   return (
-    <div className="MRT-Template">
+    <div className="MRT-Template" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
       {
         isQRCode ? <div className="resume-qr-code">
           <QRCodeCanvas value={liveTemplateURL} size={'50'} />
@@ -41,7 +47,7 @@ const BlueModernTemplate = ({ resumeData }) => {
               resumeData.AllSections[5].isSection &&
               <>
                 <div className="education-edit">
-                  <h2 style={headingStyleCSS} className="hhh">{resumeData.AllSections[5].sectionName}</h2>
+                  <h2 style={combineHeadingStyle} className="hhh">{resumeData.AllSections[5].sectionName}</h2>
                   {resumeData.AllSections[5].list.map((element, index) => {
                     const {
                       collegeName,
@@ -52,10 +58,10 @@ const BlueModernTemplate = ({ resumeData }) => {
                     } = element;
                     return (
                       <div key={index}>
-                        <h4 style={headingStyleCSS}>{startDate} - {endDate}<br />
+                        <h4 style={paraStyleCSS}>{startDate} - {endDate}<br />
                           {course}</h4>
                         <div className="MRT-mydiv MRT-Para-Size-Option">
-                          <h4 style={headingStyleCSS}> {collegeName} </h4>
+                          <h4 style={paraStyleCSS}> {collegeName} </h4>
                           <p style={paraStyleCSS} className="para-font-size">{aboutEducation}</p>
                         </div>
                       </div>
@@ -69,7 +75,7 @@ const BlueModernTemplate = ({ resumeData }) => {
             {
               resumeData.AllSections[3].isSection &&
               <div className="MRT-Heading-style MRT-skils skill-edit">
-                <h2 style={headingStyleCSS} className="hhh">{resumeData.AllSections[3].sectionName}</h2>
+                <h2 style={combineHeadingStyle} className="hhh">{resumeData.AllSections[3].sectionName}</h2>
                 <div className='MRT-skills-list'>
                   {resumeData.AllSections[3].list.map((element, index) => (
                     <li style={paraStyleCSS} key={index}>{element.skillName}</li>
@@ -82,7 +88,7 @@ const BlueModernTemplate = ({ resumeData }) => {
           <div className="MRT-Right">
             <div className="first-sec personal-edit">
               <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
-              <p style={paraStyleCSS}>{resumeData.userJobRole}</p>
+              <h4 style={{ ...headingStyleCSS }}>{resumeData.userJobRole}</h4>
             </div>
 
             {/* CONTACT */}
@@ -102,7 +108,7 @@ const BlueModernTemplate = ({ resumeData }) => {
               {
                 resumeData.AllSections[0].isSection &&
                 <div lang="MRT-sec-profile">
-                  <h2 style={headingStyleCSS} className="hhh custom-hhh">{resumeData.AllSections[0].sectionName}</h2>
+                  <h2 style={combineHeadingStyle} className="hhh custom-hhh">{resumeData.AllSections[0].sectionName}</h2>
                   <p style={paraStyleCSS} className="ppp para-font-size">{resumeData.AllSections[0].summary}</p>
                 </div>
               }
@@ -112,14 +118,14 @@ const BlueModernTemplate = ({ resumeData }) => {
               resumeData.AllSections[4].isSection &&
               <>
                 <div className="job-exp-edit">
-                  <h2 style={headingStyleCSS} className="hhh">{resumeData.AllSections[4].sectionName}</h2>
+                  <h2 style={combineHeadingStyle} className="hhh">{resumeData.AllSections[4].sectionName}</h2>
                   {resumeData.AllSections[4].list.map((element, index) => {
                     const { companyName, jobRole, startDate, endDate, aboutJob } = element;
                     return (
                       <div key={index}>
-                        <h4 style={headingStyleCSS}>{startDate} - {endDate}</h4>
+                        <h4 style={paraStyleCSS}>{startDate} - {endDate}</h4>
                         <div className="MRT-mydiv MRT-Para-Size-Option">
-                          <h4 style={headingStyleCSS}><p style={paraStyleCSS}>{jobRole}-{companyName}</p></h4>
+                          <p style={paraStyleCSS}>{jobRole}-{companyName}</p>
                           <p style={paraStyleCSS} className="para-font-size">{aboutJob}</p>
                         </div>
                       </div>
@@ -136,14 +142,14 @@ const BlueModernTemplate = ({ resumeData }) => {
               resumeData.AllSections[2].isSection &&
               <>
                 <div className="project-edit">
-                  <h2 style={headingStyleCSS} className="hhh">{resumeData.AllSections[2].sectionName}</h2>
+                  <h2 style={combineHeadingStyle} className="hhh">{resumeData.AllSections[2].sectionName}</h2>
                   {resumeData.AllSections[2].list.map((element, index) => {
                     const { projectName, startDate, endDate, aboutProject } = element;
                     return (
                       <div key={index}>
-                        <h4 style={headingStyleCSS}>{startDate} - {endDate}</h4>
+                        <h4 style={paraStyleCSS}>{startDate} - {endDate}</h4>
                         <div className="MRT-mydiv MRT-Para-Size-Option">
-                          <h4 style={headingStyleCSS}>{projectName}</h4>
+                          <h4 style={paraStyleCSS}>{projectName}</h4>
                           <p style={paraStyleCSS} className="para-font-size">{aboutProject}</p>
                         </div>
                       </div>

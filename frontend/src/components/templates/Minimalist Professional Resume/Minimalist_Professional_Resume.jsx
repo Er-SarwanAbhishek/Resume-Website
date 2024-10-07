@@ -4,12 +4,14 @@ import { QRCodeCanvas } from "qrcode.react";
 import GlobalContext from "../../context/GlobalContext";
 
 const Minimalist_Professional_Resume = ({ resumeData }) => {
-  const { AllSections, isQRCode } = resumeData;
+  const { AllSections, isQRCode, resumeStyle } = resumeData;
   const { liveTemplateURL } = useContext(GlobalContext);
   const headingStyleCSS = {
     fontFamily: resumeData.headingTextFont,
     // color: resumeData.headingTextColor,
   }
+
+  const { backgroundPattern } = resumeStyle;
 
   const paraStyleCSS = {
     fontFamily: resumeData.bodyTextFont,
@@ -20,7 +22,7 @@ const Minimalist_Professional_Resume = ({ resumeData }) => {
   const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
   return (
-    <div className="minimalist_professional_resume">
+    <div className="minimalist_professional_resume" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
       {
         isQRCode ? <div className="resume-qr-code">
           <QRCodeCanvas value={liveTemplateURL} size={"50"} />

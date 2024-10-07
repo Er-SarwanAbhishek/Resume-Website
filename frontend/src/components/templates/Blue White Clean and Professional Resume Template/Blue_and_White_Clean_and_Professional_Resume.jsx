@@ -23,7 +23,7 @@ export default function Blue_and_White_Clean_and_Professional_Resume({ resumeDat
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
     return (
-        <div className="blue-and-white-clean-resume" style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+        <div className="blue-and-white-clean-resume" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
 
             {/* HEADER SECTION */}
 
@@ -38,9 +38,11 @@ export default function Blue_and_White_Clean_and_Professional_Resume({ resumeDat
                 <div className="img-module">
                     <img src={resumeData.profileImage} alt="" />
                 </div>
-                <div className="personal-details-module personal-edit">
-                    <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
-                    <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
+                <div className="personal-details-module ">
+                    <div className='personal-edit'>
+                        <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
+                        <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
+                    </div>
 
                     {/* CONTACT SECTION */}
 

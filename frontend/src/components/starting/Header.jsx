@@ -32,7 +32,7 @@ export default function Header() {
 
         const fetchedData = await response.json();
         console.log(fetchedData);
-        
+
         setUserDetails(fetchedData);
       } catch (err) {
         console.error("There was an error fetching user data:", err);
@@ -120,12 +120,8 @@ export default function Header() {
           </> : <>Loading...</>
         ) : (
           <div className="header-btn">
-            <button className="login-btn">
-              <Link to="/login">Login</Link>
-            </button>
-            <button className="signup-btn">
-              <Link to="/sign-up">Sign up</Link>
-            </button>
+            <Link className="login-btn" to="/login">Login</Link>
+            <Link className="signup-btn" to="/sign-up">Sign up</Link>
             {
               !isNavbarPop ?
                 <svg
@@ -173,7 +169,7 @@ export default function Header() {
       ) : (
         <></>
       )}
-      {isNavbarPop ? <NavbarMenuPopup name={userDetails.name} setIsNavbarPop = {setIsNavbarPop} image={userDetails.profilePicture} cancel={() => { setIsNavbarPop(false); HideOverflowOnPop(false) } } /> : <></>}
+      {isNavbarPop ? <NavbarMenuPopup name={userDetails.name} image={userDetails.profilePicture} cancel={() => { setIsNavbarPop(false); HideOverflowOnPop(false) }} /> : <></>}
     </div>
   );
 }

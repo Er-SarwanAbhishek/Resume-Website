@@ -63,7 +63,7 @@ export default function Project() {
             type="text" 
             name="sectionName" 
             value={sectionName} 
-            placeholder='Section Name' 
+            placeholder='Section name' 
             onChange={(e) => ChangeSectionValue(e, 2)} 
           />
         </div>

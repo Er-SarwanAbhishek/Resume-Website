@@ -3,16 +3,20 @@
 .Professional_Resume_Presentation_Template {
     width: 100%;
     min-height: 1122.520px;
-    background-color: #fff;
+    /* background-color: #fff; */
     font-family: "Roboto", sans-serif;
     padding-bottom: 30px;
     position: relative;
+    background-size: cover;
+
 }
-.Professional_Resume_Presentation_Template .resume-qr-code{
+
+.Professional_Resume_Presentation_Template .resume-qr-code {
     position: absolute;
     bottom: 10px;
     right: 10px;
 }
+
 .Professional_Resume_Presentation_Template h2 {
     font-size: 1rem;
     text-transform: uppercase;

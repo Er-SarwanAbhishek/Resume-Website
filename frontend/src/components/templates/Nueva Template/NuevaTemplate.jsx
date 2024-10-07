@@ -25,7 +25,7 @@ export const NuevaTemplate = ({ resumeData }) => {
   const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px`, borderColor: themeColor }
 
   return (
-    <div className="NuevaTemplate" style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+    <div className="NuevaTemplate" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
       {
         isQRCode ? <div className="resume-qr-code">
           <QRCodeCanvas value={liveTemplateURL} size={"50"} />
@@ -34,7 +34,7 @@ export const NuevaTemplate = ({ resumeData }) => {
       <div className='fisrrt-hr'>
         < hr />
         {/* first section */}
-        <div className="intro-section ">
+        <div className="intro">
           <h1 className="personal-edit" style={headingStyleCSS}>{resumeData.userName} | {resumeData.userJobRole}</h1>
 
           {/* CONTACT */}

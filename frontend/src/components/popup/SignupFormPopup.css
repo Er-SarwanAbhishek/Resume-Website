@@ -3,7 +3,7 @@
     height: 100vh !important;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -52,6 +52,8 @@
 
 .signup-main-container .signup-container .signup-steps {
     width: 60%;
+    border-radius: 20px;
+    min-height: auto;
     padding: 50px;
 }
 
@@ -87,6 +89,12 @@
     justify-content: center;
     align-items: center;
     font-size: 12px;
+}
+
+@media screen and (max-width: 1440px) {
+    .signup-main-container .signup-container{
+        width: 70%;
+    }    
 }
 
 @media screen and (max-width: 1024px) {

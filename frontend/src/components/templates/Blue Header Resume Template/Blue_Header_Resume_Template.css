@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.blue-header-resume-template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    padding: 0px 30px 30px 30px;
+    background-color: white;
+    background-size: cover;
+    text-align: left;
+}
+
+.blue-header-resume-template .resume-qr-code {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.blue-header-resume-template .personal-details {
+    background-color: #CCE1ED;
+    padding: 30px 0px 20px 30px;
+    width: calc(100% + 60px);
+    left: -30px;
+    position: relative;
+
+}
+
+.blue-header-resume-template h1 {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.blue-header-resume-template h4 {
+    font-size: 16px;
+}
+
+.blue-header-resume-template b {
+    font-size: 14px;
+}
+
+.blue-header-resume-template .contact-details {
+    background-color: #404040;
+    padding: 10px 30px;
+    width: calc(100% + 60px);
+    left: -30px;
+    position: relative;
+}
+
+.blue-header-resume-template .contact-details ul li {
+    list-style: none;
+    font-size: 12px;
+    width: 30%;
+}
+
+.blue-header-resume-template .contact-details li {
+    display: flex;
+    align-items: center;
+}
+
+.blue-header-resume-template .contact-details ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 5%;
+    row-gap: 10px;
+}
+
+.blue-header-resume-template .contact-details i {
+    margin-right: 10px;
+    font-size: 12px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue-header-resume-template h2 {
+    font-size: 18px;
+    margin: 20px 0px 10px 0px;
+}
+
+.blue-header-resume-template p {
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.blue-header-resume-template .skills-information ul li {
+    list-style: inside;
+    font-size: 12px;
+    width: 30%;
+}
+
+.blue-header-resume-template .skills-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    row-gap: 15px;
+}
+
+.blue-header-resume-template .common-sec .common-details {
+    display: flex;
+    gap: 5%;
+    padding-bottom: 10px;
+}
+
+.blue-header-resume-template .common-sec .common-details .common-datime {
+    min-width: 20%;
+}
+
+.blue-header-resume-template .common-sec .common-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}

@@ -22,14 +22,18 @@
 
 /* Global Css  */
 
-.pattern-style-resume .personal-details h1 {
+.pattern-style-resume h1 {
     font-size: 35px;
     margin-bottom: 8px;
     padding-top: 60px;
     font-family: "Space Grotesk", sans-serif;
 }
 
-.pattern-style-resume .personal-details h4 {
+.pattern-style-resume .personal-details{
+    width: 60%;
+}
+
+.pattern-style-resume h4 {
     font-size: 15px;
     position: relative;
     font-family: "Space Grotesk", sans-serif;
@@ -38,7 +42,7 @@
 .pattern-style-resume h4 .bottom-theme {
     height: 10px;
     width: 300px;
-    top: 22px;
+    top: 25px;
     position: absolute;
     margin-top: -12px;
     z-index: -1;
@@ -192,7 +196,8 @@
 .pattern-style-resume .contact-Information ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 5px;
 }
 
 .pattern-style-resume .contact-Information i {

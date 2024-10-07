@@ -33,15 +33,16 @@
 }
 
 
-.cvnest-footer-section .logo-cvnest{
+.cvnest-footer-section .logo-cvnest {
     width: 40%;
 }
-    
+
 
 .cvnest-footer-section .contact-section {
     width: 30%;
 }
-.cvnest-footer-section .quick-links{
+
+.cvnest-footer-section .quick-links {
     width: 20%;
 }
 
@@ -54,7 +55,7 @@
     cursor: pointer;
 }
 
-.cvnest-footer-section .quick-links li a{
+.cvnest-footer-section .quick-links li a {
     color: #000;
 }
 
@@ -166,30 +167,37 @@
     cursor: pointer;
     color: #5A4ABD;
 }
-.cvnest-social-media-icon .fb-insta-tele-section .social-media-connection{
+
+.cvnest-social-media-icon .fb-insta-tele-section .social-media-connection {
     display: flex;
     gap: 10px;
 }
+
 @media screen and (max-width: 1440px) {
     .cvnest-social-media-icon .Subscribe_Bar {
 
         gap: 8px;
     }
 }
+
 @media screen and (max-width: 1024px) {
     .cvnest-footer-section {
         width: 90%;
     }
+
     .cvnest-footer-section h3 {
         font-size: 20px;
     }
+
     .cvnest-social-media-icon .bottom-row {
         width: 90%;
         align-items: center;
     }
+
     .cvnest-social-media-icon .bottom-row p {
         font-size: 14px;
     }
+
     .cvnest-social-media-icon input[type="text"] {
         padding: 10px 10px;
         width: 180px;
@@ -197,7 +205,7 @@
 
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
     .cvnest-footer-section {
         width: 90%;
         max-width: 1400px;
@@ -232,11 +240,13 @@
     .contact-text-email-section span {
         font-size: 14px;
     }
+
     .cvnest-social-media-icon .Subscribe_Bar {
-        column-gap: 10px; 
+        column-gap: 10px;
         display: flex;
         flex-direction: column;
     }
+
     .cvnest-social-media-icon input[type="text"] {
         padding: 8px 12px;
         width: 100%;
@@ -255,7 +265,7 @@
     .cvnest-social-media-icon .bottom-row .copyright-section .policy {
         width: 70%;
         display: flex;
-       
+
         justify-content: space-between;
     }
 
@@ -267,28 +277,34 @@
     .cvnest-social-media-icon .bottom-row {
         width: 90%;
         flex-direction: column;
- 
+
     }
-    .cvnest-social-media-icon .bottom-row .copyright-section p{
+
+    .cvnest-social-media-icon .bottom-row .copyright-section p {
         width: 54%;
     }
+
     .cvnest-social-media-icon .bottom-row .copyright-section {
         column-gap: 8px;
         width: 100%;
     }
+
     .cvnest-social-media-icon .fb-insta-tele-section {
         flex-direction: column;
         margin-top: 10px;
         gap: 10px;
     }
-    .cvnest-social-media-icon .fb-insta-tele-section .developed-by{
+
+    .cvnest-social-media-icon .fb-insta-tele-section .developed-by {
         width: 100%;
         text-align: center;
     }
-    .cvnest-social-media-icon .fb-insta-tele-section .social-media-connection{
+
+    .cvnest-social-media-icon .fb-insta-tele-section .social-media-connection {
         display: flex;
         gap: 20px;
     }
+
     .cvnest-social-media-icon .fb-insta-tele-section p:nth-child(2) {
         display: none;
     }
@@ -310,23 +326,22 @@
         width: 90%;
     }
 
-    /* .cvnest-social-media-icon .cvnest-footer-section .Subscribe_Bar {
-        display: none;
-    } */
-
-    .cvnest-footer-section .quick-links,
-    .cvnest-footer-section .contact-section {
-        width: 45%;
-       
-    }
     .cvnest-social-media-icon .bottom-row .copyright-section .policy {
         display: flex;
         column-gap: 10px;
     }
+
+    .cvnest-footer-section .quick-links,
+    .cvnest-footer-section .contact-section {
+        width: 45%;
+
+    }
+
     .cvnest-social-media-icon .bottom-row .copyright-section p {
         width: 100%;
         text-align: center;
-    } 
+    }
+
     .cvnest-footer-section .logo-cvnest {
         width: 100%;
         display: flex;
@@ -339,6 +354,7 @@
         text-align: left;
         margin-bottom: 12px;
     }
+
     .contact-text-email-section {
         margin-bottom: 12px;
     }
@@ -351,7 +367,7 @@
     .cvnest-social-media-icon .Subscribe_Bar {
         gap: 8px;
     }
- 
+
     .cvnest-social-media-icon .bottom-row {
         display: flex;
         flex-direction: column;
@@ -368,10 +384,11 @@
         row-gap: 8px;
         width: 100%;
     }
+
     .cvnest-social-media-icon .fb-insta-tele-section {
-     
+
         margin-top: 0px;
-        
+
     }
 
 
@@ -379,7 +396,7 @@
         display: flex;
     }
 
-    .cvnest-social-media-icon .fb-insta-tele-section i{
+    .cvnest-social-media-icon .fb-insta-tele-section i {
         display: none;
     }
 
@@ -388,7 +405,7 @@
         text-align: center;
     }
 
-    .cvnest-social-media-icon .fb-insta-tele-section p:nth-child(2){
+    .cvnest-social-media-icon .fb-insta-tele-section p:nth-child(2) {
         display: none;
     }
 

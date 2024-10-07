@@ -2,47 +2,41 @@ import React, { useContext } from 'react'
 import "./Ppvp_resume_temp.css";
 import { QRCodeCanvas } from 'qrcode.react';
 import GlobalContext from '../../context/GlobalContext';
-
 export default function Ppvp_resume_temp({ resumeData }) {
-
     const { AllSections, isQRCode } = resumeData;
     const { liveTemplateURL } = useContext(GlobalContext);
     const { themeColor } = resumeData;
     const { backgroundPattern } = resumeData.resumeStyle;
-
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
         color: resumeData.headingTextColor,
     }
-
     const paraStyleCSS = {
         fontFamily: resumeData.bodyTextFont,
         color: resumeData.bodyTextColor,
         fontSize: `${resumeData.bodyTextSize}px`
     }
-
-    const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
+    const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px`, borderColor: themeColor }
     return (
-        <div className='ppvp-resume-temp' style={{ backgroundImage: `url(${backgroundPattern})` }}>
+        <div className='ppvp-resume-temp' style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode && <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />
                 </div>
             }
-
             <div className='ppvp-left-right-section'>
                 <div className='ppvp-left-section'>
-                    <div className='psc-section'>
+                    <div className='psc-section' style={{ borderColor: themeColor }} >
                         <div className="Pic">
-                            <img src={resumeData.profileImage} alt="" style={{ width: '150px', height: '150px' }} />
+                            <img style={{ borderColor: themeColor, width: '150px', height: '150px' }} src={resumeData.profileImage} alt="" />
                         </div>
-
                         {/* CONTACT */}
                         {
                             resumeData.AllSections[1].isSection &&
-                            <div className="contact-section contact-edit" style={{ borderColor: themeColor }}>
-                                <h2 style={{ ...combineHeadingStyle, color: '#fff' }}>{AllSections[1].sectionName}</h2>
-                                <ul>
+                            <div className="contact-section contact-edit">
+                                <span className='dot' style={{ backgroundColor: themeColor }}></span>
+                                <h2 style={{ ...combineHeadingStyle, color: "#fff" }}>{AllSections[1].sectionName}</h2>
+                                <ul >
                                     {AllSections[1].list.map(element => {
                                         const { listId, iconName, contactName } = element;
                                         return (
@@ -54,12 +48,12 @@ export default function Ppvp_resume_temp({ resumeData }) {
                                     })}
                                 </ul>
                             </div>}
-
                         {/* SKILLS */}
                         {
                             resumeData.AllSections[3].isSection &&
                             <div className="skills-section skill-edit">
-                                <h2 style={{ ...combineHeadingStyle, color: '#fff' }}>{AllSections[3].sectionName}<span className='designing-line'></span></h2>
+                                <span className='dot' style={{ backgroundColor: themeColor }}></span>
+                                <h2 style={{ ...combineHeadingStyle, color: '#fff' }}>{AllSections[3].sectionName} </h2>
                                 <ul className='skill-section'>
                                     {AllSections[3].list.map(skill => {
                                         const { listId, skillName } = skill;
@@ -71,11 +65,11 @@ export default function Ppvp_resume_temp({ resumeData }) {
                                     })}
                                 </ul>
                             </div>}
-
                         {/* PROJECTS */}
                         {
                             resumeData.AllSections[2].isSection &&
                             <div className="project-section project-edit">
+                                <span className='dot' style={{ backgroundColor: themeColor }}></span>
                                 <h2 style={{ ...combineHeadingStyle, color: '#fff' }}>{AllSections[2].sectionName}<span className='designing-line'></span></h2>
                                 {AllSections[2].list.map(Project => {
                                     const { listId, projectName, startDate, endDate, aboutProject } = Project;
@@ -98,41 +92,35 @@ export default function Ppvp_resume_temp({ resumeData }) {
                             </div>}
                     </div>
                 </div>
-
                 <div className='ppvp-right-section'>
                     <div className="personal-details personal-edit">
                         <h1 style={{ ...headingStyleCSS, color: '#000' }}>
                             {resumeData.userName}
                         </h1>
-
                         <h4>{resumeData.userJobRole}
                         </h4>
                     </div>
-
                     {/* SUMMARY */}
                     {
                         resumeData.AllSections[0].isSection &&
                         <div className="summary-section summary-edit">
-                            <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}<span className='designing-line' ></span></h2>
+                            <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[0].sectionName}<span className='designing-line' ></span></h2>
                             <p style={paraStyleCSS}>{AllSections[0].summary}</p>
                         </div>}
-
                     {/* EDUCATION */}
                     {
                         resumeData.AllSections[5].isSection &&
                         <div className="education-section education-edit">
-                            <h2 style={combineHeadingStyle}>{AllSections[5].sectionName}<span className='designing-line' style={{ backgroundColor: themeColor }}></span></h2>
+                            <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[5].sectionName}<span className='designing-line' style={{ backgroundColor: themeColor }}></span></h2>
                             {AllSections[5].list.map(Education => {
                                 const { listId, collegeName, course, startDate, endDate, aboutEducation } = Education;
                                 return (
                                     <div className="education-details" key={listId}>
                                         <p style={paraStyleCSS}>
                                             <b>{collegeName}</b>
-
                                             <p style={paraStyleCSS}>
                                                 <b>{course}</b>
                                             </p>
-
                                         </p>
                                         <div><p style={paraStyleCSS}>
                                             <i>{startDate} - {endDate}</i>
@@ -145,12 +133,11 @@ export default function Ppvp_resume_temp({ resumeData }) {
                                 )
                             })}
                         </div>}
-
                     {/* JOB EXP */}
                     {
                         resumeData.AllSections[4].isSection &&
                         <div className="experience-section job-exp-edit">
-                            <h2 style={combineHeadingStyle}>{AllSections[4].sectionName}<span className='designing-line'></span></h2>
+                            <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[4].sectionName}<span className='designing-line'></span></h2>
                             {AllSections[4].list.map(Experience => {
                                 const { listId, companyName, jobRole, startDate, endDate, aboutJob } = Experience;
                                 return (
@@ -175,8 +162,6 @@ export default function Ppvp_resume_temp({ resumeData }) {
                         </div>}
                 </div>
             </div>
-
         </div >
-
     )
 }

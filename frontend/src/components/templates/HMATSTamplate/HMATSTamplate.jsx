@@ -4,13 +4,15 @@ import { QRCodeCanvas } from 'qrcode.react';
 import GlobalContext from '../../context/GlobalContext';
 
 function HMATSTamplate({ resumeData }) {
-    const { isQRCode } = resumeData;
+    const { isQRCode, resumeStyle } = resumeData;
     const { liveTemplateURL } = useContext(GlobalContext);
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
         color: resumeData.headingTextColor,
     }
+
+    const { backgroundPattern } = resumeStyle;
 
     const paraStyleCSS = {
         fontFamily: resumeData.bodyTextFont,
@@ -21,7 +23,7 @@ function HMATSTamplate({ resumeData }) {
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
     return (
-        <div className="header-modern-template-format-resume-template">
+        <div className="header-modern-template-format-resume-template" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode ? <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />
@@ -45,12 +47,12 @@ function HMATSTamplate({ resumeData }) {
                             })}
                         </div>
                     }
-                    <div className='header-modern-template-format-name-data'>
-                        <div className='header-modern-template-img-sec personal-edit'>
+                    <div className='header-modern-template-format-name-data personal-edit'>
+                        <div className='header-modern-template-img-sec'>
                             <img src={resumeData.profileImage} alt="" style={{ width: '150px', height: '150px' }} />
                         </div>
                         <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
-                        <p style={paraStyleCSS}>{resumeData.userJobRole}</p>
+                        <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
                     </div>
                 </div>
 

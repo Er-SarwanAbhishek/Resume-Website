@@ -3,8 +3,11 @@
     min-height: 1120px;
     background-color: #434343;
     position: relative;
+    background-size: cover;
+
 }
-.Beige-resume-template .resume-qr-code{
+
+.Beige-resume-template .resume-qr-code {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -168,16 +171,17 @@
 
 
 .Beige-resume-template .beige-about-job {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     margin: 5px 0 10px 0;
     line-height: 1.3em;
     font-weight: 500;
-  }
-  
-  
-  .Beige-resume-template .beige-about-job:last-of-type {
+}
+
+
+.Beige-resume-template .beige-about-job:last-of-type {
     margin: 5px 0 20px 0;
-  }
+}
+
 .Beige-resume-template .Beige-lower-left {
     width: 50%;
     padding: 2rem;
@@ -187,17 +191,18 @@
     margin-bottom: 10px;
 }
 
-  .Beige-edu-grp + .beige-course-name + .beige-about-edu {
+.Beige-edu-grp+.beige-course-name+.beige-about-edu {
     line-height: 1.3em;
     margin: 5px 0 10px 0;
     color: #fff;
     font-weight: 500;
-    margin-bottom: 10px; 
-  }
+    margin-bottom: 10px;
+}
 
-  .Beige-edu-grp + .beige-course-name + .beige-about-edu:last-of-type {
-    margin-bottom: 20px; 
-  }
+.Beige-edu-grp+.beige-course-name+.beige-about-edu:last-of-type {
+    margin-bottom: 20px;
+}
+
 .new-section-edu {
     width: 50%;
     background-color: #434343;

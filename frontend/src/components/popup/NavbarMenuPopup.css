@@ -45,26 +45,18 @@
 }
 
 .header-hamburger-section .hamburger-menu-items li {
-
+  display: flex;
+  font-family: "Mulish";
   border-bottom: 1px solid #e5e5e5;
   padding: 20px;
 
-}
-
-.header-hamburger-section .hamburger-menu-items li a {
-  color: black;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-family: "Mulish";
-  display: flex;
-  align-items: center;
 }
 
 .header-hamburger-section .hamburger-menu-items li:hover {
   background: #f2f2f2;
 }
 
-.header-hamburger-section .hamburger-menu-items li a svg {
+.header-hamburger-section .hamburger-menu-items li svg {
   margin-right: 10px;
   color: black;
   width: 20px;
@@ -72,71 +64,44 @@
 }
 
 .header-hamburger-section .login-signin-section {
-  position: fixed;
-  width: 100%;
-  bottom: 20px;
-  left: 0;
+  position: absolute;
+  width: 90%;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  bottom: 10px;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 30px;
+  padding: 20px 0;
+  animation: RightSliding 0.3s linear;
 }
 
-.header-hamburger-section .signin-signup-button {
-  display: flex;
-  column-gap: 20px;
-}
-
-.header-hamburger-section .signin-signup-button button {
+.header-hamburger-section .login-signin-section button {
   border: none;
   border-radius: 8px;
   font-family: 'Inter';
+  font-weight: 500;
   transition: 0.3s;
   padding: 15px 50px;
 }
 
-.header-hamburger-section .signin-signup-button button a {
+.header-hamburger-section .login-signin-section button a {
   text-decoration: none;
 }
 
-.header-hamburger-section .signin-signup-button .login-btn {
-  border: 1px solid #5a4abd;
+.header-hamburger-section .login-signin-section .login-btn {
+  border: 2px solid #5a4abd;
   background-color: transparent;
   color: #fff;
   outline: 1px solid #fff;
-}
-
-.header-hamburger-section .login-signin-section .login-btn a {
   color: #5a4abd;
 }
 
-.header-hamburger-section .login-signin-section .login-btn:hover {
-  background-color: #5a4abd;
-  outline: none;
-}
-
-.header-hamburger-section .login-signin-section .login-btn:hover a {
+.header-hamburger-section .login-signin-section .signup-btn {
   color: #fff;
+  background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
 }
-
-.header-hamburger-section .signin-signup-button .signup-btn {
-  background-color: #5a4abd;
-}
-
-.header-hamburger-section .signin-signup-button .signup-btn a {
-  color: #fff;
-
-}
-
-.header-hamburger-section .login-signin-section .signup-btn:hover {
-  background-color: transparent;
-  outline: 1px solid #5a4abd;
-}
-
-.header-hamburger-section .login-signin-section .signup-btn:hover a {
-  color: #5a4abd;
-}
-
-
 
 @media screen and (max-width: 768px) {
   .header-hamburger-section .hamburger-icon {
@@ -153,8 +118,12 @@
 }
 
 @media screen and (max-width: 450px) {
+  .header-hamburger-section {
+    height: calc(100vh - 120px);
+  }
+
   .header-hamburger-section .hamburger-menu {
-    width: 100%;
+    width: 90%;
   }
 
   .header-hamburger-section .cancel-btn {

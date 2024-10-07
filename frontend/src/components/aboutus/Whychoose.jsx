@@ -1,7 +1,9 @@
 import React from 'react';
 import './WhyChoose.css'
+import { useNavigate } from 'react-router-dom';
 
 const Whychoose = () => {
+    const navigate = useNavigate();
   return (
   <div className="cv-why-choose">
     <div className="wh-row">
@@ -119,7 +121,7 @@ const Whychoose = () => {
                         Keyword Optimization
         </li>
 
-        <button onClick={() => window.location.href = "#chooseTemplateSection"}>Let's Build Your Resume</button>
+        <button onClick={() =>navigate("/templates")}>Let's Build Your Resume</button>
         </div>
 
     </div>

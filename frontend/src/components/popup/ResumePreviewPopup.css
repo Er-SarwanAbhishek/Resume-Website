@@ -57,12 +57,6 @@
 }
 
 /* RESPONSIVE */
-
-@media screen and (max-width: 768px){
-    .resume-prev-popup-body .final-resume, .d-btn {
-        zoom: 0.78;
-    }
-}
 @media screen and (max-width: 450px) {
     .resume-prev-popup-body {
         justify-content: center;

@@ -53,7 +53,7 @@ export default function ContactInfo() {
                     currentTemplateData.AllSections[1].sectionVisible ?
                         <>
                             {/* <label><i class="fa-solid fa-pen-to-square"></i>Contact Details</label> */}
-                            <input type="text" name="sectionName" value={currentTemplateData.AllSections[1].sectionName} onChange={(e) => ChangeSectionValue(e, 1)} required placeholder='Name' />
+                            <input type="text" name="sectionName" value={currentTemplateData.AllSections[1].sectionName} onChange={(e) => ChangeSectionValue(e, 1)} placeholder='Section name' />
                         </> : <></>
                 }
                 {currentTemplateData.AllSections[1].list.map((element) => {
@@ -62,7 +62,7 @@ export default function ContactInfo() {
                         <>
                             <div className="social-media">
                                 <i id='brandIcon' className={element.iconName} onClick={() => setIsIcon(element.listId)}></i>
-                                <input type="text" name="contactName" value={element.contactName} onChange={(e) => ChangeListValue(e, 1, element.listId)} placeholder="Your contact" />
+                                <input type="text" name="contactName" value={element.contactName} onChange={(e) => ChangeListValue(e, 1, element.listId)} placeholder="your@contact" />
                                 <i id='brandIcon' className='fa-solid fa-trash' onClick={() => DeleteItem(1, element.listId)}></i>
                             </div>
                             {isIcon === element.listId ? <IconPopup cutPopup={() => setIsIcon("")} iconId={element.listId} iconClass={element.iconName} /> : <></>}

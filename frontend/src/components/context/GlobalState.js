@@ -14,6 +14,7 @@ export default function GlobalState(props) {
     const [errorDetails, setErrorDetails] = useState({ display: "none", message: "" });
     const liveTemplateURL = `http://localhost:3000/${authtoken ? currentTemplateData.liveTempId : ""}`;
     const [atsScoreGemini, setAtsScoreGemini] = useState('')
+    const [isSidebarPop, setIsSidebarPop] = useState(false);
 
     const [blogPosts, setBlogPosts] = useState([
         { id: 1, title: 'Tailor Your CV to the Job', date: 'September 10, 2024', excerpt: 'One size does not fit all when it comes to CVs. Tailoring your CV to each job application is essential.', image: GetJob, postPath: "tailor" },
@@ -149,7 +150,7 @@ export default function GlobalState(props) {
     }
 
     return (
-        <GlobalContext.Provider value={{ currentTemplateData, setCurrentTemplateData, DeleteItem, AddItem, ChangeListValue, ChangeSectionValue, GoogleClientId, authtoken, isSaveData, setIsSaveData, SaveUserDetails, backServer, blogPosts, setBlogPosts, HideOverflowOnPop, GoogleLogin, errorDetails, setErrorDetails, liveTemplateURL, atsScoreGemini, setAtsScoreGemini }}>
+        <GlobalContext.Provider value={{ currentTemplateData, setCurrentTemplateData, DeleteItem, AddItem, ChangeListValue, ChangeSectionValue, GoogleClientId, authtoken, isSaveData, setIsSaveData, SaveUserDetails, backServer, blogPosts, setBlogPosts, HideOverflowOnPop, GoogleLogin, errorDetails, setErrorDetails, liveTemplateURL, atsScoreGemini, setAtsScoreGemini, isSidebarPop, setIsSidebarPop }}>
             {props.children}
         </GlobalContext.Provider>
     )

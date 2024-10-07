@@ -12,7 +12,7 @@ const QrcodeSection = () => {
                 <div className='image-content'>
                     <div className='video-section'>
                         <video className='video-qrcode' autoPlay muted loop>
-                            <source src="./videos/qr-code-section2.mp4" type='video/mp4' />
+                            <source src="./videos/qr-code-section.mp4" type='video/mp4' />
                         </video>
                     </div>
                     <div className='content'>

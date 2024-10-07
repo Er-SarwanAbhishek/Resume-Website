@@ -45,18 +45,12 @@
     background-color: #4956D0;
 }
 
+@media screen and (max-width: 1440px) {
+    .prev-wrapper{
+        padding: 30px 0;
+    }
 
-
-@media screen and (max-width: 1366px) {
     .prev-wrapper .resumeCV {
-        width: auto;
-        zoom: 0.45;
+        zoom: 0.5;
     }
 }
-@media screen and (max-width: 1024px) {
-    .prev-wrapper .resumeCV {
-        width: auto;
-        zoom: 0.45;
-    }
-}
-

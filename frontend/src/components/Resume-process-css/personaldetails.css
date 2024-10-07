@@ -3,10 +3,6 @@
   margin-bottom: 30px;
 }
 
-.personal-details-form label {
-  font-family: "mulish";
-}
-
 .personal-details-upload-photo {
   margin-bottom: 20px;
 }
@@ -29,12 +25,11 @@
   font-family: "Montserrat", sans-serif;
   border-radius: 5px;
   padding: 10px;
-
+  cursor: pointer;
 }
 
 .personal-details-upload-photo input {
   display: none;
-
 }
 
 .personal-details-name-desigantion {

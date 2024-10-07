@@ -41,13 +41,13 @@ export default function Applicant_Tracking_Resume_Template({ resumeData }) {
                 <p style={paraStyleCSS}>{AllSections[0].summary}</p>
             </div>}
 
-            {AllSections[1].isSection && <div className='contact-information contact-edit'>
+            {AllSections[1].isSection && <div className='contact-information contact-edit' style={{ backgroundColor: themeColor }}>
                 <ul>
                     {AllSections[1].list.map(element => {
                         const { listId, iconName, contactName } = element
                         return (
-                            <li key={listId}>
-                                <i style={{ color: themeColor }} className={iconName} />
+                            <li key={listId} >
+                                <i style={{ color: resumeData.bodyTextColor } } className={iconName} />
                                 <p style={paraStyleCSS}> {contactName}</p>
                             </li>
                         )
@@ -56,27 +56,27 @@ export default function Applicant_Tracking_Resume_Template({ resumeData }) {
             </div>}
 
             {AllSections[4].isSection && <div className='experience-information job-exp-edit'>
-                <h2 style={{ ...combineHeadingStyle, color: themeColor }}>{AllSections[4].sectionName}</h2>
+                <h2 style={combineHeadingStyle}>{AllSections[4].sectionName}</h2>
                 {AllSections[4].list.map(Experience => {
                     const { listId, companyName, jobRole, startDate, endDate, aboutJob } = Experience;
                     return (
                         <div className='experience-details' key={listId}>
                             <p><b style={boldParaStyleCss}>{jobRole}</b></p>
                             <p><b style={boldParaStyleCss}>{companyName}</b></p>
-                            <p style={paraStyleCSS}><i style={{ color: themeColor }}>{startDate} - {endDate}</i></p>
+                            <p style={paraStyleCSS}><i style={{ color: resumeData.bodyTextColor } }>{startDate} - {endDate}</i></p>
                             <p style={paraStyleCSS}>{aboutJob}</p>
                         </div>
                     )
                 })}
             </div>}
 
-            {AllSections[3].isSection && <div className='skills-information skill-edit'>
-                <h2 style={{ ...combineHeadingStyle, color: themeColor }}>{AllSections[3].sectionName}</h2>
+            {AllSections[3].isSection && <div className='skills-information skill-edit' >
+                <h2 style={combineHeadingStyle}>{AllSections[3].sectionName}</h2>
                 <ul>
                     {AllSections[3].list.map(skill => {
                         const { listId, skillName } = skill;
                         return (
-                            <li key={listId}>
+                            <li key={listId} style={{ backgroundColor: themeColor}}>
                                 <p style={paraStyleCSS}>{skillName}</p>
                             </li>
                         )
@@ -85,13 +85,13 @@ export default function Applicant_Tracking_Resume_Template({ resumeData }) {
             </div>}
 
             {AllSections[2].isSection && <div className='project-information project-edit'>
-                <h2 style={{ ...combineHeadingStyle, color: themeColor }}>{AllSections[2].sectionName}</h2>
+                <h2 style={combineHeadingStyle}>{AllSections[2].sectionName}</h2>
                 {AllSections[2].list.map(Project => {
                     const { listId, projectName, startDate, endDate, aboutProject } = Project;
                     return (
                         <div className='project-details' key={listId}>
                             <p><b style={boldParaStyleCss}>{projectName}</b></p>
-                            <p style={paraStyleCSS}><i style={{ color: themeColor }}>{startDate} - {endDate}</i></p>
+                            <p style={paraStyleCSS}><i style={{ color: resumeData.bodyTextColor } }>{startDate} - {endDate}</i></p>
                             <p style={paraStyleCSS}>{aboutProject}</p>
                         </div>
                     )
@@ -99,14 +99,14 @@ export default function Applicant_Tracking_Resume_Template({ resumeData }) {
             </div>}
 
             {AllSections[5].isSection &&  <div className='education-information education-edit'>
-                <h2 style={{ ...combineHeadingStyle, color: themeColor }}>{AllSections[5].sectionName}</h2>
+                <h2 style={combineHeadingStyle}>{AllSections[5].sectionName}</h2>
                 {AllSections[5].list.map(Education => {
                     const { listId, collegeName, course, startDate, endDate, aboutEducation } = Education;
                     return (
                         <div className='education-details' key={listId}>
                             <p><b style={boldParaStyleCss}>{course}</b></p>
                             <p><b style={boldParaStyleCss}>{collegeName}</b></p>
-                            <p style={paraStyleCSS}><i style={{ color: themeColor }}>{startDate} - {endDate}</i></p>
+                            <p style={paraStyleCSS}><i style={{ color: resumeData.bodyTextColor } }>{startDate} - {endDate}</i></p>
                             <p style={paraStyleCSS}>{aboutEducation}</p>
                         </div>
                     )
