@@ -155,7 +155,7 @@
         font-size: 12px;
         margin-bottom: 10px;
         width: 100%;
-        align-items: center;
+        /* align-items: center; */
     }
 
     .cv-about-us-sec .column-a {
@@ -164,7 +164,7 @@
      
         z-index: 5;
         width: 100%;
-        text-align: center;
+     
     }
 
     .cv-about-us-sec .cva-row .cva-column button {

@@ -26,7 +26,7 @@ import './DownloadSteps.css'
                     <img className='fliped' src="dcolumn-b.svg" alt="here the image" />
                 </div>
                 <div className="dstep-column dcolumn-a">
-                    <h3>Update Detials</h3>
+                    <h3>Update Details</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, reprehenderit.</p>
                 </div>
                 

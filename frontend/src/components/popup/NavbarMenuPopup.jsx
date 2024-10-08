@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState, useEffect } from 'react'
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./NavbarMenuPopup.css";
 import GlobalContext from '../context/GlobalContext';
 import UserSidebarPopup from './UserSidebarPopup';
@@ -9,6 +9,7 @@ const NavbarMenuPopup = ({ cancel, name, image }) => {
   const [isSidebarPop, setIsSidebarPop] = useState(false);
   const navbarRef = useRef();
   const navigate = useNavigate();
+  const location = useLocation();
 
   // CLOSE NAVBAR MENU POPUP BY USEREF
 
@@ -26,10 +27,14 @@ const NavbarMenuPopup = ({ cancel, name, image }) => {
     };
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [location]);
+
   return (
     <>
       <div className="header-hamburger-section">
-        <div className="hamburger-menu" ref={navbarRef}>
+        <div className="hamburger-menu" ref={navbarRef} >
           <ul className="hamburger-menu-items">
             <li onClick={
               () => {
@@ -225,7 +230,6 @@ const NavbarMenuPopup = ({ cancel, name, image }) => {
             }
 
           </ul>
-        </div>
         <div className='login-signin-section' ref={navbarRef}>
           <button className="login-btn" onClick={
             () => {
@@ -243,6 +247,7 @@ const NavbarMenuPopup = ({ cancel, name, image }) => {
           }>
             Sign up
           </button>
+        </div>
         </div>
 
       </div >

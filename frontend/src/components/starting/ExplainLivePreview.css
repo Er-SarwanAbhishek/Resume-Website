@@ -49,7 +49,7 @@
 }
 
 .exp-live-prev .sub-dashboard-form {
-    margin-left: -3rem;
+    /* margin-left: -3rem; */
     width: 100%;
 }
 
@@ -192,7 +192,11 @@
       
     }
     .exp-live-prev .sub-dashboard-form {
-        width: 100%;
+        width: 80%;
         margin: 0px;
     }
+    .exp-live-prev .elp-row .column {
+        margin-top: 0;
 }
+}
+

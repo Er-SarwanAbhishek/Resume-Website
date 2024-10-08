@@ -266,7 +266,10 @@
     }
 
 
-
+    .qrcode-content-column .video-qrcode {
+        width: 80%;
+        margin-bottom: 20px;
+    }
     .qrcode-content-column .content {
         width: 90%;
     }
