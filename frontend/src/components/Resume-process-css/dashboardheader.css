@@ -78,7 +78,7 @@
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
     .resume-process-navbar {
         width: auto;
         flex-direction: column;

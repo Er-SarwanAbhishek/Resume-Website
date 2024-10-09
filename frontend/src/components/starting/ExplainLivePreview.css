@@ -47,11 +47,13 @@
     background-color: #5a4abd;
     border-radius: 50%;
 }
-
-.exp-live-prev .sub-dashboard-form {
-    /* margin-left: -3rem; */
-    width: 100%;
+.exp-live-prev .elp-row .column:nth-child(1){
+    text-align: center;
 }
+.exp-live-prev .sub-dashboard-form {
+    
+    width: 70%;
+}  
 
 
 @media screen and (max-width: 1024px){

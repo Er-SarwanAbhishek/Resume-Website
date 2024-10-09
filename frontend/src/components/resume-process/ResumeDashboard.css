@@ -54,3 +54,16 @@
         zoom: 0.5;
     }
 }
+@media screen and (max-width: 1024px) {
+
+    .prev-wrapper .resumeCV {
+        zoom: 0.42;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .prev-wrapper .resumeCV {
+        zoom: 0.32;
+        /* margin-left: 24px; */
+    }
+}

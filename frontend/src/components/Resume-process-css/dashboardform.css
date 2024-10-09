@@ -145,7 +145,8 @@
     }
 }
 
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 768px) {
     .Full-page {
         column-gap: 0;
     }

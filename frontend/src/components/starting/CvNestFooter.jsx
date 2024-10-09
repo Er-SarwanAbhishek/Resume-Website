@@ -59,7 +59,7 @@ function CvNestFooter() {
                         </svg>
 
                         <div className="email-text">
-                            <p>Email</p>
+                            {/* <p>Email</p> */}
                             <span>abc@gmail.com</span>
                         </div>
                     </div>
