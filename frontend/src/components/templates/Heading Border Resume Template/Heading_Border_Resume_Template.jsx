@@ -3,8 +3,8 @@ import './Heading_Border_Resume_Template.css'
 import { QRCodeCanvas } from 'qrcode.react';
 
 export default function Heading_Border_Resume_Template({ resumeData }) {
-    const { AllSections, themeColor, isQRCode, liveTempId, resumeStyle } = resumeData;
-    const liveTemplateURL = `http://localhost:3000/${liveTempId}`;
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
+    const { liveTemplateURL } = useContext(GlobalContext);
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
@@ -36,7 +36,7 @@ export default function Heading_Border_Resume_Template({ resumeData }) {
                     <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
 
                     {AllSections[0].isSection && <div className='summary-information summary-edit'>
-                        <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                     </div>}
                 </div>
                 {AllSections[1].isSection && <div className='contact-details contact-edit'>
@@ -75,7 +75,7 @@ export default function Heading_Border_Resume_Template({ resumeData }) {
                         <div className='common-level' key={listId}>
                             <p className='common-details'><span><b style={boldParaStyleCss}>{companyName}</b></span><span><i style={paraStyleCSS}>{startDate} - {endDate}</i></span></p>
                             <p><b style={boldParaStyleCss}>{jobRole}</b></p>
-                            <p style={paraStyleCSS}>{aboutJob}</p>
+                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                         </div>
                     )
                 })}
@@ -87,7 +87,7 @@ export default function Heading_Border_Resume_Template({ resumeData }) {
                     return (
                         <div className='common-level' key={listId}>
                             <p className='common-details'><span><b style={boldParaStyleCss}>{projectName}</b></span><span><i style={paraStyleCSS}>{startDate} - {endDate}</i></span></p>
-                            <p style={paraStyleCSS}>{aboutProject}</p>
+                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                         </div>
                     )
                 })}
@@ -100,7 +100,7 @@ export default function Heading_Border_Resume_Template({ resumeData }) {
                         <div className='common-level' key={listId}>
                             <p className='common-details'><span><b style={boldParaStyleCss}>{course}</b></span><span><i style={paraStyleCSS}>{startDate} - {endDate}</i></span></p>
                             <p><b style={boldParaStyleCss}>{collegeName}</b></p>
-                            <p style={paraStyleCSS}>{aboutEducation}</p>
+                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                         </div>
                     )
                 })}

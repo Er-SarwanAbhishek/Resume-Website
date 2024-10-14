@@ -2,14 +2,13 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 import "./ResumeDashboard.css";
 import GlobalContext from "../context/GlobalContext";
 import { TemplateData } from "../templates/TemplateData";
-import { AtsScorePopup } from "../popup/AtsScorePopup";
-import ResumePreviewpopup from "../popup/ResumePreviewpopup"; 
-import { AtsSkeletonLoader } from "../popup/AtsSkeletonLoader";
+import ResumePreviewpopup from "../popup/ResumePreviewpopup";
 
-export default function ResumeDashboard({highlightSectionClass}) {
-  const { currentTemplateData, setAtsScoreGemini } = useContext(GlobalContext);
+export default function ResumeDashboard({ highlightSectionClass }) {
+  const { currentTemplateData, setAtsScoreGemini, authtoken } = useContext(GlobalContext);
   const [isResumePreview, setIsResumePreview] = useState(false);
   const templateRef = useRef();
+  
 
   const getInnerContent = () => {
     if (templateRef.current) {
@@ -23,7 +22,7 @@ export default function ResumeDashboard({highlightSectionClass}) {
 
   useEffect(() => {
     getInnerContent();
-  }, [currentTemplateData]); 
+  }, [currentTemplateData]);
 
 
   const handleResumePreview = () => {
@@ -33,6 +32,7 @@ export default function ResumeDashboard({highlightSectionClass}) {
   return (
     <>
       <div className={`prev-wrapper ${highlightSectionClass}`}>
+        {!authtoken && <p className="signup-error"><i className="fa-solid fa-circle-exclamation"></i> Sign up to save your work</p>}
         <div className="resume-prev-section">
           <div className="resumeCV" ref={templateRef}>
             {TemplateData.map((element) => {
@@ -63,7 +63,7 @@ export default function ResumeDashboard({highlightSectionClass}) {
           cancel={() => setIsResumePreview(false)}
         />
       )}
-     
+
     </>
   );
 }

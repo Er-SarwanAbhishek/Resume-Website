@@ -4,9 +4,13 @@ import GlobalContext from "../context/GlobalContext";
 import ResumePreviewpopup from "../popup/ResumePreviewpopup";
 import { TemplateData } from "../templates/TemplateData";
 import { AiTextPopup } from "../popup/AiTextPopup";
+import ProjectJobEduTextEditor from "../popup/ProjectJobEduTextEditor";
+import MonthYearPicker from "../popup/MonthYearPicker";
 
 export default function JobExp() {
+
   const [aiTextSuggestion, setAiTextSuggestion] = useState(false);
+  const [isMonthYearPopup, setIsMonthYearPopup] = useState(false);
   const {
     currentTemplateData,
     DeleteItem,
@@ -16,7 +20,7 @@ export default function JobExp() {
     authtoken,
     backServer,
   } = useContext(GlobalContext);
-  
+
   const index = 4; // Ensure this index corresponds to the job experience section
   const { sectionName, list } = currentTemplateData.AllSections[index];
 
@@ -116,34 +120,29 @@ export default function JobExp() {
                 </div>
                 <div className="job-exp-section-pic-date">
                   <div className="job-exp-datepic-monthdate">
-                    <input
-                      className="select-option"
-                      type="date"
-                      value={startDate}
-                      onChange={(e) => ChangeListValue(e, index, listId)}
-                      name="startDate"
-                      required
-                    />
-                  </div>
-                  <div className="job-exp-datepic">
-                    <input
-                      className="select-option"
-                      type="date"
-                      value={endDate}
-                      onChange={(e) => ChangeListValue(e, index, listId)}
-                      name="endDate"
-                      required
-                    />
+                    <div className="month-year-pickers">
+                      <div className="start-end-date" onClick={() => setIsMonthYearPopup({ listId, isStartDate: true })}>
+                        <p>{startDate}</p>
+                        <i class="fa-regular fa-calendar-range"></i>
+                      </div>
+                      {isMonthYearPopup.listId === listId && isMonthYearPopup.isStartDate ? <MonthYearPicker cancel={() => setIsMonthYearPopup(false)} startingDate={true} listId={listId} sectionIndex={index} name={"startDate"} /> : <></>}
+                    </div>
+                    <div className="month-year-pickers">
+                      <div className="start-end-date" onClick={() => setIsMonthYearPopup({ listId, isStartDate: false })}>
+                        <p>{endDate}</p>
+                        <i class="fa-regular fa-calendar-range"></i>
+                      </div>
+                      {isMonthYearPopup.listId === listId && !isMonthYearPopup.isStartDate ? <MonthYearPicker cancel={() => setIsMonthYearPopup(false)} startingDate={false} listId={listId} sectionIndex={index} name={"endDate"} /> : <></>}
+                    </div>
                   </div>
                 </div>
                 <div className="textarea-delete-section">
-                  <textarea
-                    type="text"
-                    name="aboutJob"
+                  <ProjectJobEduTextEditor
+                    name="aboutjob"
                     value={aboutJob}
-                    onChange={(e) => ChangeListValue(e, index, listId)}
-                    placeholder="Job Details"
+                    onChange={(newText) => handleTextChange(newText, listId)}
                     required
+                    placeholder='Description'
                   />
                   <img
                     className="ai-text-suggestion-img"

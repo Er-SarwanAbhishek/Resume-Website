@@ -61,6 +61,10 @@
     margin: 0 40px;
 }
 
+.Entry_Level_Tech_Professional_Resume p{
+    line-height: 22px;
+}
+
 /* Skills Information css */
 
 .Entry_Level_Tech_Professional_Resume .Header .Skills_Information ul li {

@@ -60,7 +60,7 @@ export default function Simple_Professional_Template({ resumeData }) {
 
                 {AllSections[0].isSection && <div className='summary-information summary-edit'>
                     <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[0].sectionName}</h2>
-                    <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                 </div>}
 
                 {AllSections[3].isSection && <div className='skills-information skill-edit'>
@@ -88,7 +88,7 @@ export default function Simple_Professional_Template({ resumeData }) {
                                 <span className='chain-type-dots' style={{ backgroundColor: themeColor }}></span>
                                 <p><b style={boldParaStyleCss}>{course}</b></p>
                                 <p className='education-level'><span><b style={boldParaStyleCss}>{collegeName}</b></span><span><b style={boldParaStyleCss}>{startDate} - {endDate}</b></span></p>
-                                <p style={paraStyleCSS}>{aboutEducation}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                             </div>
                         )
                     })}
@@ -103,7 +103,7 @@ export default function Simple_Professional_Template({ resumeData }) {
                                 <span className='chain-type-dots' style={{ backgroundColor: themeColor }}></span>
                                 <p><b style={boldParaStyleCss}>{jobRole}</b></p>
                                 <p className='experience-level'><span><b style={boldParaStyleCss}>{companyName} </b></span><span><b style={boldParaStyleCss}>{startDate} - {endDate}</b></span></p>
-                                <p style={paraStyleCSS}>{aboutJob}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                             </div>
                         )
                     })}
@@ -117,7 +117,7 @@ export default function Simple_Professional_Template({ resumeData }) {
                             <div className='project-details' style={{ borderColor: themeColor }} key={listId}>
                                 <span className='chain-type-dots' style={{ backgroundColor: themeColor }}></span>
                                 <p className='project-level'><b style={boldParaStyleCss} >{projectName} </b><b style={boldParaStyleCss}>{startDate} - {endDate}</b></p>
-                                <p style={paraStyleCSS}>{aboutProject}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                             </div>
                         )
                     })}

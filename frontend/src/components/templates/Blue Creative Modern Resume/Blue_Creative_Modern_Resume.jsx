@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Blue_Creative_Modern_Resume.css'
 import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function Blue_Creative_Modern_Resume({ resumeData }) {
-    const { AllSections, themeColor, isQRCode, liveTempId, resumeStyle } = resumeData;
-    const liveTemplateURL = `http://localhost:3000/${liveTempId}`;
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
+    const { liveTemplateURL } = useContext(GlobalContext);
+
+    const hexToRgba = (hex, opacity) => {
+        hex = hex.replace(/^#/, '');
+        let r = parseInt(hex.substring(0, 2), 16);
+        let g = parseInt(hex.substring(2, 4), 16);
+        let b = parseInt(hex.substring(4, 6), 16);
+        return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+    }
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
         color: resumeData.headingTextColor,
     }
     const { backgroundPattern } = resumeStyle;
+    const downColor = hexToRgba(themeColor, 0.4);
 
     const paraStyleCSS = {
         fontFamily: resumeData.bodyTextFont,
@@ -24,20 +34,20 @@ export default function Blue_Creative_Modern_Resume({ resumeData }) {
 
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
     return (
-        <div className='blue-creative-modern-resume' style={{ backgroundImage: `url("./background-pattern/${backgroundPattern}.png")` }}>
+        <div className='blue-creative-modern-resume' style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode && <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />
                 </div>
             }
 
-            <div className='header' style={{ backgroundColor: themeColor }}>
+            <div className='header personal-edit' style={{ backgroundColor: themeColor }}>
                 <div className='profile-img'
                     style={{
                         backgroundImage: `url(${resumeData.profileImage})`,
                     }}>
                 </div>
-                <div className='personal-details personal-edit'>
+                <div className='personal-details'>
                     <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
                     <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
                 </div>
@@ -81,8 +91,8 @@ export default function Blue_Creative_Modern_Resume({ resumeData }) {
                             return (
                                 <div className='project-details' key={listId}>
                                     <p><b style={boldParaStyleCss}>{projectName}</b></p>
-                                    <p style={paraStyleCSS}><i style={{ color: themeColor }}>{startDate} - {endDate}</i></p>
-                                    <p style={paraStyleCSS}>{aboutProject}</p>
+                                    <p style={paraStyleCSS}><i style={{ ...paraStyleCSS, color: themeColor }}>{startDate} - {endDate}</i></p>
+                                    <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                 </div>
                             )
                         })}
@@ -91,7 +101,7 @@ export default function Blue_Creative_Modern_Resume({ resumeData }) {
                 <div className='right-column'>
                     {AllSections[0].isSection && <div className='summary-information summary-edit'>
                         <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                        <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                        <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                     </div>}
 
                     {AllSections[5].isSection && <div className='education-information education-edit'>
@@ -101,8 +111,8 @@ export default function Blue_Creative_Modern_Resume({ resumeData }) {
                             return (
                                 <div className='education-details' key={listId}>
                                     <p><b style={boldParaStyleCss}>{course}</b></p>
-                                    <p><b style={boldParaStyleCss}>{collegeName}</b> | <i style={{ color: themeColor }}>{startDate} - {endDate}</i></p>
-                                    <p style={paraStyleCSS}>{aboutEducation}</p>
+                                    <p><b style={boldParaStyleCss}>{collegeName}</b> | <i style={{ ...paraStyleCSS, color: themeColor }}>{startDate} - {endDate}</i></p>
+                                    <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                 </div>
                             )
                         })}
@@ -115,16 +125,16 @@ export default function Blue_Creative_Modern_Resume({ resumeData }) {
                             return (
                                 <div className='experience-details' key={listId}>
                                     <p><b style={boldParaStyleCss}>{jobRole}</b></p>
-                                    <p><b style={boldParaStyleCss}>{companyName}</b> | <i style={{ color: themeColor }}>{startDate} - {endDate}</i></p>
-                                    <p style={paraStyleCSS}>{aboutJob}</p>
+                                    <p><b style={boldParaStyleCss}>{companyName}</b> | <i style={{ ...paraStyleCSS, color: themeColor }}>{startDate} - {endDate}</i></p>
+                                    <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                 </div>
                             )
                         })}
                     </div>}
                 </div>
             </div>
-            <div className='bottom-color-1'></div>
-            <div className='bottom-color-2'></div>
+            <div className='bottom-color-1' style={{ backgroundColor: downColor }}></div>
+            <div className='bottom-color-2' style={{ backgroundColor: themeColor }}></div>
         </div>
     )
 }

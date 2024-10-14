@@ -7,6 +7,7 @@ export default function Elegant_Resume_Template({ resumeData }) {
 
     const { AllSections, isQRCode } = resumeData;
     const { liveTemplateURL } = useContext(GlobalContext);
+
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
         color: resumeData.headingTextColor
@@ -49,7 +50,7 @@ export default function Elegant_Resume_Template({ resumeData }) {
                                     <i className="fa-regular fa-user" />
                                     {AllSections[0].sectionName}
                                 </h2>
-                                <p style={paraStyleCSS} className="m-bottom">{AllSections[0].summary}</p>
+                                <p style={paraStyleCSS} className="m-bottom" dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                             </div></>
 
                     }
@@ -110,7 +111,7 @@ export default function Elegant_Resume_Template({ resumeData }) {
                                                     </p>
                                                 </div>
                                                 <div style={{ width: "55%" }}>
-                                                    <p style={paraStyleCSS}>{aboutProject}</p>
+                                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                                 </div>
                                             </div>
                                         )
@@ -142,7 +143,7 @@ export default function Elegant_Resume_Template({ resumeData }) {
                                                     <p style={paraStyleCSS} className="uppercase">
                                                         <b>{jobRole}</b>
                                                     </p>
-                                                    <p style={paraStyleCSS}>{aboutJob}</p>
+                                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                                 </div>
                                             </div>
                                         )
@@ -171,7 +172,7 @@ export default function Elegant_Resume_Template({ resumeData }) {
                                                     <p style={paraStyleCSS} className="uppercase">
                                                         <b>{collegaName}</b>
                                                     </p>
-                                                    <p style={paraStyleCSS}>{aboutEducation}</p>
+                                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                                 </div>
                                             </div>
                                         )

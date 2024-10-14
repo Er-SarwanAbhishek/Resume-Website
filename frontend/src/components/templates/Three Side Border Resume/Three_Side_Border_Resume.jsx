@@ -99,14 +99,14 @@ export default function Three_Side_Border_Resume({ resumeData }) {
                                         <b>{projectName}</b>
                                     </p>
                                     <p style={paraStyleCSS}><i>{startDate} - {endDate}</i></p>
-                                    <p style={paraStyleCSS}>{aboutProject}</p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                 </div>
                             )
                         })}
                     </div>}
             </div>
             <div className="Right_Column ">
-                <div className="Personal_Information personal-edit personal-edit" style={{ backgroundColor: "" }}>
+                <div className="Personal_Information personal-edit personal-edit" style={{ backgroundColor: downColor }}>
                     <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
                     <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
                 </div>
@@ -116,7 +116,7 @@ export default function Three_Side_Border_Resume({ resumeData }) {
                     resumeData.AllSections[0].isSection &&
                     <div className="Summary_Information summary-edit" style={{ borderColor: themeColor }}>
                         <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                        <p style={{ ...paraStyleCSS, borderColor: themeColor }}>{AllSections[0].summary}</p>
+                        <p className='para-theme' style={{ ...paraStyleCSS, borderColor: themeColor }} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                     </div>}
 
 
@@ -135,7 +135,7 @@ export default function Three_Side_Border_Resume({ resumeData }) {
                                         <p style={{ ...paraStyleCSS, marginBottom: 0 }}>{collegeName}</p>
                                         <p style={paraStyleCSS}><i>{startDate} - {endDate}</i></p>
                                     </div>
-                                    <p style={{ ...paraStyleCSS, marginBottom: 0 }}>{aboutEducation}</p>
+                                    <p style={{ ...paraStyleCSS, marginBottom: 0 }} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                 </div>
                             )
                         })}
@@ -156,7 +156,7 @@ export default function Three_Side_Border_Resume({ resumeData }) {
                                         <p style={{ ...paraStyleCSS, marginBottom: 0 }}>{jobRole}</p>
                                         <p style={paraStyleCSS}><i>{startDate} - {endDate}</i></p>
                                     </div>
-                                    <p style={{ ...paraStyleCSS, marginBottom: 0 }}>{aboutJob}</p>
+                                    <p style={{ ...paraStyleCSS, marginBottom: 0 }} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                 </div>
                             )
                         })}

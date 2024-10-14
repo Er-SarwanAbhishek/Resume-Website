@@ -5,7 +5,7 @@ import GlobalContext from '../../context/GlobalContext';
 
 export const SalesAchieverResume = ({ resumeData }) => {
 
-    const { isQRCode } = resumeData;
+    const { AllSections, isQRCode } = resumeData;
     const { liveTemplateURL } = useContext(GlobalContext);
     const themStyle = { backgroundColor: resumeData.themeColor }
     const { backgroundPattern } = resumeData.resumeStyle;
@@ -75,7 +75,7 @@ export const SalesAchieverResume = ({ resumeData }) => {
                                     <div key={index}>
                                         <p style={paraStyleCSS}><b>{course}</b></p>
                                         <p style={paraStyleCSS}><b>{collegeName} | {startDate} | {endDate}</b></p>
-                                        <p style={paraStyleCSS}>{aboutEducation}</p>
+                                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                     </div>
                                 )
                             })}
@@ -96,7 +96,7 @@ export const SalesAchieverResume = ({ resumeData }) => {
                             resumeData.AllSections[0].isSection &&
                             <div className="summary custom-heading-space summary-edit">
                                 <h2 style={combineHeadingStyle} >{resumeData.AllSections[0].sectionName}</h2>
-                                <p style={paraStyleCSS}>{resumeData.AllSections[0].summary}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                             </div>}
 
                         {/* JOB EXP */}
@@ -110,7 +110,7 @@ export const SalesAchieverResume = ({ resumeData }) => {
                                         <div key={index}>
                                             <p style={paraStyleCSS}><b>{jobRole}</b></p>
                                             <p style={paraStyleCSS}><b>{companyName} | {startDate} - {endDate}</b></p>
-                                            <p style={paraStyleCSS}>{aboutJob}</p>
+                                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                         </div>
                                     );
                                 })}
@@ -127,7 +127,7 @@ export const SalesAchieverResume = ({ resumeData }) => {
                                     return (
                                         <div key={index}>
                                             <p style={paraStyleCSS}><b>{projectName}  |  {startDate}-{endDate}</b></p>
-                                            <p style={paraStyleCSS}>{aboutProject}</p>
+                                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                         </div>
                                     )
                                 })}

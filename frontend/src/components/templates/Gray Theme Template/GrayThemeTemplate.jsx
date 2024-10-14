@@ -5,7 +5,7 @@ import GlobalContext from '../../context/GlobalContext';
 
 
 export const GrayThemeTemplate = ({ resumeData }) => {
-  const { isQRCode, themeColor } = resumeData;
+  const { AllSections, isQRCode, themeColor } = resumeData;
   const { liveTemplateURL } = useContext(GlobalContext);
   const headingStyleCSS = {
     fontFamily: resumeData.headingTextFont,
@@ -61,7 +61,7 @@ export const GrayThemeTemplate = ({ resumeData }) => {
           <div className='gtt-for-heading profile-so-3-a'>
             <h2 style={combineHeadingStyle}>{resumeData.AllSections[0].sectionName}</h2>
           </div>
-          <p style={paraStyleCSS}>{resumeData.AllSections[0].summary}</p>
+          <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
         </div>}
 
 
@@ -84,7 +84,7 @@ export const GrayThemeTemplate = ({ resumeData }) => {
                     <div key={index}>
                       <p style={{ ...paraStyleCSS, fontWeight: 700 }}>{companyName} | {startDate} - {endDate} </p>
                       <p id='for-bottom-spacing' style={{ ...paraStyleCSS, fontWeight: 700 }} className='gtt-sub-heading'>{jobRole}</p>
-                      <p className='fa-description' style={paraStyleCSS}>{aboutJob}</p>
+                      <p className='fa-description' style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                     </div>
                   );
                 })}
@@ -103,7 +103,7 @@ export const GrayThemeTemplate = ({ resumeData }) => {
                   return (
                     <div key={index}>
                       <p id='for-bottom-spacing' style={{ ...paraStyleCSS, fontWeight: 700 }}>{projectName} |  {startDate} - {endDate}</p>
-                      <p className='fa-description' style={paraStyleCSS}>{aboutProject}</p>
+                      <p className='fa-description' style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                     </div>
                   );
                 })}
@@ -132,7 +132,7 @@ export const GrayThemeTemplate = ({ resumeData }) => {
                       <React.Fragment key={index}>
                         <p style={{ ...paraStyleCSS, fontWeight: 700 }}>{collegeName} |  {startDate} - {endDate}</p>
                         <p id='for-bottom-spacing' style={{ ...paraStyleCSS, fontWeight: 700 }} className='gtt-sub-heading'>{course}</p>
-                        <p className='fa-description' style={paraStyleCSS}>{aboutEducation}</p>
+                        <p className='fa-description' style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                       </React.Fragment>
                     );
                   }

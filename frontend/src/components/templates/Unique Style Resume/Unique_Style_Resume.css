@@ -145,7 +145,13 @@
     justify-content: center;
 }
 
-.unique-style-resume .final-section ul li {
+.unique-style-resume .final-section .contact-details ul li {
+    font-size: 12px;
+    list-style: none;
+    font-family: "Inter", sans-serif;
+}
+
+.unique-style-resume .final-section .skills-information ul li {
     font-size: 12px;
     list-style: none;
     font-family: "Inter", sans-serif;

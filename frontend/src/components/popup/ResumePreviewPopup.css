@@ -21,6 +21,7 @@
     width: 793.7008px;
     min-height: 1122.520px;
     animation: TopSliding 0.3s linear;
+    user-select: none;
 }
 
 .resume-prev-popup-body .cancel-popup {
@@ -57,14 +58,6 @@
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 768px){
-    .resume-prev-popup-body .final-resume {
-        zoom: .68;
-    }
-    .resume-prev-popup-body .d-btn {
-        zoom: .68;
-    }
-}
 @media screen and (max-width: 450px) {
     .resume-prev-popup-body {
         justify-content: center;
@@ -80,9 +73,7 @@
     .resume-prev-popup-body .final-resume {
         zoom: 0.4;
     }
-    .resume-prev-popup-body .d-btn {
-        zoom: .4;
-    }
+
     .resume-prev-popup-body button {
         zoom: 0.4;
     }

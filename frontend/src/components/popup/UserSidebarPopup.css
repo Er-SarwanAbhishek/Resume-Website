@@ -79,3 +79,9 @@
         width: 60%;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .user-sidebar-body .sidebar-box{
+        width: 90%;
+    }
+}

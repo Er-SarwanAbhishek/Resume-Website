@@ -90,7 +90,11 @@
     padding-left: 10px;
 }
 
-.elegant-resume-template .left-right-body  li{
+.elegant-resume-template li{
+    display: list-item;
+}
+
+.elegant-resume-template .left-right-body .contact li{
     font-family: "montserrat";
     display: flex;
     align-items: center;

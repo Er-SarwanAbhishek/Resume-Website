@@ -72,7 +72,7 @@ export default function ContactForm() {
     <>  <div className="cva-cta">
     <div className="cta-abox">
     <h1>Contact Us </h1>
-    <p>Career Genniew creates standout resumes that highlight your unique skills and achievements, helping you advance your career with professional impact.</p>
+    <p>Career Gennie creates standout resumes that highlight your unique skills and achievements, helping you advance your career with professional impact.</p>
     <img src="portfolio.png" alt="" srcset="" className='image1'/>
     <img src="choose.png" alt="" srcset="" className='image3'/>
     <img src="download.png" alt="" srcset="" className='image4'/>

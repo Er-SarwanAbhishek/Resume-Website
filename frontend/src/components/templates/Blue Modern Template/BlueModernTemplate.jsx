@@ -5,7 +5,7 @@ import GlobalContext from "../../context/GlobalContext";
 
 
 const BlueModernTemplate = ({ resumeData }) => {
-  const { isQRCode, resumeStyle } = resumeData;
+  const { AllSections, isQRCode, resumeStyle } = resumeData;
   const { liveTemplateURL } = useContext(GlobalContext);
 
 
@@ -62,7 +62,7 @@ const BlueModernTemplate = ({ resumeData }) => {
                           {course}</h4>
                         <div className="MRT-mydiv MRT-Para-Size-Option">
                           <h4 style={paraStyleCSS}> {collegeName} </h4>
-                          <p style={paraStyleCSS} className="para-font-size">{aboutEducation}</p>
+                          <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} className="para-font-size" />
                         </div>
                       </div>
                     );
@@ -109,7 +109,7 @@ const BlueModernTemplate = ({ resumeData }) => {
                 resumeData.AllSections[0].isSection &&
                 <div lang="MRT-sec-profile">
                   <h2 style={combineHeadingStyle} className="hhh custom-hhh">{resumeData.AllSections[0].sectionName}</h2>
-                  <p style={paraStyleCSS} className="ppp para-font-size">{resumeData.AllSections[0].summary}</p>
+                  <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} className="ppp para-font-size" />
                 </div>
               }
             </div>
@@ -126,7 +126,7 @@ const BlueModernTemplate = ({ resumeData }) => {
                         <h4 style={paraStyleCSS}>{startDate} - {endDate}</h4>
                         <div className="MRT-mydiv MRT-Para-Size-Option">
                           <p style={paraStyleCSS}>{jobRole}-{companyName}</p>
-                          <p style={paraStyleCSS} className="para-font-size">{aboutJob}</p>
+                          <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} className="para-font-size" />
                         </div>
                       </div>
                     );
@@ -150,7 +150,7 @@ const BlueModernTemplate = ({ resumeData }) => {
                         <h4 style={paraStyleCSS}>{startDate} - {endDate}</h4>
                         <div className="MRT-mydiv MRT-Para-Size-Option">
                           <h4 style={paraStyleCSS}>{projectName}</h4>
-                          <p style={paraStyleCSS} className="para-font-size">{aboutProject}</p>
+                          <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} className="para-font-size" />
                         </div>
                       </div>
                     );
@@ -161,7 +161,7 @@ const BlueModernTemplate = ({ resumeData }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

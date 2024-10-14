@@ -68,7 +68,7 @@ export default function Blue_and_White_Clean_and_Professional_Resume({ resumeDat
                 resumeData.AllSections[0].isSection &&
                 <div className='summary-edit'>
                     <><h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                        <p className="summary-para" style={paraStyleCSS}>{AllSections[0].summary}</p></>
+                        <p className="summary-para" style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} /></>
                 </div>
             }
             {/* PROJECT SECTION */}
@@ -86,7 +86,7 @@ export default function Blue_and_White_Clean_and_Professional_Resume({ resumeDat
                                         <p style={paraStyleCSS}><b>{projectName}</b></p>
                                         <p style={paraStyleCSS}>{startDate} / {endDate}</p>
                                     </div>
-                                    <p style={paraStyleCSS}>{aboutProject}</p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                 </div>
                             )
                         })}
@@ -112,7 +112,7 @@ export default function Blue_and_White_Clean_and_Professional_Resume({ resumeDat
                                         </div>
                                         <p style={paraStyleCSS}>{startDate} / {endDate}</p>
                                     </div>
-                                    <p style={paraStyleCSS}>{aboutJob}</p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                 </div>
                             )
                         })}</>
@@ -150,7 +150,7 @@ export default function Blue_and_White_Clean_and_Professional_Resume({ resumeDat
                                         </div>
                                         <p style={paraStyleCSS}>{startDate} / {endDate}</p>
                                     </div>
-                                    <p style={paraStyleCSS}>{aboutEducation}</p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                 </div>
                             )
                         })}

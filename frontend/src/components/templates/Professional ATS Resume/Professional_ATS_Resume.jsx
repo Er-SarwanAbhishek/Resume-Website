@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react';
+
 import './Professional_ATS_Resume.css'
 import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function Professional_ATS_Resume({ resumeData }) {
-    const { AllSections, themeColor, isQRCode, liveTempId, resumeStyle } = resumeData;
-    const liveTemplateURL = `http://localhost:3000/${liveTempId}`;
-
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
+    const { liveTemplateURL } = useContext(GlobalContext)
+        ;
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
         color: resumeData.headingTextColor,
@@ -71,7 +73,7 @@ export default function Professional_ATS_Resume({ resumeData }) {
                             <div className='project-details' key={listId}>
                                 <p><b style={boldParaStyleCss}>{projectName}</b></p>
                                 <p><i>{startDate} - {endDate}</i></p>
-                                <p style={paraStyleCSS}>{aboutProject}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                             </div>
                         )
                     })}
@@ -85,7 +87,7 @@ export default function Professional_ATS_Resume({ resumeData }) {
                 </div>
                 {AllSections[0].isSection && <div className='summary-information summary-edit'>
                     <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                    <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                 </div>}
 
                 {AllSections[4].isSection && <div className='experience-information job-exp-edit'>
@@ -96,7 +98,7 @@ export default function Professional_ATS_Resume({ resumeData }) {
                             <div className='experience-details' key={listId}>
                                 <p><b style={boldParaStyleCss}>{jobRole}</b></p>
                                 <p className='experience-level'><span><b style={boldParaStyleCss}>{companyName}</b></span><span><i>{startDate} - {endDate}</i></span></p>
-                                <p style={paraStyleCSS}>{aboutJob}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                             </div>
                         )
                     })}
@@ -109,7 +111,7 @@ export default function Professional_ATS_Resume({ resumeData }) {
                             <div className='education-details' key={listId}>
                                 <p><b style={boldParaStyleCss}>{course}</b></p>
                                 <p className='education-level'><span><b style={boldParaStyleCss}>{collegeName}</b></span><span><i>{startDate} - {endDate}</i></span></p>
-                                <p style={paraStyleCSS}>{aboutEducation}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                             </div>
                         )
                     })}

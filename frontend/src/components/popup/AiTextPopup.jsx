@@ -17,7 +17,11 @@ export const AiTextPopup = ({ prompt, cancel, onTextChange }) => {
         );
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
         const additionalText =
-          'Enhance the provided text for a resume. Maintain grammatical accuracy, logical structure, and a formal tone.Present suggestions in a list format, beginning each sample on a new line without employing introductory words, special characters, or symbols. Separate samples using white spaces and line breaks.Develop 3 samples, ensuring each sample stays within a 60 to 80 word limit per sample. Refrain from mentioning word count, sample numbers, or any introductory elements. Conclude each sample with the word "END". Add appropriate keywords where necessary, or replace existing words with more relevant keywords.';
+          // 'Enhance the provided text for a resume. Maintain grammatical accuracy, logical structure, and a formal tone.Present suggestions in a list format, beginning each sample on a new line without employing introductory words, special characters, or symbols. Separate samples using white spaces and line breaks.Develop 3 samples, ensuring each sample stays within a 60 to 80 word limit per sample. Refrain from mentioning word count, sample numbers, or any introductory elements. Conclude each sample with the word "END". Add appropriate keywords where necessary, or replace existing words with more relevant keywords.';
+
+        // 'Please analyze and enhance the provided resume text while maintaining its original structure. Focus on improving clarity, coherence, and ATS (Applicant Tracking System) optimization by correcting grammatical errors and integrating strong, relevant keywords. Generate 3 different samples, each section must contain words between 40 to 60 words, and conclude each sample with "END" without mentioning word count or sample numbers or using any asterisks.(the answer must be in html format).Analyze the complete text again and dont include any heading like smaple number of somgthing like that';
+        
+        'Please analyze and enhance the provided resume text while maintaining its original structure. Focus on improving clarity, coherence, and ATS (Applicant Tracking System) optimization by correcting grammatical errors and integrating strong, relevant keywords. Generate 3 different samples, each section must contain words between 40 to 60 words, and after closing tag make sure their must be a text"END" lik(</p>END) without mentioning word count or sample numbers or using any asterisks.(the answer must be in html format).Analyze the complete text again and dont include any heading like smaple number of somgthing like that';
 
         const combinedPrompt = `${prompt}\nAdditional Context: ${additionalText}`;
         const result = await model.generateContent(combinedPrompt);
@@ -36,9 +40,12 @@ export const AiTextPopup = ({ prompt, cancel, onTextChange }) => {
     return (
       <ul className="result-list">
         {items.map((item, index) => (
-          <li key={index} onClick={() => handleItemClick(item.trim())}>
-            {item.trim()}
-          </li>
+          <div
+            className="ai-gemini-each-list"
+            key={index}
+            onClick={() => handleItemClick(item.trim())}
+            dangerouslySetInnerHTML={{ __html: item.trim() }}
+          />
         ))}
       </ul>
     );
@@ -63,7 +70,11 @@ export const AiTextPopup = ({ prompt, cancel, onTextChange }) => {
   return (
     <>
       <div
-        className={`ai-generated-text-popup ${prompt === "" || prompt.split(" ").length < 10 ? "invalid-prompt" : "valid-prompt"}`}
+        className={`ai-generated-text-popup ${
+          prompt === "" || prompt.split(" ").length < 10
+            ? "invalid-prompt"
+            : "valid-prompt"
+        }`}
         ref={textPopup}
       >
         {loading ? (

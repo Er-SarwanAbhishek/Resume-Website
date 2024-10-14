@@ -6,7 +6,12 @@ const CtaAbout = () => {
         <div className="cva-cta">
             <div className="cta-abox">
             <h1>About Us </h1>
-            <p>Career Genniew creates standout resumes that highlight your unique skills and achievements, helping you advance your career with professional impact.</p>
+            <p>Welcome to Career Gennie, This platform is a gennie for job seekers and helps 
+them to create professional personalized resumes in just one click. We 
+customized a resume that is visually appealing and shows your expertise. We 
+help you to stand out with expertly crafted resumes that highlight your skills, 
+strengths, and experience. Our mission is to empower every individual to land 
+their dream job.</p>
             <img src="portfolio.png" alt="" srcset="" className='image1'/>
             <img src="choose.png" alt="" srcset="" className='image3'/>
             <img src="download.png" alt="" srcset="" className='image4'/>

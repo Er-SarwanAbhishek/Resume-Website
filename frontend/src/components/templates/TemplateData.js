@@ -23,7 +23,7 @@ import Three_Side_Border_Resume from "./Three Side Border Resume/Three_Side_Bord
 import Yellow_Theme__Template from "./Yellow Theme Template/Yellow_Theme__Template";
 import Pattern_Style_Resume from "./Pattern Style Resume/Pattern_Style_Resume";
 import Unique_Style_Resume from "./Unique Style Resume/Unique_Style_Resume";
-// import Box_Style_Resume from "./Box Style Resume/Box_Style_Resume";
+import Box_Style_Resume from "./Box Style Resume/Box_Style_Resume";
 import Ppvp_resume_temp from "./Ppvp Resume Template/Ppvp_resume_temp";
 
 import Creative_Image_Resume_Template from "./Creative Image Resume Template/Creative_Image_Resume_Template";
@@ -41,7 +41,7 @@ import White_Background_Resume_Template from "./White Background Resume Template
 
 export const TemplateData = [
 
-    //WHITE BACKGRAUND RESUME TEMPLATE
+    //WHITE BACKGROUND RESUME TEMPLATE
     {
         id: "WHBARETE",
         templateName: "White Background Resume Template",
@@ -1272,15 +1272,16 @@ export const TemplateData = [
                         startDate: "2017",
                         endDate: "2020",
                         aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
-                    },
-                    {
-                        listId: "CORETE:EDUCATION:2",
-                        collegeName: "Mumbai University",
-                        course: "Bachelor of Technology in Computer Science",
-                        startDate: "2017",
-                        endDate: "2020",
-                        aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
                     }
+                    // ,
+                    // {
+                    //     listId: "CORETE:EDUCATION:2",
+                    //     collegeName: "Mumbai University",
+                    //     course: "Bachelor of Technology in Computer Science",
+                    //     startDate: "2017",
+                    //     endDate: "2020",
+                    //     aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
+                    // }
                 ]
             }
         ]
@@ -1738,167 +1739,167 @@ export const TemplateData = [
     },
 
     //BOX STYLE RESUME
-    // {
-    //     id: "BOXSTLR",
-    //     templateName: "Box Style Resume",
-    //     element: Box_Style_Resume,
-    //     headingTextFont: "Space Grotesk",
-    //     bodyTextFont: "Inter",
-    //     headingTextColor: "#333",
-    //     themeColor: "#C4DAD2",
-    //     bodyTextColor: "#000",
-    //     headingTextSize: 18,
-    //     bodyTextSize: 12,
-    //     category: "modern",
-    //     userName: "Sneha Sharma",
-    //     profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
-    //     userJobRole: "Data Analyst",
-    //     isQRCode: false,
-    //     resumeStyle: {
-    //         backgroundPattern: false
-    //     },
-    //     resumeDetails: {
-    //         ATS_Score: 90
-    //     },
-    //     AllSections: [
-    //         {
-    //             sectionId: "BOXSTLR:SUMMARY",
-    //             isSection: true,
-    //             sectionName: "Summary",
-    //             summary: "Detail-oriented Data Analyst with [X] years of experience in interpreting complex data and providing actionable insights."
-    //         },
-    //         {
-    //             sectionId: "BOXSTLR:CONTACT",
-    //             isSection: true,
-    //             sectionVisible: false,
-    //             sectionName: "Contact",
-    //             list: [
-    //                 {
-    //                     listId: "BOXSTLR:CONTACT:1",
-    //                     iconName: "fa-solid fa-envelope",
-    //                     contactName: "sneha.sharma@email.com"
-    //                 },
-    //                 {
-    //                     listId: "BOXSTLR:CONTACT:2",
-    //                     iconName: "fa-solid fa-phone",
-    //                     contactName: "+91-XXXXXXXXXX"
-    //                 },
-    //                 {
-    //                     listId: "BOXSTLR:CONTACT:3",
-    //                     iconName: "fa-solid fa-location-dot",
-    //                     contactName: "123 Main Street, Mumbai, Maharashtra, India"
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             sectionId: "BOXSTLR:PROJECTS",
-    //             isSection: true,
-    //             sectionName: "Projects",
-    //             list: [
-    //                 {
-    //                     listId: "BOXSTLR:PROJECTS:1",
-    //                     projectName: "Customer Segmentation Analysis",
-    //                     startDate: "2020",
-    //                     endDate: "2021",
-    //                     aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly."
-    //                 },
-    //                 {
-    //                     listId: "BOXSTLR:PROJECTS:2",
-    //                     projectName: "Customer Segmentation Analysis",
-    //                     startDate: "2020",
-    //                     endDate: "2021",
-    //                     aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly."
-    //                 },
-    //                 {
-    //                     listId: "BOXSTLR:PROJECTS:3",
-    //                     projectName: "Customer Segmentation Analysis",
-    //                     startDate: "2020",
-    //                     endDate: "2021",
-    //                     aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly."
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             sectionId: "BOXSTLR:SKILLS",
-    //             isSection: true,
-    //             sectionName: "Skills",
-    //             list: [
-    //                 {
-    //                     listId: "BOXSTLR:SKILLS:1",
-    //                     skillName: "Java"
-    //                 },
-    //                 {
-    //                     listId: "BOXSTLR:SKILLS:2",
-    //                     skillName: "Python"
-    //                 },
-    //                 {
-    //                     listId: "BOXSTLR:SKILLS:3",
-    //                     skillName: "JavaScript"
-    //                 },
-    //                 {
-    //                     listId: "BOXSTLR:SKILLS:4",
-    //                     skillName: "Spring Boot"
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             sectionId: "BOXSTLR:JOB-EXP",
-    //             isSection: true,
-    //             sectionName: "Job Experience",
-    //             list: [
-    //                 {
-    //                     listId: "BOXSTLR:JOB-EXP:1",
-    //                     companyName: "Tech Solutions Pvt. Ltd.",
-    //                     jobRole: "Data Analyst",
-    //                     startDate: "2019",
-    //                     endDate: "2021",
-    //                     aboutJob: "Analyzed large datasets to uncover trends and patterns, leading to actionable recommendations that improved operational efficiency by [X]%."
-    //                 },
-    //                 {
-    //                     listId: "BOXSTLR:JOB-EXP:2",
-    //                     companyName: "Tech Solutions Pvt. Ltd.",
-    //                     jobRole: "Data Analyst",
-    //                     startDate: "2019",
-    //                     endDate: "2021",
-    //                     aboutJob: "Analyzed large datasets to uncover trends and patterns, leading to actionable recommendations that improved operational efficiency by [X]%."
-    //                 },
+    {
+        id: "BOXSTLR",
+        templateName: "Box Style Resume",
+        element: Box_Style_Resume,
+        headingTextFont: "Space Grotesk",
+        bodyTextFont: "Inter",
+        headingTextColor: "#333",
+        themeColor: "#C4DAD2",
+        bodyTextColor: "#000",
+        headingTextSize: 18,
+        bodyTextSize: 12,
+        category: "modern",
+        userName: "Sneha Sharma",
+        profileImage: "https://upbstechnology.com/wp-content/uploads/2024/08/Default-Image.jpg",
+        userJobRole: "Data Analyst",
+        isQRCode: false,
+        resumeStyle: {
+            backgroundPattern: false
+        },
+        resumeDetails: {
+            ATS_Score: 90
+        },
+        AllSections: [
+            {
+                sectionId: "BOXSTLR:SUMMARY",
+                isSection: true,
+                sectionName: "Summary",
+                summary: "Detail-oriented Data Analyst with [X] years of experience in interpreting complex data and providing actionable insights."
+            },
+            {
+                sectionId: "BOXSTLR:CONTACT",
+                isSection: true,
+                sectionVisible: false,
+                sectionName: "Contact",
+                list: [
+                    {
+                        listId: "BOXSTLR:CONTACT:1",
+                        iconName: "fa-solid fa-envelope",
+                        contactName: "sneha.sharma@email.com"
+                    },
+                    {
+                        listId: "BOXSTLR:CONTACT:2",
+                        iconName: "fa-solid fa-phone",
+                        contactName: "+91-XXXXXXXXXX"
+                    },
+                    {
+                        listId: "BOXSTLR:CONTACT:3",
+                        iconName: "fa-solid fa-location-dot",
+                        contactName: "123 Main Street, Mumbai, Maharashtra, India"
+                    },
+                ]
+            },
+            {
+                sectionId: "BOXSTLR:PROJECTS",
+                isSection: true,
+                sectionName: "Projects",
+                list: [
+                    {
+                        listId: "BOXSTLR:PROJECTS:1",
+                        projectName: "Customer Segmentation Analysis",
+                        startDate: "2020",
+                        endDate: "2021",
+                        aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly."
+                    },
+                    {
+                        listId: "BOXSTLR:PROJECTS:2",
+                        projectName: "Customer Segmentation Analysis",
+                        startDate: "2020",
+                        endDate: "2021",
+                        aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly."
+                    },
+                    {
+                        listId: "BOXSTLR:PROJECTS:3",
+                        projectName: "Customer Segmentation Analysis",
+                        startDate: "2020",
+                        endDate: "2021",
+                        aboutProject: "Performed clustering analysis on customer data to identify distinct customer segments and tailor marketing strategies accordingly."
+                    }
+                ]
+            },
+            {
+                sectionId: "BOXSTLR:SKILLS",
+                isSection: true,
+                sectionName: "Skills",
+                list: [
+                    {
+                        listId: "BOXSTLR:SKILLS:1",
+                        skillName: "Java"
+                    },
+                    {
+                        listId: "BOXSTLR:SKILLS:2",
+                        skillName: "Python"
+                    },
+                    {
+                        listId: "BOXSTLR:SKILLS:3",
+                        skillName: "JavaScript"
+                    },
+                    {
+                        listId: "BOXSTLR:SKILLS:4",
+                        skillName: "Spring Boot"
+                    }
+                ]
+            },
+            {
+                sectionId: "BOXSTLR:JOB-EXP",
+                isSection: true,
+                sectionName: "Job Experience",
+                list: [
+                    {
+                        listId: "BOXSTLR:JOB-EXP:1",
+                        companyName: "Tech Solutions Pvt. Ltd.",
+                        jobRole: "Data Analyst",
+                        startDate: "2019",
+                        endDate: "2021",
+                        aboutJob: "Analyzed large datasets to uncover trends and patterns, leading to actionable recommendations that improved operational efficiency by [X]%."
+                    },
+                    {
+                        listId: "BOXSTLR:JOB-EXP:2",
+                        companyName: "Tech Solutions Pvt. Ltd.",
+                        jobRole: "Data Analyst",
+                        startDate: "2019",
+                        endDate: "2021",
+                        aboutJob: "Analyzed large datasets to uncover trends and patterns, leading to actionable recommendations that improved operational efficiency by [X]%."
+                    },
 
-    //             ]
-    //         },
-    //         {
-    //             sectionId: "BOXSTLR:EDUCATION",
-    //             isSection: true,
-    //             sectionName: "Education",
-    //             list: [
-    //                 {
-    //                     listId: "BOXSTLR:EDUCATION:1",
-    //                     collegeName: "Mumbai University",
-    //                     course: "Bachelor of Technology in Computer Science",
-    //                     startDate: "2017",
-    //                     endDate: "2020",
-    //                     aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
-    //                 },
-    //                 {
-    //                     listId: "BOXSTLR:EDUCATION:2",
-    //                     collegeName: "Mumbai University",
-    //                     course: "Bachelor of Technology in Computer Science",
-    //                     startDate: "2017",
-    //                     endDate: "2020",
-    //                     aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
-    //                 },
-    //                 {
-    //                     listId: "BOXSTLR:EDUCATION:3",
-    //                     collegeName: "Mumbai University",
-    //                     course: "Bachelor of Technology in Computer Science",
-    //                     startDate: "2017",
-    //                     endDate: "2020",
-    //                     aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
-    //                 }
-    //             ]
-    //         }
-    //     ]
+                ]
+            },
+            {
+                sectionId: "BOXSTLR:EDUCATION",
+                isSection: true,
+                sectionName: "Education",
+                list: [
+                    {
+                        listId: "BOXSTLR:EDUCATION:1",
+                        collegeName: "Mumbai University",
+                        course: "Bachelor of Technology in Computer Science",
+                        startDate: "2017",
+                        endDate: "2020",
+                        aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
+                    },
+                    {
+                        listId: "BOXSTLR:EDUCATION:2",
+                        collegeName: "Mumbai University",
+                        course: "Bachelor of Technology in Computer Science",
+                        startDate: "2017",
+                        endDate: "2020",
+                        aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
+                    },
+                    {
+                        listId: "BOXSTLR:EDUCATION:3",
+                        collegeName: "Mumbai University",
+                        course: "Bachelor of Technology in Computer Science",
+                        startDate: "2017",
+                        endDate: "2020",
+                        aboutEducation: "Relevant coursework included database management systems, software engineering principles, algorithms and data structures, and web development."
+                    }
+                ]
+            }
+        ]
 
-    // },
+    },
 
     //UNIQUE STYLE RESUME
     {

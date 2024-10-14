@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './ATS_Friendly_Resume.css'
 import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function ATS_Friendly_Resume({ resumeData }) {
-    const { AllSections, themeColor, isQRCode, liveTempId, resumeStyle } = resumeData;
-    const liveTemplateURL = `http://localhost:3000/${liveTempId}`;
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
+    const { liveTemplateURL } = useContext(GlobalContext);
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
@@ -50,7 +51,7 @@ export default function ATS_Friendly_Resume({ resumeData }) {
 
             {AllSections[0].isSection && <div className='summary-information summary-edit'>
                 <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
             </div>}
 
             {AllSections[4].isSection && <div className='experience-information job-exp-edit'>
@@ -62,55 +63,61 @@ export default function ATS_Friendly_Resume({ resumeData }) {
                             <p><b style={boldParaStyleCss}>{jobRole}</b></p>
                             <p><b style={boldParaStyleCss}>{companyName}</b></p>
                             <p><b style={boldParaStyleCss}><i style={{ color: themeColor }}>{startDate} - {endDate}</i></b></p>
-                            <p style={paraStyleCSS}>{aboutJob}</p>
+                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                         </div>
                     )
                 })}
             </div>}
 
-            {AllSections[2].isSection && <div className='project-information project-edit'>
-                <h2 style={combineHeadingStyle}>{AllSections[2].sectionName}</h2>
-                {AllSections[2].list.map(Project => {
-                    const { listId, projectName, startDate, endDate, aboutProject } = Project;
-                    return (
-                        <div className='project-details' key={listId}>
-                            <p><b style={boldParaStyleCss}>{projectName}</b></p>
-                            <p><b c><i style={{ color: themeColor }}>{startDate} - {endDate}</i></b></p>
-                            <p style={paraStyleCSS}>{aboutProject}</p>
-                        </div>
-                    )
-                })}
-            </div>}
-
-            {AllSections[3].isSection && <div className='skills-information skill-edit'>
-                <h2 style={combineHeadingStyle}>{AllSections[3].sectionName}</h2>
-                <ul>
-                    {AllSections[3].list.map(skill => {
-                        const { listId, skillName } = skill;
+            {
+                AllSections[2].isSection && <div className='project-information project-edit'>
+                    <h2 style={combineHeadingStyle}>{AllSections[2].sectionName}</h2>
+                    {AllSections[2].list.map(Project => {
+                        const { listId, projectName, startDate, endDate, aboutProject } = Project;
                         return (
-                            <li key={listId}>
-                                <span className='list-dots' style={{ backgroundColor: themeColor }}></span>
-                                <p style={paraStyleCSS}>{skillName}</p>
-                            </li>
+                            <div className='project-details' key={listId}>
+                                <p><b style={boldParaStyleCss}>{projectName}</b></p>
+                                <p><b style={boldParaStyleCss}><i style={{ color: themeColor }}>{startDate} - {endDate}</i></b></p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
+                            </div>
                         )
                     })}
-                </ul>
-            </div>}
+                </div>
+            }
 
-            {AllSections[5].isSection && <div className='education-information education-edit'>
-                <h2 style={combineHeadingStyle}>{AllSections[5].sectionName}</h2>
-                {AllSections[5].list.map(Education => {
-                    const { listId, collegeName, course, startDate, endDate, aboutEducation } = Education;
-                    return (
-                        <div className='education-details' key={listId}>
-                            <p><b style={boldParaStyleCss}>{course}</b></p>
-                            <p><b style={boldParaStyleCss}>{collegeName}</b></p>
-                            <p><b style={boldParaStyleCss}><i style={{ color: themeColor }}>{startDate} - {endDate}</i></b></p>
-                            <p style={paraStyleCSS}>{aboutEducation}</p>
-                        </div>
-                    )
-                })}
-            </div>}
-        </div>
+            {
+                AllSections[3].isSection && <div className='skills-information skill-edit'>
+                    <h2 style={combineHeadingStyle}>{AllSections[3].sectionName}</h2>
+                    <ul>
+                        {AllSections[3].list.map(skill => {
+                            const { listId, skillName } = skill;
+                            return (
+                                <li key={listId}>
+                                    <span className='list-dots' style={{ backgroundColor: themeColor }}></span>
+                                    <p style={paraStyleCSS}>{skillName}</p>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            }
+
+            {
+                AllSections[5].isSection && <div className='education-information education-edit'>
+                    <h2 style={combineHeadingStyle}>{AllSections[5].sectionName}</h2>
+                    {AllSections[5].list.map(Education => {
+                        const { listId, collegeName, course, startDate, endDate, aboutEducation } = Education;
+                        return (
+                            <div className='education-details' key={listId}>
+                                <p><b style={boldParaStyleCss}>{course}</b></p>
+                                <p><b style={boldParaStyleCss}>{collegeName}</b></p>
+                                <p><b style={boldParaStyleCss}><i style={{ color: themeColor }}>{startDate} - {endDate}</i></b></p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
+                            </div>
+                        )
+                    })}
+                </div>
+            }
+        </div >
     )
 }

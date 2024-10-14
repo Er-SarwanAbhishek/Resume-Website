@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './White_Background_Resume_Template.css'
 import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function White_Background_Resume_Template({ resumeData }) {
-    const { AllSections, themeColor, isQRCode, liveTempId, resumeStyle } = resumeData;
-    const liveTemplateURL = `http://localhost:3000/${liveTempId}`;
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
+    const { liveTemplateURL } = useContext(GlobalContext);
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
@@ -42,9 +43,9 @@ export default function White_Background_Resume_Template({ resumeData }) {
                 {AllSections[0].isSection && <div className='summary-information'>
                     <div className="summary-edit">
                         <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[0].sectionName}</h2>
-                        <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                     </div>
-                    <h4 className="personal-edit"style={{ ...headingStyleCSS, borderColor: themeColor }}>{resumeData.userJobRole}</h4>
+                    <h4 className="personal-edit" style={{ ...headingStyleCSS, borderColor: themeColor }}>{resumeData.userJobRole}</h4>
                 </div>}
             </div>
             <div className='main-section'>
@@ -86,7 +87,7 @@ export default function White_Background_Resume_Template({ resumeData }) {
                                     <p className="project-datime"><i style={paraStyleCSS}>{startDate} - {endDate}</i></p>
                                     <div className='project-level'>
                                         <p><b style={boldParaStyleCss}>{projectName}</b></p>
-                                        <p style={paraStyleCSS}>{aboutProject}</p>
+                                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                     </div>
                                 </div>
                             )
@@ -103,7 +104,7 @@ export default function White_Background_Resume_Template({ resumeData }) {
                                     <p style={paraStyleCSS}><i>{startDate} - {endDate}</i></p>
                                     <p><b style={boldParaStyleCss}>{companyName}</b></p>
                                     <p><b style={boldParaStyleCss}>{jobRole}</b></p>
-                                    <p style={paraStyleCSS}>{aboutJob}</p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                 </div>
                             )
                         })}
@@ -117,7 +118,7 @@ export default function White_Background_Resume_Template({ resumeData }) {
                                     <p style={paraStyleCSS}><i>{startDate} - {endDate}</i></p>
                                     <p><b style={boldParaStyleCss}>{collegeName}</b></p>
                                     <p><b style={boldParaStyleCss}>{course}</b></p>
-                                    <p style={paraStyleCSS}>{aboutEducation}</p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                 </div>
                             )
                         })}

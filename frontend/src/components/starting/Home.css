@@ -32,6 +32,10 @@
   width: 70px;
 }
 
+.home-banner .row .column .companies img:nth-last-child(1) {
+  position: relative;
+  top: 5px
+}
 
 .home-banner .row .column h1 {
   margin-bottom: 15px;
@@ -180,11 +184,12 @@
 
 @media screen and (max-width: 1440px) {
   .background-gradient-2 {
-  
+
     right: 0%;
-   
+
   }
 }
+
 @media screen and (max-width: 1024px) {
   .home-banner .row {
     width: 90%;

@@ -92,7 +92,7 @@
     width: 37%;
 }
 
-.after-border-resume-template .right-column  ul li{
+.after-border-resume-template .right-column .contact-details ul li{
     list-style: none;
     font-size: 12px;
     margin-bottom: 10px;
@@ -125,6 +125,8 @@
 .after-border-resume-template .skills-information ul li{
     list-style: square;
     list-style: inside;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
 .after-border-resume-template .skills-information{

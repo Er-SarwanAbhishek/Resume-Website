@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import UserSidebarPopup from "../popup/UserSidebarPopup";
 import GlobalContext from "../context/GlobalContext";
 import NavbarMenuPopup from '../popup/NavbarMenuPopup'
@@ -11,6 +11,8 @@ export default function Header() {
   const [isSidebarPop, setIsSidebarPop] = useState(false);
   const { authtoken, backServer, HideOverflowOnPop } = useContext(GlobalContext);
   const [isNavbarPop, setIsNavbarPop] = useState(false)
+  const location = useLocation();
+  const [onDashboard, setOnDashboard] = useState(false);
 
   // LOGGEDIN USER DETAILS
   useEffect(() => {
@@ -42,37 +44,49 @@ export default function Header() {
     fetchUserData();
   }, [authtoken]);
 
+  // TARGET DASHBOARD PATH
+  useEffect(() => {
+    if (location.pathname.startsWith('/edit-resume'))
+      setOnDashboard(false);
+    else
+      setOnDashboard(true);
+  }, [location.pathname]);
+
+  //BY DEFAULT TOP SCROLL
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location]);
+
   return (
     <div className="header-section">
 
       <div className="header-row" >
-        <h2 className="logo" onClick={() => window.location.href = "/"}>
-          CAREER <span style={{ fontWeight: "700" }}>Gennie</span>
-        </h2>
+        <img onClick={() => window.location.href = "/"} src="/branding/Career Gennie White Logo.png" alt="A Online CV Maker" className="career-logo" draggable="false" />
 
-        <ul className="menu">
-          <li>
-            <Link to="/templates">
-              Resume Templates
-            </Link>
-          </li>
-          <li>
-            <Link to="/about">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact">
-              Contact
-            </Link>
-          </li>
+        {onDashboard &&
+          <ul className="menu">
+            <li>
+              <Link to="/templates">
+                Resume Templates
+              </Link>
+            </li>
+            <li>
+              <Link to="/about">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/blog">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact">
+                Contact
+              </Link>
+            </li>
+          </ul>}
 
-        </ul>
         {authtoken ? (
           userDetails ? <>
             <div

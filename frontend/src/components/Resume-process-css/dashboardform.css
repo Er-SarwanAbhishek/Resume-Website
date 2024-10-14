@@ -22,6 +22,11 @@
     position: relative;
 }
 
+.Full-page .cv-right-dashboard .cv-all-forms .ql-editor{
+    font-family: "Mulish";
+    line-height: 1.3rem;
+}
+
 .Full-page .cv-right-dashboard .cv-all-forms .prev-resp-icon {
     color: #fff;
     background-color: #5a4abd;
@@ -144,7 +149,6 @@
         padding: 30px;
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .Full-page {

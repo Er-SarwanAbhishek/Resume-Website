@@ -72,7 +72,15 @@
     font-family: "Outfit", sans-serif;
 }
 
-.blue-creative-modern-resume ul li {
+.blue-creative-modern-resume .contact-details ul li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    list-style: none;
+    color: #000000;
+    font-family: "SUSE", sans-serif;
+}
+
+.blue-creative-modern-resume .skills-information ul li {
     font-size: 16px;
     margin-bottom: 15px;
     list-style: none;
@@ -81,8 +89,8 @@
 }
 
 .blue-creative-modern-resume p {
-    font-size: 16px;
-    line-height: 27px;
+    font-size: 12px;
+    line-height: 22px;
     color: #000000;
     font-family: "SUSE", sans-serif;
 }

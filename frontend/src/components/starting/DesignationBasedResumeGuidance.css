@@ -147,121 +147,146 @@
 .home-resume-picker .view-side {
     width: 45%;
 }
-.home-resume-picker .hsp-row1 .dropdown-side{
+
+.home-resume-picker .hsp-row1 .dropdown-side {
     display: none;
 }
 
-@media screen and (max-width:1440px){
+@media screen and (max-width:1440px) {
     .home-resume-picker .rp-container {
         width: 80%;
-        
+
     }
+
     .home-resume-picker .hsp-row1 {
         width: 50%;
-     
+
     }
+
     .home-resume-picker .rp-container .list-side,
-.home-resume-picker .rp-container .view-side {
-    width: 55%;
+    .home-resume-picker .rp-container .view-side {
+        width: 55%;
+    }
+
 }
- 
-}
-@media screen and (max-width:1024px){
+
+@media screen and (max-width:1024px) {
     .home-resume-picker {
         padding: 60px 0;
     }
+
     .home-resume-picker .rp-container {
         width: 90%;
         column-gap: 0%;
     }
+
     .home-resume-picker .hsp-row1 {
 
         width: 60%;
         margin-bottom: 40px;
     }
+
     .home-resume-picker .hsp-row1 h2 {
-        
+
 
         font-size: 35px;
 
     }
+
     .home-resume-picker .rp-container .list-side .designation-list {
         width: 62%;
     }
+
     .home-resume-picker .rp-container .list-side .designation-list h3 {
         font-size: 18px;
     }
-   
+
     .view-side .view-side-dimenssions {
         zoom: 0.56;
     }
-  
+
 }
-@media screen and  (max-width:768px){
-    .home-resume-picker{
+
+@media screen and (max-width:768px) {
+    .home-resume-picker {
         zoom: 1;
         padding: 60px 0;
     }
-    .home-resume-picker .hsp-row1 h2{
+
+    .home-resume-picker .hsp-row1 h2 {
         font-size: 26px;
     }
+
     .home-resume-picker .hsp-row1 {
         width: 90%;
         margin-bottom: 20px;
     }
+
     .home-resume-picker .rp-container {
         width: 90%;
         display: flex;
         justify-content: center;
         zoom: 0.73;
     }
-    .home-resume-picker  .rp-container .view-side{
+
+    .home-resume-picker .rp-container .view-side {
         width: 38%;
-        margin-top:0;
+        margin-top: 0;
     }
-    .home-resume-picker .rp-container .list-side{
+
+    .home-resume-picker .rp-container .list-side {
         display: none;
     }
+
     .home-resume-picker .rp-container .view-side .vs .template-btn {
         right: 5%;
         font-size: 15px;
-        padding:  8px 24px;
+        padding: 8px 24px;
     }
-    .home-resume-picker .rp-container .view-side .vs .vs-div{
+
+    .home-resume-picker .rp-container .view-side .vs .vs-div {
         border: 20px solid #f0f2fd !important;
     }
-    .home-resume-picker .hsp-row1 .dropdown-side{
+
+    .home-resume-picker .hsp-row1 .dropdown-side {
         display: flex;
-     margin-top: 20px;
+        margin-top: 20px;
         width: 100%;
         justify-content: center;
-
     }
-    .home-resume-picker .hsp-row1 .dropdown-side .profession-dropdown{
+    
+    .home-resume-picker .hsp-row1 .dropdown-side .select-wrapper{
+        background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
+        border-radius: 5px;
+        padding-right: 25px;
+        cursor: pointer;
+    }
+
+    .home-resume-picker .hsp-row1 .dropdown-side .profession-dropdown {
         border: none;
         padding: 8px;
         border-radius: 10px;
         outline: none;
         text-align: center;
-       color: #fff;
+        color: #fff;
         font-size: 15px;
         font-family: 'montserrat';
         font-weight: 500;
-        cursor: pointer;
         padding: 8px 25px;
+        padding-right: 0;
         border: none;
-        border-radius: 5px;
-        font-family: "montserrat";
         background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
         position: relative;
     }
-    .home-resume-picker  .profession-dropdown option {
+
+    .home-resume-picker .profession-dropdown option {
         color: #000;
         border-radius: 5px;
         font-weight: 500;
     }
-    /* .view-side .view-side-dimenssions {
+
+    .view-side .view-side-dimenssions {
         zoom: 0.5;
-    } */
-  
+    }
+
 }

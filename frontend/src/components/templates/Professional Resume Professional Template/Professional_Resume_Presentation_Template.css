@@ -59,7 +59,6 @@
     font-family: "Roboto", sans-serif;
     justify-content: space-between;
     column-gap: 5px;
-
 }
 
 .icon-contact p {
@@ -94,13 +93,11 @@
 
 .Professional_Resume_Presentation_Template .header ul li p {
     font-size: 0.95rem;
-
 }
 
 .Professional_Resume_Presentation_Template .header ul li i {
     font-size: 0.9rem;
     color: #fff;
-
 }
 
 .Professional_Resume_Presentation_Template .header .personal-details-module {

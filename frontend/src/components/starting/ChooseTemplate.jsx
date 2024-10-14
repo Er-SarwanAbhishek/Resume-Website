@@ -94,8 +94,7 @@ export default function ChooseTemplate({ home }) {
         </ul>
         <div className="resume-templates">
           {TemplateData.slice(0, home && templateMenu === "all" ? tempArrSize : 1000).map((element) => {
-            console.log(element.category);
-            return element.category === templateMenu || "all" === templateMenu ? <div className="template-box">
+            return element.category === templateMenu || "all" === templateMenu ? <div key={element.id} className="template-box">
               <Tilt style={{ boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.1)' }} options={defaultOptions}><div className="resume-preve" onClick={() => { setIsPrevTemplate([<element.element resumeData={element} />, element]); HideOverflowOnPop(true) }}><element.element resumeData={element} /></div></Tilt>
               <button className="prev-temp" onClick={() => { setIsPrevTemplate([<element.element resumeData={element} />, element]); HideOverflowOnPop(true) }}>Preview</button>
               <button className="use-temp" onClick={() => EditTemplate(element)}>Use Template</button>

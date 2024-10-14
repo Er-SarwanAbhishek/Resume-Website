@@ -33,7 +33,7 @@
 }
 
 .box-style-resume p {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 22px;
     font-family: "Inter", sans-serif;
 }
@@ -42,8 +42,6 @@
     list-style: circle;
     list-style-position: inside;
     margin-bottom: 15px;
-    font-size: 14px;
-    font-family: "Inter", sans-serif;
 }
 
 .box-style-resume .left-column .skills-information ul li:nth-last-child(1) {

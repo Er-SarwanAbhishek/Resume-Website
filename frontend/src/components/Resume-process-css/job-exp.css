@@ -3,20 +3,42 @@
     font-family: "Montserrat", sans-serif;
 }
 
+.job-exp .month-year-pickers {
+    position: relative;
+    width: 100%;
+
+}
+
+.job-exp .start-end-date {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    width: 100%;
+    font-family: "mulish", sans-serif;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.job-exp .custom-input-arrow {
+    float: right;
+}
+
 form .job-exp-datepic-monthdate-input {
     gap: 8px;
     width: 100%;
 }
 
-.job-exp-section-pic-date {
+.job-exp .job-exp-section-pic-date {
     display: flex;
     gap: 20px;
     width: 100%;
-}
-
-.job-exp-section-pic-date div {
-    width: 50%;
-    
+    margin-bottom: 20px;
 }
 
 .job-exp-section-pic-date input {
@@ -29,7 +51,7 @@ form .job-exp-datepic-monthdate-input {
     font-family: "mulish", sans-serif;
 }
 
-.job-exp  #section-name {
+.job-exp #section-name {
     padding: 10px;
     outline: none;
     border: 1px solid #e5e5e5;
@@ -62,14 +84,14 @@ form .job-exp-datepic-monthdate-input {
 
 .job-exp-datepic-monthdate {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px 20px;
+    width: 100%;
+    gap: 20px;
 }
 
 
-.job-exp-datepic-monthdate label {
+/* .job-exp-datepic-monthdate label {
     min-width: 100%;
-}
+} */
 
 .job-exp-datepic {
     display: flex;
@@ -82,7 +104,8 @@ form .job-exp-datepic-monthdate-input {
     width: 100%;
 }
 
-.job-exp-datepic .select-option, .job-exp-datepic-monthdate .select-option  {
+.job-exp-datepic .select-option,
+.job-exp-datepic-monthdate .select-option {
     font-family: "mulish", sans-serif;
     margin-bottom: 20px;
     /* color: #878282; */
@@ -91,7 +114,7 @@ form .job-exp-datepic-monthdate-input {
 /* {
     font-family: "mulish", sans-serif;
     /* color: #878282; */
-/* } */ 
+/* } */
 
 .textarea-delete-section textarea {
     padding: 10px;
@@ -111,14 +134,14 @@ form .job-exp-datepic-monthdate-input {
     margin-bottom: 20px;
 }
 
-.job-exp-del-add-button i{
+.job-exp-del-add-button i {
     background-color: #fff;
     color: #333;
     font-size: 15px;
     font-weight: 600;
     border-radius: 10px;
     padding: 10px 15px;
-    box-shadow: 2px 2px 10px rgba(0, 0,0,0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 
 }
@@ -146,12 +169,12 @@ form .job-exp-datepic-monthdate-input {
     cursor: pointer;
 }
 
-.job-exp-add{
+.job-exp-add {
     display: flex;
     margin-bottom: 20px;
 }
 
-.job-exp-add a{
+.job-exp-add a {
     text-align: center;
     padding: 10px;
     border: none;
@@ -177,30 +200,38 @@ form .job-exp-datepic-monthdate-input {
     margin: 0;
 }
 
-.job-exp-del-add-button i{
+.job-exp-del-add-button i {
     background-color: #fff;
     color: #333;
     font-size: 15px;
     font-weight: 600;
     border-radius: 50%;
     padding: 10px 13px;
-    box-shadow: 2px 2px 10px rgba(0, 0,0,0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 
 }
-.job-exp-del-add-button{
+
+.job-exp-del-add-button {
     padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.job-exp-del-add-button hr{
+.job-exp-del-add-button hr {
     width: 93%;
     border: none;
     height: 1px;
     background-color: #ccd2f9;
 }
+
 .job-exp .textarea-delete-section {
     position: relative;
+}
+
+@media screen and (max-width: 450px) {
+    .job-exp .job-exp-datepic-monthdate {
+        flex-wrap: wrap;
+    }
 }

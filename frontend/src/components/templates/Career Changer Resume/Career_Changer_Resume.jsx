@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import './Career_Changer_Resume.css'
 import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function Career_Changer_Resume({ resumeData }) {
-    const { AllSections, themeColor, isQRCode, liveTempId, resumeStyle } = resumeData;
-    const liveTemplateURL = `http://localhost:3000/${liveTempId}`;
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
+    const { liveTemplateURL } = useContext(GlobalContext);
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
@@ -38,7 +39,7 @@ export default function Career_Changer_Resume({ resumeData }) {
             {AllSections[1].isSection && <div className='contact-information contact-edit'>
                 <ul>
                     {AllSections[1].list.map(element => {
-                        const { listId, iconName, contactName } = element
+                        const { listId, contactName } = element
                         return (
                             <li style={paraStyleCSS} key={listId}>
                                 {contactName}
@@ -50,7 +51,7 @@ export default function Career_Changer_Resume({ resumeData }) {
 
             {AllSections[0].isSection && <div className='summary-information summary-edit'>
                 <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
             </div>}
 
             {AllSections[3].isSection && <div className='skills-information skill-edit'>
@@ -75,7 +76,7 @@ export default function Career_Changer_Resume({ resumeData }) {
                         <div className='experience-level' key={listId}>
                             <p className='experience-details'><span><b style={boldParaStyleCss}>{companyName} </b></span><span><i style={paraStyleCSS}>{startDate} - {endDate}</i></span></p>
                             <p><b style={boldParaStyleCss}>{jobRole}</b></p>
-                            <p style={paraStyleCSS}>{aboutJob}</p>
+                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                         </div>
                     )
                 })}
@@ -88,7 +89,7 @@ export default function Career_Changer_Resume({ resumeData }) {
                     return (
                         <div className='project-level' key={listId}>
                             <p className='project-details'><span><b style={boldParaStyleCss}>{projectName}</b></span><span><i style={paraStyleCSS}>{startDate} - {endDate}</i></span></p>
-                            <p style={paraStyleCSS}>{aboutProject}</p>
+                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                         </div>
                     )
                 })}
@@ -102,7 +103,7 @@ export default function Career_Changer_Resume({ resumeData }) {
                         <div className='education-level' key={listId}>
                             <p className='education-details'><span><b style={boldParaStyleCss}>{course}</b></span><span><i style={paraStyleCSS}>{startDate} - {endDate}</i></span></p>
                             <p><b style={boldParaStyleCss}>{collegeName}</b></p>
-                            <p style={paraStyleCSS}>{aboutEducation}</p>
+                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                         </div>
                     )
                 })}

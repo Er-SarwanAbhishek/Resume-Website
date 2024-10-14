@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import './Home.css';
+import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import ResumePreviewpopup from "../popup/ResumePreviewpopup";
 import GlobalContext from "../context/GlobalContext";
@@ -11,25 +11,24 @@ import InstructionPopup from "../popup/InstructionPopup.jsx";
 import { HomeCta } from "./HomeCta.jsx";
 import QrcodeSection from "./QrcodeSection.jsx";
 
-
 export default function Home() {
-
   const navigate = useNavigate();
   const [isPrevTemplate, setIsPrevTemplate] = useState(false);
   const [instructionPopup, setInstructionPopup] = useState(false);
-  const { authtoken, backServer, HideOverflowOnPop } = useContext(GlobalContext);
+  const { authtoken, backServer, HideOverflowOnPop } =
+    useContext(GlobalContext);
 
   useEffect(() => {
     const checkAndShowPopup = () => {
-      const lastShownDate = localStorage.getItem('popupLastShownDate');
-      const today = new Date().toISOString().split('T')[0]; // Get the current date in YYYY-MM-DD format
+      const lastShownDate = localStorage.getItem("popupLastShownDate");
+      const today = new Date().toISOString().split("T")[0]; // Get the current date in YYYY-MM-DD format
       console.log(backServer);
 
       if (lastShownDate !== today) {
         // Show popup if not shown today
         setInstructionPopup(true);
         HideOverflowOnPop(true);
-        localStorage.setItem('popupLastShownDate', today); // Update the date in localStorage
+        localStorage.setItem("popupLastShownDate", today); // Update the date in localStorage
       }
     };
 
@@ -43,51 +42,91 @@ export default function Home() {
   const EditTemplate = async (element) => {
     try {
       if (!authtoken) {
-        localStorage.setItem('currentTemplate', JSON.stringify(element))
+        localStorage.setItem("currentTemplate", JSON.stringify(element));
         window.location.href = "/edit-resume";
         return;
       }
 
       const tempResponse = await fetch(`${backServer}/dashboard/add-template`, {
-        method: 'PUT',
+        method: "PUT",
         body: JSON.stringify(element),
         headers: {
-          'Content-Type': 'application/json',
-          'auth-token': authtoken
-        }
+          "Content-Type": "application/json",
+          "auth-token": authtoken,
+        },
       });
       const tempData = await tempResponse.json();
 
-      localStorage.setItem('currentTemplate', JSON.stringify(tempData.currentTemplate))
+      localStorage.setItem(
+        "currentTemplate",
+        JSON.stringify(tempData.currentTemplate)
+      );
       window.location.href = "/edit-resume";
     } catch (error) {
       console.log("Server error: ", error);
     }
-  }
+  };
 
   return (
     <>
       {/* POPUPS */}
-      {
-        isPrevTemplate ? <ResumePreviewpopup element={isPrevTemplate[0]} cancel={() => { setIsPrevTemplate(false); HideOverflowOnPop(false) }} useTemp={true} funcUseTemp={() => EditTemplate(isPrevTemplate[1])} /> : <></>
-      }
+      {isPrevTemplate ? (
+        <ResumePreviewpopup
+          element={isPrevTemplate[0]}
+          cancel={() => {
+            setIsPrevTemplate(false);
+            HideOverflowOnPop(false);
+          }}
+          useTemp={true}
+          funcUseTemp={() => EditTemplate(isPrevTemplate[1])}
+        />
+      ) : (
+        <></>
+      )}
 
-      {instructionPopup ? <InstructionPopup cancel={() => { setInstructionPopup(false); HideOverflowOnPop(false) }} /> : <></>}
+      {instructionPopup ? (
+        <InstructionPopup
+          cancel={() => {
+            setInstructionPopup(false);
+            HideOverflowOnPop(false);
+          }}
+        />
+      ) : (
+        <></>
+      )}
 
       {/* ********** BANNER ********** */}
 
       <div className="home-banner">
-        <img src="background-gradient.svg" alt="" className="background-gradient" draggable="false" />
-        <img src="background-gradient.svg" alt="" className="background-gradient-2" draggable="false" />
+        <img
+          src="background-gradient.svg"
+          alt=""
+          className="background-gradient"
+          draggable="false"
+        />
+        <img
+          src="background-gradient.svg"
+          alt=""
+          className="background-gradient-2"
+          draggable="false"
+        />
 
         {/* **** */}
 
         <div className="row">
           <div className="column1 column">
             <h1>
-              Career Gennie Provides <span className="gradient-text"> Accurate Templates </span> that ensure success in your job progress
+              Career Gennie Provides{" "}
+              <span className="gradient-text"> Professional Templates </span>{" "}
+              that Ensure Your Success in Job Progress
             </h1>
-            <p>Career Gennie offers precise templates ensuring job success, tailored to enhance your professional progress with accuracy and effectiveness.</p>
+            <p>
+              Unlock your potential with Career Gennie where you can find
+              advanced professional templates for CVs and resumes. Our resources
+              are tailored to enhance your career journey with precision and
+              effectiveness that empower you to stand out in today’s competitive
+              job market.
+            </p>
             <div className="only-tblt">
               <h4>Selected resume at</h4>
               <div className="companies">
@@ -96,7 +135,12 @@ export default function Home() {
                 <img src="./images/Amazon-Logo.png" alt="" />
               </div>
             </div>
-            <button onClick={() => navigate("/templates")} className="create-cv-btn">Create CV</button>
+            <button
+              onClick={() => navigate("/templates")}
+              className="create-cv-btn"
+            >
+              Create CV
+            </button>
             {/* <button className="check-score-btn">Check Score</button> */}
           </div>
 
@@ -113,18 +157,26 @@ export default function Home() {
               <img src="./images/facebook logo.png" alt="" />
               <img src="./images/Amazon-Logo.png" alt="" />
             </div>
-            <button onClick={() => navigate("/templates")} className="create-cv-btn">Create CV</button>
+            <button
+              onClick={() => navigate("/templates")}
+              className="create-cv-btn"
+            >
+              Create CV
+            </button>
           </div>
         </div>
       </div>
 
       <ChooseTemplate home={true} />
       <HowToDesign />
-      <DesignationBasedResumeGuidance editTemplate={(elem) => EditTemplate(elem)} setIsPrevTemplate={setIsPrevTemplate} HideOverflowOnPop={HideOverflowOnPop} />
+      <DesignationBasedResumeGuidance
+        editTemplate={(elem) => EditTemplate(elem)}
+        setIsPrevTemplate={setIsPrevTemplate}
+        HideOverflowOnPop={HideOverflowOnPop}
+      />
       <QrcodeSection />
       <HomeCta />
       <ExplainLivePreview authtoken={authtoken} />
     </>
-
   );
 }

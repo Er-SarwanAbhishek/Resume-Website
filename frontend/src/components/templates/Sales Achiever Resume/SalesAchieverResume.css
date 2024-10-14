@@ -56,7 +56,7 @@
 }
 
 .SalesAchieverRT p {
-    line-height: 1.3rem;
+    line-height: 22px;
 }
 
 .SalesAchieverRT h2 {
@@ -68,17 +68,17 @@
 }
 
 
-.SalesAchieverRT li {
+.SalesAchieverRT .skills li {
     margin-bottom: 10px;
     display: flex;
     gap: 1rem;
 }
 
-.SalesAchieverRT li:nth-last-child(1) {
+.SalesAchieverRT .skills li:nth-last-child(1) {
     margin-bottom: 0px;
 }
 
-.SalesAchieverRT li::before {
+.SalesAchieverRT .skills li::before {
     content: "► ";
 }
 

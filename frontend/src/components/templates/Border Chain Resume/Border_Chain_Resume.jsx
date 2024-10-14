@@ -101,9 +101,7 @@ export default function Border_Chain_Resume({ resumeData }) {
                                         <p style={paraStyleCSS}>
                                             <i>{startDate} - {endDate}</i>
                                         </p>
-                                        <p style={paraStyleCSS}>
-                                            {aboutProject}
-                                        </p>
+                                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                     </div>
                                 )
                             })}
@@ -116,7 +114,7 @@ export default function Border_Chain_Resume({ resumeData }) {
                         resumeData.AllSections[0].isSection &&
                         <div key={AllSections[0].listId} className="Summary-info summary-edit" style={themeColor}>
                             <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                            <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                         </div>}
 
                     {/* EDUCATION */}
@@ -135,9 +133,7 @@ export default function Border_Chain_Resume({ resumeData }) {
                                         <p style={paraStyleCSS}>
                                             <i>{startDate} - {endDate}</i>
                                         </p>
-                                        <p style={paraStyleCSS}>
-                                            {aboutEducation}
-                                        </p>
+                                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                     </div>
                                 )
                             })}
@@ -157,9 +153,7 @@ export default function Border_Chain_Resume({ resumeData }) {
                                         <p style={paraStyleCSS}>{jobRole}</p>
                                         <p style={paraStyleCSS}>
                                             <i>{startDate} - {endDate}</i></p>
-                                        <p style={paraStyleCSS}>
-                                            {aboutJob}
-                                        </p>
+                                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                     </div>
                                 )
                             })}

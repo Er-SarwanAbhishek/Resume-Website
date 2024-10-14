@@ -22,7 +22,7 @@ export default function Pattern_Style_Resume({ resumeData }) {
 
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
     return (
-        <div className="pattern-style-resume"  style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
+        <div className="pattern-style-resume" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
             {
                 isQRCode ?
                     <div className="resume-qr-code">
@@ -51,7 +51,7 @@ export default function Pattern_Style_Resume({ resumeData }) {
                 resumeData.AllSections[0].isSection &&
                 <div className="about-information summary-edit">
                     <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}> {AllSections[0].sectionName}</h2>
-                    <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                 </div>}
             <div className="main">
                 <div className="left-column">
@@ -75,9 +75,7 @@ export default function Pattern_Style_Resume({ resumeData }) {
                                             <p style={paraStyleCSS}>
                                                 <i>{startDate} - {endDate}</i>
                                             </p>
-                                            <p style={paraStyleCSS}>
-                                                {aboutEducation}
-                                            </p>
+                                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                         </div>
                                     </div>
                                 )
@@ -122,9 +120,7 @@ export default function Pattern_Style_Resume({ resumeData }) {
                                             <p style={paraStyleCSS}>
                                                 <i>{startDate} - {endDate}</i>
                                             </p>
-                                            <p style={paraStyleCSS}>
-                                                {aboutJob}
-                                            </p>
+                                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                         </div>
                                     </div>
                                 )
@@ -147,9 +143,8 @@ export default function Pattern_Style_Resume({ resumeData }) {
                                             <p style={paraStyleCSS}>
                                                 <i>{startDate} - {endDate}</i>
                                             </p>
-                                            <p style={paraStyleCSS}>
-                                                {aboutProject}
-                                            </p>
+                                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
+
                                         </div>
                                     </div>
                                 )

@@ -27,11 +27,18 @@
     font-family: "Roboto Slab", serif;
 }
 
-.ats-friendly-resume ul li {
+.ats-friendly-resume .contact-details ul li {
     list-style: none;
     font-size: 12px;
     font-family: "Mulish", sans-serif;
 }
+
+.ats-friendly-resume .skills-information ul li {
+    list-style: none;
+    font-size: 12px;
+    font-family: "Mulish", sans-serif;
+}
+
 
 .ats-friendly-resume h2 {
     font-size: 20px;

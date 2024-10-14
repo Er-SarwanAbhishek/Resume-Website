@@ -61,12 +61,20 @@
     background-size: cover;
 }
 
-.simple-professional-template ul li{
+.simple-professional-template .contact-details ul li{
     list-style: none;
     margin-bottom: 15px;
     font-size: 12px;
     color: #000000;
     display: flex;
+}
+
+.simple-professional-template .skills-information ul li{
+    list-style: none;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #000000;
+    /* display: flex; */
 }
 
 .simple-professional-template ul li:nth-last-child(1){

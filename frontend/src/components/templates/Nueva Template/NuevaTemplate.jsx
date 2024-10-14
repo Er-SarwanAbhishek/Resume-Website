@@ -61,7 +61,8 @@ export const NuevaTemplate = ({ resumeData }) => {
               <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
             </div>
           </div>
-          <p style={paraStyleCSS} className='para'>{AllSections[0].summary}</p>
+          <div style={paraStyleCSS} className='para' dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
+
           {/* Second Section summary */}
 
         </div>}
@@ -111,7 +112,7 @@ export const NuevaTemplate = ({ resumeData }) => {
                   <div key={index}>
                     <p style={paraStyleCSS} className='sub-heading'><b>{companyName}</b></p>
                     <p style={paraStyleCSS} className='sub-heading-b'><b>{jobRole} | {startDate} - {endDate}</b></p>
-                    <p style={paraStyleCSS}>{aboutJob}</p>
+                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                   </div>
                 )
               })}
@@ -135,7 +136,7 @@ export const NuevaTemplate = ({ resumeData }) => {
               return (
                 <div key={index}>
                   <p style={paraStyleCSS} className='sub-heading'><b>{projectName} | {startDate} - {endDate}</b></p>
-                  <p style={paraStyleCSS}>{aboutProject}</p>
+                  <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                 </div>
               )
             })}
@@ -162,7 +163,7 @@ export const NuevaTemplate = ({ resumeData }) => {
                   <div key={index}>
                     <p style={paraStyleCSS} className='sub-heading'><b>{collegeName}</b></p>
                     <p style={paraStyleCSS} className='sub-heading-b'><b>{course} | {startDate} - {endDate}</b></p>
-                    <p style={paraStyleCSS}>{aboutEducation}</p>
+                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                   </div>
 
                 )

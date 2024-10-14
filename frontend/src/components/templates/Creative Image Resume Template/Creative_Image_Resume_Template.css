@@ -1,10 +1,8 @@
 
 .creative-image-template {
-    /* border: 2px solid #000000; */
     width: 100%;
     min-height: 1120px;
     position: relative;
-    /* margin: 20px; */
     display: flex;
     background-color: white;
     background-size: cover;
@@ -37,8 +35,6 @@
     clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
     background-color: #28555E;
     margin-top: -70px;
-    /* padding-right: 20px;
-    padding-top: 50px; */
     padding: 30px;
 }
 
@@ -54,13 +50,21 @@
     color: #d18c5c;
 }
 
-.creative-image-template ul li{
+.creative-image-template .contact-details ul li{
     font-size: 12px;
     list-style: none;
     margin-bottom: 20px;
     color: white;
     text-align: left;
-    /* margin-left: 30px; */
+    font-family: "Playpen Sans", cursive;
+}
+
+.creative-image-template .skills-information ul li{
+    font-size: 12px;
+    list-style: none;
+    margin-bottom: 20px;
+    color: white;
+    text-align: left;
     font-family: "Playpen Sans", cursive;
 }
 

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import '../Resume-process-css/summary.css';
 import SaveAlert from '../alerts/SaveAlert';
 import { AiTextPopup } from '../popup/AiTextPopup';
+import SummaryTextEditor from '../popup/SummaryTextEditor';
 
 export default function Summary() {
     const [aiTextSuggestion, setAiTextSuggestion] = useState(false);
@@ -27,9 +28,9 @@ export default function Summary() {
                     'auth-token': authtoken
                 }
             });
-            setIsSaveData(<SaveAlert status={"show"} alertMsg={"All changes saved"}/>);
+            setIsSaveData(<SaveAlert status={"show"} alertMsg={"All changes saved"} />);
             setTimeout(() => {
-                setIsSaveData(<SaveAlert status={"hide"} alertMsg={"All changes saved"}/>);
+                setIsSaveData(<SaveAlert status={"hide"} alertMsg={"All changes saved"} />);
             }, 800);
             // Also save in local storage
             localStorage.setItem('currentTemplate', JSON.stringify(currentTemplateData));
@@ -38,6 +39,7 @@ export default function Summary() {
             console.log("Server error.", error);
         }
     };
+
 
     const handleTextChange = (newText) => {
         // Update the summary in currentTemplateData
@@ -50,33 +52,30 @@ export default function Summary() {
             <h1>Summary</h1>
             <form onSubmit={handleSubmit}>
                 <div className="summary-form-name">
-                    <input 
-                        type="text" 
-                        name="sectionName" 
-                        value={currentTemplateData.AllSections[0].sectionName} 
-                        onChange={(e) => ChangeSectionValue(e, 0)}  
-                        placeholder='Section name' 
+                    <input
+                        type="text"
+                        name="sectionName"
+                        value={currentTemplateData.AllSections[0].sectionName}
+                        onChange={(e) => ChangeSectionValue(e, 0)}
+                        required
+                        placeholder='About me'
                     />
                 </div>
                 <div className="summary-form-textarea">
-                    <textarea 
-                        name="summary" 
-                        value={currentTemplateData.AllSections[0].summary} 
-                        onChange={(e) => ChangeSectionValue(e, 0)}  
-                        placeholder='Description' 
-                    />
-                    <img 
-                        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png"  
-                        alt="AI Suggestion" draggable="false"  title='Generate text' className='ai-text-suggestion-img'
-                        onClick={() => setAiTextSuggestion(true)} 
+                    <SummaryTextEditor value={currentTemplateData.AllSections[0].summary} />
+                    <img
+                        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png"
+                        alt="AI Suggestion" draggable="false" title='Generate text' className='ai-text-suggestion-img'
+                        onClick={() => setAiTextSuggestion(true)}
                     />
                     {aiTextSuggestion && (
-                        <AiTextPopup 
-                            prompt={currentTemplateData.AllSections[0].summary} 
-                            cancel={() => setAiTextSuggestion(false)} 
-                            onTextChange={handleTextChange} 
+                        <AiTextPopup
+                            prompt={currentTemplateData.AllSections[0].summary}
+                            cancel={() => setAiTextSuggestion(false)}
+                            onTextChange={handleTextChange}
                         />
                     )}
+
                 </div>
                 <div className="summary-next-button">
                     <button type='submit'>Save and Next</button>

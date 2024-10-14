@@ -9,7 +9,7 @@ export default function HowToDesign() {
                 {/* ARROW */}
                 <img className="arrow" src="./images/arrow.svg" alt="arrow" />
                 <div className="column">
-                    <h2>Customize your resume by <span style={{ fontWeight: '600' }}>including our unique features</span> </h2>
+                    <h2>Customize Your Resume: <span style={{ fontWeight: '600' }}>Stand Out and Get Hired</span> </h2>
                    <ul>
                     <li>
                         <i className="fa-solid fa-check"></i>

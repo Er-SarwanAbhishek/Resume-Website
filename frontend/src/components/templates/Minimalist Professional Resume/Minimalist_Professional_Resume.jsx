@@ -88,7 +88,7 @@ const Minimalist_Professional_Resume = ({ resumeData }) => {
                         </p>
                       </div>
                     </div>
-                    <p style={paraStyleCSS}>{aboutProject}</p>
+                    <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                   </div>
                 );
               })}</>}
@@ -107,7 +107,7 @@ const Minimalist_Professional_Resume = ({ resumeData }) => {
           resumeData.AllSections[0].isSection &&
           <div className="about-me summary-edit">
             <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-            <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+            <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
           </div>}
 
         {/* EDUCATION SECTION */}
@@ -139,7 +139,7 @@ const Minimalist_Professional_Resume = ({ resumeData }) => {
                       </p>
                     </div>
                     <p className="course-role-section" style={paraStyleCSS}>{course}</p>
-                    <p style={paraStyleCSS}>{aboutEducation}</p>
+                    <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                   </div>
                 );
               })}
@@ -172,7 +172,7 @@ const Minimalist_Professional_Resume = ({ resumeData }) => {
                       </div>
                     </div>
                     <p className="course-role-section">{jobRole}</p>
-                    <p >{aboutJob}</p>
+                    <div dangerouslySetInnerHTML={{ __html: aboutJob }} />
                   </div>
                 );
               })}</div></>}

@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Box_Style_Resume.css";
+import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function Box_Style_Resume({ resumeData }) {
-    const { AllSections } = resumeData;
-    const { themeColor } = resumeData;
-    const { backgroundPattern } = resumeData.resumeStyle;
+    const { AllSections, isQRCode, themeColor, resumeStyle } = resumeData;
+    const { backgroundPattern } = resumeStyle;
+    const { liveTemplateURL } = useContext(GlobalContext);
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
@@ -19,22 +21,22 @@ export default function Box_Style_Resume({ resumeData }) {
 
     const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
     return (
-        <div className="box-style-resume" style={{ ...themeColor, backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
-              {
+        <div className="box-style-resume" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
+            {
                 isQRCode ? <div className="resume-qr-code">
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />
                 </div> : <></>
             }
             <div className="left-column">
                 <div
-                    className="profile-img"
+                    className="profile-img personal-edit"
                     style={{
                         backgroundImage: `url(${resumeData.profileImage})`,
                     }}
                 ></div>
                 {AllSections[0].isSection && <div className="summary-information summary-edit">
                     <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                    <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                 </div>}
 
                 {AllSections[3].isSection && <div className="skills-information skill-edit">
@@ -43,9 +45,7 @@ export default function Box_Style_Resume({ resumeData }) {
                         {AllSections[3].list.map(skill => {
                             const { listId, skillName } = skill;
                             return (
-                                <li style={paraStyleCSS} key={listId}>
-                                    <p style={paraStyleCSS}>{skillName}</p>
-                                </li>
+                                <li style={paraStyleCSS} key={listId}>{skillName}</li>
                             )
                         })}
                     </ul>
@@ -64,9 +64,7 @@ export default function Box_Style_Resume({ resumeData }) {
                                     <p style={paraStyleCSS}>
                                         <b>{projectName}</b>
                                     </p>
-                                    <p style={paraStyleCSS}>
-                                        {aboutProject}
-                                    </p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                 </div>
                             </div>
                         )
@@ -74,12 +72,11 @@ export default function Box_Style_Resume({ resumeData }) {
                 </div>}
             </div>
             <div className="right-column">
-                <div className="personal-details" style={{backgroundColor: themeColor}}>
+                <div className="personal-details personal-edit" style={{ backgroundColor: themeColor }}>
                     <h1 style={headingStyleCSS}> {resumeData.userName} </h1>
                     <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
                 </div>
                 {AllSections[1].isSection && <div className="contact-information contact-edit">
-                    {/* <h2>Contact</h2> */}
                     <ul>
                         {AllSections[1].list.map(element => {
                             const { listId, iconName, contactName } = element
@@ -109,9 +106,7 @@ export default function Box_Style_Resume({ resumeData }) {
                                     <p style={paraStyleCSS}>
                                         <b>{collegeName}</b>
                                     </p>
-                                    <p style={paraStyleCSS}>
-                                        {aboutEducation}
-                                    </p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                 </div>
                             </div>
                         )
@@ -134,9 +129,7 @@ export default function Box_Style_Resume({ resumeData }) {
                                     <p style={paraStyleCSS}>
                                         <b>{jobRole}</b>
                                     </p>
-                                    <p style={paraStyleCSS}>
-                                        {aboutJob}
-                                    </p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                 </div>
                             </div>
                         )

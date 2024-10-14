@@ -51,16 +51,24 @@
 
 .Yellow-Theme-Template p {
     font-size: 12px;
-    line-height: 20px;
+    line-height: 22px;
     font-family: "Inter", sans-serif;
 }
 
-.Yellow-Theme-Template ul li {
+.Yellow-Theme-Template .Contact-Information ul li {
     list-style: none;
     font-size: 14px;
     margin: 0px 15px 15px 0px;
     font-family: "Inter", sans-serif;
 }
+
+.Yellow-Theme-Template .Skills-Information ul li {
+    list-style: none;
+    font-size: 14px;
+    margin: 0px 15px 15px 0px;
+    font-family: "Inter", sans-serif;
+}
+
 
 .Yellow-Theme-Template b {
     text-transform: uppercase;

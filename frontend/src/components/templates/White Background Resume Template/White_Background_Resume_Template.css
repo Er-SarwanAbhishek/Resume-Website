@@ -1,9 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .white-background-resume-template {
     width: 100%;
     min-height: 1120px;
@@ -81,9 +75,14 @@
     width: 40%;
 }
 
-.white-background-resume-template ul li {
+.white-background-resume-template .contact-details ul li {
     font-size: 12px;
-    /* margin-bottom: 15px; */
+    list-style: none;
+    text-align: left;
+}
+
+.white-background-resume-template .skills-information ul li {
+    font-size: 12px;
     list-style: none;
     text-align: left;
 }
@@ -112,7 +111,6 @@
 
 .white-background-resume-template .contact-details li {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .white-background-resume-template .skills-information ul {

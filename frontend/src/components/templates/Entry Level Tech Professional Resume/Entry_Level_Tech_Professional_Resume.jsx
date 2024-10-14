@@ -58,7 +58,7 @@ export default function Entry_Level_Tech_Professional_Resume({ resumeData }) {
           resumeData.AllSections[0].isSection &&
           <div className="summary summary-edit">
             <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[0].sectionName}</h2>
-            <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
           </div>}
         {/* SKILLS */}
         {
@@ -118,9 +118,7 @@ export default function Entry_Level_Tech_Professional_Resume({ resumeData }) {
                   <p style={paraStyleCSS}>
                     <b>{collegeName}</b>
                   </p>
-                  <p style={paraStyleCSS}>
-                    {aboutEducation}
-                  </p>
+                  <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                 </div>
               )
             })}
@@ -141,9 +139,7 @@ export default function Entry_Level_Tech_Professional_Resume({ resumeData }) {
                       <i>{startDate} - {endDate}</i>
                     </p>
                   </div>
-                  <p style={paraStyleCSS}>
-                    {aboutProject}
-                  </p>
+                  <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                 </div>
               )
             })}
@@ -167,9 +163,7 @@ export default function Entry_Level_Tech_Professional_Resume({ resumeData }) {
                   <p style={paraStyleCSS}>
                     <b>{jobRole}</b>
                   </p>
-                  <p style={paraStyleCSS}>
-                    {aboutJob}
-                  </p>
+                  <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                 </div>
               )
             })}

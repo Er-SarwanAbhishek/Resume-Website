@@ -44,7 +44,15 @@
     width: 80%;
 }
 
-.colorfull-resume-template ul li {
+.colorfull-resume-template .contact-details ul li {
+    list-style: none;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.colorfull-resume-template .skills-information ul li {
     list-style: none;
     color: #000000;
     margin-bottom: 15px;

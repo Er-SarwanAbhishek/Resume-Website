@@ -4,7 +4,7 @@ import { QRCodeCanvas } from "qrcode.react";
 import GlobalContext from "../../context/GlobalContext";
 
 const BeigeTemplate = ({ resumeData }) => {
-  const { isQRCode } = resumeData;
+  const { AllSections, isQRCode } = resumeData;
   const { liveTemplateURL } = useContext(GlobalContext);
 
   const themeStyle = { backgroundColor: resumeData.themeColor }
@@ -68,9 +68,9 @@ const BeigeTemplate = ({ resumeData }) => {
         resumeData.AllSections[0].isSection &&
         <div className="Beige-about-blank-div">
           <div className="Beige-section Beige-about-me" style={themeStyle}>
-            <div className=" summary-edit"style={{ paddingLeft: '1rem' }}>
+            <div className=" summary-edit" style={{ paddingLeft: '1rem' }}>
               <h2 style={combineHeadingStyle}>{resumeData.AllSections[0].sectionName}</h2>
-              <p style={paraStyleCSS}>{resumeData.AllSections[0].summary}</p>
+              <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
             </div>
             <div className="Beige-profile-image">
               <img src={resumeData.profileImage} alt="" />
@@ -132,7 +132,7 @@ const BeigeTemplate = ({ resumeData }) => {
                           </p>
                         </div>
                         <p style={paraStyleCSS} className="beige-role-name">{jobRole}</p>
-                        <p style={paraStyleCSS} className="beige-about-job">{aboutJob}</p>
+                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} className="beige-about-job" />
                       </div>
                     );
                   })}
@@ -158,9 +158,9 @@ const BeigeTemplate = ({ resumeData }) => {
                           {startDate} - {endDate}
                         </p>
                       </div>
-                      <p style={paraStyleCSS} className="beige-about-job">{aboutProject}</p>
-                    </div>
+                      <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} className="beige-about-job" />
 
+                    </div>
                   );
                 })}
               </div>
@@ -194,7 +194,7 @@ const BeigeTemplate = ({ resumeData }) => {
                             </p>
                           </div>
                           <p style={paraStyleCSS} className="beige-course-name">{course}</p>
-                          <p style={paraStyleCSS} className="beige-about-edu">{aboutEducation}</p>
+                          <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} className="beige-about-edu" />
                         </React.Fragment>
                       );
                     }

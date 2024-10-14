@@ -20,20 +20,20 @@ const QrcodeSection = () => {
                         <div className='step'>
                             <div className='step1'>
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
+                                    <i className="fa-solid fa-check"></i>
                                     Quickly view your online profile
                                 </li>
                             </div>
                             <div className='step2'>
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
+                                    <i className="fa-solid fa-check"></i>
                                     Easily share your contact information
                                 </li>
 
                             </div>
                             <div className='step3'>
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
+                                    <i className="fa-solid fa-check"></i>
                                     Makes your resume look modern
                                 </li>
                             </div>
@@ -46,15 +46,15 @@ const QrcodeSection = () => {
             </div>
             <div className='qrcode-row2'>
                 <div className='qrcode-feature1'>
-                    <i class="fa-duotone fa-solid fa-face-smile-plus"></i>
+                    <i className="fa-duotone fa-solid fa-face-smile-plus"></i>
                     <span>Impress your interviewer by including a QR code linking to your resume.</span>
                 </div>
                 <div className='qrcode-feature2'>
-                    <i class="fa-duotone fa-solid fa-clock-rotate-left"></i>
+                    <i className="fa-duotone fa-solid fa-clock-rotate-left"></i>
                     <span>The automation process saves time and reduces costs effectively.</span>
                 </div>
                 <div className='qrcode-feature3'>
-                    <i class="fa-duotone fa-solid fa-link"></i>
+                    <i className="fa-duotone fa-solid fa-link"></i>
                     <span>Share a link to your resume that can be accessed easily with a single click.</span>
                 </div>
             </div>

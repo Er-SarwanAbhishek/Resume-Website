@@ -23,7 +23,7 @@ export default function Yellow_Theme__Template({ resumeData }) {
 
   const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
   return (
-    <div className="Yellow-Theme-Template"  style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
+    <div className="Yellow-Theme-Template" style={{ backgroundImage: `url("/background-pattern/${backgroundPattern}")` }}>
       {
         isQRCode ? <div className="resume-qr-code">
           <QRCodeCanvas value={liveTemplateURL} size={"50"} />
@@ -48,7 +48,7 @@ export default function Yellow_Theme__Template({ resumeData }) {
             resumeData.AllSections[0].isSection &&
             <div className="Summary-Information summary-edit">
               <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}<span className='designing-line' style={{ backgroundColor: themeColor }}></span></h2>
-              <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+              <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
             </div>}
 
           {/* SKILLS */}
@@ -84,9 +84,7 @@ export default function Yellow_Theme__Template({ resumeData }) {
                       <p style={paraStyleCSS}>
                         <b>{projectName}</b>
                       </p>
-                      <p style={paraStyleCSS}>
-                        {aboutProject}
-                      </p>
+                      <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                     </div>
                   </div>
                 )
@@ -132,9 +130,7 @@ export default function Yellow_Theme__Template({ resumeData }) {
                       <p style={paraStyleCSS}>
                         <b>{collegeName}</b>
                       </p>
-                      <p style={paraStyleCSS}>
-                        {aboutEducation}
-                      </p>
+                      <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                     </div>
                   </div>
                 )
@@ -160,9 +156,7 @@ export default function Yellow_Theme__Template({ resumeData }) {
                       <p style={paraStyleCSS}>
                         <b>{jobRole}</b>
                       </p>
-                      <p style={paraStyleCSS}>
-                        {aboutJob}
-                      </p>
+                      <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                     </div>
                   </div>
                 )

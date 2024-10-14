@@ -1,5 +1,30 @@
 .education-form label {
- font-family: "mulish", sans-serif;
+    font-family: "mulish", sans-serif;
+}
+
+.education-form .month-year-pickers {
+    position: relative;
+    width: 100%;
+}
+
+.education-form .start-end-date {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    width: 100%;
+    font-family: "mulish", sans-serif;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.education-form .custom-input-arrow {
+    float: right;
 }
 
 .education-form h1 {
@@ -16,12 +41,9 @@
     display: flex;
     gap: 20px;
     width: 100%;
+    margin-bottom: 20px;
 }
 
-.education-form-section-pic-date div {
-    width: 50%;
-    gap: 0;
-}
 
 .education-form-section-pic-date input {
     padding: 10px;
@@ -91,7 +113,7 @@
 
 .education-form-datepic .select-option {
     font-family: "Montserrat", sans-serif;
-   
+
 }
 
 .education-form-datepic-monthdate .education-select-option {
@@ -110,7 +132,7 @@
 
 .edu-add-button {
     display: flex;
-   margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .edu-add-button a {
@@ -123,8 +145,8 @@
     font-weight: 600;
     border-radius: 10px;
     font-family: "Montserrat", sans-serif;
-    flex-grow:1;
-    width: 0; 
+    flex-grow: 1;
+    width: 0;
     background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(42, 81, 186, 1) 100%);
     cursor: pointer;
 }
@@ -157,31 +179,38 @@
     margin: 0;
 }
 
-.education-del-add-button i{
+.education-del-add-button i {
     background-color: #fff;
     color: #333;
     font-size: 15px;
     font-weight: 600;
     border-radius: 50%;
     padding: 10px 13px;
-    box-shadow: 2px 2px 10px rgba(0, 0,0,0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 
 }
-.peducation-del-add-button{
+
+.peducation-del-add-button {
     padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.education-del-add-button hr{
+.education-del-add-button hr {
     width: 93%;
     border: none;
     height: 1px;
     background-color: #ccd2f9;
 }
+
 .education-form .education-textarea-delete-section {
-position: relative;
+    position: relative;
 }
 
+@media screen and (max-width: 450px) {
+    .education-form-section-pic-date {
+        flex-wrap: wrap;
+    }
+}

@@ -40,7 +40,7 @@ export default function After_Border_Resume_Template({ resumeData }) {
                 <div className='left-column'>
                     {AllSections[0].isSection && <div className='summary-information summary-edit' style={{ borderColor: themeColor }}>
                         <h2 style={combineHeadingStyle}><span> {AllSections[0].sectionName}</span> <span className='theme-design' style={{ backgroundColor: themeColor }}></span></h2>
-                        <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                     </div>}
 
                     {AllSections[5].isSection && <div className='education-edit common-sec' style={{ borderColor: themeColor }}>
@@ -53,7 +53,7 @@ export default function After_Border_Resume_Template({ resumeData }) {
                                 <div className='common-details' key={listId}>
                                     <p><b style={boldParaStyleCss}>{course}</b> , <i style={paraStyleCSS}>{startDate} - {endDate}</i></p>
                                     <p><b style={boldParaStyleCss}>{collegeName}</b></p>
-                                    <p style={paraStyleCSS}>{aboutEducation}</p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                 </div>
                             )
                         })}
@@ -69,7 +69,7 @@ export default function After_Border_Resume_Template({ resumeData }) {
                                 <div className='common-details' key={listId}>
                                     <p><b style={boldParaStyleCss}>{jobRole}</b> , <i style={paraStyleCSS}>{startDate} - {endDate}</i></p>
                                     <p><b style={boldParaStyleCss}>{companyName}</b></p>
-                                    <p style={paraStyleCSS}>{aboutJob}</p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                 </div>
                             )
                         })}
@@ -84,7 +84,7 @@ export default function After_Border_Resume_Template({ resumeData }) {
                             return (
                                 <div className='common-details' key={listId}>
                                     <p><b style={boldParaStyleCss}>{projectName}</b> , <i style={paraStyleCSS}>{startDate} - {endDate}</i></p>
-                                    <p style={paraStyleCSS}>{aboutProject}</p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                 </div>
                             )
                         })}
@@ -124,6 +124,6 @@ export default function After_Border_Resume_Template({ resumeData }) {
                     </div>}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

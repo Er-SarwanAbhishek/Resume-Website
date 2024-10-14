@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.month-year-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 20px;
+  position: absolute;
+  width: 50%;
+  background: #fff;
+  z-index: 9999;
+ 
+}
+
+.month-year-picker .year-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+
+.month-year-picker .year-controls .year-btn {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.month-year-picker .year-controls .year-btn:hover{
+  background-color: #fafafa;
+  border-radius: 50%;
+}
+
+.month-year-picker .year-controls .year-display {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.month-year-picker .month-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 6px;
+  row-gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.month-year-picker .month {
+  text-align: center;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.month-year-picker .month:hover {
+  background-color: #fafafa;
+  color: black;
+  border: 1px solid #5a4abd;
+}
+
+
+
+.toggle-editable-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+  justify-content: space-between;
+  font-family: "inter";
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.toggle-editable-container .editable-text {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 2px 5px;
+  width: 100px;
+
+
+}
+
+.toggle-editable-container .editable-text:disabled {
+  background: none;
+  cursor: not-allowed;
+  color: #a19999;
+}
+
+.toggle-editable-container .switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.toggle-editable-container .switch input {
+  display: none;
+}
+
+.toggle-editable-container .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.toggle-editable-container .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.toggle-editable-container input:checked + .slider {
+  background-color: #5A4ABD;
+}
+
+.toggle-editable-container input:checked + .slider:before {
+  transform: translateX(14px);
+}

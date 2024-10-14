@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import './Colorfull_Resume_Template.css'
 import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function Colorfull_Resume_Template({ resumeData }) {
-    const { AllSections, themeColor, isQRCode, liveTempId, resumeStyle } = resumeData;
-    const liveTemplateURL = `http://localhost:3000/${liveTempId}`;
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
+    const { liveTemplateURL } = useContext(GlobalContext);
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
@@ -62,8 +63,7 @@ export default function Colorfull_Resume_Template({ resumeData }) {
                             <div className='education-details' key={listId}>
                                 <p><b style={boldParaStyleCss}>{course}</b></p>
                                 <p><b style={boldParaStyleCss}><i>{startDate} - {endDate}</i> |{collegeName}</b></p>
-                                <p style={paraStyleCSS}>{aboutEducation}
-                                </p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                             </div>
                         )
                     })}
@@ -87,7 +87,7 @@ export default function Colorfull_Resume_Template({ resumeData }) {
                     <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
                 </div>
                 {AllSections[0].isSection && <div className='summary-information summary-edit'>
-                    <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                 </div>}
 
                 {AllSections[4].isSection && <div className='experience-information job-exp-edit'>
@@ -98,7 +98,7 @@ export default function Colorfull_Resume_Template({ resumeData }) {
                             <div className='experience-details' key={listId}>
                                 <p><b style={boldParaStyleCss}>{jobRole}</b></p>
                                 <p><b style={boldParaStyleCss}>{companyName} | <i>{startDate} - {endDate}</i></b></p>
-                                <p style={paraStyleCSS}>{aboutJob}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                             </div>
                         )
                     })}
@@ -112,7 +112,7 @@ export default function Colorfull_Resume_Template({ resumeData }) {
                             <div className='project-details' key={listId}>
                                 <p><b style={boldParaStyleCss}><i>{startDate} - {endDate}</i></b></p>
                                 <p><b style={boldParaStyleCss}>{projectName}</b></p>
-                                <p style={paraStyleCSS}>{aboutProject}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                             </div>
                         )
                     })}

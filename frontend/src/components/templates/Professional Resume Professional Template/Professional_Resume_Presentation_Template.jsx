@@ -80,7 +80,7 @@ export default function Professional_Resume_Presentation_Template({ resumeData }
                                                     <p style={{ fontStyle: 'italic' }}>{startDate} / {endDate}</p>
                                                 </div>
                                             </div>
-                                            <span>{aboutProject}</span>
+                                            <div dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                         </div>
                                     )
                                 })}</div></>
@@ -93,7 +93,7 @@ export default function Professional_Resume_Presentation_Template({ resumeData }
                     <div className='summary-edit'>
                         resumeData.AllSections[0].isSection &&
                         <><h4>{AllSections[0].sectionName}</h4>
-                            <p>{AllSections[0].summary}</p></>
+                            <div dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} /></>
                     </div>
 
                     {/* {/ JOB EXPERIENCE SECTION /} */}
@@ -115,7 +115,7 @@ export default function Professional_Resume_Presentation_Template({ resumeData }
                                                 </div>
                                                 <p>{startDate} / {endDate}</p>
                                             </div>
-                                            <span>{aboutJob}</span>
+                                            <div dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                         </div>
                                     )
                                 })}</>}
@@ -139,13 +139,13 @@ export default function Professional_Resume_Presentation_Template({ resumeData }
                                                 </div>
                                                 <p>{startDate} / {endDate}</p>
                                             </div>
-                                            <p style={{ paddingBottom: '8px', fontSize: '14px' }}>{aboutEducation}</p>
+                                            <div style={{ paddingBottom: '8px', fontSize: '14px' }} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                         </div>
                                     )
                                 })}</>}
                     </div>
 
                 </div>
-            </div></div>
+            </div></div >
     )
 }

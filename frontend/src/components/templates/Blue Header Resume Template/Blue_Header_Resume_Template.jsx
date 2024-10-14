@@ -3,8 +3,9 @@ import './Blue_Header_Resume_Template.css'
 import { QRCodeCanvas } from 'qrcode.react';
 
 export default function Blue_Header_Resume_Template({ resumeData }) {
-    const { AllSections, themeColor, isQRCode, liveTempId, resumeStyle } = resumeData;
-    const liveTemplateURL = `http://localhost:3000/${liveTempId}`;
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
+    const { liveTemplateURL } = useContext(GlobalContext);
+
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
@@ -36,7 +37,7 @@ export default function Blue_Header_Resume_Template({ resumeData }) {
                 <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
             </div>
 
-            {AllSections[1].isSection &&  <div className='contact-details contact-edit'>
+            {AllSections[1].isSection && <div className='contact-details contact-edit'>
                 <ul>
                     {AllSections[1].list.map(element => {
                         const { listId, iconName, contactName } = element
@@ -50,9 +51,9 @@ export default function Blue_Header_Resume_Template({ resumeData }) {
                 </ul>
             </div>}
 
-           {AllSections[0].isSection &&  <div className='summary-information summary-edit'>
+            {AllSections[0].isSection && <div className='summary-information summary-edit'>
                 <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
             </div>}
 
             {AllSections[3].isSection && <div className='skills-information skill-edit'>
@@ -69,7 +70,7 @@ export default function Blue_Header_Resume_Template({ resumeData }) {
                 </ul>
             </div>}
 
-            {AllSections[5].isSection &&  <div className='education-edit common-sec'>
+            {AllSections[5].isSection && <div className='education-edit common-sec'>
                 <h2 style={combineHeadingStyle}>{AllSections[5].sectionName}</h2>
                 {AllSections[5].list.map(Education => {
                     const { listId, collegeName, course, startDate, endDate, aboutEducation } = Education;
@@ -79,14 +80,14 @@ export default function Blue_Header_Resume_Template({ resumeData }) {
                             <div className='common-level'>
                                 <p><b style={boldParaStyleCss}>{course}</b></p>
                                 <p><b style={boldParaStyleCss}>{collegeName}</b></p>
-                                <p style={paraStyleCSS}>{aboutEducation}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                             </div>
                         </div>
                     )
                 })}
             </div>}
 
-            {AllSections[4].isSection &&   <div className='job-exp-edit common-sec'>
+            {AllSections[4].isSection && <div className='job-exp-edit common-sec'>
                 <h2 style={combineHeadingStyle}>{AllSections[4].sectionName}</h2>
                 {AllSections[4].list.map(Experience => {
                     const { listId, companyName, jobRole, startDate, endDate, aboutJob } = Experience;
@@ -96,14 +97,14 @@ export default function Blue_Header_Resume_Template({ resumeData }) {
                             <div className='common-level'>
                                 <p><b style={boldParaStyleCss}>{jobRole}</b></p>
                                 <p><b style={boldParaStyleCss}>{companyName}</b></p>
-                                <p style={paraStyleCSS}>{aboutJob}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                             </div>
                         </div>
                     )
                 })}
             </div>}
 
-            {AllSections[2].isSection &&  <div className='project-edit common-sec'>
+            {AllSections[2].isSection && <div className='project-edit common-sec'>
                 <h2 style={combineHeadingStyle}>{AllSections[2].sectionName}</h2>
                 {AllSections[2].list.map(Project => {
                     const { listId, projectName, startDate, endDate, aboutProject } = Project;
@@ -112,7 +113,7 @@ export default function Blue_Header_Resume_Template({ resumeData }) {
                             <p className="common-datime"><i style={paraStyleCSS}>{startDate} - {endDate}</i></p>
                             <div className='common-level'>
                                 <p><b style={boldParaStyleCss}>{projectName}</b></p>
-                                <p style={paraStyleCSS}>{aboutProject}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                             </div>
                         </div>
                     )

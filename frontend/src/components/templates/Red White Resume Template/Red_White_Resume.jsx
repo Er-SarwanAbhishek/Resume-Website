@@ -43,7 +43,7 @@ export const Red_White_Resume = () => {
 
           <div className="about-me summary-edit">
             <h2>{AllSections[0].sectionName}</h2>
-            <p style={{ marginBottom: "25px" }}>{AllSections[0].summary}</p>
+            <div style={{ marginBottom: "25px" }} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
           </div>
 
           {/* JOB EXPERIENCE SECTION */}
@@ -74,7 +74,7 @@ export const Red_White_Resume = () => {
                       </p>
                     </div>
                   </div>
-                  <p>{aboutJob}</p>
+                  <div dangerouslySetInnerHTML={{ __html: aboutJob }} />
                 </div>
               );
             })}
@@ -96,7 +96,7 @@ export const Red_White_Resume = () => {
                       {startDate} / {endDate}
                     </p>
                   </div>
-                  <p style={{ marginTop: "0px" }}>{aboutProject}</p>
+                  <div style={{ marginTop: "0px" }} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                 </div>
               );
             })}
@@ -143,13 +143,13 @@ export const Red_White_Resume = () => {
                       {startDate} / {endDate}
                     </p>
                   </div>
-                  <p>{aboutEducation}</p>
+                  <div dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                 </div>
               );
             })}
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };

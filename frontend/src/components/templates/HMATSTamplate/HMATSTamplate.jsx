@@ -4,7 +4,7 @@ import { QRCodeCanvas } from 'qrcode.react';
 import GlobalContext from '../../context/GlobalContext';
 
 function HMATSTamplate({ resumeData }) {
-    const { isQRCode, resumeStyle } = resumeData;
+    const { AllSections, isQRCode, resumeStyle } = resumeData;
     const { liveTemplateURL } = useContext(GlobalContext);
 
     const headingStyleCSS = {
@@ -62,7 +62,7 @@ function HMATSTamplate({ resumeData }) {
                 resumeData.AllSections[0].isSection &&
                 <div className="header-modern-template-format-section header-modern-template-format-about-me summary-edit">
                     <h2 style={combineHeadingStyle}>{resumeData.AllSections[0].sectionName}</h2>
-                    <p style={paraStyleCSS}>{resumeData.AllSections[0].summary}</p>
+                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                 </div>}
             {/* <!--PROJECT SECTION--> */}
 
@@ -81,7 +81,7 @@ function HMATSTamplate({ resumeData }) {
                                         <b><p style={paraStyleCSS}>{projectName}</p></b>
                                         <p style={paraStyleCSS} className='header-modern-template-format-project-period'>{startDate} - {endDate}</p>
                                     </div>
-                                    <p style={paraStyleCSS} className='temp-p-data'>{aboutProject}</p>
+                                    <p style={paraStyleCSS} className='temp-p-data' dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                 </div>
                             )
                         })}
@@ -104,7 +104,7 @@ function HMATSTamplate({ resumeData }) {
                                         <p style={paraStyleCSS} className='header-modern-template-format-job-period'>{startDate} - {endDate}</p>
                                     </div>
                                     <p style={paraStyleCSS} className='custom-p'>{jobRole}</p>
-                                    <p style={paraStyleCSS} className='custom-pb'>{aboutJob}</p>
+                                    <p style={paraStyleCSS} className='custom-pb' dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                 </div>
 
                             )
@@ -141,7 +141,7 @@ function HMATSTamplate({ resumeData }) {
                                         <p style={paraStyleCSS}>{startDate} - {endDate}</p>
                                     </div>
                                     <p className='course-section' style={paraStyleCSS}>{course}</p>
-                                    <p style={paraStyleCSS} className='temp-p-data'>{aboutEducation}</p>
+                                    <p style={paraStyleCSS} className='temp-p-data' dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                 </React.Fragment>
                             )
                         })}

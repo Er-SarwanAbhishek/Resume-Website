@@ -66,7 +66,7 @@ export default function Moder_Curriculum_Resume_Templates({ resumeData }) {
                         resumeData.AllSections[0].isSection &&
                         <div className="summary-section">
                             <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                            <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                         </div>}
                     </div>
 
@@ -93,7 +93,7 @@ export default function Moder_Curriculum_Resume_Templates({ resumeData }) {
                                 return (
                                     <div className="each-module" key={listId}>
                                         <p style={paraStyleCSS}><b>{projectName} | <span style={{ color: themeColor }}>{startDate} - {endDate}</span></b></p>
-                                        <p style={paraStyleCSS}>{aboutProject}</p>
+                                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                     </div>
                                 )
                             })}
@@ -114,7 +114,7 @@ export default function Moder_Curriculum_Resume_Templates({ resumeData }) {
                                     <div className="each-module" key={listId}>
                                         <p style={paraStyleCSS}><b>{companyName} | <span style={{ color: themeColor }}>{startDate} - {endDate}</span></b></p>
                                         <p style={{ ...paraStyleCSS, marginBottom: '3px' }}><b>{jobRole}</b></p>
-                                        <p style={paraStyleCSS}>{aboutJob}</p>
+                                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                     </div>
                                 )
                             })}
@@ -131,7 +131,7 @@ export default function Moder_Curriculum_Resume_Templates({ resumeData }) {
                                     <div className="each-module" key={listId}>
                                         <p style={paraStyleCSS}><b>{collegeName} | <span style={{ color: themeColor }}>{startDate} - {endDate}</span></b></p>
                                         <p style={{ ...paraStyleCSS, marginBottom: '3px' }}><b>{course}</b></p>
-                                        <p style={paraStyleCSS}>{aboutEducation}</p>
+                                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                     </div>
                                 )
                             })}

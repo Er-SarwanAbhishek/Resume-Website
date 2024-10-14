@@ -1,6 +1,6 @@
 .header-section {
     width: 100vw;
-    padding: 20px 0px;
+    padding: 15px 0px;
     background: rgb(112, 92, 236);
     background: linear-gradient(90deg, rgba(112, 92, 236, 1) 0%, rgba(31, 104, 232, 1) 100%);
     display: flex;
@@ -18,11 +18,8 @@
     align-items: center;
 }
 
-.header-section .header-row .logo {
-    font-family: 'Montserrat';
-    font-size: 30px;
-    font-weight: normal;
-    color: #fff;
+.header-section .career-logo {
+    width: 250px;
     cursor: pointer;
 }
 
@@ -31,6 +28,7 @@
 }
 
 .header-section .header-row .menu li {
+    list-style: none;
     padding: 1px 15px;
     border-right: 2px solid #fff;
 }

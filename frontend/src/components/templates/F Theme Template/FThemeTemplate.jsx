@@ -4,7 +4,7 @@ import { QRCodeCanvas } from "qrcode.react";
 import GlobalContext from "../../context/GlobalContext";
 
 export const FThemeTemplate = ({ resumeData }) => {
-  const { isQRCode } = resumeData;
+  const { AllSections, isQRCode } = resumeData;
   const { liveTemplateURL } = useContext(GlobalContext);
 
   const headingStyleCSS = {
@@ -61,7 +61,7 @@ export const FThemeTemplate = ({ resumeData }) => {
             <div className="FThemeTemplate-for-heading FThemeTemplate-sub-section-B">
               <h2 style={combineHeadingStyle}>{resumeData.AllSections[0].sectionName}</h2>
             </div>
-            <p style={paraStyleCSS}>{resumeData.AllSections[0].summary}</p>
+            <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
           </div>}
         {/* Section-C */}
         <div className="FThemeTemplate-section-C">
@@ -76,9 +76,9 @@ export const FThemeTemplate = ({ resumeData }) => {
                     const { companyName, jobRole, startDate, endDate, aboutJob } = element;
                     return (
                       <div key={index}>
-                        <p style={{ ...paraStyleCSS, fontWeight: 600 }}>{companyName} | {startDate} - {endDate} </p>
+                        <p style={{ ...paraStyleCSS, fontWeight: 800 }}>{companyName} | {startDate} - {endDate} </p>
                         <p style={paraStyleCSS} className='FThemeTemplate-sub-heading'>{jobRole}</p>
-                        <p style={paraStyleCSS}>{aboutJob}</p>
+                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                       </div>
                     );
                   })}
@@ -95,8 +95,8 @@ export const FThemeTemplate = ({ resumeData }) => {
                     const { projectName, startDate, endDate, aboutProject } = element;
                     return (
                       <div key={index}>
-                        <p style={{ ...paraStyleCSS, fontWeight: 600 }}>{projectName} | {startDate} - {endDate} </p>
-                        <p style={paraStyleCSS}>{aboutProject}</p>
+                        <p style={{ ...paraStyleCSS, fontWeight: 800 }}>{projectName} | {startDate} - {endDate} </p>
+                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                       </div>
                     );
                   })}
@@ -127,9 +127,9 @@ export const FThemeTemplate = ({ resumeData }) => {
                     const { collegeName, course, startDate, endDate, aboutEducation } = element;
                     return (
                       <React.Fragment key={index}>
-                        <p style={{ ...paraStyleCSS, fontWeight: 600 }}>{collegeName} | {startDate} - {endDate} </p>
+                        <p style={{ ...paraStyleCSS, fontWeight: 800 }}>{collegeName} | {startDate} - {endDate} </p>
                         <p style={paraStyleCSS} className='FThemeTemplate-sub-heading'>{course}</p>
-                        <p style={paraStyleCSS}>{aboutEducation}</p>
+                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                       </React.Fragment>
                     );
                   })}

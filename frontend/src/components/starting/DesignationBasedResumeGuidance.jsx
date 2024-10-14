@@ -105,17 +105,19 @@ export const DesignationBasedResumeGuidance = ({ editTemplate, setIsPrevTemplate
                 </h2>
                 <div className="dropdown-side">
                     {/* <img src="" alt="" draggable="false" /> */}
-                    <select
-                        value={subSelectedTem}
-                        onChange={handleDropdownChange}
-                        className="profession-dropdown"
-                    >
-                        {professions.map((profession) => (
-                            <option key={profession.value} value={profession.value}>
-                                {profession.label}
-                            </option>
-                        ))}
-                    </select>
+                    <div className="select-wrapper">
+                        <select
+                            value={subSelectedTem}
+                            onChange={handleDropdownChange}
+                            className="profession-dropdown"
+                        >
+                            {professions.map((profession) => (
+                                <option key={profession.value} value={profession.value}>
+                                    {profession.label}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
 
                 </div>
 

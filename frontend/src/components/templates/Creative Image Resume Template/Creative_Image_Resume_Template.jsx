@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import './Creative_Image_Resume_Template.css'
 import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 
 export default function Creative_Image_Resume_Template({ resumeData }) {
-    const { AllSections, themeColor, isQRCode, liveTempId, resumeStyle } = resumeData;
-    const liveTemplateURL = `http://localhost:3000/${liveTempId}`;
+    const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
+    const { liveTemplateURL } = useContext(GlobalContext);
 
     const headingStyleCSS = {
         fontFamily: resumeData.headingTextFont,
@@ -57,7 +58,7 @@ export default function Creative_Image_Resume_Template({ resumeData }) {
                                 <div className='education-details' key={listId}>
                                     <p style={{ ...paraStyleCSS, color: '#fff' }}><b>{collegeName}</b></p>
                                     <p style={{ ...paraStyleCSS, color: '#fff' }}><b>{course} | <i style={{ color: themeColor }}>{startDate} - {endDate}</i></b></p>
-                                    <p style={{ ...paraStyleCSS, color: '#fff' }}>{aboutEducation}</p>
+                                    <p style={{ ...paraStyleCSS, color: '#fff' }} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                 </div>
                             )
                         })}
@@ -88,7 +89,7 @@ export default function Creative_Image_Resume_Template({ resumeData }) {
 
                 {AllSections[0].isSection && <div className='summary-information summary-edit'>
                     <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                    <p style={paraStyleCSS}>{AllSections[0].summary}</p>
+                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                 </div>}
 
                 {AllSections[4].isSection && <div className='experience-information job-exp-edit'>
@@ -100,7 +101,7 @@ export default function Creative_Image_Resume_Template({ resumeData }) {
                                 <p style={paraStyleCSS}><b><i style={{ color: themeColor }}>{startDate} - {endDate}</i></b></p>
                                 <p style={paraStyleCSS}><b>{companyName}</b></p>
                                 <p style={paraStyleCSS}><b>{jobRole}</b></p>
-                                <p style={paraStyleCSS}>{aboutJob} </p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                             </div>
                         )
                     })}
@@ -114,7 +115,7 @@ export default function Creative_Image_Resume_Template({ resumeData }) {
                             <div className='project-details' key={listId}>
                                 <p style={paraStyleCSS}><b><i style={{ color: themeColor }}>{startDate} - {endDate}</i></b></p>
                                 <p style={paraStyleCSS}><b>{projectName}</b></p>
-                                <p style={paraStyleCSS}>{aboutProject}</p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                             </div>
                         )
                     })}
