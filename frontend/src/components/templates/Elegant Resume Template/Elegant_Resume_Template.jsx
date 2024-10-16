@@ -66,8 +66,8 @@ export default function Elegant_Resume_Template({ resumeData }) {
                             </h2>
                                 <ul className="contact">
                                     {AllSections[1].list.map(element => {
-                                        const { listId, iconName, contactName } = element;
-                                        return <li style={paraStyleCSS} key={listId}><i className={iconName} /> {contactName}</li>;
+                                        const { listId, iconName, contactName,additionalLink } = element;
+                                        return <li onClick={()=> window.location.href=additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}><i className={iconName} /> {contactName}</li>;
                                     })}
                                 </ul>
                             </>

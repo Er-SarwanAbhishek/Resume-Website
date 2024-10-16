@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=SUSE:wght@100..800&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .blue-creative-modern-resume {
     width: 100%;
     min-height: 1120px;
@@ -67,13 +58,13 @@
 }
 
 .blue-creative-modern-resume h2 {
-    font-size: 30px;
+    font-size: 20px;
     margin: 15px 0px;
     font-family: "Outfit", sans-serif;
 }
 
 .blue-creative-modern-resume .contact-details ul li {
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 15px;
     list-style: none;
     color: #000000;
@@ -81,14 +72,14 @@
 }
 
 .blue-creative-modern-resume .skills-information ul li {
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 15px;
     list-style: none;
     color: #000000;
     font-family: "SUSE", sans-serif;
 }
 
-.blue-creative-modern-resume p {
+.blue-creative-modern-resume p{
     font-size: 12px;
     line-height: 22px;
     color: #000000;

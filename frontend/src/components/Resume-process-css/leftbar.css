@@ -1,7 +1,9 @@
 .sidebar {
+  position: relative;
   background-color: #fafafa;
   width: 12%;
   position: relative;
+  border-right: 1px solid #e5e5e5;
   padding-top: 20px;
 }
 
@@ -14,7 +16,17 @@
   display: flex;
   align-items: center;
   font-size: clamp(8px, 1vw, 14px);
+  position: relative;
 }
+
+.sidebar .sidebar-icon .premium {
+  position: absolute;
+  right: 0px;
+  width: 15px;
+  height: 15px;
+  color: #DAB04A;
+}
+
 
 .sidebar .sidebar-icon:hover {
   background-color: #f2f2f2;
@@ -27,15 +39,9 @@
   height: 18px;
 }
 
-.sidebar .sidebar-icon span {
-  padding-left: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-}
-
 /* RESPONSIVE CSS */
 @media screen and (max-width: 1440px) {
-  .sidebar{
+  .sidebar {
     width: 15%;
   }
 }
@@ -43,6 +49,13 @@
 @media screen and (max-width: 1024px) {
   .sidebar .sidebar-icon p {
     display: none;
+  }
+
+  .sidebar .sidebar-icon .premium {
+    min-width: 5px !important;
+    min-height: 5px !important;
+    top: 5px;
+    right: 10px;
   }
 
   .sidebar {
@@ -58,6 +71,22 @@
 
   .sidebar .sidebar-icon {
     padding: 20px;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .Full-page .sidebar .sidebar-icon .premium {
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    left: -12px;
+    color: #DAB04A !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Full-page .sidebar .sidebar-icon .premium {
+    width: 14px;
+    height: 14px;
   }
 }

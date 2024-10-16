@@ -97,9 +97,9 @@ export default function After_Border_Resume_Template({ resumeData }) {
                         }}></span></h2>
                         <ul>
                             {AllSections[1].list.map(element => {
-                                const { listId, iconName, contactName } = element
+                                const { listId, iconName, contactName,additionalLink } = element
                                 return (
-                                    <li key={listId}>
+                                    <li onClick={()=> window.location.href = additionalLink} key={listId} style={{cursor:'pointer'}}>
                                         <i style={{ color: resumeData.bodyTextColor }} className={iconName}></i>
                                         <p style={paraStyleCSS}> {contactName}</p>
                                     </li>

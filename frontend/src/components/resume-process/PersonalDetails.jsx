@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import GlobalContext from '../context/GlobalContext';
 import { useNavigate } from 'react-router-dom';
 import '../Resume-process-css/personaldetails.css';
@@ -10,12 +10,15 @@ export default function PersonalDetails() {
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        setCurrentTemplateData({ ...currentTemplateData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setCurrentTemplateData({ ...currentTemplateData, [name]: value, isPersonaldetailschange:true });
+       
     };
 
     const handleImageChange = (e) => {
         const imageSource = URL.createObjectURL(e.target.files[0]);
-        setCurrentTemplateData({ ...currentTemplateData, [e.target.name]: imageSource });
+       
+        setCurrentTemplateData({ ...currentTemplateData, [e.target.name]: imageSource, isPersonaldetailschange:true });
         setImageSrc(imageSource);
     };
 
@@ -49,6 +52,11 @@ export default function PersonalDetails() {
             console.log("Server error.", error);
         }
     };
+
+    //CHECK CHANGES
+    useEffect(() => {
+
+    }, [currentTemplateData])
 
     return (
         <div className='personal-details-form'>

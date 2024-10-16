@@ -31,9 +31,7 @@ export const SalesAchieverResume = ({ resumeData }) => {
                     <QRCodeCanvas value={liveTemplateURL} size={"50"} />
                 </div> : <></>
             }
-            {/* Shapes */}
-            <div className="tiangle-shapes"></div>
-            {/* Shapes */}
+            
             <div className="parent-sec">
                 <div className="left-sec" style={themStyle}>
                     <div className='for-img' style={{ backgroundImage: `url(${resumeData.profileImage})` }}></div>
@@ -43,12 +41,18 @@ export const SalesAchieverResume = ({ resumeData }) => {
                         resumeData.AllSections[1].isSection &&
                         <div className="contact custom-heading-space contact-edit">
                             <h2 style={combineHeadingStyle} >{resumeData.AllSections[1].sectionName}</h2>
-                            {resumeData.AllSections[1].list.map((element, index) => (
-                                <div className='contact-list' key={index} style={paraStyleCSS}>
-                                    <i className={element.iconName}></i>
-                                    <p style={paraStyleCSS} className="para-font-size">{element.contactName}</p>
-                                </div>
-                            ))}
+                            {AllSections[1].list.map(element => {
+                                const { listId, iconName, contactName, additionalLink } = element
+                                return (
+                                    <div className='contact-list' >
+                                    <li onClick={() => window.location.href = additionalLink} key={listId} style={{cursor:'pointer'}}>
+                                        <i style={{color: resumeData.bodyTextColor }} className={iconName} />
+                                        <p style={paraStyleCSS}> {contactName}</p>
+                                    </li>
+                                    </div>
+                                )
+                            })}
+                    
                         </div>}
 
                     {/* SKILLS */}

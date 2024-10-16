@@ -15,6 +15,7 @@
 
 .Full-page .cv-right-dashboard .cv-all-forms {
     flex: 1;
+    border-left: 1px solid #e5e5e5;
     background-color: #F0F2FD;
     padding: 50px;
     height: 100vh;

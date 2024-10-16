@@ -26,6 +26,7 @@
     align-items: center;
     border-radius: 10px;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .edit-contact-form form .social-media input {
@@ -33,6 +34,7 @@
     margin: 0px;
     padding: 10px;
     font-family: "mulish";
+  
 }
 
 .edit-contact-form form .social-media #brandIcon {
@@ -43,7 +45,48 @@
     border-bottom-left-radius: 10px;
     cursor: pointer;
 }
-
+.edit-contact-form form .social-media #brandIcon-link{
+    padding: 10px;
+    background-color: #fff;
+    border-left: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+.edit-contact-form .additional-link-sec{
+    width: 360px;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    right: 0px;
+    animation: RightSliding 0.3s linear;
+    transition: all 0.3s;
+    z-index: 100;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px #ddd;
+    color: #444;
+    white-space: nowrap;
+    bottom: 40px;
+}
+.edit-contact-form .additional-link-sec input{
+    border: 1px solid #d6d6d6;
+    border-radius: 10px !important;
+}
+.edit-contact-form .additional-link-sec button{
+   
+    padding: 10px 15px;
+    border: none;
+    color: #5a4abd;
+    border-radius:10px;
+    font-family: "Montserrat";
+    font-weight: 600;
+}
+.edit-contact-form .additional-link-sec p {
+    font-family: 'mulish';
+    font-size: 13px;
+}
 .edit-contact-form form .social-media .fa-trash {
     border-radius: 10px;
     border-top-left-radius: 0px !important;
@@ -52,7 +95,6 @@
 }
 
 .edit-contact-form form .social-section .delete-section {
-    /* background-color: green; */
     display: flex;
     justify-content: flex-end;
 }
@@ -103,4 +145,10 @@
     font-size: 15px;
     font-weight: 500;
     z-index: 0;
+}
+
+@media screen and (max-width: 450px) {
+    .edit-contact-form .additional-link-sec {
+        width: 290px;
+    }
 }

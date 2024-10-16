@@ -37,18 +37,20 @@ export const FThemeTemplate = ({ resumeData }) => {
           </div>
 
           {/* CONTACT */}
-          {
-            resumeData.AllSections[1].isSection &&
+          {resumeData.AllSections[1].isSection &&
             <div className="FThemeTemplate-sec-acc-FT contact-edit">
-              {resumeData.AllSections[1].list.map((element) => {
-                return (
-                  <div style={paraStyleCSS} className="FThemeTemplate-account" key={element.contactName}>
-                    <p style={paraStyleCSS}>{element.contactName}</p>
-                    <i className={element.iconName}></i>
+            {resumeData.AllSections[1].list.map((element) => {
+                  const { listId, iconName, contactName, additionalLink } =
+                    element;
+                  return (
+                  <div style={{ ...paraStyleCSS, cursor: 'pointer' }} className="FThemeTemplate-account" key={listId} onClick={()=>window.location.href=additionalLink}>
+                    <p style={paraStyleCSS}>{contactName}</p>
+                    <i className={iconName}></i>
                   </div>
                 );
               })}
             </div>}
+
         </div>
       </div>
       <div className="FThemeTemplate-padding">

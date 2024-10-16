@@ -44,9 +44,9 @@ export default function Ppvp_resume_temp({ resumeData }) {
                                 <h2 style={{ ...combineHeadingStyle, color: '#fff' }}>{AllSections[1].sectionName}</h2>
                                 <ul>
                                     {AllSections[1].list.map(element => {
-                                        const { listId, iconName, contactName } = element;
+                                        const { listId, iconName, contactName,additionalLink } = element;
                                         return (
-                                            <li style={paraStyleCSS} key={listId}>
+                                            <li onClick={() => window.location.href = additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
                                                 <i style={{ color: '#fff' }} className={iconName} />
                                                 <p style={{ ...paraStyleCSS, color: '#fff' }}>{contactName}</p>
                                             </li>

@@ -73,7 +73,17 @@
 .cv-about-us-sec .cva-row .cloumn-mobile {
     display: none;
 }
-
+.cv-about-us-sec .column-a i{
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5a4abd;
+    border-radius: 50%;
+}
 
 @media screen and (max-width:1024px){
     .cv-about-us-sec .cva-row {

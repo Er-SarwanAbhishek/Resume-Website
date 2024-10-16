@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import '../Resume-process-css/summary.css';
 import SaveAlert from '../alerts/SaveAlert';
 import { AiTextPopup } from '../popup/AiTextPopup';
-import SummaryTextEditor from '../popup/SummaryTextEditor';
+import ProjectJobEduTextEditor from '../popup/ProjectJobEduTextEditor';
 
 export default function Summary() {
     const [aiTextSuggestion, setAiTextSuggestion] = useState(false);
@@ -62,7 +62,10 @@ export default function Summary() {
                     />
                 </div>
                 <div className="summary-form-textarea">
-                    <SummaryTextEditor value={currentTemplateData.AllSections[0].summary} />
+                    <ProjectJobEduTextEditor value={currentTemplateData.AllSections[0].summary} onChange={(e) => {
+                        ChangeSectionValue({ target: { name: "summary", value: e } }, 0); 
+                        console.log(e, "by summary");
+                    }} />
                     <img
                         src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png"
                         alt="AI Suggestion" draggable="false" title='Generate text' className='ai-text-suggestion-img'

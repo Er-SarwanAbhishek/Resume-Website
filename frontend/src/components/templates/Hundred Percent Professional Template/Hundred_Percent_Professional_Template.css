@@ -1,0 +1,124 @@
+.hundred-percent-professional-template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    padding: 20px 30px 30px 30px;
+    text-align: left;
+    background-color: white;
+    background-size: cover;
+}
+
+.hundred-percent-professional-template .resume-qr-code {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.hundred-percent-professional-template h1{
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.hundred-percent-professional-template h4{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.hundred-percent-professional-template h2{
+    font-size: 18px;
+    margin: 20px 0px 10px 0px;
+    background-color: #DFD7D3;
+    padding: 5px 10px;
+    width: 70%;
+    text-transform: uppercase;
+}
+
+.hundred-percent-professional-template p{
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.hundred-percent-professional-template b{
+    font-size: 14px;
+}
+
+.hundred-percent-professional-template .contact-details ul{
+    display: flex;
+    gap: 15px 30px;
+    flex-wrap: wrap;
+}
+
+.hundred-percent-professional-template .contact-details ul li {
+    list-style: none;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    font-family: "Mulish", sans-serif;
+}
+
+.hundred-percent-professional-template .contact-details i{
+    margin-right: 10px;
+    font-size: 15px;
+    border-radius: 50%;
+    color: #000;
+}
+
+.hundred-percent-professional-template .main-section{
+    display: flex;
+    gap: 5%;
+    border-top: 2px solid #DFD7D3;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+.hundred-percent-professional-template .main-section .left-column{
+    width: 40%;
+}
+
+.hundred-percent-professional-template .profile-img{
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+}
+
+.hundred-percent-professional-template .main-section .left-column .education-information .education-details{
+    padding-bottom: 10px;
+}
+
+.hundred-percent-professional-template .main-section .left-column .education-information .education-details:nth-last-child(1){
+    padding-bottom: 0px;
+}
+
+.hundred-percent-professional-template .skill-information ul li{
+    list-style: disc;
+    list-style: inside;
+    font-size: 12px;
+    margin-bottom: 15px;
+
+}
+
+.hundred-percent-professional-template .skill-information ul li:nth-last-child(1){
+    margin-bottom: 0px;
+}
+
+.hundred-percent-professional-template .main-section .right-column{
+    width: 55%;
+}
+
+.hundred-percent-professional-template .main-section .right-column .summary-information h2{
+    margin-top: 0px;
+}
+
+.hundred-percent-professional-template .main-section .right-column .common-section .common-details{
+    padding-bottom: 10px;
+}
+
+.hundred-percent-professional-template .main-section .right-column .common-section .common-details:nth-last-child(1){
+    padding-bottom: 0px;
+}
+
+.hundred-percent-professional-template .main-section .right-column .common-section .common-details .common-level{
+    display: flex;
+    justify-content: space-between;
+}

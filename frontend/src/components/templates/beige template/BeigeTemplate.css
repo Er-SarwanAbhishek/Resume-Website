@@ -122,15 +122,15 @@
     margin: auto;
     align-items: center;
     border-radius: 50%;
-    width: 55%;
     max-width: 250px;
     margin-right: 0.5rem;
 }
 
 .Beige-profile-image img {
     width: 120px;
-    height: auto;
+    height: 120px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .Beige-section-education {

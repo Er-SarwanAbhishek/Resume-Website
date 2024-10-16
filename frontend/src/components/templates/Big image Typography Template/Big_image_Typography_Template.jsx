@@ -42,9 +42,9 @@ export default function Big_image_Typography_Template({ resumeData }) {
                     <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor, color: "#fff" }}>{AllSections[1].sectionName}</h2>
                     <ul>
                         {AllSections[1].list.map(element => {
-                            const { listId, iconName, contactName } = element
+                            const { listId, iconName, contactName, additionalLink } = element
                             return (
-                                <li key={listId}>
+                                <li onClick={() => window.location.href = additionalLink} key={listId} style={{ cursor: 'pointer' }}>
                                     <i style={{ backgroundColor: themeColor }} className={iconName} />
                                     <p style={paraStyleCSS}> {contactName}</p>
                                 </li>

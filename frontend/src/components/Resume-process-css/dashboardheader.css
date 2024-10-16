@@ -8,7 +8,7 @@
     position: sticky;
     top: 65px;
     background-color: #fff;
-    border-bottom: 1px solid #ccd2f9;
+    border-bottom: 1px solid #e5e5e5;
     z-index: 50;
     column-gap: 50px;
 }

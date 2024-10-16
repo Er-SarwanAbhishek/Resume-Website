@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Blue_Header_Resume_Template.css'
 import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function Blue_Header_Resume_Template({ resumeData }) {
     const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
@@ -40,9 +41,9 @@ export default function Blue_Header_Resume_Template({ resumeData }) {
             {AllSections[1].isSection && <div className='contact-details contact-edit'>
                 <ul>
                     {AllSections[1].list.map(element => {
-                        const { listId, iconName, contactName } = element
+                        const { listId, iconName, contactName, additionalLink } = element
                         return (
-                            <li key={listId}>
+                            <li onClick={() => window.location.href = additionalLink} key={listId} style={{ cursor: 'pointer' }}>
                                 <i className={iconName} />
                                 <p style={{ ...paraStyleCSS, color: "#fff" }}> {contactName}</p>
                             </li>

@@ -39,9 +39,9 @@ export default function Career_Changer_Resume({ resumeData }) {
             {AllSections[1].isSection && <div className='contact-information contact-edit'>
                 <ul>
                     {AllSections[1].list.map(element => {
-                        const { listId, contactName } = element
+                        const { listId, contactName,additionalLink } = element
                         return (
-                            <li style={paraStyleCSS} key={listId}>
+                            <li onClick={() => window.location.href = additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
                                 {contactName}
                             </li>
                         )

@@ -50,9 +50,9 @@ export default function Blue_and_White_Clean_and_Professional_Resume({ resumeDat
                         resumeData.AllSections[1].isSection &&
                         <ul className="icon-contact contact-edit">
                             {AllSections[1].list.map(element => {
-                                const { listId, iconName, contactName } = element;
+                                const { listId, iconName, contactName ,additionalLink} = element;
                                 return (
-                                    <li style={paraStyleCSS} key={listId}>
+                                    <li onClick={()=>window.location.href=additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
                                         <i className={iconName}></i>
                                         <p style={paraStyleCSS}>{contactName}</p>
                                     </li>

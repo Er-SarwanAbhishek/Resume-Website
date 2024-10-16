@@ -1,0 +1,168 @@
+.brown-minimalist-creative-template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    padding: 40px 30px 30px 30px;
+    text-align: left;
+    background-size: cover;
+}
+
+.brown-minimalist-creative-template .resume-qr-code {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+.brown-minimalist-creative-template .header {
+    display: flex;
+    column-gap: 30px;
+    padding: 30px;
+    background-color: #101F24;
+    border-radius: 30px;
+}
+
+.brown-minimalist-creative-template .personal-details {
+    flex: 1;
+    position: relative;
+}
+
+.brown-minimalist-creative-template .header .profile-img {
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.brown-minimalist-creative-template h1 {
+    font-size: 35px;
+    margin-bottom: 5px;
+    color: white;
+    font-family: "Martel", serif;
+    font-weight: 700;
+}
+
+.brown-minimalist-creative-template h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: "Martel", serif;
+    font-weight: 700;
+}
+
+.brown-minimalist-creative-template .header p {
+    color: white;
+}
+
+.brown-minimalist-creative-template h2 {
+    font-size: 20px;
+    margin: 20px 0px 10px 0px;
+    font-family: "Martel", serif;
+    font-weight: 1000;
+}
+
+.brown-minimalist-creative-template .main-section {
+    display: flex;
+    padding-top: 30px;
+    gap: 5%;
+}
+
+.brown-minimalist-creative-template .left-column {
+    width: 45%;
+}
+
+.brown-minimalist-creative-template p {
+    font-size: 12px;
+    line-height: 22px;
+    color: black;
+    font-family: "Inter", sans-serif;
+}
+
+.brown-minimalist-creative-template .contact-information h2 {
+    margin-top: 0px;
+}
+
+.brown-minimalist-creative-template .contact-information ul li {
+    list-style: none;
+    font-size: 12px;
+    margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brown-minimalist-creative-template .contact-information i {
+    margin-right: 10px;
+    font-size: 10px;
+    background-color: #101F24;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brown-minimalist-creative-template .skills-information ul li {
+    list-style: none;
+    font-size: 12px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+    font-family: "Inter", sans-serif;
+}
+
+.brown-minimalist-creative-template .skills-information ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.brown-minimalist-creative-template .skills-information li .list-dots-boxes {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #101F24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+    left: 0px;
+}
+
+.brown-minimalist-creative-template b {
+    font-size: 14px;
+}
+
+.brown-minimalist-creative-template .common-section .common-details {
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.brown-minimalist-creative-template .right-column .project-edit h2 {
+    margin-top: 0px;
+}
+
+.brown-minimalist-creative-template .common-section .common-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.brown-minimalist-creative-template .right-column {
+    width: 50%;
+    border-left: 1px solid #101F24;
+    padding-left: 20px;
+}
+
+.brown-minimalist-creative-template .right-column .common-section .common-dots {
+    content: "";
+    position: absolute;
+    background-color: #101F24;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: -25px;
+    top: 7px;
+}

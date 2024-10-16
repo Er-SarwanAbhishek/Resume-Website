@@ -49,8 +49,8 @@ export default function Moder_Curriculum_Resume_Templates({ resumeData }) {
                         resumeData.AllSections[1].isSection &&
                         <ul className="contact-section contact-edit">
                             {AllSections[1].list.map(contact => {
-                                const { listId, iconName, contactName } = contact;
-                                return <li key={listId}><i className={iconName}></i> <p style={{ fontFamily: resumeData.bodyTextFont, fontSize: `${resumeData.bodyTextSize}px` }}>{contactName}</p></li>
+                                const { listId, iconName, contactName,additionalLink } = contact;
+                                return <li onClick={() => window.location.href = additionalLink} key={listId} style={{cursor:'pointer'}}><i className={iconName}></i> <p style={{ fontFamily: resumeData.bodyTextFont, fontSize: `${resumeData.bodyTextSize}px` }}>{contactName}</p></li>
                             })}
                         </ul>}
                 </div>

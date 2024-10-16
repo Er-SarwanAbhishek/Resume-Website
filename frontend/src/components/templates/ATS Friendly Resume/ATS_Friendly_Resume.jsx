@@ -38,9 +38,9 @@ export default function ATS_Friendly_Resume({ resumeData }) {
             {AllSections[1].isSection && <div className='contact-details contact-edit'>
                 <ul>
                     {AllSections[1].list.map(element => {
-                        const { listId, iconName, contactName } = element
+                        const { listId, iconName, contactName ,additionalLink} = element
                         return (
-                            <li key={listId}>
+                            <li onClick={()=>window.location.href=additionalLink} key={listId} style={{cursor:'pointer'}}>
                                 <i style={{ color: themeColor }} className={iconName} />
                                 <p style={paraStyleCSS}> {contactName}</p>
                             </li>

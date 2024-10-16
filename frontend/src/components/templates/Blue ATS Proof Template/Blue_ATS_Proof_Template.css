@@ -1,0 +1,102 @@
+.blue-ats-proof-template {
+    width: 100%;
+    min-height: 1120px;
+    position: relative;
+    padding: 30px;
+    text-align: left;
+    background-color: white;
+    background-size: cover;
+}
+
+.blue-ats-proof-template h1 {
+    font-size: 35px;
+    margin-bottom: 5px;
+    /* font-family: "Merriweather", serif; */
+}
+
+.blue-ats-proof-template h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #215399;
+    /* font-family: "Merriweather", serif; */
+}
+
+.blue-ats-proof-template h2 {
+    font-size: 20px;
+    margin: 15px 0px 10px 0px;
+    border-bottom: 2px solid #7B9DD5;
+    /* font-family: "Merriweather", serif; */
+    text-transform: uppercase;
+}
+
+.blue-ats-proof-template p {
+    font-size: 12px;
+    line-height: 22px;
+    /* font-family: "Rubik", sans-serif;     */
+}
+
+.blue-ats-proof-template .contact-details {
+    background-color: #E4F2FD;
+    padding: 10px 20px;
+}
+
+.blue-ats-proof-template .contact-details ul li {
+    list-style: none;
+    font-size: 12px;
+    /* font-family: "Rubik", sans-serif; */
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.blue-ats-proof-template .contact-details ul {
+    display: flex;
+    gap: 15px 30px;
+    flex-wrap: wrap;
+}
+
+.blue-ats-proof-template .contact-details i {
+    margin-right: 6px;
+    font-size: 15px;
+    border-radius: 50%;
+    color: #215399;
+}
+
+.blue-ats-proof-template b {
+    font-size: 14px;
+}
+
+.blue-ats-proof-template .common-section .common-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blue-ats-proof-template .common-section .common-details i {
+    background-color: #E4F2FD;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.blue-ats-proof-template .common-level {
+    padding-bottom: 10px;
+}
+
+.blue-ats-proof-template .common-level:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.blue-ats-proof-template .skills-information ul li {
+    list-style: none;
+    font-size: 12px;
+    /* font-family: "Rubik", sans-serif; */
+    border: 1px solid #b6e3ff;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.blue-ats-proof-template .skills-information ul {
+    display: flex;
+    gap: 15px 30px;
+    flex-wrap: wrap;
+}

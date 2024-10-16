@@ -1,5 +1,6 @@
 import ReactQuill from 'react-quill'; // Import the Quill component
 import 'react-quill/dist/quill.snow.css'; // Import Quill's snow theme
+import './texteditor.css'
 
 const ProjectJobEduTextEditor = ({ value, onChange }) => {
 

@@ -16,10 +16,26 @@
 }
 
 .SalesAchieverRT .left-sec {
+    position: relative; 
     width: 33%;
     padding: 2rem;
+    background-color: #f0f0f0; 
+    margin: 20px;
 }
 
+.SalesAchieverRT .left-sec:after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: -26px;
+    width: 0px;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid #ffffff;
+    z-index: 100;
+    transform: rotate(45deg);
+}
 .SalesAchieverRT .right-sec {
     padding: 2rem 0 3rem 2rem;
 }
@@ -66,7 +82,12 @@
 .SalesAchieverRT h1 {
     font-size: 30px;
 }
-
+.SalesAchieverRT .left-sec .contact-list li{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
 .SalesAchieverRT .skills li {
     margin-bottom: 10px;
@@ -102,13 +123,3 @@
     padding-right: 2rem;
 }
 
-/* shapes */
-.SalesAchieverRT .tiangle-shapes {
-    width: 70px;
-    height: 70px;
-    clip-path: polygon(100% 0, 0 0, 100% 100%);
-    background-color: #ffffff;
-    position: absolute;
-    left: 24.5%;
-    top: 1.2%;
-}

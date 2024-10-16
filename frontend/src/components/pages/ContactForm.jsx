@@ -91,7 +91,7 @@ export default function ContactForm() {
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label>Name</label>
-              <input type="text" name="name" placeholder="Enter Your Name" value={formData.name} onChange={handleChange} required />
+              <input type="text" name="name" placeholder="Enter your name" value={formData.name} onChange={handleChange} required />
             </div>
 
             <div className="form-group">
@@ -99,7 +99,7 @@ export default function ContactForm() {
               <input
                 type="email"
                 name="email"
-                placeholder="Enter Your email" value={formData.email} onChange={handleChange}
+                placeholder="Enter your email" value={formData.email} onChange={handleChange}
                 required
               />
             </div>

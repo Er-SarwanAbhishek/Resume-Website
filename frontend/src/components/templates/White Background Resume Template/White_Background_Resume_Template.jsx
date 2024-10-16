@@ -54,10 +54,10 @@ export default function White_Background_Resume_Template({ resumeData }) {
                         <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[1].sectionName}</h2>
                         <ul>
                             {AllSections[1].list.map(element => {
-                                const { listId, iconName, contactName } = element
+                                const { listId, iconName, contactName, additionalLink } = element
                                 return (
-                                    <li key={listId}>
-                                        <i style={{ backgroundColor: themeColor, color: resumeData.bodyTextColor }} className={iconName} />
+                                    <li onClick={() => window.location.href = additionalLink} key={listId} style={{cursor:'pointer'}}>
+                                        <i style={{ backgroundColor: themeColor,color: resumeData.bodyTextColor }} className={iconName} />
                                         <p style={paraStyleCSS}> {contactName}</p>
                                     </li>
                                 )

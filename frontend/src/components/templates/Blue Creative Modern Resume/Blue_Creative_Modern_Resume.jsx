@@ -58,9 +58,9 @@ export default function Blue_Creative_Modern_Resume({ resumeData }) {
                         <h2 style={combineHeadingStyle}>{AllSections[1].sectionName}</h2>
                         <ul>
                             {AllSections[1].list.map(element => {
-                                const { listId, iconName, contactName } = element
+                                const { listId, iconName, contactName,additionalLink } = element
                                 return (
-                                    <li key={listId}>
+                                    <li onClick={()=>window.location.href=additionalLink} key={listId} style={{cursor:'pointer'}}>
                                         <i style={{ backgroundColor: themeColor }} className={iconName} />
                                         <p style={paraStyleCSS}> {contactName}</p>
                                     </li>
@@ -92,7 +92,7 @@ export default function Blue_Creative_Modern_Resume({ resumeData }) {
                                 <div className='project-details' key={listId}>
                                     <p><b style={boldParaStyleCss}>{projectName}</b></p>
                                     <p style={paraStyleCSS}><i style={{ ...paraStyleCSS, color: themeColor }}>{startDate} - {endDate}</i></p>
-                                    <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                                 </div>
                             )
                         })}
@@ -101,7 +101,7 @@ export default function Blue_Creative_Modern_Resume({ resumeData }) {
                 <div className='right-column'>
                     {AllSections[0].isSection && <div className='summary-information summary-edit'>
                         <h2 style={combineHeadingStyle}>{AllSections[0].sectionName}</h2>
-                        <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
+                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                     </div>}
 
                     {AllSections[5].isSection && <div className='education-information education-edit'>
@@ -112,7 +112,7 @@ export default function Blue_Creative_Modern_Resume({ resumeData }) {
                                 <div className='education-details' key={listId}>
                                     <p><b style={boldParaStyleCss}>{course}</b></p>
                                     <p><b style={boldParaStyleCss}>{collegeName}</b> | <i style={{ ...paraStyleCSS, color: themeColor }}>{startDate} - {endDate}</i></p>
-                                    <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                                 </div>
                             )
                         })}
@@ -126,7 +126,7 @@ export default function Blue_Creative_Modern_Resume({ resumeData }) {
                                 <div className='experience-details' key={listId}>
                                     <p><b style={boldParaStyleCss}>{jobRole}</b></p>
                                     <p><b style={boldParaStyleCss}>{companyName}</b> | <i style={{ ...paraStyleCSS, color: themeColor }}>{startDate} - {endDate}</i></p>
-                                    <div style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                                 </div>
                             )
                         })}

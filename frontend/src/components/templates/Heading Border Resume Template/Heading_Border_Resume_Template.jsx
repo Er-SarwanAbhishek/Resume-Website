@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Heading_Border_Resume_Template.css'
 import { QRCodeCanvas } from 'qrcode.react';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function Heading_Border_Resume_Template({ resumeData }) {
     const { AllSections, themeColor, isQRCode, resumeStyle } = resumeData;
@@ -42,9 +43,9 @@ export default function Heading_Border_Resume_Template({ resumeData }) {
                 {AllSections[1].isSection && <div className='contact-details contact-edit'>
                     <ul>
                         {AllSections[1].list.map(element => {
-                            const { listId, iconName, contactName } = element
+                            const { listId, iconName, contactName, additionalLink } = element
                             return (
-                                <li key={listId}>
+                                <li onClick={() => window.location.href = additionalLink} key={listId} style={{ cursor: 'pointer' }}>
                                     <i style={{ color: resumeData.bodyTextColor }} className={iconName} />
                                     <p style={paraStyleCSS}> {contactName}</p>
                                 </li>
@@ -54,7 +55,7 @@ export default function Heading_Border_Resume_Template({ resumeData }) {
                 </div>}
             </div>
             {AllSections[3].isSection && <div className='skills-information skill-edit'>
-                <h2 style={combineHeadingStyle}>{AllSections[3].sectionName}</h2>
+                <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[3].sectionName}</h2>
                 <ul>
                     {AllSections[3].list.map(skill => {
                         const { listId, skillName } = skill;
@@ -68,7 +69,7 @@ export default function Heading_Border_Resume_Template({ resumeData }) {
             </div>}
 
             {AllSections[4].isSection && <div className='job-exp-edit common-sec'>
-                <h2 style={combineHeadingStyle}>{AllSections[4].sectionName}</h2>
+                <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[4].sectionName}</h2>
                 {AllSections[4].list.map(Experience => {
                     const { listId, companyName, jobRole, startDate, endDate, aboutJob } = Experience;
                     return (
@@ -81,7 +82,7 @@ export default function Heading_Border_Resume_Template({ resumeData }) {
                 })}
             </div>}
             {AllSections[2].isSection && <div className='project-edit common-sec'>
-                <h2 style={combineHeadingStyle}>{AllSections[2].sectionName}</h2>
+                <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[2].sectionName}</h2>
                 {AllSections[2].list.map(Project => {
                     const { listId, projectName, startDate, endDate, aboutProject } = Project;
                     return (
@@ -93,7 +94,7 @@ export default function Heading_Border_Resume_Template({ resumeData }) {
                 })}
             </div>}
             {AllSections[5].isSection && <div className='education-edit common-sec'>
-                <h2 style={combineHeadingStyle}>{AllSections[5].sectionName}</h2>
+                <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[5].sectionName}</h2>
                 {AllSections[5].list.map(Education => {
                     const { listId, collegeName, course, startDate, endDate, aboutEducation } = Education;
                     return (

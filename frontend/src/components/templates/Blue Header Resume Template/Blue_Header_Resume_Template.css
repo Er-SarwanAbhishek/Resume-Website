@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .blue-header-resume-template {
     width: 100%;
@@ -26,7 +21,6 @@
     width: calc(100% + 60px);
     left: -30px;
     position: relative;
-
 }
 
 .blue-header-resume-template h1 {
@@ -54,9 +48,6 @@
     list-style: none;
     font-size: 12px;
     width: 30%;
-}
-
-.blue-header-resume-template .contact-details li {
     display: flex;
     align-items: center;
 }
@@ -96,14 +87,14 @@
 .blue-header-resume-template .skills-information ul li {
     list-style: inside;
     font-size: 12px;
-    width: 30%;
+    width: 20%;
 }
 
 .blue-header-resume-template .skills-information ul {
     display: flex;
     flex-wrap: wrap;
     column-gap: 5%;
-    row-gap: 15px;
+    row-gap: 10px;
 }
 
 .blue-header-resume-template .common-sec .common-details {

@@ -39,9 +39,9 @@ export default function Creative_Image_Resume_Template({ resumeData }) {
                         <h2 style={{ ...combineHeadingStyle, color: '#fff' }}><i style={{ color: themeColor }} class="fa-solid fa-phone-volume"></i>{AllSections[1].sectionName}</h2>
                         <ul>
                             {AllSections[1].list.map(element => {
-                                const { listId, iconName, contactName } = element
+                                const { listId, iconName, contactName ,additionalLink} = element
                                 return (
-                                    <li style={paraStyleCSS} key={listId}>
+                                    <li onClick={() => window.location.href = additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
                                         <i className={iconName} />
                                         <p style={{ ...paraStyleCSS, color: '#fff' }}>{contactName}</p>
                                     </li>

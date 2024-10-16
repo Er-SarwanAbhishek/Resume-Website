@@ -48,18 +48,19 @@ const BeigeTemplate = ({ resumeData }) => {
             <div className="Beige-contact-sec forHeading-beige contact-edit">
               <h2 style={combineHeadingStyle}>{resumeData.AllSections[1].sectionName}</h2>
               {resumeData.AllSections[1].list.map((element) => {
-                return (
-                  <div class="Beige-contact" key={element.listId}>
-                    <i class={element.iconName}></i>
-                    <p style={paraStyleCSS}>{element.contactName}</p>
+                  const { listId, iconName, contactName, additionalLink } =
+                    element;
+                  return (
+                  <div class="Beige-contact" key={listId} onClick={()=>window.location.href=additionalLink} style={{cursor:'pointer'}} >
+                    <i class={iconName}></i>
+                    <p style={paraStyleCSS}>{contactName}</p>
+                  
                   </div>
                 );
               })}
             </div>
           }
         </div>
-
-
       </div>
       {/* <!--ABOUT SECTION--> */}
 

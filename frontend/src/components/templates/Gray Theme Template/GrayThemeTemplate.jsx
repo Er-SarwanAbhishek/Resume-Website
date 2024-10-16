@@ -45,8 +45,10 @@ export const GrayThemeTemplate = ({ resumeData }) => {
         resumeData.AllSections[1].isSection &&
         <div className='contact-sec-so2 contact-edit' style={{ background: themeColor }}>
           {resumeData.AllSections[1].list.map((element) => {
-            return (
-              <div key={element.listId} style={paraStyleCSS} className="account-so-2-details"  >
+                  const { listId, iconName, contactName, additionalLink } =
+                    element;
+                  return (
+              <div key={listId} style={{ ...paraStyleCSS, cursor: 'pointer' }}className="account-so-2-details" onClick={()=>window.location.href=additionalLink} >
                 <i className={element.iconName}></i>
                 <p>{element.contactName}</p>
               </div>

@@ -84,6 +84,8 @@
 /* Space Grotesk */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 /* DM Serif Text */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* Rubik */
 
 
 body,
@@ -93,7 +95,7 @@ body * {
   box-sizing: border-box;
 }
 
-.overflow-hidden{
+.overflow-hidden {
   overflow: hidden;
 }
 
@@ -202,6 +204,6 @@ body *::-webkit-scrollbar-thumb {
 
 @keyframes AnimOnCancelBtn {
   100% {
-      transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 }

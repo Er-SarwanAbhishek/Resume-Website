@@ -47,7 +47,17 @@
     font-weight: 500;
     column-gap: 10px;
 }
-
+.cv-why-choose .column-b i{
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5a4abd;
+    border-radius: 50%;
+}
 .cv-why-choose .wh-row .column-b button {
     border: none;
     padding: 12px 60px;

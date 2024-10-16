@@ -115,9 +115,10 @@ export default function Unique_Style_Resume({ resumeData }) {
                             {/* <h2>Contact</h2> */}
                             <ul className='contact-edit'>
                                 {AllSections[1].list.map(element => {
-                                    const { listId, iconName, contactName } = element
+                                    const { listId, iconName, contactName,additionalLink } = element
                                     return (
-                                        <li style={paraStyleCSS} key={listId}>
+                                         
+                                        <li onClick={() => window.location.href = additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
                                             <i style={{ backgroundColor: themeColor }} className={iconName} />
                                             {contactName}
                                         </li>

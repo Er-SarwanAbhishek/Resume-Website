@@ -1,6 +1,6 @@
 .exp-live-prev {
     width: 100vw;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     display: flex;
     justify-content: center;
 }
@@ -63,17 +63,12 @@
     }
 
     .exp-live-prev .elp-row h2 {
-
         font-size: 35px;
-
     }
 
     .exp-live-prev .elp-row li {
-
         font-size: 16px;
-
         margin-bottom: 15px;
-
         column-gap: 10px;
     }
 
@@ -154,7 +149,7 @@
 }
 
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
     .exp-live-prev #hide-heading-ls {
         display: none;
     }

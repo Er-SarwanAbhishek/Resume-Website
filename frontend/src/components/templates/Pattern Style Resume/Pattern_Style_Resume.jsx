@@ -160,9 +160,9 @@ export default function Pattern_Style_Resume({ resumeData }) {
                     <span className="contact-theme-design" style={{ backgroundColor: themeColor }}></span>
                     <ul>
                         {AllSections[1].list.map(element => {
-                            const { listId, iconName, contactName } = element
+                            const { listId, iconName, contactName ,additionalLink } = element
                             return (
-                                <li style={paraStyleCSS} key={listId}>
+                                <li onClick={() => window.location.href = additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
                                     <i style={{ backgroundColor: themeColor }}
                                         className={iconName} />
                                     {contactName}

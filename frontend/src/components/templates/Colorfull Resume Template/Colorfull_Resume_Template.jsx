@@ -44,9 +44,9 @@ export default function Colorfull_Resume_Template({ resumeData }) {
                     <h2 style={combineHeadingStyle}>{AllSections[1].sectionName}</h2>
                     <ul>
                         {AllSections[1].list.map(element => {
-                            const { listId, iconName, contactName } = element
+                            const { listId, iconName, contactName,additionalLink } = element
                             return (
-                                <li key={listId}>
+                                <li onClick={() => window.location.href = additionalLink} key={listId} style={{cursor:'pointer'}}>
                                     <i className={iconName} />
                                     <p style={paraStyleCSS}> {contactName}</p>
                                 </li>

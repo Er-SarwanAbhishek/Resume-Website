@@ -55,9 +55,9 @@ export default function Border_Chain_Resume({ resumeData }) {
                             <h2 style={combineHeadingStyle}>{AllSections[1].sectionName}</h2>
                             <ul>
                                 {AllSections[1].list.map(element => {
-                                    const { listId, iconName, contactName } = element
+                                    const { listId, iconName, contactName,additionalLink } = element
                                     return (
-                                        <li style={paraStyleCSS} key={listId}>
+                                        <li onClick={() => window.location.href = additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
                                             <i className={iconName} />
                                             {contactName}
                                         </li>
