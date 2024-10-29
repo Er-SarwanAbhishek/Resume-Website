@@ -5,46 +5,50 @@
     gap: 5%;
     background-size: cover;
     background-color: #ffffff;
+    background-position: right;
 }
 
 .blue-creative-modern-resume .resume-qr-code {
     position: absolute;
-    left: 10px;
+    right: 10px;
     bottom: 50px;
+    padding-top: 20px;
 }
 
 .blue-creative-modern-resume .header {
     display: flex;
     column-gap: 50px;
-    background-color: #03989f;
-    padding: 30px 0px;
+    padding: 20px 0px;
     justify-content: center;
     align-items: center;
     color: white;
 }
 
 .blue-creative-modern-resume .header .profile-img {
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
     background-position: center;
     background-size: cover;
     border-radius: 50%;
     border: 8px solid #fff;
 }
 
-.blue-creative-modern-resume .header .personal-details h1 {
-    font-size: 50px;
-    margin-bottom: 15px;
-    font-family: "Outfit", sans-serif;
+.blue-creative-modern-resume .personal-details {
+    width: 40%;
 }
 
-.blue-creative-modern-resume .personal-details {
-    width: 60%;
+.blue-creative-modern-resume .header .personal-details h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
 }
 
 .blue-creative-modern-resume .header .personal-details h4 {
-    font-size: 18px;
-    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+}
+
+.blue-creative-modern-resume h2 {
+    margin: 10px 0px;
+    text-transform: uppercase;
 }
 
 .blue-creative-modern-resume .main-div {
@@ -54,43 +58,23 @@
 
 .blue-creative-modern-resume .main-div .left-column {
     width: 38%;
-    padding: 30px 0px 50px 30px;
+    padding: 10px 0px 50px 30px;
 }
 
-.blue-creative-modern-resume h2 {
-    font-size: 20px;
-    margin: 15px 0px;
-    font-family: "Outfit", sans-serif;
+.blue-creative-modern-resume .main-div .right-column {
+    width: 57%;
+    padding: 10px 0px 50px 30px;
 }
 
 .blue-creative-modern-resume .contact-details ul li {
-    font-size: 12px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     list-style: none;
     color: #000000;
-    font-family: "SUSE", sans-serif;
-}
-
-.blue-creative-modern-resume .skills-information ul li {
-    font-size: 12px;
-    margin-bottom: 15px;
-    list-style: none;
-    color: #000000;
-    font-family: "SUSE", sans-serif;
-}
-
-.blue-creative-modern-resume p{
-    font-size: 12px;
-    line-height: 22px;
-    color: #000000;
-    font-family: "SUSE", sans-serif;
-}
-
-.blue-creative-modern-resume .main-div .left-column .contact-details li {
     display: flex;
+    font-weight: 500;
 }
 
-.blue-creative-modern-resume .main-div ul li:nth-last-child(1) {
+.blue-creative-modern-resume .main-div .left-column .contact-details ul a:nth-last-child(1) li {
     margin-bottom: 0px;
 }
 
@@ -108,74 +92,38 @@
     align-items: center;
 }
 
-.blue-creative-modern-resume .main-div .left-column .skills-information li {
+.blue-creative-modern-resume .main-div .left-column .common-list-styling ul li {
+    margin-bottom: 6px;
+    list-style: none;
+    color: #000000;
     position: relative;
-    padding-left: 30px;
+    padding-left: 20px;
+    font-weight: 500;
 }
 
-.blue-creative-modern-resume .main-div .left-column .skills-information li .list-dots {
+.blue-creative-modern-resume .main-div .left-column .common-list-styling ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.blue-creative-modern-resume .main-div .left-column .common-list-styling li .list-dots {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     position: absolute;
     background-color: #03989f;
-    top: 6px;
+    top: 5.4px;
     left: 0px;
 }
 
-.blue-creative-modern-resume .main-div .left-column .project-information .project-details b {
-    font-size: 18px;
+.blue-creative-modern-resume .common-section .common-details i {
+    font-weight: 500;
 }
 
-.blue-creative-modern-resume .main-div .left-column .project-information .project-details i {
-    color: #03989f;
-    font-weight: 600;
+.blue-creative-modern-resume .common-section .common-details {
+    padding-bottom: 8px;
 }
 
-.blue-creative-modern-resume .main-div .left-column .project-information .project-details {
-    padding-bottom: 15px;
-}
-
-.blue-creative-modern-resume .main-div .left-column .project-information .project-details:nth-last-child(1) {
-    padding-bottom: 0px;
-}
-
-.blue-creative-modern-resume .main-div .right-column {
-    width: 57%;
-    padding: 30px 0px 50px 30px;
-}
-
-.blue-creative-modern-resume .main-div .right-column .education-information .education-details b {
-    font-size: 18px;
-}
-
-.blue-creative-modern-resume .main-div .right-column .education-information .education-details i {
-    color: #03989f;
-    font-weight: 600;
-}
-
-.blue-creative-modern-resume .main-div .right-column .education-information .education-details {
-    padding-bottom: 15px;
-}
-
-.blue-creative-modern-resume .main-div .right-column .education-information .education-details:nth-last-child(1) {
-    padding-bottom: 0px;
-}
-
-.blue-creative-modern-resume .main-div .right-column .experience-information .experience-details b {
-    font-size: 18px;
-}
-
-.blue-creative-modern-resume .main-div .right-column .experience-information .experience-details i {
-    color: #03989f;
-    font-weight: 600;
-}
-
-.blue-creative-modern-resume .main-div .right-column .experience-information .experience-details {
-    padding-bottom: 15px;
-}
-
-.blue-creative-modern-resume .main-div .right-column .experience-information .experience-details:nth-last-child(1) {
+.blue-creative-modern-resume .common-section .common-details:nth-last-child(1) {
     padding-bottom: 0px;
 }
 

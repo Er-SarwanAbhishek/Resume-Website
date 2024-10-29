@@ -48,15 +48,15 @@ function HMATSTamplate({ resumeData }) {
               {AllSections[1].list.map((element) => {
                 const { listId, contactName, additionalLink } = element;
                 return (
+                  <a href={additionalLink} key={listId}>
                   <div
-                    key={listId}
-                    onClick={() => (window.location.href = additionalLink)}
                     style={{ ...paraStyleCSS, cursor: 'pointer' }}
                     className="header-modern-template-format-contact-grp"
                   >
                     <i className={element.iconName}></i>
                     <p>{element.contactName}</p>
                   </div>
+                  </a>
                 );
               })}
             </div>

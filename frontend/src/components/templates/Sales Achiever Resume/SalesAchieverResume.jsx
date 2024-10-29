@@ -45,10 +45,12 @@ export const SalesAchieverResume = ({ resumeData }) => {
                                 const { listId, iconName, contactName, additionalLink } = element
                                 return (
                                     <div className='contact-list' >
-                                    <li onClick={() => window.location.href = additionalLink} key={listId} style={{cursor:'pointer'}}>
+                                         <a href={additionalLink} key={listId}>
+                                    <li  style={{cursor:'pointer'}}>
                                         <i style={{color: resumeData.bodyTextColor }} className={iconName} />
                                         <p style={paraStyleCSS}> {contactName}</p>
                                     </li>
+                                    </a>
                                     </div>
                                 )
                             })}

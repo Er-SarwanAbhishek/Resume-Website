@@ -16,7 +16,8 @@ export default function Brown_Minimalist_Creative_Template({ resumeData }) {
   const paraStyleCSS = {
     fontFamily: resumeData.bodyTextFont,
     color: resumeData.bodyTextColor,
-    fontSize: `${resumeData.bodyTextSize}px`
+    fontSize: `${resumeData.bodyTextSize}px`,
+    lineHeight: `${resumeData.bodyTextSize + 8}px`
   }
 
   const boldParaStyleCss = {
@@ -34,9 +35,9 @@ export default function Brown_Minimalist_Creative_Template({ resumeData }) {
       <div className='header'>
         <div className='personal-details personal-edit'>
           <h1 style={{ ...headingStyleCSS, color: "#fff" }}>{resumeData.userName}</h1>
-          <h4 style={{ ...headingStyleCSS, color: "#fff" }}>{resumeData.userJobRole}</h4>
+          <h4 style={{...headingStyleCSS,color: 'fff', fontSize: `${resumeData.bodyTextSize + 4}px`}}>{resumeData.userJobRole}</h4>
           {AllSections[0].isSection && <div className='summary-information summary-edit'>
-            <p style={{ ...headingStyleCSS, color: "#fff" }} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
+            <p style={{ ...paraStyleCSS, color: "#fff" }} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
           </div>}
         </div>
         <div
@@ -54,10 +55,12 @@ export default function Brown_Minimalist_Creative_Template({ resumeData }) {
               {AllSections[1].list.map(element => {
                 const { listId, iconName, contactName, additionalLink } = element
                 return (
-                  <li onClick={() => window.location.href = additionalLink} key={listId} style={{cursor:'pointer'}}>
-                    <i style={{ backgroundColor: themeColor, color: resumeData.bodyTextColor }} className={iconName}></i>
-                    <p style={paraStyleCSS}> {contactName}</p>
-                  </li>
+                  <a href={additionalLink} key={listId}>
+                    <li style={{ cursor: 'pointer' }}>
+                      <i style={{ backgroundColor: themeColor, color: resumeData.bodyTextColor }} className={iconName}></i>
+                      <p style={paraStyleCSS}> {contactName}</p>
+                    </li>
+                  </a>
                 )
               })}
             </ul>
@@ -91,6 +94,22 @@ export default function Brown_Minimalist_Creative_Template({ resumeData }) {
               )
             })}
           </div>}
+
+          {AllSections[7].isSection && <div className='hobbies-information interest-edit' style={{ borderColor: themeColor }}>
+            <h2 style={combineHeadingStyle}>{AllSections[7].sectionName}</h2>
+            <ul>
+              {AllSections[7].list.map(hobbies => {
+                const { listId, interest } = hobbies;
+                return (
+                  <li style={paraStyleCSS} key={listId}>
+                    <span className='list-dots-boxes' style={{ backgroundColor: themeColor }}></span>
+                    <p> {interest}</p>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>}
+
         </div>
         <div className='right-column'>
           {AllSections[2].isSection && <div className='project-edit common-section'>
@@ -98,7 +117,7 @@ export default function Brown_Minimalist_Creative_Template({ resumeData }) {
             {AllSections[2].list.map(Project => {
               const { listId, projectName, startDate, endDate, aboutProject } = Project;
               return (<div className='common-details' key={listId}>
-                <span className='common-dots'></span>
+                <span className='common-dots' style={{background: themeColor}}></span>
                 <p><i style={paraStyleCSS}>{startDate} - {endDate} - </i><b style={boldParaStyleCss}> {projectName}</b></p>
                 <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
               </div>
@@ -112,13 +131,41 @@ export default function Brown_Minimalist_Creative_Template({ resumeData }) {
               const { listId, companyName, jobRole, startDate, endDate, aboutJob } = Experience;
               return (
                 <div className='common-details' key={listId}>
-                  <span className='common-dots'></span>
+                  <span className='common-dots' style={{background: themeColor}}></span>
                   <p><b style={boldParaStyleCss}>{jobRole}</b></p>
                   <p><i style={paraStyleCSS}>{startDate} - {endDate} - </i><b style={boldParaStyleCss}> {companyName}</b></p>
                   <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                 </div>
               )
             })}
+          </div>}
+          {AllSections[8].isSection && <div className='certification-edit common-section'>
+            <h2 style={combineHeadingStyle}>{AllSections[8].sectionName}</h2>
+            {AllSections[8].list.map(Project => {
+              const { listId, instituteName, startDate, endDate, certificateName, aboutCertificate } = Project;
+              return (
+                <div className='common-details' key={listId}>
+                  <span className='common-dots' style={{background: themeColor}}></span>
+                  <p><b style={boldParaStyleCss}>{certificateName}</b></p>
+                  <p style={paraStyleCSS}><i>{startDate} - {endDate} - </i><b style={boldParaStyleCss}>{instituteName}</b></p>
+                  <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutCertificate }} />
+                </div>
+              )
+            })}
+          </div>}
+          {AllSections[6].isSection && <div className='languages-information language-edit'>
+            <h2 style={combineHeadingStyle}>{AllSections[6].sectionName}</h2>
+            <ul>
+              {AllSections[6].list.map(languages => {
+                const { listId, languageName, languageProfiency } = languages;
+                return (
+                  <li style={paraStyleCSS} key={listId}>
+                    <span className='list-dots-boxes' style={{ backgroundColor: themeColor }}></span>
+                    <p> {languageName} - {languageProfiency}</p>
+                  </li>
+                )
+              })}
+            </ul>
           </div>}
         </div>
       </div>

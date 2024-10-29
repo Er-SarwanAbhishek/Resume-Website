@@ -35,7 +35,7 @@
 
 .Beige-name-data h1 {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     color: #f36e45;
     line-height: 1.1em;
     margin-bottom: 10px;
@@ -46,7 +46,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
-    font-size: 15px;
+
 }
 
 .Beige-contact-me {
@@ -76,6 +76,7 @@
 .Beige-contact p {
     color: #fff;
     margin: 0 0 0 5px;
+    font-weight: 500;
 }
 
 /* Section  2nd */
@@ -142,7 +143,7 @@
     color: #f36e45;
     text-transform: uppercase;
     font-size: 1.5em;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .Beige-edu-grp {
@@ -150,19 +151,20 @@
     color: #f36e45;
     align-items: center;
     gap: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     justify-content: space-between;
 }
 
 .Beige-edu-grp p {
     font-size: 1em;
     text-transform: uppercase;
+    
 }
 
 .beige-course-name,
 .beige-role-name {
     margin: 5px 0 0 0;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .beige-course-name {
@@ -179,14 +181,14 @@
 
 
 .Beige-resume-template .beige-about-job:last-of-type {
-    margin: 5px 0 20px 0;
+    margin: 5px 0 10px 0;
 }
 
 .Beige-resume-template .Beige-lower-left {
     width: 50%;
     padding: 2rem;
     background-color: #F4F4F4;
-    font-weight: 600;
+    font-weight: 500;
     border-top-right-radius: 80px;
     margin-bottom: 10px;
 }
@@ -227,6 +229,7 @@
     text-transform: uppercase;
     list-style-type: none;
     color: #fff;
+    font-size: 600px;
 }
 
 .Beige-skills-sec li::before {

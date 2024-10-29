@@ -1,120 +1,111 @@
  .career-changer-resume {
-    width: 100%;
-    min-height: 1120px;
-    position: relative;
-    padding: 30px;
-    background-color: white;
-    background-size: cover;
-}
+     width: 100%;
+     min-height: 1120px;
+     position: relative;
+     padding: 30px;
+     background-color: white;
+     background-size: cover;
+     background-position: right;
+ }
 
-.career-changer-resume .resume-qr-code {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
+ .career-changer-resume .resume-qr-code {
+     position: absolute;
+     top: 10px;
+     left: 10px;
+ }
 
-.career-changer-resume h1 {
-    font-size: 35px;
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-}
+ .career-changer-resume h1 {
+     font-size: 30px;
+     text-align: center;
+ }
 
-.career-changer-resume h4 {
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    margin-bottom: 5px;
-}
+ .career-changer-resume h4 {
+     font-size: 14px;
+     text-align: center;
+     margin-bottom: 5px;
+ }
 
-.career-changer-resume h2 {
-    font-size: 20px;
-    margin: 15px 0px 10px 0px;
-    border-bottom: 2px solid #e5e5e5;
-    text-align: left;
-    font-family: "Roboto", sans-serif;
-}
+ .career-changer-resume h2 {
+     margin: 10px 0px 10px 0px;
+     border-bottom: 2px solid #e5e5e5;
+     text-align: left;
+     text-transform: uppercase;
+ }
 
-.career-changer-resume p {
-    font-size: 12px;
-    line-height: 22px;
-    text-align: left;
-    font-family: "Open Sans", sans-serif;
-}
+ .career-changer-resume .contact-information ul {
+     display: flex;
+     flex-wrap: wrap;
+     column-gap: 35px;
+     row-gap: 6px;
+     justify-content: center;
+ }
 
-.career-changer-resume b {
-    font-size: 14px;
-}
+ .career-changer-resume .contact-information li {
+     list-style: disc;
+ }
 
-.career-changer-resume .contact-information ul li {
-    font-size: 12px;
-    font-family: "Open Sans", sans-serif;
-}
+ .career-changer-resume .skills-information ul {
+     display: flex;
+     flex-wrap: wrap;
+     column-gap: 30px;
+     row-gap: 6px;
+ }
 
-.career-changer-resume .skills-information ul li {
-    font-size: 12px;
-    font-family: "Open Sans", sans-serif;
-}
+ .career-changer-resume .skills-information li {
+     width: 20%;
+     list-style: inside;
+     text-align: left;
+     text-indent: -1.5em;
+     padding-left: 1.5em;
+ }
 
-.career-changer-resume .contact-information ul {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 30px;
-    row-gap: 15px;
-    justify-content: center;
-}
+ .career-changer-resume .hobbies-information ul {
+     display: flex;
+     flex-wrap: wrap;
+     column-gap: 30px;
+     row-gap: 6px;
+   
+ }
 
-.career-changer-resume .contact-information li {
-    list-style: disc;
-}
+ .career-changer-resume .hobbies-information li {
+     width: 20%;
+     list-style: inside;
+     text-align: left;
+     text-indent: -1.5em;
+     padding-left: 1.5em;
+ }
 
-.career-changer-resume .skills-information ul {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 30px;
-    row-gap: 15px;
-}
+ .career-changer-resume .common-section .common-details {
+     display: flex;
+     justify-content: space-between;
+ }
 
-.career-changer-resume .skills-information li {
-    width: 20%;
-    list-style: inside;
-    text-align: left;
-}
+ .career-changer-resume .common-section .common-level {
+     padding-bottom: 8px;
+ }
+ .career-changer-resume .common-section .common-details  .all-name-section-wdt{
+    width: 70%;
+ }
+ .career-changer-resume .common-section .common-details .all-name-section-date{
+    width: 30%;
+   text-align: end;
+ }
 
-.career-changer-resume .experience-information .experience-details {
-    display: flex;
-    justify-content: space-between;
-}
+ .career-changer-resume .common-section .common-level:nth-last-child(1) {
+     padding-bottom: 0px;
+ }
 
-.career-changer-resume .experience-information .experience-level {
-    padding-bottom: 10px;
-}
+ .career-changer-resume .languages-information ul {
+     display: flex;
+     flex-wrap: wrap;
+     column-gap: 30px;
+     row-gap: 6px;
+ }
 
-.career-changer-resume .experience-information .experience-level:nth-last-child(1) {
-    padding-bottom: 0px;
-}
-
-.career-changer-resume .project-information .project-details {
-    display: flex;
-    justify-content: space-between;
-}
-
-.career-changer-resume .project-information .project-level {
-    padding-bottom: 10px;
-}
-
-.career-changer-resume .project-information .project-level:nth-last-child(1) {
-    padding-bottom: 0px;
-}
-
-.career-changer-resume .education-information .education-details {
-    display: flex;
-    justify-content: space-between;
-}
-
-.career-changer-resume .education-information .education-level {
-    padding-bottom: 10px;
-}
-
-.career-changer-resume .education-information .education-details:nth-last-child(1) {
-    padding-bottom: 0px;
-}
+ .career-changer-resume .languages-information li {
+     width: 30%;
+     list-style: inside;
+     text-align: left;
+     text-indent: -1.5em;
+     padding-left: 1.5em;
+ }

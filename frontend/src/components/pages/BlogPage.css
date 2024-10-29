@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 80px;
-
 }
 
 .blog-page h2 {
@@ -161,7 +160,8 @@
 
 .blog-page .blog-page-header .blog-text-heading p {
   font-size: 18px;
-  font-family: "Inter";
+  font-family: "Mulish";
+  font-weight: 600;
   line-height: 1.5rem;
   padding-bottom: 1.5rem;
 }

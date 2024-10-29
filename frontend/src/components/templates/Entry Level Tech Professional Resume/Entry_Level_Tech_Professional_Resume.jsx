@@ -44,10 +44,12 @@ export default function Entry_Level_Tech_Professional_Resume({ resumeData }) {
               {AllSections[1].list.map(element => {
                 const { listId, iconName, contactName,additionalLink } = element
                 return (
-                  <li onClick={() => window.location.href = additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
+                  <a href={additionalLink} key={listId}>
+                  <li  style={{ ...paraStyleCSS, cursor: 'pointer' }} >
                     <i className={iconName} />
                     {contactName}
                   </li>
+                  </a>
                 )
               })}
             </ul>

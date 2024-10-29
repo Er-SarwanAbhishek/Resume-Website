@@ -13,12 +13,11 @@ export default function Colorfull_Resume_Template({ resumeData }) {
     }
     const { backgroundPattern } = resumeStyle;
 
-
-
     const paraStyleCSS = {
         fontFamily: resumeData.bodyTextFont,
         color: resumeData.bodyTextColor,
-        fontSize: `${resumeData.bodyTextSize}px`
+        fontSize: `${resumeData.bodyTextSize}px`,
+        lineHeight: `${resumeData.bodyTextSize + 8}px`
     }
 
     const boldParaStyleCss = {
@@ -44,12 +43,14 @@ export default function Colorfull_Resume_Template({ resumeData }) {
                     <h2 style={combineHeadingStyle}>{AllSections[1].sectionName}</h2>
                     <ul>
                         {AllSections[1].list.map(element => {
-                            const { listId, iconName, contactName,additionalLink } = element
+                            const { listId, iconName, contactName, additionalLink } = element
                             return (
-                                <li onClick={() => window.location.href = additionalLink} key={listId} style={{cursor:'pointer'}}>
-                                    <i className={iconName} />
-                                    <p style={paraStyleCSS}> {contactName}</p>
-                                </li>
+                                <a href={additionalLink} key={listId}>
+                                    <li style={{ cursor: 'pointer' }}>
+                                        <i className={iconName} />
+                                        <p style={paraStyleCSS}> {contactName}</p>
+                                    </li>
+                                </a>
                             )
                         })}
                     </ul>
@@ -69,13 +70,30 @@ export default function Colorfull_Resume_Template({ resumeData }) {
                     })}
                 </div>}
 
+
+                {AllSections[7].isSection && <div className='hobbies-information interest-edit'>
+                    <h2 style={combineHeadingStyle}>{AllSections[7].sectionName}</h2>
+                    <ul>
+                        {AllSections[7].list.map(hobbies => {
+                            const { listId, interest } = hobbies;
+                            return (
+                                <li style={paraStyleCSS} key={listId}>
+                                    {interest}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>}
+
                 {AllSections[3].isSection && <div className='skills-information skill-edit'>
                     <h2 style={combineHeadingStyle}>{AllSections[3].sectionName}</h2>
                     <ul>
                         {AllSections[3].list.map(skill => {
                             const { listId, skillName } = skill;
                             return (
-                                <li style={paraStyleCSS} key={listId}>{skillName}</li>
+                                <li style={paraStyleCSS} key={listId}>
+                                    {skillName}
+                                </li>
                             )
                         })}
                     </ul>
@@ -110,12 +128,39 @@ export default function Colorfull_Resume_Template({ resumeData }) {
                         const { listId, projectName, startDate, endDate, aboutProject } = Project;
                         return (
                             <div className='project-details' key={listId}>
-                                <p><b style={boldParaStyleCss}><i>{startDate} - {endDate}</i></b></p>
-                                <p><b style={boldParaStyleCss}>{projectName}</b></p>
+                                <p><b style={boldParaStyleCss}>{projectName} | <i>{startDate} - {endDate}</i></b></p>
                                 <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                             </div>
                         )
                     })}
+                </div>}
+
+                {AllSections[8].isSection && <div className='certification-information certification-edit'>
+                    <h2 style={combineHeadingStyle}>{AllSections[8].sectionName}</h2>
+                    {AllSections[8].list.map(Project => {
+                        const { listId, instituteName, startDate, endDate, certificateName, aboutCertificate } = Project;
+                        return (
+                            <div className='certification-details' key={listId}>
+                                <p><b style={boldParaStyleCss}>{certificateName}</b></p>
+                                <p><b style={boldParaStyleCss}>{instituteName} | <i>{startDate} - {endDate}</i></b></p>
+                                <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutCertificate }} />
+                            </div>
+                        )
+                    })}
+                </div>}
+
+                {AllSections[6].isSection && <div className='languages-information language-edit'>
+                    <h2 style={combineHeadingStyle}>{AllSections[6].sectionName}</h2>
+                    <ul>
+                        {AllSections[6].list.map(languages => {
+                            const { listId, languageName, languageProfiency } = languages;
+                            return (
+                                <li style={paraStyleCSS} key={listId}>
+                                    {languageName} - {languageProfiency}
+                                </li>
+                            )
+                        })}
+                    </ul>
                 </div>}
             </div>
 

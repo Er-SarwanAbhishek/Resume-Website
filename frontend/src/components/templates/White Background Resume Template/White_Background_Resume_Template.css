@@ -5,6 +5,7 @@
     padding: 20px 30px;
     background-color: white;
     background-size: cover;
+    background-position: right;
 }
 
 .white-background-resume-template .resume-qr-code {
@@ -28,11 +29,11 @@
     margin-bottom: 15px;
 }
 
-.white-background-resume-template p {
+/* .white-background-resume-template p {
     font-size: 12px;
     line-height: 22px;
     text-align: left;
-}
+} */
 
 .white-background-resume-template h1 {
     font-size: 30px;
@@ -42,22 +43,21 @@
 
 .white-background-resume-template h2 {
     text-align: left;
-    font-size: 20px;
     padding-bottom: 3px;
-    margin: 20px 0px 10px 0px;
+    text-transform: uppercase;
+    margin: 10px 0px 10px 0px;
     border-bottom: 2px solid #b0b0b0;
 }
 
 .white-background-resume-template h4 {
     text-align: left;
-    font: 16px;
     text-transform: uppercase;
     border-top: 2px solid #b0b0b0;
     padding-top: 10px;
 }
 
 .white-background-resume-template .summary-information p {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .white-background-resume-template .header {
@@ -68,23 +68,11 @@
 .white-background-resume-template .main-section {
     display: flex;
     padding-top: 10px;
-    gap: 5%;
+    /* gap: 5%; */
 }
 
 .white-background-resume-template .left-column {
-    width: 40%;
-}
-
-.white-background-resume-template .contact-details ul li {
-    font-size: 12px;
-    list-style: none;
-    text-align: left;
-}
-
-.white-background-resume-template .skills-information ul li {
-    font-size: 12px;
-    list-style: none;
-    text-align: left;
+    width: 45%;
 }
 
 .white-background-resume-template ul li:nth-last-child(1) {
@@ -92,8 +80,22 @@
 }
 
 .white-background-resume-template .contact-details ul li {
-    margin-bottom: 15px;
+    margin-bottom: 6px;
+    display: flex;
+    list-style: none;
+    text-align: left;
 }
+
+.white-background-resume-template .contact-details ul li p{
+ display: flex;
+ align-items: center;
+ font-weight: 500;
+}
+
+.white-background-resume-template .contact-details h2{
+    margin-top: 0px;
+}
+
 
 .white-background-resume-template .contact-details i {
     margin-right: 10px;
@@ -109,28 +111,74 @@
     align-items: center;
 }
 
-.white-background-resume-template .contact-details li {
-    display: flex;
+.white-background-resume-template .skills-information ul li {
+    /* font-size: 12px; */
+    list-style: none;
+    text-align: left;
 }
+
 
 .white-background-resume-template .skills-information ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
 }
 
 .white-background-resume-template .skills-information li {
     background-color: #b0b0b0;
     padding: 5px 10px;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .white-background-resume-template .project-information .project-details {
     display: flex;
-    gap: 10%;
-    padding-bottom: 10px;
+    gap: 5%;
+    padding-bottom: 8px;
     width: 100%;
+}
+
+.white-background-resume-template .project-information .project-details .project-datime {
+    width: 25%;
+}
+.white-background-resume-template .project-information .project-details .project-level{
+    width: 75%;
+}
+
+.white-background-resume-template .project-information .project-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.white-background-resume-template .certification-information .certification-details {
+    display: flex;
+    gap: 5%;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.white-background-resume-template .certification-information .certification-details .certification-datime {
+    width:25%;
+}
+.white-background-resume-template .certification-information .certification-details .certification-level {
+    width: 75%;
+}
+
+.white-background-resume-template .certification-information .certification-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.white-background-resume-template .hobbies-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.white-background-resume-template .hobbies-information li {
+    background-color: #b0b0b0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    list-style: none;
 }
 
 .white-background-resume-template b {
@@ -140,13 +188,32 @@
 .white-background-resume-template .right-column {
     width: 55%;
     border-left: 2px solid #b0b0b0;
-    padding-left: 30px;
+    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .white-background-resume-template .common-sec .common-details {
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .white-background-resume-template .common-sec .common-details:nth-last-child(1) {
     padding-bottom: 0px;
+}
+
+.white-background-resume-template .job-exp-edit h2{
+    margin-top: 0px;
+}
+
+.white-background-resume-template .languages-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.white-background-resume-template .languages-information li {
+    background-color: #b0b0b0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    list-style: none;
 }

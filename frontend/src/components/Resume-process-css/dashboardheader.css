@@ -12,7 +12,16 @@
     z-index: 50;
     column-gap: 50px;
 }
-
+.resume-process-navbar .ischeck{
+    color: green;
+    margin-left: 2px;
+    font-size: 13px;
+}
+.resume-process-navbar .iserror{
+    color: red;
+    margin-left: 2px;
+    font-size: 13px;
+}
 .resume-process-navbar a {
     text-decoration: none;
     color: #333;

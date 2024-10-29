@@ -68,11 +68,13 @@
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
     .common-pop-box {
         bottom: 20px;
     }
+}
 
+@media screen and (max-width: 450px) {
     .background-pop-body .b-patterns {
         gap: 3%;
         height: 250px;

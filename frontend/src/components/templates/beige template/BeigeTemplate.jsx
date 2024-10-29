@@ -20,6 +20,10 @@ const BeigeTemplate = ({ resumeData }) => {
     // color: resumeData.bodyTextColor,
     fontSize: `${resumeData.bodyTextSize}px`
   }
+  const boldParaStyleCss = {
+    ...paraStyleCSS, fontSize: `${resumeData.bodyTextSize + 2}px`,  fontWeight: '600'
+  
+}
 
   const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
@@ -34,7 +38,7 @@ const BeigeTemplate = ({ resumeData }) => {
         <div className="Beige-section Beige-name">
           <div className="Beige-name-data personal-edit">
             <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
-            <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
+            <h4 style={{...headingStyleCSS, fontSize: `${resumeData.bodyTextSize + 6}px`}}>{resumeData.userJobRole}</h4>
           </div>
         </div>
         {/* <img className="design2" src={design2} alt="" style={{width:"50px" ,height:"50px"}} /> */}
@@ -51,11 +55,12 @@ const BeigeTemplate = ({ resumeData }) => {
                   const { listId, iconName, contactName, additionalLink } =
                     element;
                   return (
-                  <div class="Beige-contact" key={listId} onClick={()=>window.location.href=additionalLink} style={{cursor:'pointer'}} >
-                    <i class={iconName}></i>
-                    <p style={paraStyleCSS}>{contactName}</p>
-                  
-                  </div>
+                    <a href={additionalLink} key={listId}>
+                    <div className="Beige-contact" style={{ cursor: 'pointer' }}>
+                        <i className={iconName}></i>
+                        <p style={paraStyleCSS }>{contactName}</p>
+                    </div>
+                </a>
                 );
               })}
             </div>
@@ -77,34 +82,7 @@ const BeigeTemplate = ({ resumeData }) => {
               <img src={resumeData.profileImage} alt="" />
             </div>
           </div>
-          <svg
-            style={{ position: 'absolute' }}
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            width={64}
-            zoomAndPan="magnify"
-            viewBox="0 0 384 383.999986"
-            height={64}
-            preserveAspectRatio="xMidYMid meet"
-            version={1.0}
-          >
-            <defs>
-              <clipPath id="b7e1524858">
-                <path
-                  d="M 0.0703125 0 L 366 0 L 366 356.25 L 0.0703125 356.25 Z M 0.0703125 0 "
-                  clipRule="nonzero"
-                />
-              </clipPath>
-            </defs>
-            <g clipPath="url(#b7e1524858)">
-              <path
-                fill={resumeData.themeColor}
-                d="M 365.78125 0 C 167.628906 37.058594 39.257812 176.042969 0.320312 356.273438 L 0.320312 0 Z M 365.78125 0 "
-                fillOpacity={1}
-                fillRule="evenodd"
-              />
-            </g>
-          </svg>
+         
         </div>
       }
 
@@ -127,12 +105,12 @@ const BeigeTemplate = ({ resumeData }) => {
                     return (
                       <div className="Beige-job-position" key={index}>
                         <div className="Beige-edu-grp">
-                          <p style={{ ...paraStyleCSS, fontWeight: 600 }}>{companyName} </p>
-                          <p style={paraStyleCSS} className="Beige-job-period">
+                          <p style={boldParaStyleCss}>{companyName} </p>
+                          <p style={boldParaStyleCss} className="Beige-job-period">
                             {startDate} - {endDate}
                           </p>
                         </div>
-                        <p style={paraStyleCSS} className="beige-role-name">{jobRole}</p>
+                        <p style={boldParaStyleCss} className="beige-role-name">{jobRole}</p>
                         <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} className="beige-about-job" />
                       </div>
                     );
@@ -154,8 +132,8 @@ const BeigeTemplate = ({ resumeData }) => {
                   return (
                     <div className="Beige-section-position" key={index}>
                       <div className="Beige-edu-grp">
-                        <p style={{ ...paraStyleCSS, fontWeight: 600 }}>{projectName} </p>
-                        <p style={paraStyleCSS} className="Beige-job-period">
+                        <p style={boldParaStyleCss}>{projectName} </p>
+                        <p style={boldParaStyleCss} className="Beige-job-period">
                           {startDate} - {endDate}
                         </p>
                       </div>
@@ -189,12 +167,12 @@ const BeigeTemplate = ({ resumeData }) => {
                       return (
                         <React.Fragment key={index}>
                           <div className="Beige-edu-grp">
-                            <p style={{ ...paraStyleCSS, fontWeight: 600 }}>{collegeName} </p>
-                            <p style={paraStyleCSS}>
+                            <p style={boldParaStyleCss}>{collegeName} </p>
+                            <p style={boldParaStyleCss}>
                               {startDate} - {endDate}
                             </p>
                           </div>
-                          <p style={paraStyleCSS} className="beige-course-name">{course}</p>
+                          <p style={boldParaStyleCss} className="beige-course-name">{course}</p>
                           <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} className="beige-about-edu" />
                         </React.Fragment>
                       );

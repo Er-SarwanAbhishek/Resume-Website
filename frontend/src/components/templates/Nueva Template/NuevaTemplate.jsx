@@ -44,9 +44,11 @@ export const NuevaTemplate = ({ resumeData }) => {
               {AllSections[1].list.map(element => {
     const { listId, contactName, additionalLink } = element;
     return (
-        <div key={listId} onClick={() => window.location.href = additionalLink} style={{cursor:'pointer'}}>
+      <a href={additionalLink} key={listId}>
+        <div style={{cursor:'pointer'}}>
             <p style={paraStyleCSS}>| {contactName} |</p>
         </div>
+        </a>
     );
 })}
             </div>}

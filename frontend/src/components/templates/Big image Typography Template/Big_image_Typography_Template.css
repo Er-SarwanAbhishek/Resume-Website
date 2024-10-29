@@ -6,52 +6,47 @@
     gap: 10%;
     background-color: white;
     background-size: cover;
+    background-position: right;
 }
 
 /* globel Css */
 
 .big-image-typography-template .left-column {
     width: 40%;
-    padding: 80px 20px 30px 30px;
+    padding: 80px 20px 0px 30px;
 }
 
 .big-image-typography-template .resume-qr-code {
     position: absolute;
     left: 10px;
-    top: 10px;
+    bottom: 10px;
 }
 
 .big-image-typography-template h1 {
     font-size: 50px;
     line-height: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: left;
 }
 
 .big-image-typography-template h4 {
-    font-size: 25px;
+    
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .big-image-typography-template h2 {
-    font-size: 20px;
+    /* font-size: 14px; */
     text-align: left;
-    margin: 20px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
     background-color: #000000;
     color: white;
     padding: 3px 20px;
-    border-radius: 10px;
-}
-
-.big-image-typography-template p {
-    font-size: 12px;
-    line-height: 25px;
-    color: #000000;
+    border-radius: 4px;
 }
 
 .big-image-typography-template b {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Contact Details  */
@@ -59,28 +54,30 @@
 
 .big-image-typography-template .left-column .contact-details ul li {
     list-style: none;
-    margin-bottom: 20px;
-    text-align: left;
+    margin-bottom: 6px;
+    /* text-align: left; */
     color: black;
-    font-size: 16px;
+    display: flex;
+
 }
 
-.big-image-typography-template .left-column .contact-details li {
+.big-image-typography-template .left-column .contact-details li p{
     display: flex;
     align-items: center;
+    font-weight: 500;
 }
 
-.big-image-typography-template .left-column .contact-details ul li:nth-last-child(1) {
+.big-image-typography-template .left-column .contact-details ul a:nth-last-child(1) li {
     margin-bottom: 0px;
 }
 
 .big-image-typography-template .left-column .contact-details i {
-    margin-right: 15px;
+    margin-right: 10px;
     font-size: 12px;
     background-color: #000000;
     color: white;
     padding: 12px;
-    border-radius: 50%;
+    border-radius: 4px;
     width: 15px;
     height: 15px;
     display: inline-flex;
@@ -92,10 +89,11 @@
 
 .big-image-typography-template .left-column .skills-information ul li {
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
     text-align: left;
     position: relative;
-    padding-left: 30px;
+    padding-left: 20px;
+    font-weight: 500;
 }
 
 .big-image-typography-template .left-column .skills-information ul li:nth-last-child(1) {
@@ -104,12 +102,12 @@
 
 .big-image-typography-template .left-column .skills-information li .list-dots-boxes {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height:8px;
     position: absolute;
-    /* background-color: #000000; */
-    top: 8px;
+    top: 5px;
     left: 0px;
+    border-radius: 2px;
 }
 
 /* Education Section Css */
@@ -120,15 +118,34 @@
 }
 
 .big-image-typography-template .left-column .education-details {
-    padding-bottom: 15px;
+    padding-bottom: 8px;
 }
-
-/* .big-image-typography-template .left-column .education-details b {
-    font-size: 18px;
-} */
 
 .big-image-typography-template .left-column .education-details:nth-last-child(1) {
     padding-bottom: 0px;
+}
+
+.big-image-typography-template .left-column .hobbies-information ul li {
+    list-style: none;
+    margin-bottom: 6px;
+    text-align: left;
+    position: relative;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+.big-image-typography-template .left-column .hobbies-information ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.big-image-typography-template .left-column .hobbies-information li .list-dots-boxes {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    border-radius: 2px;
 }
 
 /* Right Column And Image Css */
@@ -140,7 +157,7 @@
 
 .big-image-typography-template .right-column .profile-img {
     width: 100%;
-    height: 350px;
+    height: 300px;
     background-position: center;
     background-size: cover;
 }
@@ -151,6 +168,7 @@
     text-align: left;
     background-color: #000000;
     padding: 20px 30px 20px 30px;
+    border-bottom-left-radius: 4px;
 }
 
 .big-image-typography-template .right-column .summary-information h2 {
@@ -158,10 +176,6 @@
     color: black;
     width: 70%;
     margin-top: 0px;
-}
-
-.big-image-typography-template .right-column .summary-information p {
-    color: white;
 }
 
 /* Project Details Css */
@@ -173,36 +187,65 @@
 .big-image-typography-template .right-column .project_information .project_details {
     text-align: left;
     padding-right: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 8px;
 }
 
 .big-image-typography-template .right-column .project_information .project_details:nth-last-child(1) {
     padding-bottom: 0px;
 }
 
-.big-image-typography-template .right-column .project_information .project_details b {
-    font-size: 19px;
-}
-
 /* Experience Details Css */
 
-.big-image-typography-template .right-column .experience-information {
-    text-align: left;
-}
 
 .big-image-typography-template .right-column .experience-information h2 {
     width: 70%;
 }
 
 .big-image-typography-template .right-column .experience-details {
-    padding-bottom: 15px;
+    padding-bottom: 8px;
     padding-right: 30px;
 }
 
-/* .big-image-typography-template .right-column .experience-details b {
-    font-size: 18px;
-} */
-
 .big-image-typography-template .right-column .experience-details:nth-last-child(1) {
     padding-bottom: 0px;
+}
+
+.big-image-typography-template .right-column .certification-information h2 {
+    width: 70%;
+}
+
+.big-image-typography-template .right-column .certification-details {
+    padding-bottom: 8px;
+    padding-right: 30px;
+}
+
+.big-image-typography-template .right-column .certification-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.big-image-typography-template .right-column .languages-information h2 {
+    width: 70%;
+}
+
+.big-image-typography-template .right-column .languages-information ul li {
+    list-style: none;
+    margin-bottom: 6px;
+    text-align: left;
+    position: relative;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+.big-image-typography-template .right-column .languages-information ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.big-image-typography-template .right-column .languages-information li .list-dots-boxes {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    border-radius: 2px;
 }

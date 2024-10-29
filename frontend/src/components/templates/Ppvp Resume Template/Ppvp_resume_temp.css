@@ -4,6 +4,8 @@
     padding: 30px;
     background-color: #fff;
     position: relative;
+    background-size: cover;
+    background-position: right;
 }
 
 .ppvp-resume-temp .resume-qr-code {
@@ -12,25 +14,41 @@
     bottom: 10px;
 }
 
-.ppvp-resume-temp h2 {
-    position: relative;
-    padding-bottom: 10px;
+.ppvp-resume-temp .ppvp-left-section .Pic {
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: -70px;
+    border-radius: 50%;
+    left: 110px;
+    border: 10px solid #63769B;
 }
 
+.ppvp-resume-temp h2 {
+    position: relative;
+    margin:10px 0px 8px 0px;
+}
+
+.ppvp-resume-temp h4 {
+    font-size: 14px;
+}
 
 .ppvp-resume-temp .ppvp-right-section h2 {
     display: inline-block;
     background-color: #63769B;
     border-radius: 8px;
-    padding: 5px;
-    margin-bottom: 10px;
+    padding: 5px 10px;
+    margin: 10px 0px;
 }
 
 .ppvp-resume-temp h1 {
     text-transform: uppercase;
+    font-size: 35px;
 }
 
-.ppvp-resume-temp .ppvp-left-section h2::before {
+.ppvp-resume-temp .ppvp-left-section h2 .designing-line {
     position: absolute;
     content: " ";
     height: 10px;
@@ -49,6 +67,7 @@
 
 .ppvp-resume-temp .ppvp-left-section {
     width: 35%;
+    border-radius: 8px;
     background-color: #323B4C;
 }
 
@@ -66,10 +85,6 @@
     width: 60%;
 }
 
-.ppvp-resume-temp .contact-section {
-    margin-bottom: 10px;
-}
-
 .ppvp-resume-temp .contact-section ul {
     display: flex;
     flex-wrap: wrap;
@@ -80,7 +95,11 @@
 .ppvp-resume-temp .contact-section li {
     display: flex;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 10px;
+}
+
+.ppvp-resume-temp .contact-section i {
+    font-size: 12px;
 }
 
 .ppvp-resume-temp img {
@@ -91,60 +110,105 @@
     top: -69px;
 }
 
-.ppvp-resume-temp .skills-section {
-    margin-bottom: 10px;
-}
-
 .ppvp-resume-temp .skills-section ul {
     list-style-type: none;
 }
 
-.ppvp-resume-temp .skills-section li::before {
-    content: "•";
-    color: #fff;
-}
-
 .ppvp-resume-temp .skills-section li {
+    position: relative;
     display: flex;
-    align-items: center;
-    column-gap: 5px;
-    flex-wrap: wrap;
+    column-gap: 10px;
+    margin-bottom: 6px;
+    align-items: flex-start;
 }
 
-.ppvp-resume-temp .project-section {
-    padding-bottom: 20px;
+.ppvp-resume-temp .skills-section li .list-dots {
+    min-width: 6px;
+    min-height: 6px;
+    border-radius: 50%;
+    /* bottom: 10px; */
+    /* top: 6px; */
+    left: 0px;
+    background-color: #fff;
+    margin-top: 7px;
+}
+
+.ppvp-resume-temp .hobbies-information ul {
+    list-style-type: none;
+}
+
+.ppvp-resume-temp .hobbies-information li {
+    position: relative;
+    display: flex;
+    margin-bottom: 6px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.ppvp-resume-temp .hobbies-information li .list-dots {
+    min-width: 6px;
+    min-height: 6px;
+    border-radius: 50%;
+    bottom: 10px;
+    top: 6px;
+    left: 0px;
+    background-color: #fff;
 }
 
 .ppvp-resume-temp .project-details {
-    margin-bottom: 10px;
+    padding-bottom: 8px;
 }
 
-.ppvp-resume-temp p {
-    line-height: 20px;
+.ppvp-resume-temp .project-details:nth-last-child(1) {
+    padding-bottom: 0px;
 }
 
 .ppvp-resume-temp .personal-details {
-    margin: 50px 80px;
+    margin: 50px 0px 30px 50px;
     display: flex;
     flex-direction: column;
 }
 
-.ppvp-resume-temp .summary-section {
-    margin-bottom: 10px;
-}
-
 .ppvp-resume-temp .education-details {
-    padding-bottom: 5px;
+    padding-bottom: 8px;
 }
 
-.ppvp-resume-temp .education-section {
-    margin-bottom: 10px;
-}
-
-.ppvp-resume-temp .experience-section {
-    margin-bottom: 10px;
+.ppvp-resume-temp .education-details:nth-last-child(1) {
+    padding-bottom: 0px;
 }
 
 .ppvp-resume-temp .experience-details {
-    padding-bottom: 5px;
+    padding-bottom: 8px;
+}
+
+.ppvp-resume-temp .experience-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+
+
+.ppvp-resume-temp .certification-information:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.ppvp-resume-temp .languages-information ul {
+    list-style-type: none;
+}
+
+.ppvp-resume-temp .languages-information li {
+    position: relative;
+    display: flex;
+    margin-bottom: 6px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.ppvp-resume-temp .languages-information li .list-dots {
+    min-width: 6px;
+    min-height: 6px;
+    border-radius: 50%;
+    bottom: 10px;
+    top: 6px;
+    left: 0px;
+    background-color: #000;
 }

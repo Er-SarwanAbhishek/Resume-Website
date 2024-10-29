@@ -48,10 +48,12 @@ export const GrayThemeTemplate = ({ resumeData }) => {
                   const { listId, iconName, contactName, additionalLink } =
                     element;
                   return (
-              <div key={listId} style={{ ...paraStyleCSS, cursor: 'pointer' }}className="account-so-2-details" onClick={()=>window.location.href=additionalLink} >
+                    <a href={additionalLink} key={listId}>
+              <div  style={{ ...paraStyleCSS, cursor: 'pointer' }}className="account-so-2-details" >
                 <i className={element.iconName}></i>
                 <p>{element.contactName}</p>
               </div>
+              </a>
             );
           })}
         </div>}

@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap');
-
 .applicant-tracking-resume-template {
     width: 100%;
     min-height: 1120px;
@@ -9,6 +6,8 @@
     text-align: left;
     background-color: white;
     background-size: cover;
+    background-position: right;
+
 }
 
 .applicant-tracking-resume-template .resume-qr-code {
@@ -17,130 +16,121 @@
     top: 10px;
 }
 
-.applicant-tracking-resume-template h1{
-    font-size: 35px;
+.applicant-tracking-resume-template h1 {
+    font-size: 30px;
     margin-bottom: 5px;
-    font-family: "Roboto Slab", serif;
 }
 
-.applicant-tracking-resume-template h4{
-    font-size: 15px;
+.applicant-tracking-resume-template h4 {
+    
     margin-bottom: 10px;
-    font-family: "Roboto Slab", serif;
 }
 
-.applicant-tracking-resume-template p{
-    font-size: 12px;
-    line-height: 22px;
-    color: #000000;
-    font-family: "Mulish", sans-serif;
+.applicant-tracking-resume-template .summary-information p {
+    padding-bottom: 5px;
 }
 
-.applicant-tracking-resume-template .summary-information p{
-    padding-bottom: 15px;
+.applicant-tracking-resume-template h2 {
+   
+   
+    margin: 10px 0px 10px 0px;
+    text-transform: uppercase;
 }
 
-.applicant-tracking-resume-template h2{
-    font-size: 20px;
-    color: #175855;
-    margin: 15px 0px 5px 0px;
-    font-family: "Roboto Slab", serif;
-}
-
-.applicant-tracking-resume-template b{
-    font-size: 14px;
-}
-
-.applicant-tracking-resume-template .contact-information ul li{
+.applicant-tracking-resume-template .contact-information ul li {
     list-style: none;
-    font-size: 12px;
-    color: #000000;
-    font-family: "Mulish", sans-serif;
+    font-weight: 500;
 }
 
-.applicant-tracking-resume-template .skills-information ul li{
+.applicant-tracking-resume-template .skills-information ul li {
     list-style: none;
-    font-size: 12px;
-    color: #000000;
-    font-family: "Mulish", sans-serif;
+    font-weight: 500;
 }
 
-.applicant-tracking-resume-template .contact-information{
+.applicant-tracking-resume-template .contact-information {
     background-color: #f1f1f1;
     padding: 10px 30px;
     position: relative;
     width: calc(100% + 60px);
     left: -30px;
 }
-.applicant-tracking-resume-template .contact-information ul{
+
+.applicant-tracking-resume-template .contact-information ul {
     display: flex;
     gap: 10px 30px;
     flex-wrap: wrap;
 }
 
-.applicant-tracking-resume-template .contact-information li{
+.applicant-tracking-resume-template .contact-information ul li {
     display: flex;
+    font-weight: 500;
+  
+}
+.applicant-tracking-resume-template .contact-information ul li p{
+    margin-top: 3px;
     align-items: center;
 }
 
-.applicant-tracking-resume-template .contact-information i{
-        margin-right: 6px;
-        font-size: 15px;
-        border-radius: 50%;
-        color: #175855;
-        padding: 12px;
-        width: 15px;
-        height: 15px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+.applicant-tracking-resume-template .contact-information i {
+    margin-right: 6px;
+    font-size: 14px;
+    border-radius: 50%;
+  
+    padding: 12px;
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.applicant-tracking-resume-template .experience-information .experience-details{
-    padding-bottom: 10px;
+.applicant-tracking-resume-template .common-section .common-details {
+    padding-bottom: 8px;
 }
 
-.applicant-tracking-resume-template .experience-information .experience-details:nth-last-child(1){
+.applicant-tracking-resume-template .common-section .common-details:nth-last-child(1) {
     padding-bottom: 0px;
 }
 
-.applicant-tracking-resume-template .experience-information .experience-details i{
-    color: #175855;
-}
 
-.applicant-tracking-resume-template .skills-information ul{
+.applicant-tracking-resume-template .skills-information ul {
     display: flex;
-    gap: 20px;
+    gap:12px 20px;
     flex-wrap: wrap;
 }
 
-.applicant-tracking-resume-template .skills-information li{
+.applicant-tracking-resume-template .skills-information li {
     background-color: #f1f1f1;
     padding: 5px 10px;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
-.applicant-tracking-resume-template .project-information .project-details{
-    padding-bottom: 10px;
+.applicant-tracking-resume-template .hobbies-information ul {
+    display: flex;
+    gap:12px 20px;
+    flex-wrap: wrap;
 }
 
-.applicant-tracking-resume-template .project-information .project-details:nth-last-child(1){
-    padding-bottom: 0px;
+.applicant-tracking-resume-template .hobbies-information li {
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    list-style: none;
 }
 
-.applicant-tracking-resume-template .project-information .project-details i{
-    color: #175855;
+.applicant-tracking-resume-template .languages-information ul {
+    display: flex;
+    gap:12px 20px;
+    flex-wrap: wrap;
 }
 
-.applicant-tracking-resume-template .education-information .education-details{
-    padding-bottom: 10px;
-}
-
-.applicant-tracking-resume-template .education-information .education-details:nth-last-child(1){
-    padding-bottom: 0px;
-}
-
-.applicant-tracking-resume-template .education-information .education-details i{
-    color: #175855;
+.applicant-tracking-resume-template .languages-information li {
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    list-style: none;
+   
 }

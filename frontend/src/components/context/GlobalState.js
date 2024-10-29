@@ -15,16 +15,11 @@ export default function GlobalState(props) {
     const liveTemplateURL = `http://localhost:3000/${authtoken ? currentTemplateData.liveTempId : ""}`;
     const [atsScoreGemini, setAtsScoreGemini] = useState('')
     const [isSidebarPop, setIsSidebarPop] = useState(false);
-
-    // const [isPersonalDetailschange, setIsPersonalDetailschange] = useState(false)
-    
-
     const [blogPosts, setBlogPosts] = useState([
         { id: 1, title: 'Tailor Your CV to the Job', date: 'September 10, 2024', excerpt: 'One size does not fit all when it comes to CVs. Tailoring your CV to each job application is essential.', image: GetJob, postPath: "tailor" },
     ]);
 
     // GLOBAL FUNCTIONS
-
     const DeleteItem = (index, id) => {
         console.log(currentTemplateData)
         setCurrentTemplateData((prevData) => {
@@ -48,11 +43,11 @@ export default function GlobalState(props) {
 
     const ChangeListValue = (event, index, id) => {
         console.log("running");
-        
+
         const { value, name } = event.target;
         setCurrentTemplateData((prevData) => {
             const newData = { ...prevData };
-            newData.AllSections[index] = {...newData.AllSections[index], isSectionDetailsChanges: true, }
+            newData.AllSections[index] = { ...newData.AllSections[index], isSectionDetailsChanges: true, }
             newData.AllSections[index].list = newData.AllSections[index].list.map(item => {
                 if (item.listId === id) {
                     return { ...item, [name]: value };
@@ -66,7 +61,7 @@ export default function GlobalState(props) {
     const ChangeSectionValue = (event, index) => {
         setCurrentTemplateData((prevData) => {
             const updateContact = { ...prevData };
-            updateContact.AllSections[index] = { ...updateContact.AllSections[index], [event.target.name]: event.target.value, isSectionDetailsChanges: true,};
+            updateContact.AllSections[index] = { ...updateContact.AllSections[index], [event.target.name]: event.target.value, isSectionDetailsChanges: true, };
             return updateContact;
         })
     }

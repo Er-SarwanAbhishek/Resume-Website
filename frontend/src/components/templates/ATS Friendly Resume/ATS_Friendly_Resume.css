@@ -6,6 +6,7 @@
     background-size: cover;
     padding: 30px;
     text-align: left;
+    background-position: right;
 }
 
 .ats-friendly-resume .resume-qr-code {
@@ -15,42 +16,20 @@
 }
 
 .ats-friendly-resume h1 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 5px;
-    font-family: "Roboto Slab", serif;
 }
 
 .ats-friendly-resume h4 {
-    font-size: 15px;
+    
     margin-bottom: 10px;
     color: #3765e2;
-    font-family: "Roboto Slab", serif;
 }
-
-.ats-friendly-resume .contact-details ul li {
-    list-style: none;
-    font-size: 12px;
-    font-family: "Mulish", sans-serif;
-}
-
-.ats-friendly-resume .skills-information ul li {
-    list-style: none;
-    font-size: 12px;
-    font-family: "Mulish", sans-serif;
-}
-
 
 .ats-friendly-resume h2 {
-    font-size: 20px;
-    margin: 15px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
     border-bottom: 2px solid #e5e5e5;
-    font-family: "Roboto Slab", serif;
-}
-
-.ats-friendly-resume p {
-    font-size: 12px;
-    line-height: 22px;
-    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
 }
 
 .ats-friendly-resume .contact-details ul {
@@ -59,87 +38,47 @@
     flex-wrap: wrap;
 }
 
-.ats-friendly-resume .contact-details li {
+.ats-friendly-resume .contact-details ul li {
+    list-style: none;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    font-weight: 500;
+   
+}
+.ats-friendly-resume .contact-details ul li p{
+    margin-top: -3px;
+
 }
 
 .ats-friendly-resume .contact-details i {
     margin-right: 6px;
-    font-size: 15px;
-    border-radius: 50%;
+    font-size: 13px;
     color: #3765e2;
 }
 
-.ats-friendly-resume .experience-information .experience-details {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 10px;
+.ats-friendly-resume .common-section .common-details {
+    padding-bottom: 8px;
 }
 
-.ats-friendly-resume .experience-information .experience-details:nth-last-child(1) {
+.ats-friendly-resume .common-section .common-details:nth-last-child(1) {
     padding-bottom: 0px;
     border-bottom: none;
 }
 
-.ats-friendly-resume .experience-information .experience-details b {
-    font-size: 14px;
-}
-
-.ats-friendly-resume .experience-information .experience-details i {
-    color: #3765e2;
-}
-
-.ats-friendly-resume .project-information .project-details {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 10px;
-}
-
-.ats-friendly-resume .project-information .project-details:nth-last-child(1) {
-    padding-bottom: 0px;
-    border-bottom: none;
-}
-
-.ats-friendly-resume .project-information .project-details b {
-    font-size: 14px;
-}
-
-.ats-friendly-resume .project-information .project-details i {
-    color: #3765e2;
-}
-
-.ats-friendly-resume .education-information .education-details {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 10px;
-}
-
-.ats-friendly-resume .education-information .education-details:nth-last-child(1) {
-    padding-bottom: 0px;
-    border-bottom: none;
-}
-
-.ats-friendly-resume .education-information .education-details b {
-    font-size: 14px;
-}
-
-.ats-friendly-resume .education-information .education-details i {
-    color: #3765e2;
-}
-
-.ats-friendly-resume .skills-information ul li {
+.ats-friendly-resume .common-list-style ul li {
+    list-style: none;
     position: relative;
-    padding-left: 25px;
+    padding-left: 15px;
+    font-weight: 500;
 }
 
-.ats-friendly-resume .skills-information ul {
+.ats-friendly-resume .common-list-style ul {
     display: flex;
-    gap: 15px;
+    gap: 10px 30px;
     flex-wrap: wrap;
 }
 
-.ats-friendly-resume .skills-information li .list-dots {
+.ats-friendly-resume .common-list-style li .list-dots {
     content: "";
     position: absolute;
     width: 8px;
@@ -147,5 +86,5 @@
     border-radius: 50%;
     background-color: #3765e2;
     left: 0px;
-    top: 7px;
+    top: 5px;
 }

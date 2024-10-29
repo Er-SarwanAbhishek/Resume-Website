@@ -119,6 +119,7 @@
     font-size: 12px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .pattern-style-resume .left-column .skills-information ul li:nth-last-child(1) {

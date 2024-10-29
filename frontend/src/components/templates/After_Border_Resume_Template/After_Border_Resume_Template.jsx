@@ -16,7 +16,8 @@ export default function After_Border_Resume_Template({ resumeData }) {
     const paraStyleCSS = {
         fontFamily: resumeData.bodyTextFont,
         color: resumeData.bodyTextColor,
-        fontSize: `${resumeData.bodyTextSize}px`
+        fontSize: `${resumeData.bodyTextSize}px`,
+        lineHeight: `${resumeData.bodyTextSize + 8}px`
     }
 
     const boldParaStyleCss = {
@@ -33,18 +34,18 @@ export default function After_Border_Resume_Template({ resumeData }) {
             }
             <div className='personal-details personal-edit' style={{ borderColor: themeColor }}>
                 <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
-                <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
+                <h4 style={{...headingStyleCSS, fontSize: `${resumeData.bodyTextSize + 4}px`}}>{resumeData.userJobRole}</h4>
             </div>
 
             <div className='main'>
                 <div className='left-column'>
                     {AllSections[0].isSection && <div className='summary-information summary-edit' style={{ borderColor: themeColor }}>
-                        <h2 style={combineHeadingStyle}><span> {AllSections[0].sectionName}</span> <span className='theme-design' style={{ backgroundColor: themeColor }}></span></h2>
+                        <h2 style={combineHeadingStyle}><span className='theme-design-heading'> {AllSections[0].sectionName}</span> <span className='theme-design' style={{ backgroundColor: themeColor }}></span></h2>
                         <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                     </div>}
 
                     {AllSections[5].isSection && <div className='education-edit common-sec' style={{ borderColor: themeColor }}>
-                        <h2 style={combineHeadingStyle}><span>{AllSections[5].sectionName}</span> <span className='theme-design' style={{
+                        <h2 style={combineHeadingStyle}><span className='theme-design-heading'>{AllSections[5].sectionName}</span> <span className='theme-design' style={{
                             backgroundColor: themeColor
                         }}></span></h2>
                         {AllSections[5].list.map(Education => {
@@ -60,7 +61,7 @@ export default function After_Border_Resume_Template({ resumeData }) {
                     </div>}
 
                     {AllSections[4].isSection && <div className='job-exp-edit common-sec' style={{ borderColor: themeColor }}>
-                        <h2 style={combineHeadingStyle}><span>{AllSections[4].sectionName} </span> <span className='theme-design' style={{
+                        <h2 style={combineHeadingStyle}><span className='theme-design-heading'>{AllSections[4].sectionName} </span> <span className='theme-design' style={{
                             backgroundColor: themeColor
                         }}></span></h2>
                         {AllSections[4].list.map(Experience => {
@@ -76,7 +77,7 @@ export default function After_Border_Resume_Template({ resumeData }) {
                     </div>}
 
                     {AllSections[2].isSection && <div className='project-edit common-sec' style={{ borderColor: themeColor }}>
-                        <h2 style={combineHeadingStyle}><span>{AllSections[2].sectionName} </span><span className='theme-design' style={{
+                        <h2 style={combineHeadingStyle}><span className='theme-design-heading'>{AllSections[2].sectionName} </span><span className='theme-design' style={{
                             backgroundColor: themeColor
                         }}></span></h2>
                         {AllSections[2].list.map(Project => {
@@ -89,26 +90,44 @@ export default function After_Border_Resume_Template({ resumeData }) {
                             )
                         })}
                     </div>}
+
+                    {AllSections[8].isSection && <div className='certification-edit common-sec' style={{ borderColor: themeColor }}>
+                        <h2 style={combineHeadingStyle}><span className='theme-design-heading'>{AllSections[8].sectionName}</span><span className='theme-design' style={{
+                            backgroundColor: themeColor
+                        }}></span></h2>
+                        {AllSections[8].list.map(Project => {
+                            const { listId, instituteName, startDate, endDate, certificateName, aboutCertificate } = Project;
+                            return (
+                                <div className='common-details' key={listId}>
+                                    <p><b style={boldParaStyleCss}>{certificateName}</b> , <i style={paraStyleCSS}>{startDate} - {endDate}</i></p>
+                                    <p><b style={boldParaStyleCss}>{instituteName}</b></p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutCertificate }} />
+                                </div>
+                            )
+                        })}
+                    </div>}
                 </div>
                 <div className='right-column'>
                     {AllSections[1].isSection && <div className='contact-details contact-edit' style={{ borderColor: themeColor }}>
-                        <h2 style={combineHeadingStyle}><span>{AllSections[1].sectionName} </span><span className='theme-design' style={{
+                        <h2 style={combineHeadingStyle}><span className='theme-design-heading'>{AllSections[1].sectionName} </span><span className='theme-design' style={{
                             backgroundColor: themeColor
                         }}></span></h2>
                         <ul>
                             {AllSections[1].list.map(element => {
-                                const { listId, iconName, contactName,additionalLink } = element
+                                const { listId, iconName, contactName, additionalLink } = element
                                 return (
-                                    <li onClick={()=> window.location.href = additionalLink} key={listId} style={{cursor:'pointer'}}>
-                                        <i style={{ color: resumeData.bodyTextColor }} className={iconName}></i>
-                                        <p style={paraStyleCSS}> {contactName}</p>
-                                    </li>
+                                    <a href={additionalLink} key={listId}>
+                                        <li style={{ cursor: 'pointer' }}>
+                                            <i style={{ color: resumeData.bodyTextColor }} className={iconName}></i>
+                                            <p style={paraStyleCSS}>{contactName}</p>
+                                        </li>
+                                    </a>
                                 )
                             })}
                         </ul>
                     </div>}
                     {AllSections[3].isSection && <div className='skills-information skill-edit' style={{ borderColor: themeColor }}>
-                        <h2 style={combineHeadingStyle}><span>{AllSections[3].sectionName}</span><span className='theme-design' style={{
+                        <h2 style={combineHeadingStyle}><span className='theme-design-heading'>{AllSections[3].sectionName}</span><span className='theme-design' style={{
                             backgroundColor: themeColor
                         }}></span></h2>
                         <ul>
@@ -117,6 +136,38 @@ export default function After_Border_Resume_Template({ resumeData }) {
                                 return (
                                     <li style={paraStyleCSS} key={listId}>
                                         {skillName}
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>}
+
+                    {AllSections[7].isSection && <div className='hobbies-information interest-edit' style={{ borderColor: themeColor }}>
+                        <h2 style={combineHeadingStyle}><span className='theme-design-heading'>{AllSections[7].sectionName}</span><span className='theme-design' style={{
+                            backgroundColor: themeColor
+                        }}></span></h2>
+                        <ul>
+                            {AllSections[7].list.map(hobbies => {
+                                const { listId, interest } = hobbies;
+                                return (
+                                    <li style={paraStyleCSS} key={listId}>
+                                        {interest}
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>}
+
+                    {AllSections[6].isSection && <div className='languages-information language-edit' style={{ borderColor: themeColor }}>
+                        <h2 style={combineHeadingStyle}><span className='theme-design-heading'>{AllSections[6].sectionName}</span><span className='theme-design' style={{
+                            backgroundColor: themeColor
+                        }}></span></h2>
+                        <ul>
+                            {AllSections[6].list.map(languages => {
+                                const { listId, languageName, languageProfiency } = languages;
+                                return (
+                                    <li style={paraStyleCSS} key={listId}>
+                                        {languageName} - {languageProfiency}
                                     </li>
                                 )
                             })}

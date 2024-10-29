@@ -1,9 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .colorfull-resume-template {
     width: 100%;
     min-height: 1120px;
@@ -13,12 +7,13 @@
     padding: 30px 30px;
     background-size: cover;
     background-color: white;
+    background-position: right;
 }
 
 .colorfull-resume-template .resume-qr-code {
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    top: 10px;
 }
 
 .colorfull-resume-template .left-column {
@@ -31,12 +26,11 @@
     background-position: center;
     background-size: cover;
     border-radius: 50%;
-    border: 5px solid #000000;
+    border: 2px solid #000000;
 }
 
 .colorfull-resume-template h2 {
-    font-size: 18px;
-    margin: -20px 0px 20px 0px;
+    margin: -20px 0px 10px 0px;
     border: 2px solid #000000;
     padding: 5px 10px;
     border-radius: 30px;
@@ -44,56 +38,50 @@
     width: 80%;
 }
 
+.colorfull-resume-template .right-column h1 {
+    font-size: 45px;
+    line-height: 18px;
+    margin: 10px 0px 20px 0px;
+}
+
+.colorfull-resume-template .right-column h4 {
+    font-size: 18px;
+}
+
 .colorfull-resume-template .contact-details ul li {
     list-style: none;
     color: #000000;
-    margin-bottom: 15px;
+    margin-bottom: 6px;
     text-align: left;
     font-size: 12px;
-}
-
-.colorfull-resume-template .skills-information ul li {
-    list-style: none;
-    color: #000000;
-    margin-bottom: 15px;
-    text-align: left;
-    font-size: 12px;
-}
-
-.colorfull-resume-template p {
-    font-size: 12px;
-    line-height: 22px;
-    color: #000000;
-    text-align: left;
+    display: flex;
+    font-weight: 500;
+    
 }
 
 .colorfull-resume-template .left-column .contact-details {
     border: 2px solid black;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 10px 20px;
     border-radius: 20px;
     margin-top: 50px;
 }
 
-.colorfull-resume-template .left-column .contact-details li {
-    display: flex;
-    align-items: center;
-}
-
-.colorfull-resume-template .left-column .contact-details li:nth-last-child(1) {
+.colorfull-resume-template .left-column .contact-details ul a:nth-last-child(1) li {
     margin-bottom: 0px;
 }
 
 .colorfull-resume-template .left-column .contact-details h2 {
-    background-color: aquamarine;
+    background-color: #b3cdff;
+    text-transform: uppercase;
 }
 
 .colorfull-resume-template .left-column .contact-details i {
     margin-right: 15px;
     font-size: 12px;
-    background-color: aquamarine;
+    background-color:  #b3cdff;
     border-radius: 50%;
     color: #000000;
-    /* padding: 12px; */
+    padding: 12px;
     width: 18px;
     height: 18px;
     display: inline-flex;
@@ -103,40 +91,85 @@
 
 .colorfull-resume-template .left-column .education-information {
     border: 2px solid black;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 10px 20px;
     border-radius: 20px;
     margin-top: 40px;
 }
 
 .colorfull-resume-template .left-column .education-information h2 {
-    background-color: rgb(179, 120, 235);
+    background-color: #9CC5A1;
+    text-transform: uppercase;
 }
 
 .colorfull-resume-template .left-column .education-information .education-details {
-    padding-bottom: 15px;
+    padding-bottom: 8px;
 }
 
 .colorfull-resume-template .left-column .education-information .education-details:nth-last-child(1) {
-    margin-bottom: 0px;
-}
-
-.colorfull-resume-template .left-column .education-information .education-details b {
-    font-size: 14px;
+    padding-bottom: 0px;
 }
 
 .colorfull-resume-template .left-column .education-information .education-details i {
-    color: rgb(122, 14, 223);
+    color: #f73f45;
+}
+
+.colorfull-resume-template .hobbies-information ul li {
+    list-style: none;
+    margin-bottom: 6px;
+    text-align: left;
+    list-style: circle;
+    width: 100%;
+    list-style-position: inside;
+    font-weight: 500;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+}
+
+.colorfull-resume-template .left-column .hobbies-information {
+    border: 2px solid black;
+    padding: 0px 20px 10px 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.colorfull-resume-template .left-column .hobbies-information h2 {
+    background-color: rgb(126, 116, 255);
+    text-transform: uppercase;
+}
+
+.colorfull-resume-template .left-column .hobbies-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4%;
+  
+}
+
+.colorfull-resume-template .left-column .hobbies-information ul li:nth-last-child(1){
+    margin-bottom: 0px;
+}
+
+.colorfull-resume-template .skills-information ul li {
+    
+    margin-bottom: 6px;
+    text-align: left;
+    list-style: circle;
+    width: 100%;
+    list-style-position: inside;
+    font-weight: 500;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
 }
 
 .colorfull-resume-template .left-column .skills-information {
     border: 2px solid black;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 10px 20px;
     border-radius: 20px;
     margin-top: 40px;
 }
 
 .colorfull-resume-template .left-column .skills-information h2 {
-    background-color: chocolate;
+    background-color: #e5e5e5;
+    text-transform: uppercase;
 }
 
 .colorfull-resume-template .left-column .skills-information ul {
@@ -145,80 +178,120 @@
     column-gap: 4%;
 }
 
-.colorfull-resume-template .left-column .skills-information ul li {
-    list-style: circle;
-    width: 48%;
-    list-style-position: inside;
-    font-weight: 500;
+.colorfull-resume-template .left-column .skills-information ul li:nth-last-child(1){
+    margin-bottom: 0px;
 }
 
 .colorfull-resume-template .right-column {
     width: 55%;
 }
 
-.colorfull-resume-template .right-column h1 {
-    font-size: 45px;
-    margin: 30px 0px 15px 0px;
-}
-
-.colorfull-resume-template .right-column h4 {
-    font-size: 18px;
-}
-
 .colorfull-resume-template .right-column .summary-information {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .colorfull-resume-template .right-column .experience-information {
     border: 2px solid black;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 10px 20px;
     border-radius: 20px;
     margin-top: 40px;
 }
 
 .colorfull-resume-template .right-column .experience-information h2 {
-    background-color: rgb(0, 247, 255);
+    background-color: #8cdff8;
+    text-transform: uppercase;
 }
 
 .colorfull-resume-template .right-column .experience-information .experience-details {
-    padding-bottom: 15px;
+    padding-bottom: 8px;
 }
 
 .colorfull-resume-template .right-column .experience-information .experience-details:nth-last-child(1) {
-    margin-bottom: 0px;
-}
-
-.colorfull-resume-template .right-column .experience-information .experience-details b {
-    font-size: 14px;
+    padding-bottom: 0px;
 }
 
 .colorfull-resume-template .right-column .experience-information .experience-details i {
-    color: rgb(0, 247, 255);
+    color: #8cdff8;
 }
 
 .colorfull-resume-template .right-column .project-information {
     border: 2px solid black;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 10px 20px;
     border-radius: 20px;
     margin-top: 40px;
 }
 
 .colorfull-resume-template .right-column .project-information h2 {
-    background-color: orangered;
+    background-color: #fdf0d5;
+    text-transform: uppercase;
 }
 
 .colorfull-resume-template .right-column .project-information .project-details {
-    padding-bottom: 15px;
+    padding-bottom: 8px;
 }
 
 .colorfull-resume-template .right-column .project-information .project-details:nth-last-child(1) {
-    margin-bottom: 0px;
-}
-
-.colorfull-resume-template .right-column .project-information .project-details b {
-    font-size: 14px;
+    padding-bottom: 0px;
 }
 
 .colorfull-resume-template .right-column .project-information .project-details i {
-    color: orangered;
+    color: #fdf0d5;
+}
+
+.colorfull-resume-template .right-column .certification-information {
+    border: 2px solid black;
+    padding: 0px 20px 10px 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.colorfull-resume-template .right-column .certification-information h2 {
+    background-color: #ffc2d1;
+    text-transform: uppercase;
+}
+
+.colorfull-resume-template .right-column .certification-information .certification-details {
+    padding-bottom: 8px;
+}
+
+.colorfull-resume-template .right-column .certification-information .certification-details:nth-last-child(1) {
+    padding-bottom: 0px;
+}
+
+.colorfull-resume-template .right-column .certification-information .certification-details i {
+    color:  #ffc2d1;
+}
+
+.colorfull-resume-template .languages-information ul li {
+    list-style: none;
+    margin-bottom: 6px;
+    text-align: left;
+    list-style: circle;
+    width: 100%;
+    list-style-position: inside;
+    font-weight: 500;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+}
+
+.colorfull-resume-template .right-column .languages-information {
+    border: 2px solid black;
+    padding: 0px 20px 10px 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.colorfull-resume-template .right-column .languages-information h2 {
+    background-color: rgb(238, 177, 47);
+    text-transform: uppercase;
+}
+
+.colorfull-resume-template .right-column .languages-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4%;
+}
+
+.colorfull-resume-template .right-column .languages-information ul li:nth-last-child(1){
+    margin-bottom: 0px;
 }

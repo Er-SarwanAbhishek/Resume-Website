@@ -5,6 +5,7 @@
     padding: 30px;
     background-color: white;
     background-size: cover;
+    background-position: right;
 }
 
 .heading-border-resume-template .resume-qr-code {
@@ -16,29 +17,27 @@
 .heading-border-resume-template .main-header {
     display: flex;
     justify-content: space-between;
+    gap: 2%;
 }
 
 .heading-border-resume-template h1 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 5px;
-    font-family: "Roboto Slab", serif;
 }
 
 .heading-border-resume-template h4 {
-    font-size: 16px;
+    /* font-size: 14px; */
     margin-bottom: 5px;
-    font-family: "Roboto Slab", serif;
 }
 
 .heading-border-resume-template p {
-    font-size: 12px;
-    line-height: 22px;
+    /* font-size: 10px; */
+    /* line-height: 18px; */
     text-align: left;
-    font-family: "PT Sans", sans-serif;
 }
 
 .heading-border-resume-template b {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .heading-border-resume-template .summary-information {
@@ -46,30 +45,30 @@
 }
 
 .heading-border-resume-template h2 {
-    font-size: 20px;
+    font-size: 14px;
     text-align: left;
-    margin: 20px 0px 10px 0px;
-    padding: 5px 20px;
-    font-family: "Roboto Slab", serif;
+    margin: 10px 0px 10px 0px;
+    padding: 5px 15px;
+    text-transform: uppercase;
     background-color: #f6ebcf;
 }
 
 .heading-border-resume-template .personal-details {
     text-align: left;
-    width: 60%;
+    width: 59%;
 }
 
 .heading-border-resume-template .contact-details ul li {
     list-style: none;
-    font-size: 12px;
-    margin-bottom: 15px;
-    font-family: "PT Sans", sans-serif;
+
+    margin-bottom: 8px;
+    font-weight: 500;
     display: flex;
     flex-direction: row-reverse;
 }
 
 .heading-border-resume-template .contact-details {
-    width: 40%;
+    width: 39%;
 }
 
 .heading-border-resume-template .contact-details li p {
@@ -82,22 +81,37 @@
     color: rgb(0, 0, 0);
     display: inline-flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 3px;
+    /* align-items: center; */
 }
+
 
 .heading-border-resume-template .skills-information ul li {
     list-style: none;
-    font-size: 12px;
-    font-weight: 600;
-    background-color: #f6ebcf;
+    font-size: 10px;
+    font-weight: 500;
+    /* background-color: #fcf9f0; */
     padding: 5px 10px;
-    border-radius: 5px;
 }
 
 .heading-border-resume-template .skills-information ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 30px;
+    gap: 10px 30px;
+}
+
+.heading-border-resume-template .hobbies-information ul li {
+    list-style: none;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 5px 10px;
+    /* border-radius: 5px; */
+}
+
+.heading-border-resume-template .hobbies-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 30px;
 }
 
 .heading-border-resume-template .common-sec .common-details {
@@ -106,9 +120,24 @@
 }
 
 .heading-border-resume-template .common-sec .common-level {
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .heading-border-resume-template .common-sec .common-level:nth-last-child(1) {
     padding-bottom: 0px;
+}
+
+.heading-border-resume-template .languages-information ul li {
+    list-style: none;
+    font-size: 10px;
+    font-weight: 500;
+
+    padding: 5px 10px;
+    /* border-radius: 5px; */
+}
+
+.heading-border-resume-template .languages-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 30px;
 }

@@ -16,7 +16,8 @@ export default function White_Background_Resume_Template({ resumeData }) {
     const paraStyleCSS = {
         fontFamily: resumeData.bodyTextFont,
         color: resumeData.bodyTextColor,
-        fontSize: `${resumeData.bodyTextSize}px`
+        fontSize: `${resumeData.bodyTextSize}px`,
+        lineHeight: `${resumeData.bodyTextSize + 8}px`
     }
 
     const boldParaStyleCss = {
@@ -45,7 +46,7 @@ export default function White_Background_Resume_Template({ resumeData }) {
                         <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[0].sectionName}</h2>
                         <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: AllSections[0].summary }} />
                     </div>
-                    <h4 className="personal-edit" style={{ ...headingStyleCSS, borderColor: themeColor }}>{resumeData.userJobRole}</h4>
+                    <h4 className="personal-edit" style={{ ...headingStyleCSS, borderColor: themeColor,fontSize: `${resumeData.bodyTextSize + 4}px` }}>{resumeData.userJobRole}</h4>
                 </div>}
             </div>
             <div className='main-section'>
@@ -56,10 +57,12 @@ export default function White_Background_Resume_Template({ resumeData }) {
                             {AllSections[1].list.map(element => {
                                 const { listId, iconName, contactName, additionalLink } = element
                                 return (
-                                    <li onClick={() => window.location.href = additionalLink} key={listId} style={{cursor:'pointer'}}>
-                                        <i style={{ backgroundColor: themeColor,color: resumeData.bodyTextColor }} className={iconName} />
-                                        <p style={paraStyleCSS}> {contactName}</p>
-                                    </li>
+                                    <a href={additionalLink} key={listId}>
+                                        <li style={{ cursor: 'pointer' }}>
+                                            <i style={{ backgroundColor: themeColor, color: resumeData.bodyTextColor }} className={iconName} />
+                                            <p style={paraStyleCSS}> {contactName}</p>
+                                        </li>
+                                    </a>
                                 )
                             })}
                         </ul>
@@ -93,6 +96,38 @@ export default function White_Background_Resume_Template({ resumeData }) {
                             )
                         })}
                     </div>}
+
+                    {AllSections[8].isSection && <div className='certification-information certification-edit' style={{ borderColor: themeColor }}>
+                        <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[8].sectionName}</h2>
+                        {AllSections[8].list.map(Project => {
+                            const { listId, instituteName, startDate, endDate, certificateName, aboutCertificate } = Project;
+                            return (
+                                <div className='certification-details' key={listId}>
+                                    <p className="certification-datime"><i style={paraStyleCSS}>{startDate} - {endDate}</i></p>
+                                    <div className='certification-level'>
+                                        <p><b style={boldParaStyleCss}>{certificateName}</b></p>
+                                        <p><b style={boldParaStyleCss}>{instituteName}</b></p>
+                                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutCertificate }} />
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>}
+
+                    {AllSections[7].isSection && <div className='hobbies-information interest-edit'>
+                        <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[7].sectionName}</h2>
+                        <ul>
+                            {AllSections[7].list.map(hobbies => {
+                                const { listId, interest } = hobbies;
+                                return (
+                                    <li style={{ backgroundColor: themeColor }} key={listId}>
+                                        <p style={paraStyleCSS}>{interest}</p>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>}
+
                 </div>
                 <div className='right-column' style={{ borderColor: themeColor }}>
                     {AllSections[4].isSection && <div className='job-exp-edit common-sec'>
@@ -123,6 +158,21 @@ export default function White_Background_Resume_Template({ resumeData }) {
                             )
                         })}
                     </div>}
+
+                    {AllSections[6].isSection && <div className='languages-information language-edit'>
+                        <h2 style={{ ...combineHeadingStyle, borderColor: themeColor }}>{AllSections[6].sectionName}</h2>
+                        <ul>
+                            {AllSections[6].list.map(languages => {
+                                const { listId, languageName, languageProfiency } = languages;
+                                return (
+                                    <li style={{ backgroundColor: themeColor }} key={listId}>
+                                       <p style={paraStyleCSS}> {languageName} - {languageProfiency}</p>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>}
+
                 </div>
             </div>
         </div>

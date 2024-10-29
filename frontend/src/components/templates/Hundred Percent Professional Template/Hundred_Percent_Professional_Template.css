@@ -6,6 +6,7 @@
     text-align: left;
     background-color: white;
     background-size: cover;
+    background-position: right;
 }
 
 .hundred-percent-professional-template .resume-qr-code {
@@ -14,56 +15,54 @@
     right: 10px;
 }
 
-.hundred-percent-professional-template h1{
-    font-size: 35px;
+.hundred-percent-professional-template h1 {
+    font-size: 30px;
     margin-bottom: 5px;
 }
 
-.hundred-percent-professional-template h4{
-    font-size: 16px;
+.hundred-percent-professional-template h4 {
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
-.hundred-percent-professional-template h2{
-    font-size: 18px;
-    margin: 20px 0px 10px 0px;
+.hundred-percent-professional-template h2 {
+    font-size: 14px;
+    margin: 10px 0px 10px 0px;
     background-color: #DFD7D3;
-    padding: 5px 10px;
+    padding: 7px 10px 5px 10px;
     width: 70%;
     text-transform: uppercase;
 }
 
-.hundred-percent-professional-template p{
+
+
+.hundred-percent-professional-template b {
     font-size: 12px;
-    line-height: 22px;
 }
 
-.hundred-percent-professional-template b{
-    font-size: 14px;
-}
-
-.hundred-percent-professional-template .contact-details ul{
+.hundred-percent-professional-template .contact-details ul {
     display: flex;
-    gap: 15px 30px;
+    gap: 10px 30px;
     flex-wrap: wrap;
 }
 
 .hundred-percent-professional-template .contact-details ul li {
     list-style: none;
-    font-size: 12px;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    font-family: "Mulish", sans-serif;
+ 
 }
 
-.hundred-percent-professional-template .contact-details i{
+.hundred-percent-professional-template .contact-details i {
     margin-right: 10px;
-    font-size: 15px;
+    font-size: 12px;
     border-radius: 50%;
     color: #000;
+   
 }
 
-.hundred-percent-professional-template .main-section{
+.hundred-percent-professional-template .main-section {
     display: flex;
     gap: 5%;
     border-top: 2px solid #DFD7D3;
@@ -71,54 +70,87 @@
     margin-top: 20px;
 }
 
-.hundred-percent-professional-template .main-section .left-column{
+.hundred-percent-professional-template .main-section .left-column {
     width: 40%;
 }
 
-.hundred-percent-professional-template .profile-img{
+.hundred-percent-professional-template .profile-img {
     width: 100%;
     height: 250px;
     background-position: center;
     background-size: cover;
+    margin-bottom: 20px;
 }
 
-.hundred-percent-professional-template .main-section .left-column .education-information .education-details{
-    padding-bottom: 10px;
+.hundred-percent-professional-template .main-section .left-column .education-information .education-details {
+    padding-bottom: 8px;
 }
 
-.hundred-percent-professional-template .main-section .left-column .education-information .education-details:nth-last-child(1){
+.hundred-percent-professional-template .main-section .left-column .education-information .education-details:nth-last-child(1) {
     padding-bottom: 0px;
 }
 
-.hundred-percent-professional-template .skill-information ul li{
+
+.hundred-percent-professional-template .skill-information ul li {
     list-style: disc;
     list-style: inside;
-    font-size: 12px;
-    margin-bottom: 15px;
-
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+  
 }
 
-.hundred-percent-professional-template .skill-information ul li:nth-last-child(1){
+.hundred-percent-professional-template .skill-information ul li:nth-last-child(1) {
     margin-bottom: 0px;
 }
 
-.hundred-percent-professional-template .main-section .right-column{
+.hundred-percent-professional-template .hobbies-information ul li {
+    list-style: disc;
+    list-style: inside;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 500;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+}
+
+.hundred-percent-professional-template .hobbies-information ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.hundred-percent-professional-template .main-section .right-column {
     width: 55%;
 }
 
-.hundred-percent-professional-template .main-section .right-column .summary-information h2{
+.hundred-percent-professional-template .main-section .right-column .summary-information h2 {
     margin-top: 0px;
 }
 
-.hundred-percent-professional-template .main-section .right-column .common-section .common-details{
-    padding-bottom: 10px;
+.hundred-percent-professional-template .main-section .right-column .common-section .common-details {
+    padding-bottom: 8px;
 }
 
-.hundred-percent-professional-template .main-section .right-column .common-section .common-details:nth-last-child(1){
+.hundred-percent-professional-template .main-section .right-column .common-section .common-details:nth-last-child(1) {
     padding-bottom: 0px;
 }
 
-.hundred-percent-professional-template .main-section .right-column .common-section .common-details .common-level{
+.hundred-percent-professional-template .main-section .right-column .common-section .common-details .common-level {
     display: flex;
     justify-content: space-between;
+}
+
+
+.hundred-percent-professional-template .main-section .right-column .languages-information ul li {
+    list-style: disc;
+    list-style: inside;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.hundred-percent-professional-template .main-section .right-column .languages-information ul li:nth-last-child(1){
+    margin-bottom: 0px;
 }

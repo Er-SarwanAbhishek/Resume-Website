@@ -1,10 +1,11 @@
 .brown-minimalist-creative-template {
     width: 100%;
-    min-height: 1120px;
+    height: 1120px;
     position: relative;
     padding: 40px 30px 30px 30px;
     text-align: left;
     background-size: cover;
+    background-position: right ;
 }
 
 .brown-minimalist-creative-template .resume-qr-code {
@@ -28,15 +29,15 @@
 }
 
 .brown-minimalist-creative-template .header .profile-img {
-    min-width: 200px;
-    min-height: 200px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     background-position: center;
     background-size: cover;
 }
 
 .brown-minimalist-creative-template h1 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 5px;
     color: white;
     font-family: "Martel", serif;
@@ -44,7 +45,7 @@
 }
 
 .brown-minimalist-creative-template h4 {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 15px;
     color: white;
     font-family: "Martel", serif;
@@ -56,10 +57,11 @@
 }
 
 .brown-minimalist-creative-template h2 {
-    font-size: 20px;
-    margin: 20px 0px 10px 0px;
+    font-size: 14px;
+    margin: 10px 0px 10px 0px;
     font-family: "Martel", serif;
-    font-weight: 1000;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .brown-minimalist-creative-template .main-section {
@@ -72,12 +74,7 @@
     width: 45%;
 }
 
-.brown-minimalist-creative-template p {
-    font-size: 12px;
-    line-height: 22px;
-    color: black;
-    font-family: "Inter", sans-serif;
-}
+
 
 .brown-minimalist-creative-template .contact-information h2 {
     margin-top: 0px;
@@ -85,11 +82,15 @@
 
 .brown-minimalist-creative-template .contact-information ul li {
     list-style: none;
-    font-size: 12px;
-    margin-bottom: 15px;
+
+    margin-bottom: 6px;
     font-family: "Inter", sans-serif;
     display: flex;
-    flex-wrap: wrap;
+    font-weight: 500;
+}
+
+.brown-minimalist-creative-template .contact-information ul a:nth-last-child(1) li {
+    margin-bottom: 0px;
 }
 
 .brown-minimalist-creative-template .contact-information i {
@@ -108,10 +109,11 @@
 
 .brown-minimalist-creative-template .skills-information ul li {
     list-style: none;
-    font-size: 12px;
-    margin-bottom: 15px;
+    
+    margin-bottom: 6px;
     position: relative;
-    padding-left: 30px;
+    font-weight: 500;
+    padding-left: 20px;
     font-family: "Inter", sans-serif;
 }
 
@@ -119,7 +121,7 @@
     margin-bottom: 0px;
 }
 
-.brown-minimalist-creative-template .skills-information li .list-dots-boxes {
+.brown-minimalist-creative-template .list-dots-boxes {
     content: "";
     width: 8px;
     height: 8px;
@@ -129,16 +131,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 8px;
+    top: 5px;
     left: 0px;
 }
 
+.brown-minimalist-creative-template .hobbies-information ul li {
+    list-style: none;
+
+    margin-bottom: 6px;
+    text-align: left;
+    font-weight: 500;
+    padding-left: 20px;
+    position: relative;
+}
+
+.brown-minimalist-creative-template .hobbies-information ul li:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
 .brown-minimalist-creative-template b {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .brown-minimalist-creative-template .common-section .common-details {
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     position: relative;
 }
 
@@ -153,16 +169,30 @@
 .brown-minimalist-creative-template .right-column {
     width: 50%;
     border-left: 1px solid #101F24;
-    padding-left: 20px;
+    padding-left: 20.6px;
 }
 
 .brown-minimalist-creative-template .right-column .common-section .common-dots {
     content: "";
     position: absolute;
-    background-color: #101F24;
+
     width: 8px;
     height: 8px;
     border-radius: 50%;
     left: -25px;
     top: 7px;
+}
+
+.brown-minimalist-creative-template .main-section .right-column .languages-information ul li {
+    list-style: none;
+
+    margin-bottom: 6px;
+    text-align: left;
+    font-weight: 500;
+    padding-left: 20px;
+    position: relative;
+}
+
+.brown-minimalist-creative-template .main-section .right-column .languages-information ul li:nth-last-child(1) {
+    margin-bottom: 0px;
 }

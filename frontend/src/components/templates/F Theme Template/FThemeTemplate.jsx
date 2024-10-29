@@ -18,6 +18,9 @@ export const FThemeTemplate = ({ resumeData }) => {
     color: resumeData.bodyTextColor,
     fontSize: `${resumeData.bodyTextSize}px`
   }
+  const boldParaStyleCss = {
+    ...paraStyleCSS, fontSize: `${resumeData.bodyTextSize + 2}px`, fontWeight: '600'
+}
 
   const combineHeadingStyle = { ...headingStyleCSS, fontSize: `${resumeData.headingTextSize}px` }
 
@@ -43,10 +46,12 @@ export const FThemeTemplate = ({ resumeData }) => {
                   const { listId, iconName, contactName, additionalLink } =
                     element;
                   return (
-                  <div style={{ ...paraStyleCSS, cursor: 'pointer' }} className="FThemeTemplate-account" key={listId} onClick={()=>window.location.href=additionalLink}>
+                    <a href={additionalLink} key={listId}>
+                  <div style={{ ...paraStyleCSS, cursor: 'pointer' }} className="FThemeTemplate-account" >
                     <p style={paraStyleCSS}>{contactName}</p>
                     <i className={iconName}></i>
                   </div>
+                  </a>
                 );
               })}
             </div>}
@@ -78,9 +83,9 @@ export const FThemeTemplate = ({ resumeData }) => {
                     const { companyName, jobRole, startDate, endDate, aboutJob } = element;
                     return (
                       <div key={index}>
-                        <p style={{ ...paraStyleCSS, fontWeight: 800 }}>{companyName} | {startDate} - {endDate} </p>
-                        <p style={paraStyleCSS} className='FThemeTemplate-sub-heading'>{jobRole}</p>
-                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutJob }} />
+                        <p style={boldParaStyleCss}>{companyName} | {startDate} - {endDate} </p>
+                        <p style={boldParaStyleCss} className='FThemeTemplate-sub-heading'>{jobRole}</p>
+                        <p style={{...paraStyleCSS, marginBottom: '10px'}} dangerouslySetInnerHTML={{ __html: aboutJob }} />
                       </div>
                     );
                   })}
@@ -97,7 +102,7 @@ export const FThemeTemplate = ({ resumeData }) => {
                     const { projectName, startDate, endDate, aboutProject } = element;
                     return (
                       <div key={index}>
-                        <p style={{ ...paraStyleCSS, fontWeight: 800 }}>{projectName} | {startDate} - {endDate} </p>
+                        <p style={boldParaStyleCss}>{projectName} | {startDate} - {endDate} </p>
                         <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutProject }} />
                       </div>
                     );
@@ -129,9 +134,9 @@ export const FThemeTemplate = ({ resumeData }) => {
                     const { collegeName, course, startDate, endDate, aboutEducation } = element;
                     return (
                       <React.Fragment key={index}>
-                        <p style={{ ...paraStyleCSS, fontWeight: 800 }}>{collegeName} | {startDate} - {endDate} </p>
-                        <p style={paraStyleCSS} className='FThemeTemplate-sub-heading'>{course}</p>
-                        <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
+                        <p style={boldParaStyleCss}>{collegeName} | {startDate} - {endDate} </p>
+                        <p style={boldParaStyleCss} className='FThemeTemplate-sub-heading'>{course}</p>
+                        <p style={{...paraStyleCSS, marginBottom: '10px'}} dangerouslySetInnerHTML={{ __html: aboutEducation }} />
                       </React.Fragment>
                     );
                   })}

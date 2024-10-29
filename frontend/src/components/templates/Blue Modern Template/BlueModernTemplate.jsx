@@ -107,7 +107,7 @@ const BlueModernTemplate = ({ resumeData }) => {
           <div className="MRT-Right">
             <div className="first-sec personal-edit">
               <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
-              <h4 style={{ ...headingStyleCSS }}>{resumeData.userJobRole}</h4>
+              <h4 style={{...headingStyleCSS, fontSize: `${resumeData.bodyTextSize + 6}px`}}>{resumeData.userJobRole}</h4>
             </div>
 
             {/* CONTACT */}
@@ -116,8 +116,8 @@ const BlueModernTemplate = ({ resumeData }) => {
     {resumeData.AllSections[1].list.map((element, index) => {
       const { listId, iconName, contactName, additionalLink } = element;
       return (
-        <div
-          key={listId} 
+        <a href={additionalLink} key={listId}>
+        <div 
           style={{ ...paraStyleCSS, cursor: 'pointer' }}
           className="MRT-sec-details MRT-Para-Size-Option"
           onClick={() => (window.location.href = additionalLink)}
@@ -127,6 +127,7 @@ const BlueModernTemplate = ({ resumeData }) => {
             {contactName}
           </p>
         </div>
+        </a>
       );
     })}
   </div>

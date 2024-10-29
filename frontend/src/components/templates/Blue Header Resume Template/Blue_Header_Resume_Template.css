@@ -1,4 +1,3 @@
-
 .blue-header-resume-template {
     width: 100%;
     min-height: 1120px;
@@ -7,6 +6,7 @@
     background-color: white;
     background-size: cover;
     text-align: left;
+    background-position: right;
 }
 
 .blue-header-resume-template .resume-qr-code {
@@ -17,23 +17,20 @@
 
 .blue-header-resume-template .personal-details {
     background-color: #CCE1ED;
-    padding: 30px 0px 20px 30px;
+    padding: 30px 0px 10px 30px;
     width: calc(100% + 60px);
     left: -30px;
     position: relative;
 }
 
 .blue-header-resume-template h1 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 5px;
 }
 
-.blue-header-resume-template h4 {
-    font-size: 16px;
-}
 
 .blue-header-resume-template b {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .blue-header-resume-template .contact-details {
@@ -46,61 +43,86 @@
 
 .blue-header-resume-template .contact-details ul li {
     list-style: none;
-    font-size: 12px;
-    width: 30%;
+    display: flex;
+    font-weight: 500;
+   
+}
+.blue-header-resume-template .contact-details ul li p{
     display: flex;
     align-items: center;
 }
-
 .blue-header-resume-template .contact-details ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     column-gap: 5%;
-    row-gap: 10px;
+    row-gap: 15px;
 }
 
 .blue-header-resume-template .contact-details i {
     margin-right: 10px;
-    font-size: 12px;
+    font-size: 10px;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     padding: 12px;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
 .blue-header-resume-template h2 {
-    font-size: 18px;
-    margin: 20px 0px 10px 0px;
+    /* font-size: 14px; */
+    margin: 12px 0px 8px 0px;
 }
-
+/* 
 .blue-header-resume-template p {
-    font-size: 12px;
-    line-height: 22px;
-}
+    font-size: 10px;
+    line-height: 18px;
+} */
 
 .blue-header-resume-template .skills-information ul li {
     list-style: inside;
-    font-size: 12px;
     width: 20%;
+    font-weight: 500;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+ 
 }
 
 .blue-header-resume-template .skills-information ul {
     display: flex;
     flex-wrap: wrap;
     column-gap: 5%;
-    row-gap: 10px;
+    row-gap: 5px;
+
+}
+
+.blue-header-resume-template .hobbies-information ul li {
+    list-style: inside;
+    /* font-size: 10px; */
+    width: 20%;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+    font-weight: 500;
+ 
+
+}
+
+.blue-header-resume-template .hobbies-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    row-gap: 5px;
+
 }
 
 .blue-header-resume-template .common-sec .common-details {
     display: flex;
     gap: 5%;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .blue-header-resume-template .common-sec .common-details .common-datime {
@@ -110,3 +132,19 @@
 .blue-header-resume-template .common-sec .common-details:nth-last-child(1) {
     padding-bottom: 0px;
 }
+.blue-header-resume-template .languages-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    row-gap: 5px;
+}
+.blue-header-resume-template .languages-information ul li {
+    list-style: inside;
+    width: 20%;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+    font-weight: 500;
+
+
+}
+

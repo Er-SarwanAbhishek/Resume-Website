@@ -102,10 +102,12 @@ export default function Yellow_Theme__Template({ resumeData }) {
                 {AllSections[1].list.map(element => {
                   const { listId, iconName, contactName ,additionalLink} = element
                   return (
-                    <li onClick={() => window.location.href = additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
+                    <a href={additionalLink} key={listId}>
+                    <li style={{ ...paraStyleCSS, cursor: 'pointer' }} >
                       <i style={{ backgroundColor: themeColor }} className={iconName} />
                       {contactName}
                     </li>
+                    </a>
                   )
                 })}
               </ul>

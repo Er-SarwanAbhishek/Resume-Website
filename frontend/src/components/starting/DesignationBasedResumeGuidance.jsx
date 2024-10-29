@@ -23,11 +23,11 @@ export const DesignationBasedResumeGuidance = ({ editTemplate, setIsPrevTemplate
         { value: "businessAnalytics", label: "Business Analyst", icon: "fa-briefcase" },
         { value: "dataScientist", label: "Data Analyst", icon: "fa-database" },
         { value: "productManager", label: "Product Manager", icon: "fa-user-gear" },
-        { value: "softwareEngineer", label: "Software Engineer", icon: "fa-laptop-code" },
+        { value: "softwareDeveloper", label: "Software Engineer", icon: "fa-laptop-code" },
         { value: "sales", label: "Sales", icon: "fa-chart-simple" },
         { value: "teacher", label: "Teacher", icon: "fa-pen-ruler" },
         { value: "engineer", label: "Hardware Engineer", icon: "fa-graduation-cap" },
-        { value: "accounting", label: "Accounting", icon: "fa-folder-open" },
+        { value: "BDE", label: "BDE", icon: "fa-folder-open" },
         { value: "graphicDesigner", label: "Designer", icon: "fa-palette" },
         { value: "marketing", label: "Marketing", icon: "fa-shop" }
     ];
@@ -43,11 +43,11 @@ export const DesignationBasedResumeGuidance = ({ editTemplate, setIsPrevTemplate
             case "businessAnalytics":
             case "dataScientist":
             case "productManager":
-            case "softwareEngineer":
+            case "softwareDeveloper":
             case "sales":
             case "teacher":
             case "engineer":
-            case "accounting":
+            case "BDE":
             case "graphicDesigner":
             case "marketing":
                 setSubSelectedTem(profession);
@@ -70,7 +70,7 @@ export const DesignationBasedResumeGuidance = ({ editTemplate, setIsPrevTemplate
             case "productManager":
                 setSubSelectedTem(TemplateData.subCategory);
                 break;
-            case "softwarEengineer":
+            case "softwareDeveloper":
                 setSubSelectedTem(TemplateData.subCategory);
                 break;
             case "sales":
@@ -82,7 +82,7 @@ export const DesignationBasedResumeGuidance = ({ editTemplate, setIsPrevTemplate
             case "engineer":
                 setSubSelectedTem(TemplateData.subCategory);
                 break;
-            case "accounting":
+            case "BDE":
                 setSubSelectedTem(TemplateData.subCategory);
                 break;
             case "graphicDesigner":
@@ -154,12 +154,12 @@ export const DesignationBasedResumeGuidance = ({ editTemplate, setIsPrevTemplate
                     </div>
                     <div
                         onClick={() => {
-                            handleProfessionClick("softwarEengineer");
-                            setSubSelectedTem("softwareEngineer")
+                            handleProfessionClick("softwareDeveloper");
+                            setSubSelectedTem("softwareDeveloper")
                         }}
-                        className={subSelectedTem === "softwareEngineer" ? "designation-active-tab designation-list" : "designation-list"}
+                        className={subSelectedTem === "softwareDeveloper" ? "designation-active-tab designation-list" : "designation-list"}
                     >
-                        <i className="fa-solid fa-laptop-code"></i> <h3>Software Engineer</h3>
+                        <i className="fa-solid fa-laptop-code"></i> <h3>Software Developer</h3>
                     </div>
                     <div
                         onClick={() => {
@@ -189,11 +189,11 @@ export const DesignationBasedResumeGuidance = ({ editTemplate, setIsPrevTemplate
                     </div>
                     <div
                         onClick={() => {
-                            handleProfessionClick("accounting");
-                            setSubSelectedTem("accounting");
-                        }} className={subSelectedTem === "accounting" ? "designation-active-tab designation-list" : "designation-list"}
+                            handleProfessionClick("BDE");
+                            setSubSelectedTem("BDE");
+                        }} className={subSelectedTem === "BDE" ? "designation-active-tab designation-list" : "designation-list"}
                     >
-                        <i className="fa-solid fa-folder-open"></i> <h3>Accounting</h3>
+                        <i className="fa-solid fa-folder-open"></i> <h3>BDE</h3>
                     </div>
                     <div
                         onClick={() => {

@@ -65,12 +65,14 @@
     max-width: 1400px;
     width: 80%;
     border-radius: 20px;
+    
 }
 
 .qrcode-content-column .image-content {
     width: 100%;
     display: flex;
     gap: 4%;
+  
 }
 
 .qrcode-content-column .video-section {
@@ -82,12 +84,12 @@
 
 .qrcode-content-column .video-qrcode {
     position: relative;
-    width: 82%;
+    width: 73%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 85%;
+
 }
 
 .qrcode-content-column .video-qrcode img {

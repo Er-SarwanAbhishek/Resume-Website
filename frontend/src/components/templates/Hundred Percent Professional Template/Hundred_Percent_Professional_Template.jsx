@@ -16,7 +16,8 @@ export default function Hundred_Percent_Professional_Template({ resumeData }) {
     const paraStyleCSS = {
         fontFamily: resumeData.bodyTextFont,
         color: resumeData.bodyTextColor,
-        fontSize: `${resumeData.bodyTextSize}px`
+        fontSize: `${resumeData.bodyTextSize}px`,
+        lineHeight: `${resumeData.bodyTextSize + 8}px`
     }
 
     const boldParaStyleCss = {
@@ -35,17 +36,19 @@ export default function Hundred_Percent_Professional_Template({ resumeData }) {
             <div className='header'>
                 <div className='personal-details personal-edit'>
                     <h1 style={headingStyleCSS}>{resumeData.userName}</h1>
-                    <h4 style={headingStyleCSS}>{resumeData.userJobRole}</h4>
+                    <h4 style={{...headingStyleCSS, fontSize: `${resumeData.bodyTextSize + 4}px`}}>{resumeData.userJobRole}</h4>
                 </div>
                 {AllSections[1].isSection && <div className='contact-details contact-edit'>
                     <ul>
                         {AllSections[1].list.map(element => {
                             const { listId, iconName, contactName, additionalLink } = element
                             return (
-                                <li onClick={() => window.location.href = additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
-                                    <i style={{ color: resumeData.bodyTextColor }} className={iconName} />
-                                    <p style={paraStyleCSS}>  {contactName}</p>
-                                </li>
+                                <a href={additionalLink} key={listId}>
+                                    <li style={{ ...paraStyleCSS, cursor: 'pointer' }} >
+                                        <i style={{ color: resumeData.bodyTextColor }} className={iconName} />
+                                        <p style={paraStyleCSS}>  {contactName}</p>
+                                    </li>
+                                </a>
                             )
                         })}
                     </ul>
@@ -88,6 +91,20 @@ export default function Hundred_Percent_Professional_Template({ resumeData }) {
                         </ul>
                     </div>}
 
+                    {AllSections[7].isSection && <div className='hobbies-information interest-edit'>
+                        <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[7].sectionName}</h2>
+                        <ul>
+                            {AllSections[7].list.map(hobbies => {
+                                const { listId, interest } = hobbies;
+                                return (
+                                    <li style={paraStyleCSS} key={listId}>
+                                        {interest}
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>}
+
                 </div>
                 <div className='right-column'>
                     {AllSections[0].isSection && <div className='summary-information summary-edit'>
@@ -120,6 +137,35 @@ export default function Hundred_Percent_Professional_Template({ resumeData }) {
                                 </div>
                             )
                         })}
+                    </div>}
+
+                    {AllSections[8].isSection && <div className='certification-edit common-section' style={{ borderColor: themeColor }}>
+                        <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[8].sectionName}</h2>
+                        {AllSections[8].list.map(Project => {
+                            const { listId, instituteName, startDate, endDate, certificateName, aboutCertificate } = Project;
+                            return (
+                                <div className='common-details' key={listId}>
+                                    <p><b style={boldParaStyleCss}>{certificateName}</b></p>
+                                    <p><b style={boldParaStyleCss}>{instituteName}</b></p>
+                                    <p style={paraStyleCSS}><i>{startDate} - {endDate}</i></p>
+                                    <p style={paraStyleCSS} dangerouslySetInnerHTML={{ __html: aboutCertificate }} />
+                                </div>
+                            )
+                        })}
+                    </div>}
+
+                    {AllSections[6].isSection && <div className='languages-information language-edit' style={{ borderColor: themeColor }}>
+                        <h2 style={{ ...combineHeadingStyle, backgroundColor: themeColor }}>{AllSections[6].sectionName}</h2>
+                        <ul>
+                            {AllSections[6].list.map(languages => {
+                                const { listId, languageName, languageProfiency } = languages;
+                                return (
+                                    <li style={paraStyleCSS} key={listId}>
+                                        {languageName} - {languageProfiency}
+                                    </li>
+                                )
+                            })}
+                        </ul>
                     </div>}
 
                 </div>

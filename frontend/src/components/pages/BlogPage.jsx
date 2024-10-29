@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link , useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './BlogPage.css';
 import GetJob from '../../assets/blog-images/Get Job.jpg';
 import GlobalContext from '../context/GlobalContext';
@@ -14,11 +14,11 @@ const BlogPage = () => {
         <div className='blog-page-row-section'>
           <div className='blog-text-heading'>
             <h1>Expert Tips and Insights for Crafting the Perfect CV</h1>
-            <p>Welcome to Career Gennie Blog! The platform where we share valuable insights 
-and expert advice on creating standout professional CVs and Resumes. These 
-insights and advice keep you ahead in the industry with the latest highlighting 
-your right expertise to the employer.</p>
-            <button onClick={() => navigate("/templates") }>Build Your Resume</button>
+            <p>Welcome to Career Gennie Blog! The platform where we share valuable insights
+              and expert advice on creating standout professional CVs and Resumes. These
+              insights and advice keep you ahead in the industry with the latest highlighting
+              your right expertise to the employer.</p>
+            <button onClick={() => navigate("/templates")}>Build Your Resume</button>
           </div>
         </div>
 

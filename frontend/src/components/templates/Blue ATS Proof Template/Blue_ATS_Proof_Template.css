@@ -6,33 +6,29 @@
     text-align: left;
     background-color: white;
     background-size: cover;
+    background-position: right;
 }
-
+.blue-ats-proof-template .resume-qr-code{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 .blue-ats-proof-template h1 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 5px;
-    /* font-family: "Merriweather", serif; */
 }
 
 .blue-ats-proof-template h4 {
-    font-size: 15px;
-    margin-bottom: 10px;
+    
+    margin-bottom: 8px;
     color: #215399;
-    /* font-family: "Merriweather", serif; */
 }
 
 .blue-ats-proof-template h2 {
-    font-size: 20px;
-    margin: 15px 0px 10px 0px;
+    font-size: 14px;
+    margin: 10px 0px 10px 0px;
     border-bottom: 2px solid #7B9DD5;
-    /* font-family: "Merriweather", serif; */
     text-transform: uppercase;
-}
-
-.blue-ats-proof-template p {
-    font-size: 12px;
-    line-height: 22px;
-    /* font-family: "Rubik", sans-serif;     */
 }
 
 .blue-ats-proof-template .contact-details {
@@ -42,24 +38,23 @@
 
 .blue-ats-proof-template .contact-details ul li {
     list-style: none;
-    font-size: 12px;
-    /* font-family: "Rubik", sans-serif; */
     display: flex;
     align-items: center;
     font-weight: 500;
 }
 
+
 .blue-ats-proof-template .contact-details ul {
     display: flex;
-    gap: 15px 30px;
+    gap: 10px 30px;
     flex-wrap: wrap;
 }
 
 .blue-ats-proof-template .contact-details i {
     margin-right: 6px;
-    font-size: 15px;
+    font-size: 13px;
     border-radius: 50%;
-    color: #215399;
+
 }
 
 .blue-ats-proof-template b {
@@ -79,7 +74,7 @@
 }
 
 .blue-ats-proof-template .common-level {
-    padding-bottom: 10px;
+    padding-bottom: 6px;
 }
 
 .blue-ats-proof-template .common-level:nth-last-child(1) {
@@ -88,15 +83,39 @@
 
 .blue-ats-proof-template .skills-information ul li {
     list-style: none;
-    font-size: 12px;
-    /* font-family: "Rubik", sans-serif; */
-    border: 1px solid #b6e3ff;
-    padding: 5px 10px;
-    font-weight: 600;
+  
+    padding: 3px 8px;
+    font-weight: 500;
 }
 
 .blue-ats-proof-template .skills-information ul {
     display: flex;
-    gap: 15px 30px;
+    gap: 10px 30px;
+    flex-wrap: wrap;
+}
+
+.blue-ats-proof-template .hobbies-information ul li {
+    list-style: none;
+    border: 1px solid #b6e3ff;
+    padding: 3px 8px;
+    font-weight: 500;
+}
+
+.blue-ats-proof-template .hobbies-information ul {
+    display: flex;
+    gap: 10px 30px;
+    flex-wrap: wrap;
+}
+
+.blue-ats-proof-template .languages-information ul li {
+    list-style: none;
+    border: 1px solid #b6e3ff;
+    padding: 3px 8px;
+    font-weight: 500;
+}
+
+.blue-ats-proof-template .languages-information ul {
+    display: flex;
+    gap: 10px 30px;
     flex-wrap: wrap;
 }

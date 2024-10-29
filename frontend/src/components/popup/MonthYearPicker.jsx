@@ -7,18 +7,18 @@ const MonthYearPicker = ({ startingDate, listId, sectionIndex, name, cancel }) =
   const monthYearRef = useRef();
   const [year, setYear] = useState(currentYear);
   const months = [
-    "January",
-    "February",
+    "Jan",
+    "Feb",
     "March",
     "April",
     "May",
     "June",
     "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
   const { ChangeListValue } = useContext(GlobalContext);

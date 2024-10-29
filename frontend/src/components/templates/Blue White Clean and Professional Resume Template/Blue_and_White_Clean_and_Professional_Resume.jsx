@@ -52,10 +52,12 @@ export default function Blue_and_White_Clean_and_Professional_Resume({ resumeDat
                             {AllSections[1].list.map(element => {
                                 const { listId, iconName, contactName ,additionalLink} = element;
                                 return (
-                                    <li onClick={()=>window.location.href=additionalLink} style={{ ...paraStyleCSS, cursor: 'pointer' }} key={listId}>
+                                    <a href={additionalLink} key={listId}>
+                                    <li style={{ ...paraStyleCSS, cursor: 'pointer' }} >
                                         <i className={iconName}></i>
                                         <p style={paraStyleCSS}>{contactName}</p>
                                     </li>
+                                    </a>
                                 )
                             })}
                         </ul>}

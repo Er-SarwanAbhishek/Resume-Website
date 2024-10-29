@@ -11,28 +11,28 @@ export const HomeCta = () => {
         <button className="hcta-cv-btn" onClick={() => window.location.href = "/templates"}>Create CV</button>
         <div className="image-sections">
           <section className="section section-up">
-            <img src="cta-template-images/cta-template-a.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-b.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-e.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-a.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-b.png" alt="Image 1" />
+            <img src="cta-template-images/cta-template-a.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-b.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-e.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-a.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-b.png" alt="Image 1" draggable="false"/>
           </section>
 
           <section className="section section-down">
-            <img src="cta-template-images/cta-template-f.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-c.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-d.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-f.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-c.png" alt="Image 1" />
+            <img src="cta-template-images/cta-template-f.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-c.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-d.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-f.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-c.png" alt="Image 1" draggable="false"/>
           </section>
           <section className="section section-up">
-            <img src="cta-template-images/cta-template-e.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-h.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-a.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-h.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-c.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-e.png" alt="Image 1" />
-            <img src="cta-template-images/cta-template-f.png" alt="Image 1" />
+            <img src="cta-template-images/cta-template-e.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-h.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-a.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-h.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-c.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-e.png" alt="Image 1" draggable="false"/>
+            <img src="cta-template-images/cta-template-f.png" alt="Image 1" draggable="false"/>
           </section>
         </div>
       </div>
